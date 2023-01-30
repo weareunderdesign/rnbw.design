@@ -4,27 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="description" content="Build together on the web">
-        <meta property="og:title" content="Home">
-        <link rel="icon" href="./images/favicon.png">
-        <link rel="stylesheet" href="https://relate-icons.relate.design/css/styles.css">
-        <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
         <title>Home</title>
+        <meta name="description" content="rainbow">
+        <meta property="og:title" content="design. develop. ship.">
+        <link rel="icon" href="images/favicon.png">
+        <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css">
+        <script type="module" src="https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js"></script>
     </head>
     <body>
-        <nav class="box-l padding-xl justify-stretch gap-xl align-center" id="editor">
-            <a href="https://relate.app/">
-                <img src="./images/Logo.svg" />
-            </a>
-            <div class="direction-column gap-s">
-                <a href="/features" class="padding-s">Features</a>
-                <a href="/pricing" class="padding-s">Pricing</a>
-                <a href="https://relate.app/new" class="padding-s">Templates</a>
-                <a href="https://relate.app/login" class="padding-s">Log in</a>
-                <a class="border radius-m padding-s" href="https://tally.so/r/w5pbv3">Sign up</a>
-            </div>
-        </nav>
+        <rnbw-nav></rnbw-nav>
+
         <div class="view align-stretch">
             <div class="page">
                 <h1 class="heading1-efzva">
@@ -818,5 +807,9 @@
                 </div>
             </div>
         </div>
+        <rnbw-footer></rnbw-footer>
     </body>
+    <script src="rnbw-nav.js"></script>
+    <script src="rnbw-banner.js"></script>
+    <script src="rnbw-footer.js"></script>
 </html>
