@@ -49,52 +49,77 @@ customElements.define("rnbw-footer", RnbwFooter);
 const currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML += currentYear;
 
+// Select body and theme name elements from the DOM
 var body = document.querySelector("body");
 var themeName = document.querySelector("#theme-name");
+
+// Set the initial value of themeName to "system"
 themeName.textContent = "system";
 
+// Function to toggle between themes (light, dark, and system)
 function toggleTheme() {
   switch (themeName.textContent) {
+    // If the current theme is set to "system", change it to "light"
     case "system":
       body.setAttribute("data-theme", "light");
       themeName.textContent = "light";
+      // Save the new theme in local storage
+      localStorage.setItem("theme", "light");
       break;
+    // If the current theme is set to "light", change it to "dark"
     case "light":
       body.setAttribute("data-theme", "dark");
       themeName.textContent = "dark";
+      // Save the new theme in local storage
+      localStorage.setItem("theme", "dark");
       break;
+    // If the current theme is set to "dark", change it to "system"
     case "dark":
       body.removeAttribute("data-theme");
       themeName.textContent = "system";
+      // Remove the theme from local storage
+      localStorage.removeItem("theme");
       break;
   }
 }
 
-var storedTheme =
-  localStorage.getItem("theme") ||
-  (window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light");
+// Check if there is a saved theme in local storage
+var storedTheme = localStorage.getItem("theme");
 
-document.documentElement.setAttribute("data-theme", storedTheme);
+// If there is a saved theme, use it
+if (storedTheme) {
+  document.documentElement.setAttribute("data-theme", storedTheme);
+  themeName.textContent = storedTheme;
+} else {
+  // If there is no saved theme, check the system preference
+  const siteWrapper = document.getElementsByTagName("html")[0];
 
-const siteWrapper = document.getElementsByTagName("html")[0];
+  const setSystemTheme = () => {
+    // Check if the system prefers a dark theme
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      siteWrapper.setAttribute("data-theme", "dark");
+      themeName.textContent = "dark";
+      // Save the theme in local storage
+      localStorage.setItem("theme", "dark");
+    } else {
+      siteWrapper.setAttribute("data-theme", "light");
+      themeName.textContent = "light";
+      // Save the theme in local storage
+      localStorage.setItem("theme", "light");
+    }
+  };
 
-const setSystemTheme = () => {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    siteWrapper.setAttribute("data-theme", "dark");
-  } else {
-    siteWrapper.setAttribute("data-theme", "light");
-  }
-};
+  // Set the initial theme based on the system preference
+  setSystemTheme();
 
-setSystemTheme();
-
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", (e) => {
-    setSystemTheme();
-  });
+  // Listen for changes in the system preference
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      // Update the theme if the system preference changes
+      setSystemTheme();
+    });
+}
