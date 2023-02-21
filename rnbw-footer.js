@@ -2,7 +2,7 @@ const footerTemplate = `
 <footer class="padding-xl box-l">
     <div class="gap-s direction-column align-start box-l">
         <div class="gap-l direction-row align-start box">
-            <img src="https://rnbw.company/images/rnbw.svg">
+            <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
             <div class="text-s">
                 © <span id="year"></span> Rainbow Design, Ltd.
             </div>

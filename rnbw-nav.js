@@ -1,24 +1,24 @@
 const navTemplate = `
 <nav class="box-l padding-l direction-column box">
     <a href="https://rnbw.company" class="box gap-l">
-        <img src="https://rnbw.company/images/rnbw.svg">
+        <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
         <p class="text-s">high-quality,</br> functional design</br>and development tools</p>
     </a>
     <div class="gap-l box justify-end">
         <a href="https://rnbw.company/" class="align-center direction-row">
-            <img src="https://rnbw.company/images/ovrvw.svg" class="border radius-s foreground-secondary icon-xl" id="nav-item">
+            <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s foreground-secondary icon-xl" id="nav-item"></svg-icon>
             rnbw 0.1
         </a>
         <a href="https://guide.rnbw.dev/" class="align-center direction-row">
-        <img src="https://rnbw.company/images/usrgd.svg" class="border radius-s icon-xl" id="nav-item">
+        <svg-icon src="https://rnbw.company/images/usrgd.svg" class="border radius-s icon-xl" id="nav-item"></svg-icon>
             guide
         </a>
         <a href="https://discord.gg/cKHxeyR2" class="align-center direction-row">
-        <img src="https://rnbw.company/images/cmnty.svg" class="border radius-s icon-xl" id="nav-item">
+        <svg-icon src="https://rnbw.company/images/cmnty.svg" class="border radius-s icon-xl" id="nav-item"></svg-icon>
             community
         </a>
         <a href="https://rnbw.dev/" class="align-center direction-row">
-        <img src="https://rnbw.company/images/gtstrt.svg" class="border radius-s icon-xl" id="nav-item">
+        <svg-icon src="https://rnbw.company/images/gtstrt.svg" class="border radius-s icon-xl" id="nav-item"></svg-icon>
             start
         </a>
     </div>
