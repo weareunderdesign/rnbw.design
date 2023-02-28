@@ -45,7 +45,7 @@ const rnbwPreviewTemplate = `
       <div>
         <div>
           <div class="gap-s justify-start padding-s">
-            <div class="icon-xs icon-down"></div>
+            <svg-icon src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
             <svg-icon src="https://raincons.rnbw.dev/icons/folder.svg"></svg-icon>
             <span class="text-s">Folder</span>
           </div>
@@ -84,7 +84,7 @@ const rnbwPreviewTemplate = `
         </div>
       </div>
       <div>
-        <div class="justify-stretch padding-xs">
+        <div class="justify-stretch padding-xs background-tertiary">
           <div class="gap-s padding-xs">
             <div class="icon-xs"></div>
             <svg-icon src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
@@ -102,7 +102,7 @@ const rnbwPreviewTemplate = `
               <span class="text-s">Logo</span>
             </div>
           </div>
-          <div class="justify-stretch padding-xs">
+          <div class="justify-stretch padding-xs background-secondary">
             <div class="gap-s padding-xs">
               <div class="icon-xs"></div>
               <div class="icon-xs"></div>
@@ -111,7 +111,7 @@ const rnbwPreviewTemplate = `
               <span class="text-s">Element</span>
             </div>
           </div>
-          <div class="justify-stretch padding-xs">
+          <div class="justify-stretch padding-xs background-secondary">
             <div class="gap-s padding-xs">
               <div class="icon-xs"></div>
               <div class="icon-xs"></div>
