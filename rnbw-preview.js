@@ -22,10 +22,11 @@ const rnbwPreviewTemplate = `
         <div class="direction-column"></div>
       </div>
       <div class="justify-stretch padding-xs">
-        <div class="gap-s padding-xs">
+        <div class="justify-start gap-s padding-xs">
           <div class="icon-xs"></div>
           <svg-icon src="https://raincons.rnbw.dev/icons/brush.svg"></svg-icon>
           <span class="text-s">Stylesheet</span>
+          <div class="radius-s foreground-primary" style="width:6px; height:6px;"></div>
         </div>
       </div>
       <div class="justify-stretch padding-xs">
@@ -206,7 +207,7 @@ const rnbwPreviewTemplate = `
 </div>
 <div class="box align-stretch">
   <div class="box padding-xl border-left">
-    <h5 class="border">
+    <h5>
     <span style="color:#006400">rnbw is a modern design and code editor.</span>
     <span style="color:#0000CD">is it 100% powered by the web.</span>
     <span style="color:#800080">It is simple.</span>
