@@ -1,5 +1,5 @@
 const navTemplate = `
-<nav class="box-l padding-l direction-column box">
+<nav class="box-l padding-l direction-column gap-l box">
     <a href="https://rnbw.company" class="box gap-l">
         <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
         <span class="text-s">high-quality,</br> functional design</br>and development tools</span>
