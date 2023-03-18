@@ -2,7 +2,7 @@ const navTemplate = `
 <nav class="box-l padding-l direction-column gap-l box">
     <a href="https://rnbw.company" class="box gap-l">
         <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
-        <span class="text-s">high-quality,</br> functional design</br>and development tools</span>
+        <div class="text-s">high-quality,</br> functional design</br>and development tools</div>
     </a>
     <div class="gap-l box justify-end">
         <a href="https://rnbw.company/" class="align-center direction-row">
