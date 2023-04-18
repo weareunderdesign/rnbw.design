@@ -1,9 +1,9 @@
 const headerTemplate = `
 <nav class="box-l padding-l direction-column gap-l box">
-    <a href="https://rnbw.company" class="box gap-l">
+    <div class="box gap-l">
         <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
-    </a>
+    </div>
     <div class="gap-l box justify-end">
         <a href="https://rnbw.company/" class="align-center direction-row">
             <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
