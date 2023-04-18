@@ -1,28 +1,64 @@
 const navTemplate = `
-<nav class="box-l padding-l direction-column gap-l box">
-    <a href="https://rnbw.company" class="box gap-l">
-        <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
-        <div class="text-s">high-quality,</br> functional design</br>and development tools</div>
-    </a>
-    <div class="gap-l box justify-end">
-        <a href="https://rnbw.company/" class="align-center direction-row">
-            <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s foreground-secondary icon-xl" id="nav-item"></svg-icon>
-            rnbw 0.1
-        </a>
-        <a href="https://guide.rnbw.dev/" class="align-center direction-row">
-        <svg-icon src="https://rnbw.company/images/usrgd.svg" class="border radius-s icon-xl" id="nav-item"></svg-icon>
-            guide
-        </a>
-        <a href="https://discord.gg/cKHxeyR2" class="align-center direction-row">
-        <svg-icon src="https://rnbw.company/images/cmnty.svg" class="border radius-s icon-xl" id="nav-item"></svg-icon>
-            community
-        </a>
-        <a href="https://rnbw.dev/" class="align-center direction-row">
-        <svg-icon src="https://rnbw.company/images/gtstrt.svg" class="border radius-s icon-xl" id="nav-item"></svg-icon>
-            start
-        </a>
-    </div>
-</nav>
+                <div class="direction-column box-l gap-m">
+                    <div class="box">
+                        <a
+                            href="https://rnbw.dev"
+                            target="_blank"
+                            class="padding-l gap-s radius-s background-primary border">
+                            <svg-icon
+                                src="https://raincons.rnbw.dev/icons/oval.svg"
+                                class="icon-s"></svg-icon>
+                            <div>
+                                <span class="text-l">start ↗</span>
+                                <p class="text-s">get it going with rnbw.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a
+                            href="https://github.com/rnbwdev/rnbw"
+                            target="_blank"
+                            class="padding-l gap-s radius-s background-primary border">
+                            <svg-icon
+                                src="https://raincons.rnbw.dev/icons/github.svg"
+                                class="icon-s"></svg-icon>
+                            <div>
+                                <span class="text-l">GitHub ↗</span>
+                                <p class="text-s">
+                                    contribute or make it yours.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a
+                            href="https://guide.rnbw.dev/"
+                            target="_blank"
+                            class="padding-l gap-s radius-s background-primary border">
+                            <svg-icon
+                                src="https://raincons.rnbw.dev/icons/library.svg"
+                                class="icon-s"></svg-icon>
+                            <div>
+                                <span class="text-l">guide ↗</span>
+                                <p class="text-s">learn how to use.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a
+                            href="https://discord.gg/cKHxeyR2/"
+                            target="_blank"
+                            class="padding-l gap-s radius-s background-primary border">
+                            <svg-icon
+                                src="https://raincons.rnbw.dev/icons/people.svg"
+                                class="icon-s"></svg-icon>
+                            <div>
+                                <span class="text-l">community ↗</span>
+                                <p class="text-s">be part of it.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 `;
 
 class RnbwNav extends HTMLElement {
@@ -33,15 +69,3 @@ class RnbwNav extends HTMLElement {
 }
 
 customElements.define("rnbw-nav", RnbwNav);
-
-const navItems = document.querySelectorAll("#nav-item");
-
-navItems.forEach(function(navItem) {
-  navItem.addEventListener("mouseover", function() {
-    navItem.classList.add("background-secondary");
-  });
-
-  navItem.addEventListener("mouseout", function() {
-    navItem.classList.remove("background-secondary");
-  });
-});
