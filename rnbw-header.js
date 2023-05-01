@@ -1,10 +1,10 @@
 const headerTemplate = `
 <nav class="box-l padding-l direction-column gap-l box">
     <div class="box gap-l">
-        <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon>
+        <a href="https://rnbw.company/"><svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon></a>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
-    <div class="gap-l box justify-end">
+    <div class="gap-m box justify-end">
         <a href="https://rnbw.company/" class="align-center direction-row">
             <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             rnbw 0.1
@@ -13,11 +13,11 @@ const headerTemplate = `
         <svg-icon src="https://rnbw.company/images/usrgd.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             guide
         </a>
-        <a href="https://discord.gg/cKHxeyR2" class="align-center direction-row">
+        <a href="https://discord.gg/HycXz8TJkd" target="_blank" class="align-center direction-row">
         <svg-icon src="https://rnbw.company/images/cmnty.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             community
         </a>
-        <a href="https://rnbw.dev/" class="align-center direction-row">
+        <a href="https://rnbw.company/signup" target="_blank" class="align-center direction-row">
         <svg-icon src="https://rnbw.company/images/gtstrt.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             start
         </a>
