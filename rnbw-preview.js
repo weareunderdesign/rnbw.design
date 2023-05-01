@@ -1,6 +1,6 @@
 const rnbwPreviewTemplate = `
                 <div
-                    class="hidden-on-mobile direction-column radius-s background-primary border padding-m gap-m">
+                    class="hidden-on-mobile direction-column radius-s border padding-m gap-m">
                     <div
                         class="panel justify-stretch radius-s border background-primary">
                         <div class="panel">
@@ -264,46 +264,29 @@ const rnbwPreviewTemplate = `
                     </div>
 
                     <div class="box gap-l direction-row">
-                        <h4>
-                            <span style="color: #006400"
-                                >rnbw is a modern design and code editor.</span
-                            >
-                            <span style="color: #0000cd"
-                                >it is 100% powered by the web.</span
-                            >
-                            <span style="color: #800080">It is simple.</span>
-                            <span style="color: #ee82ee"
-                                >it is made “for the people”.</span
-                            >
-                            <span style="color: #ff4500"
-                                >it is optimized for simplicity,
-                                flexibility and openness.</span
-                            >
-                            <span style="color: #ffa500"
-                                >and it fully embraces open web standards.</span
-                            >
-                            <span style="color: #ffd700"
-                                >and, it is powered by AI...</span
-                            >
-                        </h4>
+                    <style>
+                    .hidden {
+                        display: none;
+                    }
+                </style>
+                <h3>
+                <span class="hidden" style="color: #006400">rnbw is a modern design and code editor.</span>
+                <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
+                <span class="hidden" style="color: #800080">It works with your files.</span>
+                <span class="hidden" style="color: #ee82ee">it's powered by the web.</span>
+                <span class="hidden" style="color: #ff4500">it's open source.</span>
+                <span class="hidden" style="color: #ffa500">it fully embraces open web standards.</span>
+                <span class="hidden" style="color: #ffd700">and, it is powered by AI...</span>
+                </h3>
                         <div
                             class="padding-l border-left background-primary radius-s border opacity-m">
-
-                                <code style="white-space: pre-wrap;">&lt;span style="color:#006400"&gt;
-    rnbw is a modern design and code editor.&lt;/span&gt;
-&lt;span style="color:#0000CD"&gt;
-    is it 100% powered by the web.&lt;/span&gt;
-&lt;span style="color:#800080"&gt;
-    It is simple.&lt;/span&gt;
-&lt;span style="color:#EE82EE"&gt;
-    It is made &ldquo;for the people&rdquo;.&lt;/span&gt;
-&lt;span style="color:#FF4500"&gt;
-    It is 100% optimized for simplicity, flexibility and openness.&lt;/span&gt;
-&lt;span style="color:#FFA500"&gt;
-    And it fully embraces open web standards.&lt;/span&gt;
-&lt;span style="color:#FFD700"&gt;
-    And, it is powered by AI...&lt;/span&gt;</code>
-
+<code style="white-space: pre-wrap;">&lt;span style="color:#006400"&gt;rnbw is a modern design and code editor.&lt;/span&gt;
+&lt;span style="color:#0000CD"&gt;it's simple, flexible, and open.&lt;/span&gt;
+&lt;span style="color:#800080"&gt;it works with your files.&lt;/span&gt;
+&lt;span style="color:#EE82EE"&gt;it's powered by the web.&lt;/span&gt;
+&lt;span style="color:#FF4500"&gt;it's open source.&lt;/span&gt;
+&lt;span style="color:#FFA500"&gt;it fully embraces open web standards.&lt;/span&gt;
+&lt;span style="color:#FFD700"&gt;and, it is powered by AI...&lt;/span&gt;</code>
                         </div>
                     </div>
                 </div>
@@ -317,3 +300,30 @@ class RnbwPreview extends HTMLElement {
 }
 
 customElements.define("rnbw-preview", RnbwPreview);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const h3 = document.querySelector("h3");
+    const spans = h3.querySelectorAll("span");
+    let index = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (index < spans.length) {
+            spans[index].classList.remove("hidden");
+            const originalText = spans[index].getAttribute("data-text");
+            if (charIndex < originalText.length) {
+                spans[index].textContent = originalText.slice(0, charIndex + 1);
+                charIndex++;
+                setTimeout(type, 50);
+            } else {
+                charIndex = 0;
+                index++;
+                setTimeout(type, 500);
+            }
+        }
+    }
+
+    spans.forEach(span => span.setAttribute("data-text", span.textContent));
+    spans.forEach(span => span.textContent = "");
+    type();
+});
