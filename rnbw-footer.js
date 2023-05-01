@@ -9,12 +9,12 @@ const footerTemplate = `
 
         </div>
         <div class="direction-row gap-s box">
-            <a href="https://rnbw.dev/" target="_blank">start</a><a href="https://guide.rnbw.dev/">guide</a>
+            <a href="https://rnbw.company/signup" target="_blank">start</a><a href="https://guide.rnbw.dev/">guide</a>
             <a href="https://rnbw.company/about">about</a>
         </div>
         <div class="direction-row gap-s box">
 
-            <a href="https://discord.gg/cKHxeyR2" target="_blank">community ↗</a>
+            <a href="https://discord.gg/HycXz8TJkd" target="_blank">community ↗</a>
             <a href="https://twitter.com/rnbwdev" target="_blank">twitter ↗</a>
             <a href="https://github.com/rnbwdev" target="_blank">github ↗</a>
             <a href="mailto:hello@rnbw.dev">get in touch</a>
@@ -31,7 +31,7 @@ const footerTemplate = `
                 target="_blank">privacy</a><a href="https://www.notion.so/rnbw/GDPR-e0ff3e4d10f649ffbf0c81b99629ec84"
                 target="_blank">gdpr</a>
                 <div>
-                    <button onclick="toggleTheme()" class="border background-primary radius-s" style="cursor: pointer;"><span class="opacity-m" id="theme-name"></span></button>
+                    <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer;"><span class="opacity-m" id="theme-name"></span></button>
                 </div>
         </div>
     </div>
@@ -51,6 +51,28 @@ function updateThemeElementsVisibility() {
         element.style.display = theme === "dark" ? "" : "none";
     });
 }
+
+function handleSystemThemeChange(e) {
+    if (themeName.textContent === "system") {
+        if (e.matches) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+        }
+        updateThemeElementsVisibility();
+    }
+}
+
+const setSystemTheme = () => {
+    if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+        handleSystemThemeChange({ matches: true });
+    } else {
+        handleSystemThemeChange({ matches: false });
+    }
+};
 
 class RnbwFooter extends HTMLElement {
     constructor() {
@@ -89,11 +111,13 @@ function toggleTheme() {
             document.documentElement.removeAttribute("data-theme");
             themeName.textContent = "system";
             localStorage.removeItem("theme");
+            setSystemTheme();
             break;
     }
 
     updateThemeElementsVisibility();
 }
+
 
 var storedTheme = localStorage.getItem("theme");
 
@@ -102,28 +126,10 @@ if (storedTheme) {
     themeName.textContent = storedTheme;
     updateThemeElementsVisibility();
 } else {
-    const siteWrapper = document.getElementsByTagName("html")[0];
-
-    const setSystemTheme = () => {
-        if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-            siteWrapper.setAttribute("data-theme", "dark");
-            themeName.textContent = "dark";
-        } else {
-            siteWrapper.setAttribute("data-theme", "light");
-            themeName.textContent = "light";
-        }
-    };
-
     setSystemTheme();
     updateThemeElementsVisibility();
 
     window
         .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (e) => {
-            setSystemTheme();
-            updateThemeElementsVisibility();
-        });
+        .addEventListener("change", handleSystemThemeChange);
 }
