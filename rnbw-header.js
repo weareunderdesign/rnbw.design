@@ -57,9 +57,10 @@ class RnbwHeader extends HTMLElement {
             return link.href === window.location.href;
         }
 
-        this.querySelectorAll("nav a").forEach((link) => {
+        this.querySelectorAll("#nav-item").forEach((navItem) => {
+            const link = navItem.querySelector("a");
             if (isLinkActive(link)) {
-                link
+                navItem
                     .querySelector("svg-icon")
                     .classList.add("foreground-secondary");
             }
