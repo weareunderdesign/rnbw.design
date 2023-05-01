@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>signup</title>
+    <meta name="description" content="rainbow" />
+    <meta property="og:title" content="design. develop. ship." />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css" />
+    <script type="module" src="https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js"></script>
+    <script defer data-domain="rnbw.company" src="https://plausible.io/js/script.js"></script>
+</head>
+
+<body class="background-secondary">
+    <div class="view align-center direction-row">
+        <div class="page" style="align-items: center;">
+            <h5>let us know a lil bit about you?</h5>
+            <form id="signup-form"class="padding-l radius-s shadow background-primary border box-s">
+                  <input class="background-primary border padding-m radius-xs box-l text-l" type="text" id="full-name" placeholder="full name" required>
+                  <input class="background-primary border padding-m radius-xs box-l text-l" type="email" id="email" placeholder="email" required>
+                  <input class="background-primary border padding-m radius-xs box-l text-l" type="text" id="company-name" placeholder="company name (if any)">
+                <button class="foreground-primary border padding-m radius-xs box-l text-l align-center" type="submit">subscribe</button>
+              </form>
+            <a href="https://rnbw.dev" class="text-m"><span>skip! go directly to rnbw.dev →</span></a>
+              <!-- Include the Intercom snippet here -->
+            
+              <script>
+                // Handle form submission, send data to Intercom, and redirect
+                document.getElementById("signup-form").addEventListener("submit", function (event) {
+                  event.preventDefault(); // Prevent the form from submitting the default way
+            
+                  // Get the full name, email, and company name values
+                  const fullName = document.getElementById("full-name").value;
+                  const email = document.getElementById("email").value;
+                  const companyName = document.getElementById("company-name").value;
+            
+                  // Prepare the Intercom data object
+                  const intercomData = {
+                    name: fullName,
+                    email: email,
+                    user_hash: null, // For added security, consider generating a user_hash server-side
+                  };
+            
+                  // Add the company name to the Intercom data object only if it has a value
+                  if (companyName) {
+                    intercomData.company = companyName;
+                  }
+            
+                  // Send data to Intercom
+                  window.Intercom("boot", intercomData);
+            
+                  // Redirect to another site
+                  window.location.href = "https://rnbw.dev";
+                });
+              </script>
+              <script>
+                window.intercomSettings = {
+                  app_id: "efp5cdu4",
+                };
+              </script>
+              <script>
+                (function () {
+                  var w = window;
+                  var ic = w.Intercom;
+                  if (typeof ic === "function") {
+                    ic("reattach_activator");
+                    ic("update", intercomSettings);
+                  } else {
+                    var d = document;
+                    var i = function () {
+                      i.c(arguments);
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                      i.q.push(args);
+                    };
+                    w.Intercom = i;
+                    function l() {
+                      var s = d.createElement("script");
+                      s.type = "text/javascript";
+                      s.async = true;
+                      s.src = "https://widget.intercom.io/widget/efp5cdu4";
+                      var x = d.getElementsByTagName("script")[0];
+                      x.parentNode.insertBefore(s, x);
+                    }
+                    if (w.attachEvent) {
+                      w.attachEvent("onload", l);
+                    } else {
+                      w.addEventListener("load", l, false);
+                    }
+                  }
+                })();
+              </script>
+        </div>
+    </div>
+    <rnbw-footer class="hidden"></rnbw-footer>
+</body>
+<script src="rnbw-footer.js"></script>
+
+</html>
