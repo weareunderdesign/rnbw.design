@@ -257,13 +257,13 @@ style.innerHTML = `
       transition: opacity 0.5s, transform 0.5s;
     }
 
-    .hide{
+    rnbw-editor .hide{
         display: none;
         transition: opacity 0.5s, transform 0.5s;
     }
 
 
-    .anim.is-visible {
+    rnbw-editor .anim.is-visible {
         opacity: 1;
         transform: translateY(0);
         }
@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observer = new IntersectionObserver(fadeInOnScroll, options);
 
-  let anim1 = document.querySelectorAll("#anim1");
+  let anim1 = document.querySelectorAll("rnbw-editor #anim1");
   anim1.forEach((span) => span.setAttribute("data-text", "/d"));
   anim1.forEach((span) => (span.textContent = "/"));
 
