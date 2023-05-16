@@ -1,30 +1,30 @@
 const footerTemplate = `
 <footer class="padding-xl box-l">
-    <div class="gap-s direction-column align-start box-l">
-        <div class="gap-l direction-row align-start box">
+    <div class="gap-s row align-start box-l">
+        <div class="gap-l column align-start box">
             <a href="https://rnbw.company"><svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon></a>
             <div class="text-s">
                 © <span id="year"></span> Rainbow Design, Ltd.
             </div>
 
         </div>
-        <div class="direction-row gap-s box">
+        <div class="column gap-s box">
             <a href="https://rnbw.company/signup" target="_blank">start</a><a href="https://guide.rnbw.dev/">guide</a>
             <a href="https://rnbw.company/about">about</a>
         </div>
-        <div class="direction-row gap-s box">
+        <div class="column gap-s box">
 
             <a href="https://discord.gg/HycXz8TJkd" target="_blank">community ↗</a>
             <a href="https://twitter.com/rnbwdev" target="_blank">twitter ↗</a>
             <a href="https://github.com/rnbwdev" target="_blank">github ↗</a>
             <a href="mailto:hello@rnbw.dev">get in touch</a>
         </div>
-        <div class="direction-row gap-s box">
+        <div class="column gap-s box">
             <a class="opacity-m"">rene.css ↗</a>
             <a class="opacity-m"">svg-icon.js ↗</a>
             <a class="opacity-m">rfrncs.design ↗</a>
         </div>
-        <div class="direction-row gap-s box">
+        <div class="column gap-s box">
             <a href="https://www.notion.so/rnbw/Terms-Conditions-0f1a79a92cd84cbdb84c99ed48445db2"
                 target="_blank">terms</a><a
                 href="https://www.notion.so/rnbw/Privacy-Policy-d490b0e9792e460289985feddf601097"

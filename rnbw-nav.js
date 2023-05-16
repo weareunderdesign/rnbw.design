@@ -1,5 +1,5 @@
 const navTemplate = `
-                <div class="direction-column box-l gap-m">
+                <div class="row box-l gap-m">
                     <div class="box">
                         <a id="nav-item"
                             href="https://rnbw.company/signup"
