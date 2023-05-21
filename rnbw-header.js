@@ -15,7 +15,7 @@ const headerTemplate = `
         </a>
         <a id="nav-item" href="https://discord.gg/HycXz8TJkd" target="_blank" class="align-center column">
         <svg-icon src="https://rnbw.company/images/cmnty.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
-            community
+            discord
         </a>
         <a id="nav-item" href="https://rnbw.company/signup" target="_blank" class="align-center column">
         <svg-icon src="https://rnbw.company/images/gtstrt.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
