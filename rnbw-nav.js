@@ -1,5 +1,5 @@
 const navTemplate = `
-                <div class="direction-column box-l gap-m">
+                <div class="row box-l gap-m">
                     <div class="box">
                         <a id="nav-item"
                             href="https://rnbw.company/signup"
@@ -62,29 +62,28 @@ const navTemplate = `
 `;
 
 class RnbwNav extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = navTemplate;
-    }
+  constructor() {
+    super();
+    this.innerHTML = navTemplate;
+  }
 
-    connectedCallback() {
-        this.applyHoverEffect();
-    }
+  connectedCallback() {
+    this.applyHoverEffect();
+  }
 
-    applyHoverEffect() {
-        const navItems = this.querySelectorAll("#nav-item");
+  applyHoverEffect() {
+    const navItems = this.querySelectorAll("#nav-item");
 
-        navItems.forEach((navItem) => {
-            navItem.addEventListener("mouseover", function () {
-                navItem.classList.add("background-secondary");
-            });
+    navItems.forEach((navItem) => {
+      navItem.addEventListener("mouseover", function () {
+        navItem.classList.add("background-secondary");
+      });
 
-            navItem.addEventListener("mouseout", function () {
-                navItem.classList.remove("background-secondary");
-            });
-        });
-    }
+      navItem.addEventListener("mouseout", function () {
+        navItem.classList.remove("background-secondary");
+      });
+    });
+  }
 }
 
 customElements.define("rnbw-nav", RnbwNav);
-

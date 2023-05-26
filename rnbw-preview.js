@@ -1,6 +1,6 @@
 const rnbwPreviewTemplate = `
                 <div
-                    class="hidden-on-mobile direction-column radius-s border padding-m gap-m">
+                    class="hidden-on-mobile row radius-s border padding-m gap-m">
                     <div
                         class="panel justify-stretch radius-s border background-primary">
                         <div class="panel">
@@ -26,7 +26,7 @@ const rnbwPreviewTemplate = `
                                             src="https://raincons.rnbw.dev/icons/page.svg"></svg-icon>
                                         <span class="text-s">Page</span>
                                     </div>
-                                    <div class="direction-column"></div>
+                                    <div class="row"></div>
                                 </div>
                                 <div class="justify-stretch padding-xs">
                                     <div class="justify-start gap-s padding-xs">
@@ -49,7 +49,7 @@ const rnbwPreviewTemplate = `
                                             src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
                                         <span class="text-s">Script</span>
                                     </div>
-                                    <div class="direction-column"></div>
+                                    <div class="row"></div>
                                 </div>
                                 <div class="gap-s justify-start padding-s">
                                     <div class="icon-xs"></div>
@@ -180,7 +180,7 @@ const rnbwPreviewTemplate = `
                                 <div class="justify-stretch">
                                     <span class="text-s">Settings</span>
                                     <div
-                                        class="direction-column gap-s justify-end">
+                                        class="row gap-s justify-end">
                                         <div class="padding-xs radius-xs">
                                             <svg-icon
                                                 src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
@@ -242,7 +242,7 @@ const rnbwPreviewTemplate = `
                                         </div>
                                         <span class="text-s">Display</span>
                                     </div>
-                                    <div class="direction-column gap-s">
+                                    <div class="row gap-s">
                                         <span class="text-s">Flex</span>
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@ const rnbwPreviewTemplate = `
                                         </div>
                                         <span class="text-s">Position</span>
                                     </div>
-                                    <div class="direction-column gap-s">
+                                    <div class="row gap-s">
                                         <span class="text-s">Relative</span>
                                     </div>
                                 </div>
@@ -263,7 +263,7 @@ const rnbwPreviewTemplate = `
                         </div>
                     </div>
 
-                    <div class="box gap-l direction-row">
+                    <div class="box gap-l column">
                     <style>
                     .hidden {
                         display: none;
@@ -293,37 +293,37 @@ const rnbwPreviewTemplate = `
 `;
 
 class RnbwPreview extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = rnbwPreviewTemplate;
-    }
+  constructor() {
+    super();
+    this.innerHTML = rnbwPreviewTemplate;
+  }
 }
 
 customElements.define("rnbw-preview", RnbwPreview);
 
-document.addEventListener("DOMContentLoaded", function() {
-    const h3 = document.querySelector("h3");
-    const spans = h3.querySelectorAll("span");
-    let index = 0;
-    let charIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const h3 = document.querySelector("h3");
+  const spans = h3.querySelectorAll("span");
+  let index = 0;
+  let charIndex = 0;
 
-    function type() {
-        if (index < spans.length) {
-            spans[index].classList.remove("hidden");
-            const originalText = spans[index].getAttribute("data-text");
-            if (charIndex < originalText.length) {
-                spans[index].textContent = originalText.slice(0, charIndex + 1);
-                charIndex++;
-                setTimeout(type, 50);
-            } else {
-                charIndex = 0;
-                index++;
-                setTimeout(type, 500);
-            }
-        }
+  function type() {
+    if (index < spans.length) {
+      spans[index].classList.remove("hidden");
+      const originalText = spans[index].getAttribute("data-text");
+      if (charIndex < originalText.length) {
+        spans[index].textContent = originalText.slice(0, charIndex + 1);
+        charIndex++;
+        setTimeout(type, 50);
+      } else {
+        charIndex = 0;
+        index++;
+        setTimeout(type, 500);
+      }
     }
+  }
 
-    spans.forEach(span => span.setAttribute("data-text", span.textContent));
-    spans.forEach(span => span.textContent = "");
-    type();
+  spans.forEach((span) => span.setAttribute("data-text", span.textContent));
+  spans.forEach((span) => (span.textContent = ""));
+  type();
 });

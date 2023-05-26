@@ -1,5 +1,5 @@
 const rnbwEditor = `
-<div class="hidden-on-mobile direction-column radius-s border padding-m gap-m border"
+<div class="hidden-on-mobile row radius-s border padding-m gap-m border"
 style="min-height: 600px">
 <div class="panel justify-stretch background-primary radius-s border">
     <div class="panel">
@@ -95,7 +95,7 @@ style="min-height: 600px">
         <div class="padding-m gap-s panel border-bottom">
             <div class="justify-stretch">
                 <span class="text-s">Settings</span>
-                <div class="direction-column gap-s justify-end">
+                <div class="row gap-s justify-end">
                     <div class="padding-xs radius-xs">
                         <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
                     </div>
@@ -146,7 +146,7 @@ style="min-height: 600px">
                     </div>
                     <span class="text-s">Display</span>
                 </div>
-                <div class="direction-column gap-s">
+                <div class="row gap-s">
                     <span class="text-s">Flex</span>
                 </div>
             </div>
@@ -157,7 +157,7 @@ style="min-height: 600px">
                     </div>
                     <span class="text-s">Position</span>
                 </div>
-                <div class="direction-column gap-s">
+                <div class="row gap-s">
                     <span class="text-s">Relative</span>
                 </div>
             </div>
@@ -165,7 +165,7 @@ style="min-height: 600px">
     </div>
 </div>
 
-<div class="box direction-row gap-m">
+<div class="box column gap-m">
     <h4 class="border">
         "The first web browser was also an editor. The idea
         being that not only could everyone read content on
@@ -174,35 +174,35 @@ style="min-height: 600px">
         <br>
     </h4>
     <i>Sir Tim Berners-Lee</i>
-    <div class="gap-s direction-row box-s">
+    <div class="gap-s column box-s">
         <div class="box-l size-dropdown gap-xs padding-s" >
             <p class="opacity-m anim" id="anim1">/</p>
         
         </div>
-        <div class="size-dropdown shadow direction-row radius-xs background-primary border anim" id="anim2">
-            <div class="border-bottom box-l direction-row" id ="anim3">
-                <div class="padding-s background-secondary-onhover direction-column gap-s box-l">
+        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2">
+            <div class="border-bottom box-l column" id ="anim3">
+                <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
                     <span class="text-s">Page</span>
                 </div>
-                <div class="padding-s background-secondary-onhover direction-column gap-s box-l" id="filtered-option">
+                <div class="padding-s background-secondary-onhover row gap-s box-l" id="filtered-option">
                     <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
                     <span class="text-s">Div</span>
                 </div>
-                <div class="padding-s background-secondary-onhover direction-column gap-s box-l">
+                <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/text.svg"></svg-icon>
                     <span class="text-s">Span</span>
                 </div>
-                <div class="padding-s background-secondary-onhover direction-column gap-s box-l">
+                <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/image.svg"></svg-icon>
                     <span class="text-s">Image</span>
                 </div>
-                <div class="padding-s background-secondary-onhover direction-column gap-s box-l">
+                <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/link.svg"></svg-icon>
                     <span class="text-s">Link</span>
                 </div>
             </div>
-            <div class="box-l direction-row">
+            <div class="box-l column">
                 <div class="padding-s justify-start">
                     <div class="gap-s align-center">
                         <svg-icon src="https://raincons.rnbw.dev/icons/bullet.svg"></svg-icon>

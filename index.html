@@ -1,608 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>rnbw</title>
-    <meta name="description" content="rainbow">
-    <meta property="og:title" content="design. develop. ship.">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css">
-    <script type="module" src="https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js"></script>
-    <script defer data-domain="rnbw.company" src="https://plausible.io/js/script.js"></script>
-</head>
+    <meta name="description" content="rainbow" />
+    <meta property="og:title" content="design. develop. ship." />
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js"
+    ></script>
+    <script
+      defer
+      data-domain="rnbw.company"
+      src="https://plausible.io/js/script.js"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <rnbw-header></rnbw-header>
-    <div class="view align-center direction-row">
-        <div class="page">
-            <h1 class="text-center">
-                design, meet<br>
-                development.
-            </h1>
-            <rnbw-preview></rnbw-preview>
-            <h3 class="align-center">design that works</h3>
+    <div class="view align-center column">
+      <div class="page">
+        <h1 class="text-center">
+          design, meet<br />
+          development.
+        </h1>
+        <rnbw-preview></rnbw-preview>
+        <h3 class="align-center">design that works</h3>
 
-            <div class="box-l align-center">
-                <p class="box-s text-center">
-                    rnbw is an environment to design in the web medium.
-                    build websites, apps, and design systems. create with
-                    popular libraries or make your stuff. while you act on
-                    your ideas, HTML & CSS are generated in the background.
-                    your design (literally, your code files) is a living
-                    product with unlimited capabilities. it helps you
-                    embrace HTML/CSS as the ultimate design tool and common
-                    ground with your development workflows. when your design
-                    is done, it’s done.
-                </p>
-            </div>
+        <div class="box-l align-center">
+          <p class="box-s text-center">
+            rnbw is an environment to design in the web medium. build websites,
+            apps, and design systems. create with popular libraries or make your
+            stuff. while you act on your ideas, HTML & CSS are generated in the
+            background. your design (literally, your code files) is a living
+            product with unlimited capabilities. it helps you embrace HTML/CSS
+            as the ultimate design tool and common ground with your development
+            workflows. when your design is done, it’s done.
+          </p>
         </div>
-        <img src="images/comp.png">
+      </div>
+      <img src="images/comp.png" />
 
-        <div class="page">
-            <h3 class="align-center">we’re not in canvas anymore</h3>
+      <div class="page">
+        <h3 class="align-center">we’re not in canvas anymore</h3>
 
-            <div class="direction-column gap-xl">
-                <div class="box direction-row">
-                    <p>
-                        HTML and CSS are powerful design tools and happen to
-                        be the presentational programming languages of the
-                        web. essentially, they are everything you see in
-                        your browser. however, it's important to remember
-                        that when designing with these tools, you are
-                        working on something other than a canvas.
-                    </p>
-                </div>
-                <div class="box direction-row">
-                    <p>
-                        Canvas is a blank slate that you can paint with
-                        whatever colors and shapes. however, in rnbw, you’re
-                        designing for the web, so you are working within its
-                        constraints. the web is designed to display content
-                        using an adaptive structure built from boxes nested
-                        inside boxes. this allows for flexibility in moving
-                        and composing content.
-                    </p>
-                </div>
-            </div>
-
-
-            <rnbw-editor></rnbw-editor>
-
-            <h3 class="align-center">simple yet dangerous</h3>
-            <div class="direction-column gap-xl">
-                <div class="box direction-row">
-                    <p>
-                        rnbw is simple enough for anyone. flexible enough
-                        for anything. and open enough to use anyhow. rnbw
-                        differs from traditional vertical software by
-                        focusing on atomic concepts. while features are
-                        great "one-size-fits-all" solutions, atomic concepts
-                        multiply their meaning when combined.
-                    </p>
-                </div>
-                <div class="box direction-row">
-                    <p>
-                        by breaking down complex ideas or objects into
-                        atomic concepts, we can better understand how they
-                        work and interact with each other. rnbw allows users
-                        to build their solutions in the most vertical way
-                        possible that works for them, not others. we believe
-                        this design principle is the key to more powerful
-                        software.
-                    </p>
-                </div>
-            </div>
-            <div class="box align-start">
-                <a href="https://guide.rnbw.dev/" target="_blank" class="gap-m">
-                    <svg-icon src="https://raincons.rnbw.dev/icons/library.svg" class="icon-s"></svg-icon>
-                    <div>
-                        <span class="text-l">a good way to start is to follow the quick
-                            guide ↗</span>
-                    </div>
-                </a>
-            </div>
-            <rnbw-map></rnbw-map>
-
-            <h3 class="align-center">design at your command</h3>
-
-            <div class="direction-column gap-xl">
-                <div class="box direction-row">
-                    <p>
-                        rnbw is prompt-driven and optimized for you and your
-                        keyboard. the command menus are designed to bring
-                        you that feeling of lightness and flow.
-                    </p>
-                </div>
-                <div class="box direction-row">
-                    <p>
-                        keyboard shorcuts are the de-facto way of doing
-                        things in rnbw. hit
-                        <span class="padding-xs radius-s background-secondary">J</span>
-                        for the jumpstart menu. hit
-                        <span class="padding-xs radius-s background-secondary">A</span>
-                        to add something. hit
-                        <span class="padding-xs radius-s background-secondary">W</span>
-                        to do something. you've just learned it!
-                    </p>
-                </div>
-            </div>
-            <img class="dark" src="images/keyboard-dark.svg">
-            <img class="light" src="images/keyboard-light.svg">
-            <div class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile"
-                style="min-height: 600px">
-                <div class="direction-column shadow background-primary radius-s box-s border">
-                    <div class="gap-m border-bottom padding-m justify-stretch box-l">
-                        <div class="gap-s direction-row">
-                            <div class="justify-start gap-s padding-s">
-                                <div>
-                                    <span class="text-l opacity-m">Do something...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="direction-row align-stretch box-l padding-m">
-                        <div class="direction-row align-stretch">
-                            <div class="padding-m gap-s">
-                                <span class="text-s opacity-m">Project</span>
-                            </div>
-                            <div class="justify-stretch padding-s background-secondary radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Add</span>
-                                </div>
-                                <div class="gap-s">
-                                    <span class="text-m">A</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/code-html.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Code</span>
-                                </div>
-                                <div class="gap-s">
-                                    <span class="text-m">C</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/play.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Run</span>
-                                </div>
-                                <div class="gap-s">
-                                    <span class="text-m">R</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/edit.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Design</span>
-                                </div>
-                                <div class="gap-s">
-                                    <span class="text-m">/</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s opacity-m">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/cloud-upload.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Publish</span>
-                                </div>
-                                <div class="gap-s">
-                                    <span class="text-m">P</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s opacity-m">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/share.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Share</span>
-                                </div>
-                                <div class="gap-s">
-                                    <span class="text-m">O</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <span class="text-s opacity-m">Actions</span>
-                                </div>
-                            </div>
-
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/copy.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Cut</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/copy.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Copy</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/copy.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Paste</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <span class="text-s opacity-m">Other</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/component.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Create component</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/cross.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Remove unused styles</span><span class="text-m">(28)</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/copy.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Copy class names</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-l direction-column align-stretch"></div>
-                </div>
-            </div>
-            <h3 class="align-center">files, who knew?</h3>
-
-            <div class="direction-column box-l gap-xl">
-                <div class="box">
-                    <p>
-                        that's right, rnbw lets you open and edit any file
-                        type like html, css, markdown, javascript, and svg
-                        directly within the platform.
-                    </p>
-                </div>
-                <div class="box">
-                    <p>
-                        experience seamless, user-friendly editing as you
-                        visually manipulate your files and bring your
-                        projects to life.
-                    </p>
-                </div>
-            </div>
-            <div class="hidden-on-mobile gap-m direction-column radius-s border padding-m">
-                <div class="panel justify-stretch background-primary radius-s border">
-                    <div class="panel">
-                        <div class="justify-stretch padding-s border-bottom">
-                            <div class="gap-s align-center">
-                                <div class="radius-m icon-s align-center background-secondary"></div>
-                                <span class="text-s opacity-m">/</span>
-                                <div class="gap-s align-center radius-s">
-                                    <div class="radius-m icon-s align-center background-secondary"></div>
-                                    <span class="text-s">Project</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="justify-stretch padding-xs background-secondary">
-                                <div class="gap-s padding-xs">
-                                    <div class="icon-xs"></div>
-                                    <svg-icon src="https://raincons.rnbw.dev/icons/page.svg"></svg-icon>
-                                    <span class="text-s">Page</span>
-                                </div>
-                                <div class="direction-column"></div>
-                            </div>
-                            <div class="justify-stretch padding-xs">
-                                <div class="justify-start gap-s padding-xs">
-                                    <div class="icon-xs"></div>
-                                    <svg-icon src="https://raincons.rnbw.dev/icons/brush.svg"></svg-icon>
-                                    <span class="text-s">Stylesheet</span>
-                                    <div class="radius-s foreground-primary" style="
-                                                width: 6px;
-                                                height: 6px;
-                                            "></div>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-xs">
-                                <div class="gap-s padding-xs">
-                                    <div class="icon-xs"></div>
-                                    <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
-                                    <span class="text-s">Script</span>
-                                </div>
-                                <div class="direction-column"></div>
-                            </div>
-                            <div class="gap-s justify-start padding-s">
-                                <div class="icon-xs"></div>
-                                <svg-icon src="https://raincons.rnbw.dev/icons/component.svg"></svg-icon>
-                                <span class="text-s">Component</span>
-                            </div>
-                            <div>
-                                <div>
-                                    <div class="gap-s justify-start padding-s">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/folder.svg"></svg-icon>
-                                        <span class="text-s">Folder</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="gap-s justify-start padding-s">
-                                        <div class="icon-xs"></div>
-                                        <div class="icon-xs"></div>
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/brush.svg"></svg-icon>
-                                        <span class="text-s">Stylesheet</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="gap-s justify-start padding-s">
-                                        <div class="icon-xs"></div>
-                                        <div class="icon-xs"></div>
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
-                                        <span class="text-s">Script</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box align-stretch">
-                    <div class="box gap-m direction-column">
-                        <h2>
-                            <span>by adopting open standards and using files
-                                as the core, you can easily open and edit
-                                any HTML/CSS/JS project visually, enjoying
-                                the benefits of files without the "meh".
-                            </span>
-                        </h2>
-                        <div class="padding-l border-left background-primary radius-s border opacity-m">
-                            <code>JS CODE GOES HERE</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="align-center direction-row gap-m opacity-m">
-                <span class="text-s padding-s radius-s border background-secondary">coming soon</span>
-                <h3 class="text-center">optimized for openness</h3>
-            </div>
-            <div class="direction-column box-l gap-xl opacity-m">
-                <div class="box">
-                    <p>
-                        rnbw is 100% front-end and offers an open core,
-                        allowing you to
-                        <a href><u>contribute</u></a> directly or make
-                        the platform your own. you can run rnbw locally.
-                    </p>
-                </div>
-                <div class="box">
-                    <p class="gap-s align-start direction-row">
-                        with its api-first approach, you can extend rnbw's
-                        capabilities to suit your needs. you can create
-                        custom actions and take full control of your design
-                        process.
-                    </p>
-                </div>
-            </div>
-            <div class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile"
-                style="min-height: 600px">
-                <div class="direction-column shadow background-primary radius-s box-s border">
-                    <div class="gap-m border-bottom padding-m justify-stretch box-l">
-                        <div class="gap-s direction-row">
-                            <div class="justify-start gap-s padding-s">
-                                <div>
-                                    <span class="text-l opacity-m">Do something...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="direction-row align-stretch box-l padding-m">
-                        <div class="direction-row align-stretch">
-                            <div class="padding-m gap-s">
-                                <span class="text-s opacity-m">Other</span>
-                            </div>
-                            <div class="justify-stretch padding-s background-secondary radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/events.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Create new action</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-l direction-column align-stretch"></div>
-                </div>
-            </div>
-            <rnbw-nav></rnbw-nav>
-            <div class="align-center direction-row gap-m opacity-m">
-                <span class="text-s padding-s radius-s border background-secondary">coming soon</span>
-                <h3 class="text-center">more imagine, less crafting</h3>
-            </div>
-
-            <div class="direction-column gap-xl opacity-m">
-                <div class="box direction-row">
-                    <p>
-                        let AI do the work and unleash your creativity! The
-                        AI-powered design editor allows you to focus on
-                        creating.
-                    </p>
-                </div>
-                <div class="box direction-row">
-                    <p>
-                        rnbw uses artificial intelligence to understand the
-                        structure of your project and provides you with a
-                        range of tools to manage it.
-                    </p>
-                </div>
-            </div>
-            <div class="box align-center radius-s border padding-xl hidden-on-mobile"
-                style="min-height: 600px; position: relative">
-                <div class="opacity-l" style="
-                            position: absolute;
-                            left: 40px;
-                            top: 40px;
-                            right: 40px;
-                        ">
-                    <article>
-                        <h2>Blog Post Title</h2>
-                        <p>Posted on April 30, 2023 by Author Name</p>
-                        <svg-icon src="./images/image.svg" alt="Blog Post Image" class="opacity-m"></svg-icon>
-                        <p>
-                            This is the first paragraph of the blog post. It
-                            should be engaging and give readers an idea of
-                            what to expect in the rest of the article.
-                        </p>
-                        <h3>Subheading 1</h3>
-                        <p>
-                            This paragraph is part of the first section,
-                            which has a subheading to help organize the
-                            content.
-                        </p>
-                        <h3>Subheading 2</h3>
-                        <p>
-                            This paragraph is part of the second section,
-                            which also has a subheading for organization
-                            purposes.
-                        </p>
-                    </article>
-                </div>
-                <div class="direction-column shadow background-primary radius-s box-s border" style="z-index: 999">
-                    <div class="gap-m border-bottom padding-m justify-stretch box-l">
-                        <div class="gap-s direction-row">
-                            <div class="justify-start gap-s padding-s">
-                                <div>
-                                    <span class="text-l opacity-m">Do something...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="direction-row align-stretch box-l padding-m">
-                        <div class="direction-row align-stretch">
-                            <div class="padding-m gap-s">
-                                <span class="text-s opacity-m">Generate</span>
-                            </div>
-                            <div class="justify-stretch padding-s background-secondary radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/repeat-x.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Continue</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/bullet.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Create</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/help.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Explain</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/events.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Brainstorm </span>
-                                </div>
-                            </div>
-                            <div class="padding-m gap-s">
-                                <span class="text-s opacity-m">Edit</span>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/bubble.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Change tone</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/edit.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Improve Writing
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/location.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Simplify </span>
-                                </div>
-                            </div>
-                            <div class="padding-m gap-s">
-                                <span class="text-s opacity-m">Recent</span>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/bullet-outlined.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Create a blog post layout</span>
-                                </div>
-                            </div>
-                            <div class="justify-stretch padding-s radius-xs">
-                                <div class="gap-s align-center">
-                                    <div class="padding-xs">
-                                        <svg-icon src="https://raincons.rnbw.dev/icons/bullet-outlined.svg"></svg-icon>
-                                    </div>
-                                    <span class="text-m">Create a pricing section with the
-                                        active components libraries</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-l direction-column align-stretch"></div>
-                </div>
-            </div>
+        <div class="row gap-xl">
+          <div class="box column">
+            <p>
+              HTML and CSS are powerful design tools and happen to be the
+              presentational programming languages of the web. essentially, they
+              are everything you see in your browser. however, it's important to
+              remember that when designing with these tools, you are working on
+              something other than a canvas.
+            </p>
+          </div>
+          <div class="box column">
+            <p>
+              Canvas is a blank slate that you can paint with whatever colors
+              and shapes. however, in rnbw, you’re designing for the web, so you
+              are working within its constraints. the web is designed to display
+              content using an adaptive structure built from boxes nested inside
+              boxes. this allows for flexibility in moving and composing
+              content.
+            </p>
+          </div>
         </div>
+
+        <rnbw-editor></rnbw-editor>
+
+        <h3 class="align-center">simple yet dangerous</h3>
+        <div class="row gap-xl">
+          <div class="box column">
+            <p>
+              rnbw is simple enough for anyone. flexible enough for anything.
+              and open enough to use anyhow. rnbw differs from traditional
+              vertical software by focusing on atomic concepts. while features
+              are great "one-size-fits-all" solutions, atomic concepts multiply
+              their meaning when combined.
+            </p>
+          </div>
+          <div class="box column">
+            <p>
+              by breaking down complex ideas or objects into atomic concepts, we
+              can better understand how they work and interact with each other.
+              rnbw allows users to build their solutions in the most vertical
+              way possible that works for them, not others. we believe this
+              design principle is the key to more powerful software.
+            </p>
+          </div>
+        </div>
+        <div class="box align-start">
+          <a href="https://guide.rnbw.dev/" target="_blank" class="gap-m">
+            <svg-icon
+              src="https://raincons.rnbw.dev/icons/library.svg"
+              class="icon-s"
+            ></svg-icon>
+            <div>
+              <span class="text-l"
+                >a good way to start is to follow the quick guide ↗</span
+              >
+            </div>
+          </a>
+        </div>
+        <rnbw-map></rnbw-map>
+
+        <h3 class="align-center">design at your command</h3>
+
+        <div class="row gap-xl">
+          <div class="box column">
+            <p>
+              rnbw is prompt-driven and optimized for you and your keyboard. the
+              command menus are designed to bring you that feeling of lightness
+              and flow.
+            </p>
+          </div>
+          <div class="box column">
+            <p>
+              keyboard shorcuts are the de-facto way of doing things in rnbw.
+              hit
+              <span class="padding-xs radius-s background-secondary">J</span>
+              for the jumpstart menu. hit
+              <span class="padding-xs radius-s background-secondary">A</span>
+              to add something. hit
+              <span class="padding-xs radius-s background-secondary">W</span>
+              to do something. you've just learned it!
+            </p>
+          </div>
+        </div>
+        <img class="dark" src="images/keyboard-dark.svg" />
+        <img class="light" src="images/keyboard-light.svg" />
+        <div
+          class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile"
+          style="min-height: 600px"
+        >
+          <div class="row shadow background-primary radius-s box-s border">
+            <div class="gap-m border-bottom padding-m justify-stretch box-l">
+              <div class="gap-s column">
+                <div class="justify-start gap-s padding-s">
+                  <div>
+                    <span class="text-l opacity-m">Do something...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column align-stretch box-l padding-m">
+              <div class="column align-stretch">
+                <div class="padding-m gap-s">
+                  <span class="text-s opacity-m">Project</span>
+                </div>
+                <div
+                  class="justify-stretch padding-s background-secondary radius-xs"
+                >
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/plus.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Add</span>
+                  </div>
+                  <div class="gap-s">
+                    <span class="text-m">A</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/code-html.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Code</span>
+                  </div>
+                  <div class="gap-s">
+                    <span class="text-m">C</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/play.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Run</span>
+                  </div>
+                  <div class="gap-s">
+                    <span class="text-m">R</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/edit.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Design</span>
+                  </div>
+                  <div class="gap-s">
+                    <span class="text-m">/</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s opacity-m">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/cloud-upload.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Publish</span>
+                  </div>
+                  <div class="gap-s">
+                    <span class="text-m">P</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s opacity-m">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/share.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Share</span>
+                  </div>
+                  <div class="gap-s">
+                    <span class="text-m">O</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <span class="text-s opacity-m">Actions</span>
+                  </div>
+                </div>
+
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/copy.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Cut</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/copy.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Copy</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/copy.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Paste</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <span class="text-s opacity-m">Other</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/component.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Create component</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/cross.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Remove unused styles</span
+                    ><span class="text-m">(28)</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/copy.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Copy class names</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-l row align-stretch"></div>
+          </div>
+        </div>
+        <h3 class="align-center">files, who knew?</h3>
+
+        <div class="row box-l gap-xl">
+          <div class="box">
+            <p>
+              that's right, rnbw lets you open and edit any file type like html,
+              css, markdown, javascript, and svg directly within the platform.
+            </p>
+          </div>
+          <div class="box">
+            <p>
+              experience seamless, user-friendly editing as you visually
+              manipulate your files and bring your projects to life.
+            </p>
+          </div>
+        </div>
+        <div class="hidden-on-mobile gap-m row radius-s border padding-m">
+          <div class="panel justify-stretch background-primary radius-s border">
+            <div class="panel">
+              <div class="justify-stretch padding-s border-bottom">
+                <div class="gap-s align-center">
+                  <div
+                    class="radius-m icon-s align-center background-secondary"
+                  ></div>
+                  <span class="text-s opacity-m">/</span>
+                  <div class="gap-s align-center radius-s">
+                    <div
+                      class="radius-m icon-s align-center background-secondary"
+                    ></div>
+                    <span class="text-s">Project</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="justify-stretch padding-xs background-secondary">
+                  <div class="gap-s padding-xs">
+                    <div class="icon-xs"></div>
+                    <svg-icon
+                      src="https://raincons.rnbw.dev/icons/page.svg"
+                    ></svg-icon>
+                    <span class="text-s">Page</span>
+                  </div>
+                  <div class="row"></div>
+                </div>
+                <div class="justify-stretch padding-xs">
+                  <div class="justify-start gap-s padding-xs">
+                    <div class="icon-xs"></div>
+                    <svg-icon
+                      src="https://raincons.rnbw.dev/icons/brush.svg"
+                    ></svg-icon>
+                    <span class="text-s">Stylesheet</span>
+                    <div
+                      class="radius-s foreground-primary"
+                      style="width: 6px; height: 6px"
+                    ></div>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-xs">
+                  <div class="gap-s padding-xs">
+                    <div class="icon-xs"></div>
+                    <svg-icon
+                      src="https://raincons.rnbw.dev/icons/code-js.svg"
+                    ></svg-icon>
+                    <span class="text-s">Script</span>
+                  </div>
+                  <div class="row"></div>
+                </div>
+                <div class="gap-s justify-start padding-s">
+                  <div class="icon-xs"></div>
+                  <svg-icon
+                    src="https://raincons.rnbw.dev/icons/component.svg"
+                  ></svg-icon>
+                  <span class="text-s">Component</span>
+                </div>
+                <div>
+                  <div>
+                    <div class="gap-s justify-start padding-s">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/down.svg"
+                      ></svg-icon>
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/folder.svg"
+                      ></svg-icon>
+                      <span class="text-s">Folder</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="gap-s justify-start padding-s">
+                      <div class="icon-xs"></div>
+                      <div class="icon-xs"></div>
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/brush.svg"
+                      ></svg-icon>
+                      <span class="text-s">Stylesheet</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="gap-s justify-start padding-s">
+                      <div class="icon-xs"></div>
+                      <div class="icon-xs"></div>
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/code-js.svg"
+                      ></svg-icon>
+                      <span class="text-s">Script</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box align-stretch">
+            <div class="box gap-m row">
+              <h2>
+                <span
+                  >by adopting open standards and using files as the core, you
+                  can easily open and edit any HTML/CSS/JS project visually,
+                  enjoying the benefits of files without the "meh".
+                </span>
+              </h2>
+              <div
+                class="padding-l border-left background-primary radius-s border opacity-m"
+              >
+                <code>JS CODE GOES HERE</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="align-center column gap-m opacity-m">
+          <span class="text-s padding-s radius-s border background-secondary"
+            >coming soon</span
+          >
+          <h3 class="text-center">optimized for openness</h3>
+        </div>
+        <div class="row box-l gap-xl opacity-m">
+          <div class="box">
+            <p>
+              rnbw is 100% front-end and offers an open core, allowing you to
+              <a href><u>contribute</u></a> directly or make the platform your
+              own. you can run rnbw locally.
+            </p>
+          </div>
+          <div class="box">
+            <p class="gap-s align-start column">
+              with its api-first approach, you can extend rnbw's capabilities to
+              suit your needs. you can create custom actions and take full
+              control of your design process.
+            </p>
+          </div>
+        </div>
+        <div
+          class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile"
+          style="min-height: 600px"
+        >
+          <div class="row shadow background-primary radius-s box-s border">
+            <div class="gap-m border-bottom padding-m justify-stretch box-l">
+              <div class="gap-s column">
+                <div class="justify-start gap-s padding-s">
+                  <div>
+                    <span class="text-l opacity-m">Do something...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column align-stretch box-l padding-m">
+              <div class="column align-stretch">
+                <div class="padding-m gap-s">
+                  <span class="text-s opacity-m">Other</span>
+                </div>
+                <div
+                  class="justify-stretch padding-s background-secondary radius-xs"
+                >
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/events.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Create new action</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-l row align-stretch"></div>
+          </div>
+        </div>
+        <rnbw-nav></rnbw-nav>
+        <div class="align-center column gap-m opacity-m">
+          <span class="text-s padding-s radius-s border background-secondary"
+            >coming soon</span
+          >
+          <h3 class="text-center">more imagine, less crafting</h3>
+        </div>
+
+        <div class="row gap-xl opacity-m">
+          <div class="box column">
+            <p>
+              let AI do the work and unleash your creativity! The AI-powered
+              design editor allows you to focus on creating.
+            </p>
+          </div>
+          <div class="box column">
+            <p>
+              rnbw uses artificial intelligence to understand the structure of
+              your project and provides you with a range of tools to manage it.
+            </p>
+          </div>
+        </div>
+        <div
+          class="box align-center radius-s border padding-xl hidden-on-mobile"
+          style="min-height: 600px; position: relative"
+        >
+          <div
+            class="opacity-l"
+            style="position: absolute; left: 40px; top: 40px; right: 40px"
+          >
+            <article>
+              <h2>Blog Post Title</h2>
+              <p>Posted on April 30, 2023 by Author Name</p>
+              <svg-icon
+                src="./images/image.svg"
+                alt="Blog Post Image"
+                class="opacity-m"
+              ></svg-icon>
+              <p>
+                This is the first paragraph of the blog post. It should be
+                engaging and give readers an idea of what to expect in the rest
+                of the article.
+              </p>
+              <h3>Subheading 1</h3>
+              <p>
+                This paragraph is part of the first section, which has a
+                subheading to help organize the content.
+              </p>
+              <h3>Subheading 2</h3>
+              <p>
+                This paragraph is part of the second section, which also has a
+                subheading for organization purposes.
+              </p>
+            </article>
+          </div>
+          <div
+            class="row shadow background-primary radius-s box-s border"
+            style="z-index: 999"
+          >
+            <div class="gap-m border-bottom padding-m justify-stretch box-l">
+              <div class="gap-s column">
+                <div class="justify-start gap-s padding-s">
+                  <div>
+                    <span class="text-l opacity-m">Do something...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column align-stretch box-l padding-m">
+              <div class="column align-stretch">
+                <div class="padding-m gap-s">
+                  <span class="text-s opacity-m">Generate</span>
+                </div>
+                <div
+                  class="justify-stretch padding-s background-secondary radius-xs"
+                >
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/repeat-x.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Continue</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/bullet.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Create</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/help.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Explain</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/events.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Brainstorm </span>
+                  </div>
+                </div>
+                <div class="padding-m gap-s">
+                  <span class="text-s opacity-m">Edit</span>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/bubble.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Change tone</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/edit.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Improve Writing </span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/location.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Simplify </span>
+                  </div>
+                </div>
+                <div class="padding-m gap-s">
+                  <span class="text-s opacity-m">Recent</span>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/bullet-outlined.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m">Create a blog post layout</span>
+                  </div>
+                </div>
+                <div class="justify-stretch padding-s radius-xs">
+                  <div class="gap-s align-center">
+                    <div class="padding-xs">
+                      <svg-icon
+                        src="https://raincons.rnbw.dev/icons/bullet-outlined.svg"
+                      ></svg-icon>
+                    </div>
+                    <span class="text-m"
+                      >Create a pricing section with the active components
+                      libraries</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-l row align-stretch"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <rnbw-footer></rnbw-footer>
-</body>
-<script src="https://guide.rnbw.dev/rnbw-map.js"></script>
-<script src="rnbw-editor.js"></script>
-<script src="rnbw-header.js"></script>
-<script src="rnbw-nav.js"></script>
-<script src="rnbw-footer.js"></script>
-<script src="rnbw-preview.js"></script>
-
+  </body>
+  <script src="https://guide.rnbw.dev/rnbw-map.js"></script>
+  <script src="rnbw-editor.js"></script>
+  <script src="rnbw-header.js"></script>
+  <script src="rnbw-nav.js"></script>
+  <script src="rnbw-footer.js"></script>
+  <script src="rnbw-preview.js"></script>
 </html>
