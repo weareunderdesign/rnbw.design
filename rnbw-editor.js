@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let anim3Div = rnbwMapElement.querySelectorAll("#anim3")[0];
   let anim4Div = rnbwMapElement.querySelectorAll("#anim4")[0];
 
-  const fadeInSections = [anim1Div, anim2Div, anim3];
+  const fadeInSections = [anim1Div, anim2Div, anim3Div];
 
   let delay = 0;
   let charIndex = 0;
@@ -361,6 +361,4 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeInSections.forEach((section) => {
     observer.observe(section);
   });
-
-  animationSequence();
 });
