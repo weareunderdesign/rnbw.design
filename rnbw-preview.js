@@ -322,7 +322,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+  const code = document.querySelector("code");
+  const text = code.textContent;
+  code.textContent = "";
 
+  let i = 0;
+  function typeCode() {
+    if (i < text.length) {
+      code.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeCode, 25); // adjust the delay time as needed
+    }
+  }
+
+  typeCode();
   spans.forEach((span) => span.setAttribute("data-text", span.textContent));
   spans.forEach((span) => (span.textContent = ""));
   type();
