@@ -105,6 +105,11 @@
         </script>
 
         <script>
+          function generateUniqueId() {
+            const timestamp = Date.now().toString(16);
+            const randomString = Math.random().toString(16).substring(2, 8);
+            return timestamp + randomString;
+          }
           // Handle form submission, send data to Intercom, and redirect
           document
             .getElementById("signup-form")
@@ -124,16 +129,20 @@
               };
 
               // Add the company name to the Intercom data object only if it has a value
+              const uniqueId = generateUniqueId();
               if (companyName) {
-                intercomData.companyName = companyName;
+                intercomData.company = {
+                  id: uniqueId,
+                  name: companyName,
+                };
               }
+              console.log(intercomData);
 
               // Send data to Intercom
-              console.log(intercomData);
-              window.Intercom("boot", intercomData);
+              // window.Intercom("boot", intercomData);
 
               // Redirect to another site
-              window.location.href = "https://rnbw.dev";
+              // window.location.href = "https://rnbw.dev";
             });
         </script>
       </div>
