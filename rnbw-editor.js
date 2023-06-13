@@ -1,6 +1,6 @@
 const rnbwEditor = `
-<div class="hidden-on-mobile row radius-s border padding-m gap-m border"
-style="min-height: 600px">
+<div class="hidden-on-mobile row radius-s border padding-m gap-m border" id="rnbw-editor"
+style="min-height: 630px">
 <div class="panel justify-stretch background-primary radius-s border">
     <div class="panel">
         <div class="justify-stretch padding-s border-bottom">
@@ -273,11 +273,15 @@ document.head.appendChild(style);
 document.addEventListener("DOMContentLoaded", () => {
   const rnbwMapElement = document.querySelector("rnbw-editor");
 
-  let anim1Div = rnbwMapElement.querySelectorAll("#anim1")[0];
-  let anim2Div = rnbwMapElement.querySelectorAll("#anim2")[0];
-  let anim3Div = rnbwMapElement.querySelectorAll("#anim3")[0];
-  let anim4Div = rnbwMapElement.querySelectorAll("#anim4")[0];
+  function getAnimationSection() {
+    let anim1Div = rnbwMapElement.querySelectorAll("#anim1")[0];
+    let anim2Div = rnbwMapElement.querySelectorAll("#anim2")[0];
+    let anim3Div = rnbwMapElement.querySelectorAll("#anim3")[0];
+    let anim4Div = rnbwMapElement.querySelectorAll("#anim4")[0];
+    return [anim1Div, anim2Div, anim3Div, anim4Div];
+  }
 
+  const [anim1Div, anim2Div, anim3Div] = getAnimationSection();
   const fadeInSections = [anim1Div, anim2Div, anim3Div];
 
   let delay = 0;
@@ -293,6 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(async () => {
         await entry.target.classList.add("is-visible");
         if (entry.target.id == "anim2") {
+          setAnim1();
           type();
           filterAndSelectDiv();
         }
@@ -310,10 +315,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const observer = new IntersectionObserver(fadeInOnScroll, options);
-
-  let anim1 = document.querySelectorAll("rnbw-editor #anim1");
-  anim1.forEach((span) => span.setAttribute("data-text", "/d"));
-  anim1.forEach((span) => (span.textContent = "/"));
+  function setAnim1() {
+    let anim1 = document.querySelectorAll("rnbw-editor #anim1");
+    anim1.forEach((span) => span.setAttribute("data-text", "/d"));
+    anim1.forEach((span) => (span.textContent = "/"));
+  }
 
   function type() {
     if (index < anim1.length) {
@@ -335,6 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterAndSelectDiv() {
+    const [anim1Div, anim2Div, anim3Div, anim4Div] = getAnimationSection();
     let anim3DivChildren = anim3Div.children;
     for (let i = 0; i < anim3DivChildren.length; i++) {
       if (anim3DivChildren[i].id == "filtered-option") {
@@ -356,6 +363,34 @@ document.addEventListener("DOMContentLoaded", () => {
       anim2Div.classList.add("hide");
       document.getElementById("logo").classList.add("background-secondary");
       anim4Div.classList.remove("hide");
+
+      setTimeout(() => {
+        const element = document.getElementById("rnbw-editor");
+        element.style.transition = "opacity 0.5s ease-in-out";
+        element.style.opacity = 0;
+        setTimeout(() => {
+          rnbwMapElement.innerHTML = rnbwEditor;
+          setTimeout(() => {
+            element.style.opacity = 1;
+          }, 500);
+        }, 500);
+
+        setTimeout(() => {
+          const animationSection = getAnimationSection();
+          const fadeInSections = [
+            animationSection[0],
+            animationSection[1],
+            animationSection[2],
+          ];
+          delay = 0;
+          charIndex = 0;
+          index = 0;
+          //restart intersection observer
+          fadeInSections.forEach((section) => {
+            observer.observe(section);
+          });
+        }, 1000);
+      }, 1000);
     }, delay);
   }
   fadeInSections.forEach((section) => {
