@@ -16,7 +16,7 @@ const rnbwFiles = `
         </div>
       </div>
     </div>
-    <div>
+    <div id="reset">
       <div class="justify-stretch padding-xs background-secondary" id="anim-1">
         <div class="gap-s padding-xs">
           <div class="icon-xs"></div>
@@ -124,10 +124,16 @@ class RnbwFiles extends HTMLElement {
 customElements.define("rnbw-files", RnbwFiles);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const rnbwFiles = document.querySelector("rnbw-files");
-  let anim1 = rnbwFiles.querySelectorAll("#anim-1")[0];
-  let anim2 = rnbwFiles.querySelectorAll("#anim-2")[0];
-  let anim3 = rnbwFiles.querySelectorAll("#anim-3")[0];
+  const rnbwFilesElement = document.querySelector("rnbw-files");
+
+  const getAnims = () => {
+    let anim1 = rnbwFilesElement.querySelectorAll("#anim-1")[0];
+    let anim2 = rnbwFilesElement.querySelectorAll("#anim-2")[0];
+    let anim3 = rnbwFilesElement.querySelectorAll("#anim-3")[0];
+    return [anim1, anim2, anim3];
+  };
+
+  const [anim1] = getAnims();
   let delay = 250;
   const options = {
     root: null,
@@ -139,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(anim1);
 
   function animateOnIntersect(entries, observer) {
+    const [anim1, anim2, anim3] = getAnims();
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
@@ -159,5 +166,22 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.unobserve(entry.target);
       }
     });
+
+    setTimeout(() => {
+      const element = document.getElementById("reset");
+      element.style.transition = "opacity 0.5s ease-in-out";
+      element.style.opacity = 0;
+      setTimeout(() => {
+        rnbwFilesElement.innerHTML = rnbwFiles;
+        setTimeout(() => {
+          element.style.opacity = 1;
+          setTimeout(() => {
+            const [anim1] = getAnims();
+            delay = 0;
+            observer.observe(anim1);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    }, 2500);
   }
 });
