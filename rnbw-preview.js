@@ -312,9 +312,14 @@ document.addEventListener("DOMContentLoaded", function () {
       spans[index].classList.remove("hidden");
       const originalText = spans[index].getAttribute("data-text");
       if (charIndex < originalText.length) {
+        let char = originalText.charAt(charIndex);
         spans[index].textContent = originalText.slice(0, charIndex + 1);
         charIndex++;
-        setTimeout(type, 50);
+        if (char === ">") {
+          setTimeout(type, 1000);
+        } else {
+          setTimeout(type, 100);
+        }
       } else {
         charIndex = 0;
         index++;
@@ -331,7 +336,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (i < text.length) {
       code.textContent += text.charAt(i);
       i++;
-      setTimeout(typeCode, 25); // adjust the delay time as needed
+      if (text.charAt(i) === ">") {
+        setTimeout(typeCode, 1000);
+      } else {
+        setTimeout(typeCode, 25); // adjust the delay time as needed
+      }
     }
   }
 
