@@ -167,18 +167,31 @@ class RnbwBlog extends HTMLElement {
 }
 
 customElements.define("rnbw-blog", RnbwBlog);
+const rules = `
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+`;
+if (!!style) style.innerHTML = style.innerHTML + rules;
 
 document.addEventListener("DOMContentLoaded", function () {
   const rnbwBlogElement = document.querySelector("rnbw-blog");
 
   function getAnimationElements() {
-    let anim1 = rnbwBlogElement.querySelectorAll("#anim-1")[0];
-    let anim3 = rnbwBlogElement.querySelectorAll("#anim-3")[0];
-    let anim4 = rnbwBlogElement.querySelectorAll("#anim-4")[0];
-    let anim5 = rnbwBlogElement.querySelectorAll("#anim-5")[0];
-    let anim6 = rnbwBlogElement.querySelectorAll("#anim-6")[0];
-    return { anim1, anim3, anim4, anim5, anim6 };
+    return {
+      anim1: rnbwBlogElement.querySelector("#anim-1"),
+      anim3: rnbwBlogElement.querySelector("#anim-3"),
+      anim4: rnbwBlogElement.querySelector("#anim-4"),
+      anim5: rnbwBlogElement.querySelector("#anim-5"),
+      anim6: rnbwBlogElement.querySelector("#anim-6"),
+    };
   }
+
   const { anim1 } = getAnimationElements();
   let delay = 250;
 
@@ -191,45 +204,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(animateOnIntersect, options);
   observer.observe(anim1);
 
-  function animateOnIntersect(entries, observer) {
-    //set opacity of all the anim5 children to 0
-    //convert to array
+  function makeAnim5ChildrenInvisible() {
     const { anim5 } = getAnimationElements();
     let anim5DivChildren = Array.from(anim5.children);
+    anim5.style.opacity = 0;
     anim5DivChildren.forEach((child) => {
       child.style.opacity = 0;
       //add transition
       child.style.transition = "opacity 0.5s ease-in-out";
     });
+  }
 
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          type();
-        }, 1000);
-        observer.unobserve(entry.target);
-      }
-    });
+  function animateOnIntersect(entries, observer) {
+    setTimeout(() => {
+      makeAnim5ChildrenInvisible();
+      type();
+    }, 1000);
+    observer.unobserve(entries[0].target);
   }
 
   const span = document.querySelector("rnbw-blog #anim-1");
 
-  //
-
   let i = 0;
   const text = span.dataset.type;
   function type() {
-    console.log({ i, text });
     if (i < text.length) {
       if (i == 0) {
         span.textContent = "";
       }
       span.textContent += text.charAt(i);
       i++;
-      setTimeout(type, 50); // adjust the delay time as needed
       delay += 50;
-    }
-    if (i == text.length) {
+      setTimeout(type, 50); // adjust the delay time as needed
+    } else {
       filterAndSelectDiv();
     }
   }
@@ -244,37 +251,48 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         continue;
       }
-      if (i === anim4DivChildren.length - 1) {
-        setTimeout(() => {
-          anim3.classList.add("background-secondary");
-          setTimeout(() => {
-            anim5.style.opacity = "1";
-            anim6.style.opacity = "0";
-            let anim5DivChildren = Array.from(anim5.children);
-            let timer = 250;
-            anim5DivChildren.forEach((child) => {
-              setTimeout(() => {
-                child.style.opacity = 1;
-              }, timer);
-              timer += 250;
-            });
-            setTimeout(() => {
-              rnbwBlogElement.innerHTML = rnbwBlog;
-              delay = 250;
-              i = 0;
-              setTimeout(() => {
-                const { anim1 } = getAnimationElements();
-                observer.observe(anim1);
-              }, 1000);
-            }, 250 * anim5DivChildren.length + 1000);
-          }, 250);
-        }, delay);
-      }
       setTimeout(() => {
         //add inline style to the children of display none
         anim4DivChildren[i].style.display = "none";
       }, delay);
       delay += 50;
+      if (i === anim4DivChildren.length - 1) {
+        delay += 500;
+        anim4DivChildren[1].classList.remove("background-secondary");
+        anim3.classList.add("background-secondary");
+        setTimeout(() => {
+          anim5.style.opacity = "1";
+          anim6.style.opacity = "0";
+
+          let anim5DivChildren = Array.from(anim5.children);
+          let timer = 500;
+          anim5DivChildren.forEach((child) => {
+            setTimeout(() => {
+              child.style.opacity = 1;
+            }, timer);
+            timer += 500;
+          });
+          setTimeout(() => {
+            resetAnimation();
+          }, timer);
+        }, delay);
+      }
     }
+  }
+
+  function resetAnimation() {
+    const { anim3, anim4, anim6 } = getAnimationElements();
+    let anim4DivChildren = anim4.children;
+    makeAnim5ChildrenInvisible();
+    anim3.classList.remove("background-secondary");
+    for (let i = 0; i < anim4DivChildren.length; i++) {
+      anim4DivChildren[i].style.display = "flex";
+    }
+    setTimeout(() => {
+      anim6.style.opacity = "1";
+      delay = 250;
+      i = 0;
+      observer.observe(anim1);
+    }, 500);
   }
 });
