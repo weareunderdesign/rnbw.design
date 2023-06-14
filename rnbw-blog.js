@@ -169,12 +169,17 @@ class RnbwBlog extends HTMLElement {
 customElements.define("rnbw-blog", RnbwBlog);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const rnbwBlog = document.querySelector("rnbw-blog");
-  let anim1 = rnbwBlog.querySelectorAll("#anim-1")[0];
-  let anim3 = rnbwBlog.querySelectorAll("#anim-3")[0];
-  let anim4 = rnbwBlog.querySelectorAll("#anim-4")[0];
-  let anim5 = rnbwBlog.querySelectorAll("#anim-5")[0];
-  let anim6 = rnbwBlog.querySelectorAll("#anim-6")[0];
+  const rnbwBlogElement = document.querySelector("rnbw-blog");
+
+  function getAnimationElements() {
+    let anim1 = rnbwBlogElement.querySelectorAll("#anim-1")[0];
+    let anim3 = rnbwBlogElement.querySelectorAll("#anim-3")[0];
+    let anim4 = rnbwBlogElement.querySelectorAll("#anim-4")[0];
+    let anim5 = rnbwBlogElement.querySelectorAll("#anim-5")[0];
+    let anim6 = rnbwBlogElement.querySelectorAll("#anim-6")[0];
+    return { anim1, anim3, anim4, anim5, anim6 };
+  }
+  const { anim1 } = getAnimationElements();
   let delay = 250;
 
   const options = {
@@ -189,12 +194,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function animateOnIntersect(entries, observer) {
     //set opacity of all the anim5 children to 0
     //convert to array
+    const { anim5 } = getAnimationElements();
     let anim5DivChildren = Array.from(anim5.children);
     anim5DivChildren.forEach((child) => {
       child.style.opacity = 0;
       //add transition
       child.style.transition = "opacity 0.5s ease-in-out";
     });
+
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
@@ -206,11 +213,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const span = document.querySelector("rnbw-blog #anim-1");
-  const text = span.dataset.type;
+
   //
 
   let i = 0;
+  const text = span.dataset.type;
   function type() {
+    console.log({ i, text });
     if (i < text.length) {
       if (i == 0) {
         span.textContent = "";
@@ -226,6 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function filterAndSelectDiv() {
+    const { anim3, anim4, anim5, anim6 } = getAnimationElements();
     let anim4DivChildren = anim4.children;
     for (let i = 0; i < anim4DivChildren.length; i++) {
       if (
@@ -248,6 +258,15 @@ document.addEventListener("DOMContentLoaded", function () {
               }, timer);
               timer += 250;
             });
+            setTimeout(() => {
+              rnbwBlogElement.innerHTML = rnbwBlog;
+              delay = 250;
+              i = 0;
+              setTimeout(() => {
+                const { anim1 } = getAnimationElements();
+                observer.observe(anim1);
+              }, 1000);
+            }, 250 * anim5DivChildren.length + 1000);
           }, 250);
         }, delay);
       }

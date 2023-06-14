@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < anim1.length) {
       anim1[index].classList.remove("hidden");
       const originalText = anim1[index].getAttribute("data-text");
-      if (charIndex < originalText.length) {
+      if (!!originalText && charIndex < originalText.length) {
         anim1[index].textContent = originalText.slice(0, charIndex + 1);
         charIndex++;
 
