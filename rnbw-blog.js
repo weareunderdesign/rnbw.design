@@ -187,6 +187,14 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(anim1);
 
   function animateOnIntersect(entries, observer) {
+    //set opacity of all the anim5 children to 0
+    //convert to array
+    let anim5DivChildren = Array.from(anim5.children);
+    anim5DivChildren.forEach((child) => {
+      child.style.opacity = 0;
+      //add transition
+      child.style.transition = "opacity 0.5s ease-in-out";
+    });
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
@@ -232,6 +240,14 @@ document.addEventListener("DOMContentLoaded", function () {
           setTimeout(() => {
             anim5.style.opacity = "1";
             anim6.style.opacity = "0";
+            let anim5DivChildren = Array.from(anim5.children);
+            let timer = 250;
+            anim5DivChildren.forEach((child) => {
+              setTimeout(() => {
+                child.style.opacity = 1;
+              }, timer);
+              timer += 250;
+            });
           }, 250);
         }, delay);
       }
