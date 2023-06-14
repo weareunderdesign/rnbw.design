@@ -278,10 +278,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let anim2Div = rnbwMapElement.querySelectorAll("#anim2")[0];
     let anim3Div = rnbwMapElement.querySelectorAll("#anim3")[0];
     let anim4Div = rnbwMapElement.querySelectorAll("#anim4")[0];
-    return [anim1Div, anim2Div, anim3Div, anim4Div];
+    return { anim1Div, anim2Div, anim3Div, anim4Div };
   }
 
-  const [anim1Div, anim2Div, anim3Div] = getAnimationSection();
+  const { anim1Div, anim2Div, anim3Div } = getAnimationSection();
   const fadeInSections = [anim1Div, anim2Div, anim3Div];
 
   let delay = 0;
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterAndSelectDiv() {
-    const [anim1Div, anim2Div, anim3Div, anim4Div] = getAnimationSection();
+    const { anim1Div, anim2Div, anim3Div, anim4Div } = getAnimationSection();
     let anim3DivChildren = anim3Div.children;
     for (let i = 0; i < anim3DivChildren.length; i++) {
       if (anim3DivChildren[i].id == "filtered-option") {
@@ -376,12 +376,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500);
 
         setTimeout(() => {
-          const animationSection = getAnimationSection();
-          const fadeInSections = [
-            animationSection[0],
-            animationSection[1],
-            animationSection[2],
-          ];
+          const { anim1Div, anim2Div, anim3Div } = getAnimationSection();
+          const fadeInSections = [anim1Div, anim2Div, anim3Div];
           delay = 0;
           charIndex = 0;
           index = 0;
