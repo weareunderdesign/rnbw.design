@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let anim1 = rnbwFilesElement.querySelectorAll("#anim-1")[0];
     let anim2 = rnbwFilesElement.querySelectorAll("#anim-2")[0];
     let anim3 = rnbwFilesElement.querySelectorAll("#anim-3")[0];
-    return [anim1, anim2, anim3];
+    return { anim1, anim2, anim3 };
   };
 
-  const [anim1] = getAnims();
+  const { anim1 } = getAnims();
   let delay = 250;
   const options = {
     root: null,
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(anim1);
 
   function animateOnIntersect(entries, observer) {
-    const [anim1, anim2, anim3] = getAnims();
+    const { anim1, anim2, anim3 } = getAnims();
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
           element.style.opacity = 1;
           setTimeout(() => {
-            const [anim1] = getAnims();
+            const { anim1 } = getAnims();
             delay = 0;
             observer.observe(anim1);
           }, 1000);
