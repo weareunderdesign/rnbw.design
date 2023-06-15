@@ -361,19 +361,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       anim1Div.classList.add("hide");
       anim2Div.classList.add("hide");
-      document.getElementById("logo").classList.add("background-secondary");
+      document.getElementById("logo").classList.remove("background-secondary");
       anim4Div.classList.remove("hide");
 
       setTimeout(() => {
-        const element = document.getElementById("rnbw-editor");
-        element.style.transition = "opacity 0.5s ease-in-out";
-        element.style.opacity = 0;
-        setTimeout(() => {
-          rnbwMapElement.innerHTML = rnbwEditor;
-          setTimeout(() => {
-            element.style.opacity = 1;
-          }, 500);
-        }, 500);
+        reset();
 
         setTimeout(() => {
           const { anim1Div, anim2Div, anim3Div } = getAnimationSection();
@@ -381,13 +373,41 @@ document.addEventListener("DOMContentLoaded", () => {
           delay = 0;
           charIndex = 0;
           index = 0;
-          //restart intersection observer
+          //   restart intersection observer
           fadeInSections.forEach((section) => {
             observer.observe(section);
           });
         }, 1000);
       }, 1000);
     }, delay);
+  }
+
+  function reset() {
+    const { anim1Div, anim2Div, anim3Div, anim4Div } = getAnimationSection();
+    const element = document.getElementById("rnbw-editor");
+    element.style.transition = "opacity 0.5s ease-in-out";
+    // element.style.opacity = 0;
+    setTimeout(() => {
+      anim4Div.classList.add("hide");
+      anim1Div.classList.remove("hide");
+      anim2Div.classList.remove("hide");
+      document.getElementById("logo").classList.remove("background-secondary");
+
+      let anim3DivChildren = anim3Div.children;
+      for (let i = 0; i < anim3DivChildren.length; i++) {
+        if (anim3DivChildren[i].id == "filtered-option") {
+          anim3DivChildren[i].classList.remove("background-secondary");
+          continue;
+        }
+        anim3DivChildren[i].classList.remove("hide");
+      }
+
+      let anim1 = document.querySelectorAll("rnbw-editor #anim1");
+      anim1.forEach((span) => {
+        span.textContent = "";
+        span.removeAttribute("data-text");
+      });
+    }, 500);
   }
   fadeInSections.forEach((section) => {
     observer.observe(section);
