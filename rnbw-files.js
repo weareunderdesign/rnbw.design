@@ -155,33 +155,36 @@ document.addEventListener("DOMContentLoaded", function () {
           setTimeout(() => {
             anim2.classList.add("background-secondary");
             delay += 250;
-          }, delay);
 
-          setTimeout(() => {
-            anim3.style.opacity = 1;
-            delay += 250;
+            setTimeout(() => {
+              anim3.style.opacity = 1;
+              delay += 250;
+
+              setTimeout(() => {
+                reset();
+              }, delay);
+            }, delay);
           }, delay);
         }, delay);
 
         observer.unobserve(entry.target);
       }
     });
+  }
+
+  function reset() {
+    const { anim1, anim2, anim3 } = getAnims();
 
     setTimeout(() => {
-      const element = document.getElementById("reset");
-      element.style.transition = "opacity 0.5s ease-in-out";
-      element.style.opacity = 0;
+      anim3.style.opacity = 0;
+      anim2.classList.remove("background-secondary");
+    }, 200);
+    setTimeout(() => {
+      anim1.classList.add("background-secondary");
+      delay = 250;
       setTimeout(() => {
-        rnbwFilesElement.innerHTML = rnbwFiles;
-        setTimeout(() => {
-          element.style.opacity = 1;
-          setTimeout(() => {
-            const { anim1 } = getAnims();
-            delay = 0;
-            observer.observe(anim1);
-          }, 1000);
-        }, 1000);
-      }, 1000);
-    }, 2500);
+        observer.observe(anim1);
+      }, 500);
+    }, 1000);
   }
 });
