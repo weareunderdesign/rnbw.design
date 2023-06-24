@@ -57,8 +57,8 @@ style="min-height: 630px">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
                             <svg-icon src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                            <span class="text-s">Div</span>
+                            <svg-icon src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
+                            <span class="text-s">H1</span>
                         </div>
                     </div>
                     <div class="justify-stretch padding-xs">
@@ -174,11 +174,13 @@ style="min-height: 630px">
         <br>
     </h4>
     <i>Sir Tim Berners-Lee</i>
+    <h1 class="border" style="display:none;" id="anim-heading">Write Something</h1>
     <div class="gap-s column box-s">
         <div class="box-l size-dropdown gap-xs padding-s" >
             <p class="opacity-m anim" id="anim1">/</p>
-        
+            
         </div>
+
         <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2">
             <div class="border-bottom box-l column" id ="anim3">
                 <div class="padding-s background-secondary-onhover row gap-s box-l">
@@ -186,8 +188,8 @@ style="min-height: 630px">
                     <span class="text-s">Page</span>
                 </div>
                 <div class="padding-s background-secondary-onhover row gap-s box-l" id="filtered-option">
-                    <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                    <span class="text-s">Div</span>
+                    <svg-icon src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
+                    <span class="text-s">Heading</span>
                 </div>
                 <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/text.svg"></svg-icon>
@@ -317,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(fadeInOnScroll, options);
   function setAnim1() {
     let anim1 = document.querySelectorAll("rnbw-editor #anim1");
-    anim1.forEach((span) => span.setAttribute("data-text", "/d"));
+    anim1.forEach((span) => span.setAttribute("data-text", "/h"));
     anim1.forEach((span) => (span.textContent = "/"));
   }
 
@@ -356,7 +358,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }, delay);
       delay += 50;
     }
-
+    setTimeout(() => {
+      const animHeading = document.getElementById("anim-heading");
+      animHeading.style.display = "block";
+    }, delay + 1000);
     delay += 1000;
     setTimeout(() => {
       anim1Div.classList.add("hide");
@@ -392,7 +397,8 @@ document.addEventListener("DOMContentLoaded", () => {
       anim1Div.classList.remove("hide");
       anim2Div.classList.remove("hide");
       document.getElementById("logo").classList.remove("background-secondary");
-
+      const animHeading = document.getElementById("anim-heading");
+      animHeading.style.display = "none";
       let anim3DivChildren = anim3Div.children;
       for (let i = 0; i < anim3DivChildren.length; i++) {
         if (anim3DivChildren[i].id == "filtered-option") {
