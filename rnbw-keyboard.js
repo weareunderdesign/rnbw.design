@@ -1,12 +1,12 @@
 const rnbwKeyboardTemplate = `
-<div class="page" id="keyboard">
+<div class="page" id="keyboard-wrapper">
 <img class="dark keyboard" src="images/keyboard-dark-j.svg" />
 <img class="dark keyboard hidden" src="images/keyboard-dark-a.svg" />
 <img class="dark keyboard hidden" src="images/keyboard-dark-w.svg" />
 
-<img class="light keyboard hidden" src="images/keyboard-light-j.svg" />
-<img class="light hidden keyboard" src="images/keyboard-light-a.svg" />
-<img class="light hidden keyboard" src="images/keyboard-light-w.svg" />
+<img class="light keyboard" src="images/keyboard-light-j.svg" />
+<img class="light keyboard hidden" src="images/keyboard-light-a.svg" />
+<img class="light keyboard hidden" src="images/keyboard-light-w.svg" />
 
 <div
   class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile"
@@ -199,9 +199,6 @@ class RnbwKeyobard extends HTMLElement {
 
 customElements.define("rnbw-keyboard", RnbwKeyobard);
 document.addEventListener("DOMContentLoaded", function () {
-  //find the current theme
-  let theme = document.querySelector("html").dataset.theme;
-
   const options = {
     root: null,
     rootMargin: "0px",
@@ -210,10 +207,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const rnbwKeyboardElement = document.querySelector("rnbw-keyboard");
 
   const observer = new IntersectionObserver(toggleOnIntersect, options);
-  let target = document.querySelector(".keyboard");
+  let keyboardToggleIntervalId = "";
+  const mutationObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === "data-theme") {
+        i = 0;
+        clearInterval(keyboardToggleIntervalId);
+        keyboardToggleIntervalId = setInterval(toggleVisibility, 1500);
+      }
+    });
+  });
+
+  mutationObserver.observe(document.querySelector("html"), {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+
+  let target = document.getElementById("keyboard-wrapper");
   observer.observe(target);
 
-  let keyboards = document.querySelectorAll(`.${theme}.keyboard`);
   let i = 0;
 
   const textArr = ["Jumpstart Menu", "Add something", "Do something"];
@@ -229,7 +241,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  let delay = 0;
   function toggleVisibility() {
+    //find the current theme
+    let theme = document.querySelector("html").dataset.theme;
+    let keyboards = document.querySelectorAll(`.${theme}.keyboard`);
+
     for (let j = 0; j < keyboards.length; j++) {
       if (j === i) {
         keyboards[j].classList.remove("hidden");
@@ -239,18 +256,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     type(textArr[i]);
     i = (i + 1) % keyboards.length;
-    setTimeout(toggleVisibility, 1500);
   }
 
   function toggleOnIntersect(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(toggleVisibility, 1500);
+        keyboardToggleIntervalId = setInterval(toggleVisibility, 1500);
         observer.unobserve(entry.target);
       }
     });
   }
-
-  // add a delay before starting the loop
-  // setTimeout(toggleVisibility, 1000);
 });
