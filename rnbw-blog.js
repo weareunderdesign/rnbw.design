@@ -232,12 +232,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (i == 0) {
         span.textContent = "";
       }
+      if (i === 1) {
+        filterAndSelectDiv();
+      }
       span.textContent += text.charAt(i);
       i++;
       delay += 50;
       setTimeout(type, 50); // adjust the delay time as needed
-    } else {
-      filterAndSelectDiv();
     }
   }
 
@@ -255,9 +256,9 @@ document.addEventListener("DOMContentLoaded", function () {
         //add inline style to the children of display none
         anim4DivChildren[i].style.display = "none";
       }, delay);
-      delay += 50;
+      delay += 10;
       if (i === anim4DivChildren.length - 1) {
-        delay += 500;
+        delay += 1500;
         anim4DivChildren[1].classList.remove("background-secondary");
         anim3.classList.add("background-secondary");
         setTimeout(() => {
@@ -270,11 +271,11 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
               child.style.opacity = 1;
             }, timer);
-            timer += 500;
+            timer += 150;
           });
           setTimeout(() => {
             resetAnimation();
-          }, timer);
+          }, timer + 1000);
         }, delay);
       }
     }
@@ -292,6 +293,8 @@ document.addEventListener("DOMContentLoaded", function () {
       anim6.style.opacity = "1";
       delay = 250;
       i = 0;
+      const span = document.querySelector("rnbw-blog #anim-1");
+      span.textContent = "";
       observer.observe(anim1);
     }, 500);
   }
