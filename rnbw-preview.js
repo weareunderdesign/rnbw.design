@@ -322,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let text = "";
   function animateOnIntersect(entries, observer) {
+    observer.unobserve(rnbwPreviewElement);
     if (entries[0].isIntersecting) {
       const h3 = document.querySelector("h3");
       const spans = h3.querySelectorAll("span");
