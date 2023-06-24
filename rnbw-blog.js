@@ -252,10 +252,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         continue;
       }
-      setTimeout(() => {
-        //add inline style to the children of display none
-        anim4DivChildren[i].style.display = "none";
-      }, delay);
+
+      anim4DivChildren[i].style.display = "none";
+
       delay += 10;
       if (i === anim4DivChildren.length - 1) {
         delay += 1500;
