@@ -107,7 +107,14 @@ const rnbwFiles = `
       style="opacity:0; transition: opacity 0.5s; transition-delay: 0.5s;"
       id="anim-3"
     >
-      <code>JS CODE GOES HERE</code>
+      <code>
+      const tryMeBtn = document.getElementById("try_me");
+      </code>
+      <code>
+      tryMeBtn.addEventListener("click", () => {
+       window.location.href = "https://rnbw.dev";
+      });
+      </code>
     </div>
   </div>
 </div>
@@ -158,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
               anim3.style.opacity = 1;
-              delay += 250;
+              delay += 500;
 
               setTimeout(() => {
                 reset();
