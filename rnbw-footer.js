@@ -37,7 +37,6 @@ const footerTemplate = `
     </div>
 </footer>
 `;
-
 function updateThemeElementsVisibility() {
   const theme = document.documentElement.getAttribute("data-theme");
   const lightElements = document.querySelectorAll(".light");
@@ -53,14 +52,16 @@ function updateThemeElementsVisibility() {
 }
 
 function handleSystemThemeChange(e) {
-  if (themeName.textContent === "system") {
-    if (e.matches) {
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-    }
-    updateThemeElementsVisibility();
+  let theme;
+  if (e.matches) {
+    theme = "dark";
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    theme = "light";
+    document.documentElement.setAttribute("data-theme", "light");
   }
+  updateThemeElementsVisibility();
+  switchFavicon(theme);
 }
 
 const setSystemTheme = () => {
@@ -82,10 +83,17 @@ class RnbwFooter extends HTMLElement {
 
   connectedCallback() {
     updateThemeElementsVisibility();
+    handleSystemThemeChange(
+      window.matchMedia("(prefers-color-scheme: dark)")
+    );
   }
 }
 
 customElements.define("rnbw-footer", RnbwFooter);
+
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", handleSystemThemeChange);
 
 const currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML += currentYear;
@@ -96,18 +104,22 @@ var themeName = document.querySelector("#theme-name");
 themeName.textContent = "system";
 
 function toggleTheme() {
+  let theme;
   switch (themeName.textContent) {
     case "system":
+      theme = "light";
       document.documentElement.setAttribute("data-theme", "light");
       themeName.textContent = "light";
       localStorage.setItem("theme", "light");
       break;
     case "light":
+      theme = "dark";
       document.documentElement.setAttribute("data-theme", "dark");
       themeName.textContent = "dark";
       localStorage.setItem("theme", "dark");
       break;
     case "dark":
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
       document.documentElement.removeAttribute("data-theme");
       themeName.textContent = "system";
       localStorage.removeItem("theme");
@@ -127,8 +139,13 @@ if (storedTheme) {
 } else {
   setSystemTheme();
   updateThemeElementsVisibility();
+}
 
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", handleSystemThemeChange);
+function switchFavicon(theme) {
+  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/png';
+  link.rel = 'shortcut icon';
+  link.href = `https://rnbw.company/images/favicon-${theme}.png`;
+
+  document.getElementsByTagName('head')[0].appendChild(link);
 }
