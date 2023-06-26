@@ -37,55 +37,63 @@ const footerTemplate = `
     </div>
 </footer>
 `;
-
 function updateThemeElementsVisibility() {
-    const theme = document.documentElement.getAttribute("data-theme");
-    const lightElements = document.querySelectorAll(".light");
-    const darkElements = document.querySelectorAll(".dark");
+  const theme = document.documentElement.getAttribute("data-theme");
+  const lightElements = document.querySelectorAll(".light");
+  const darkElements = document.querySelectorAll(".dark");
 
-    lightElements.forEach((element) => {
-        element.style.display = theme === "dark" ? "none" : "";
-    });
+  lightElements.forEach((element) => {
+    element.style.display = theme === "dark" ? "none" : "";
+  });
 
-    darkElements.forEach((element) => {
-        element.style.display = theme === "dark" ? "" : "none";
-    });
+  darkElements.forEach((element) => {
+    element.style.display = theme === "dark" ? "" : "none";
+  });
 }
 
 function handleSystemThemeChange(e) {
-    if (themeName.textContent === "system") {
-        if (e.matches) {
-            document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-            document.documentElement.setAttribute("data-theme", "light");
-        }
-        updateThemeElementsVisibility();
-    }
+  let theme;
+  if (e.matches) {
+    theme = "dark";
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    theme = "light";
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+  updateThemeElementsVisibility();
+  switchFavicon(theme);
 }
 
 const setSystemTheme = () => {
-    if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-        handleSystemThemeChange({ matches: true });
-    } else {
-        handleSystemThemeChange({ matches: false });
-    }
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    handleSystemThemeChange({ matches: true });
+  } else {
+    handleSystemThemeChange({ matches: false });
+  }
 };
 
 class RnbwFooter extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = footerTemplate;
-    }
+  constructor() {
+    super();
+    this.innerHTML = footerTemplate;
+  }
 
-    connectedCallback() {
-        updateThemeElementsVisibility();
-    }
+  connectedCallback() {
+    updateThemeElementsVisibility();
+    handleSystemThemeChange(
+      window.matchMedia("(prefers-color-scheme: dark)")
+    );
+  }
 }
 
 customElements.define("rnbw-footer", RnbwFooter);
+
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", handleSystemThemeChange);
 
 const currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML += currentYear;
@@ -96,40 +104,48 @@ var themeName = document.querySelector("#theme-name");
 themeName.textContent = "system";
 
 function toggleTheme() {
-    switch (themeName.textContent) {
-        case "system":
-            document.documentElement.setAttribute("data-theme", "light");
-            themeName.textContent = "light";
-            localStorage.setItem("theme", "light");
-            break;
-        case "light":
-            document.documentElement.setAttribute("data-theme", "dark");
-            themeName.textContent = "dark";
-            localStorage.setItem("theme", "dark");
-            break;
-        case "dark":
-            document.documentElement.removeAttribute("data-theme");
-            themeName.textContent = "system";
-            localStorage.removeItem("theme");
-            setSystemTheme();
-            break;
-    }
+  let theme;
+  switch (themeName.textContent) {
+    case "system":
+      theme = "light";
+      document.documentElement.setAttribute("data-theme", "light");
+      themeName.textContent = "light";
+      localStorage.setItem("theme", "light");
+      break;
+    case "light":
+      theme = "dark";
+      document.documentElement.setAttribute("data-theme", "dark");
+      themeName.textContent = "dark";
+      localStorage.setItem("theme", "dark");
+      break;
+    case "dark":
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+      document.documentElement.removeAttribute("data-theme");
+      themeName.textContent = "system";
+      localStorage.removeItem("theme");
+      setSystemTheme();
+      break;
+  }
 
-    updateThemeElementsVisibility();
+  updateThemeElementsVisibility();
 }
-
 
 var storedTheme = localStorage.getItem("theme");
 
 if (storedTheme) {
-    document.documentElement.setAttribute("data-theme", storedTheme);
-    themeName.textContent = storedTheme;
-    updateThemeElementsVisibility();
+  document.documentElement.setAttribute("data-theme", storedTheme);
+  themeName.textContent = storedTheme;
+  updateThemeElementsVisibility();
 } else {
-    setSystemTheme();
-    updateThemeElementsVisibility();
+  setSystemTheme();
+  updateThemeElementsVisibility();
+}
 
-    window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", handleSystemThemeChange);
+function switchFavicon(theme) {
+  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  link.type = 'image/png';
+  link.rel = 'shortcut icon';
+  link.href = `https://rnbw.company/images/favicon-${theme}.png`;
+
+  document.getElementsByTagName('head')[0].appendChild(link);
 }

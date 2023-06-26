@@ -13,10 +13,10 @@ const bannerTemplate = `
 `;
 
 class RnbwBanner extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = bannerTemplate;
-    }
+  constructor() {
+    super();
+    this.innerHTML = bannerTemplate;
+  }
 }
 
 customElements.define("rnbw-banner", RnbwBanner);

@@ -26,46 +26,44 @@ const headerTemplate = `
 `;
 
 class RnbwHeader extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = headerTemplate;
+  constructor() {
+    super();
+    this.innerHTML = headerTemplate;
+  }
+
+  connectedCallback() {
+    this.applyHoverEffect();
+    this.highlightActiveLink();
+  }
+
+  applyHoverEffect() {
+    const navItems = this.querySelectorAll("#nav-item");
+
+    navItems.forEach((navItem) => {
+      const headerItem = navItem.querySelector("#header-item");
+
+      navItem.addEventListener("mouseover", function () {
+        headerItem.classList.add("background-secondary");
+      });
+
+      navItem.addEventListener("mouseout", function () {
+        headerItem.classList.remove("background-secondary");
+      });
+    });
+  }
+
+  highlightActiveLink() {
+    function isLinkActive(link) {
+      return link.href === window.location.href;
     }
 
-    connectedCallback() {
-        this.applyHoverEffect();
-        this.highlightActiveLink();
-    }
-
-    applyHoverEffect() {
-        const navItems = this.querySelectorAll("#nav-item");
-
-        navItems.forEach((navItem) => {
-            const headerItem = navItem.querySelector("#header-item");
-
-            navItem.addEventListener("mouseover", function () {
-                headerItem.classList.add("background-secondary");
-            });
-
-            navItem.addEventListener("mouseout", function () {
-                headerItem.classList.remove("background-secondary");
-            });
-        });
-    }
-
-    highlightActiveLink() {
-        function isLinkActive(link) {
-            return link.href === window.location.href;
-        }
-
-        this.querySelectorAll("#nav-item").forEach((navItem) => {
-            const link = navItem.querySelector("a");
-            if (isLinkActive(link)) {
-                navItem
-                    .querySelector("svg-icon")
-                    .classList.add("foreground-secondary");
-            }
-        });
-    }
+    this.querySelectorAll("#nav-item").forEach((navItem) => {
+      const link = navItem.querySelector("a");
+      if (isLinkActive(link)) {
+        navItem.querySelector("svg-icon").classList.add("foreground-secondary");
+      }
+    });
+  }
 }
 
 customElements.define("rnbw-header", RnbwHeader);

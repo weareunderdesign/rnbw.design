@@ -19,7 +19,7 @@ const rnbwPreviewTemplate = `
                             </div>
                             <div class="border-bottom">
                                 <div
-                                    class="justify-stretch padding-xs background-secondary">
+                                    class="justify-stretch padding-xs">
                                     <div class="gap-s padding-xs">
                                         <div class="icon-xs"></div>
                                         <svg-icon
@@ -93,86 +93,94 @@ const rnbwPreviewTemplate = `
                                 </div>
                             </div>
                             <div class="border-bottom">
-                                <div class="justify-stretch padding-xs">
-                                    <div class="gap-s padding-xs">
-                                        <div class="icon-xs"></div>
+                            <div class="justify-stretch padding-xs background-tertiary">
+                                 <div class="gap-s padding-xs">
                                         <svg-icon
-                                            src="https://raincons.rnbw.dev/icons/image.svg"></svg-icon>
-                                        <span class="text-s">Image</span>
-                                    </div>
+                                              src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
+                                        <svg-icon
+                                            src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
+                                        <span class="text-s">H3</span>
                                 </div>
-                                <div class="justify-stretch padding-xs">
-                                    <div class="gap-s padding-xs">
-                                        <svg-icon
-                                            src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
-                                        <svg-icon
-                                            src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                                        <span class="text-s">Div</span>
-                                    </div>
-                                </div>
+                            </div>
+                              
                                 <div>
                                     <div
-                                        class="justify-stretch padding-xs background-tertiary">
+                                        class="justify-stretch padding-xs background-secondary" id="span1" style="opacity:0;">
                                         <div class="gap-s padding-xs">
                                             <div class="icon-xs"></div>
-                                            <svg-icon
-                                                src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
+                                            <div class="icon-xs"></div>
                                             <svg-icon
                                                 src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                                            <span class="text-s">Element</span>
+                                            <span class="text-s">Span</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div
-                                            class="justify-stretch padding-xs background-secondary">
-                                            <div class="gap-s padding-xs">
-                                                <div class="icon-xs"></div>
-                                                <div class="icon-xs"></div>
-                                                <div class="icon-xs"></div>
-                                                <svg-icon
-                                                    src="https://raincons.rnbw.dev/icons/image.svg"></svg-icon>
-                                                <span class="text-s">Logo</span>
-                                            </div>
+                                    <div
+                                        class="justify-stretch padding-xs background-secondary" id="span2" style="opacity:0;">
+                                        <div class="gap-s padding-xs">
+                                            <div class="icon-xs"></div>
+                                            <div class="icon-xs"></div>
+                                            <svg-icon
+                                                src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                                            <span class="text-s">Span</span>
                                         </div>
-                                        <div
-                                            class="justify-stretch padding-xs background-secondary">
-                                            <div class="gap-s padding-xs">
-                                                <div class="icon-xs"></div>
-                                                <div class="icon-xs"></div>
-                                                <svg-icon
-                                                    src="https://raincons.rnbw.dev/icons/right.svg"></svg-icon>
-                                                <svg-icon
-                                                    src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                                                <span class="text-s"
-                                                    >Element</span
-                                                >
-                                            </div>
+                                    </div>
+
+                                    <div
+                                    class="justify-stretch padding-xs background-secondary" id="span3" style="opacity:0;">
+                                        <div class="gap-s padding-xs">
+                                            <div class="icon-xs"></div>
+                                            <div class="icon-xs"></div>
+                                            <svg-icon
+                                                src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                                            <span class="text-s">Span</span>
                                         </div>
-                                        <div
-                                            class="justify-stretch padding-xs background-secondary">
-                                            <div class="gap-s padding-xs">
-                                                <div class="icon-xs"></div>
-                                                <div class="icon-xs"></div>
-                                                <div class="icon-xs"></div>
-                                                <svg-icon
-                                                    src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                                                <span class="text-s"
-                                                    >Element</span
-                                                >
-                                            </div>
+                                    </div>
+
+                                    <div
+                                        class="justify-stretch padding-xs background-secondary" id="span4" style="opacity:0;">
+                                        <div class="gap-s padding-xs">
+                                            <div class="icon-xs"></div>
+                                            <div class="icon-xs"></div>
+                                            <svg-icon
+                                                src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                                            <span class="text-s">Span</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="justify-stretch padding-xs background-secondary" id="span5" style="opacity:0;">
+                                        <div class="gap-s padding-xs">
+                                            <div class="icon-xs"></div>
+                                            <div class="icon-xs"></div>
+                                            <svg-icon
+                                                src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                                            <span class="text-s">Span</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="justify-stretch padding-xs background-secondary" id="span6" style="opacity:0;">
+                                        <div class="gap-s padding-xs">
+                                            <div class="icon-xs"></div>
+                                            <div class="icon-xs"></div>
+                                            <svg-icon
+                                                src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                                            <span class="text-s">Span</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="justify-stretch padding-xs background-secondary" id="span7" style="opacity:0;">
+                                        <div class="gap-s padding-xs">
+                                            <div class="icon-xs"></div>
+                                            <div class="icon-xs"></div>
+                                            <svg-icon
+                                                src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                                            <span class="text-s">Span</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="justify-stretch padding-xs">
-                                    <div class="gap-s padding-xs">
-                                        <div class="icon-xs"></div>
-                                        <svg-icon
-                                            src="https://raincons.rnbw.dev/icons/right.svg"></svg-icon>
-                                        <svg-icon
-                                            src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
-                                        <span class="text-s">Element</span>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                         <div>
@@ -293,37 +301,117 @@ const rnbwPreviewTemplate = `
 `;
 
 class RnbwPreview extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = rnbwPreviewTemplate;
-    }
+  constructor() {
+    super();
+    this.innerHTML = rnbwPreviewTemplate;
+  }
 }
 
 customElements.define("rnbw-preview", RnbwPreview);
 
-document.addEventListener("DOMContentLoaded", function() {
-    const h3 = document.querySelector("h3");
-    const spans = h3.querySelectorAll("span");
-    let index = 0;
-    let charIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const rnbwPreviewElement = document.querySelector("rnbw-preview");
 
-    function type() {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver(animateOnIntersect, options);
+
+  let text = "";
+  function animateOnIntersect(entries, observer) {
+    observer.unobserve(rnbwPreviewElement);
+    if (entries[0].isIntersecting) {
+      const h3 = document.querySelector("h3");
+      const spans = h3.querySelectorAll("span");
+      let index = 0;
+      let charIndex = 0;
+
+      function type() {
         if (index < spans.length) {
-            spans[index].classList.remove("hidden");
-            const originalText = spans[index].getAttribute("data-text");
-            if (charIndex < originalText.length) {
-                spans[index].textContent = originalText.slice(0, charIndex + 1);
-                charIndex++;
-                setTimeout(type, 50);
+          spans[index].classList.remove("hidden");
+          const originalText = spans[index].getAttribute("data-text");
+          if (charIndex < originalText.length) {
+            let char = originalText.charAt(charIndex);
+            spans[index].textContent = originalText.slice(0, charIndex + 1);
+            charIndex++;
+            if (char === ">") {
+              setTimeout(type, 100);
             } else {
-                charIndex = 0;
-                index++;
-                setTimeout(type, 500);
+              setTimeout(type, 120);
             }
+          } else {
+            charIndex = 0;
+            index++;
+            setTimeout(type, 500);
+          }
+        } else {
+          setTimeout(() => {
+            reset();
+          }, 2000);
         }
-    }
+      }
+      const code = document.querySelector("code");
+      if (!text) {
+        text = code.textContent;
+      }
+      code.textContent = "";
 
-    spans.forEach(span => span.setAttribute("data-text", span.textContent));
-    spans.forEach(span => span.textContent = "");
-    type();
+      let i = 0;
+      let spanCount = 1;
+      let totalSpansAnimated = 0;
+      let timer = 1500;
+      function typeCode() {
+        if (i < text.length) {
+          code.textContent += text.charAt(i);
+          i++;
+          if (text.charAt(i) === ">") {
+            if (spanCount <= 7) {
+              let element = document.getElementById("span" + spanCount);
+              setTimeout(() => {
+                element.style.opacity = 1;
+                totalSpansAnimated++;
+              }, timer);
+              timer += 1500;
+              spanCount++;
+            }
+            setTimeout(typeCode, 1000);
+          } else {
+            setTimeout(typeCode, 25); // adjust the delay time as needed
+          }
+        } else {
+        }
+      }
+
+      typeCode();
+      spans.forEach((span) => span.setAttribute("data-text", span.textContent));
+      spans.forEach((span) => (span.textContent = ""));
+      type();
+    }
+  }
+  function reset() {
+    const spans = document.querySelectorAll("h3 span");
+    spans.forEach((span) => span.classList.add("hidden"));
+
+    for (let i = 1; i <= 7; i++) {
+      let element = document.getElementById("span" + i);
+      element.style.opacity = 0;
+    }
+    const code = document.querySelector("code");
+    code.textContent = "";
+    observer.unobserve(rnbwPreviewElement);
+    index = 0;
+    charIndex = 0;
+    i = 0;
+    spanCount = 1;
+    totalSpansAnimated = 0;
+    timer = 1500;
+
+    setTimeout(() => {
+      observer.observe(rnbwPreviewElement);
+    }, 1500);
+  }
+  observer.observe(rnbwPreviewElement);
 });
