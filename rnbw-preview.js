@@ -334,18 +334,13 @@ document.addEventListener("DOMContentLoaded", function () {
           spans[index].classList.remove("hidden");
           const originalText = spans[index].getAttribute("data-text");
           if (charIndex < originalText.length) {
-            let char = originalText.charAt(charIndex);
             spans[index].textContent = originalText.slice(0, charIndex + 1);
             charIndex++;
-            if (char === ">") {
-              setTimeout(type, 100);
-            } else {
-              setTimeout(type, 120);
-            }
+            setTimeout(type, 30);
           } else {
             charIndex = 0;
             index++;
-            setTimeout(type, 500);
+            setTimeout(type, 1000);
           }
         } else {
           setTimeout(() => {
@@ -362,26 +357,25 @@ document.addEventListener("DOMContentLoaded", function () {
       let i = 0;
       let spanCount = 1;
       let totalSpansAnimated = 0;
-      let timer = 1500;
+      let timer = 100;
       function typeCode() {
         if (i < text.length) {
           code.textContent += text.charAt(i);
           i++;
-          if (text.charAt(i) === ">") {
+          if (text.charAt(i) === ".") {
             if (spanCount <= 7) {
               let element = document.getElementById("span" + spanCount);
               setTimeout(() => {
                 element.style.opacity = 1;
                 totalSpansAnimated++;
               }, timer);
-              timer += 1500;
+              timer += 100;
               spanCount++;
             }
             setTimeout(typeCode, 1000);
           } else {
-            setTimeout(typeCode, 25); // adjust the delay time as needed
+            setTimeout(typeCode, 10); // adjust the delay time as needed
           }
-        } else {
         }
       }
 
