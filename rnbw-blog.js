@@ -1,7 +1,7 @@
 const rnbwBlog = `
 <div
 class="box align-center radius-s border padding-xl hidden-on-mobile"
-style="min-height: 600px; position: relative"
+style="min-height: 605px; position: relative"
 >
 <div style="position: absolute; left: 40px; top: 40px; right: 40px"
 >
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
       span.textContent += text.charAt(i);
       i++;
       delay += 50;
-      setTimeout(type, 50); // adjust the delay time as needed
+      setTimeout(type, 200); // adjust the delay time as needed
     }
   }
 
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
       delay = 250;
       i = 0;
       const span = document.querySelector("rnbw-blog #anim-1");
-      span.textContent = "";
+      span.textContent = "Do something...";
       observer.observe(anim1);
     }, 500);
   }
