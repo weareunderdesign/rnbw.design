@@ -104,7 +104,7 @@ const rnbwFiles = `
     </h2>
     <div
       class="padding-l border-left background-primary radius-s border opacity-m"
-      style="opacity:0; transition: opacity 0.5s; transition-delay: 0.5s;"
+      style="opacity:0;"
       id="anim-3"
     >
       <code>
@@ -157,15 +157,15 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         setTimeout(() => {
           anim1.classList.remove("background-secondary");
-          delay += 250;
+          delay += 50;
 
           setTimeout(() => {
             anim2.classList.add("background-secondary");
-            delay += 250;
+            delay += 0;
 
             setTimeout(() => {
               anim3.style.opacity = 1;
-              delay += 500;
+              delay += 200;
 
               setTimeout(() => {
                 reset();
