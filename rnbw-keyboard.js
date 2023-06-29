@@ -11,7 +11,7 @@ const rnbwKeyboardTemplate = `
   <!-- Do Something -->
   <div
     class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile hidden"
-    style="min-height: 600px"
+    style="min-height: 700px"
     id="do-something-menu"
   >
     <div class="row shadow background-primary radius-s box-s border">
@@ -193,7 +193,7 @@ const rnbwKeyboardTemplate = `
 
   <!-- Jumpstart menu --->
 
-    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile" style="min-height: 600px"
+    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile" style="min-height: 700px"
     id="jumpstart-menu"
     >
       <div class="box-m row align-stretch shadow background-primary radius-s border">
@@ -335,14 +335,14 @@ const rnbwKeyboardTemplate = `
                   </div>
               </div>
               <div class="box align-center border-left">
-                  <span>Description</span>
+                  
               </div>
           </div>
       </div>
   </div>
 
   <!-- Add something -->
-    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile hidden" style="min-height: 600px"
+    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile hidden" style="min-height: 700px"
     id="add-something-menu"
     >
       <div class="box-m row align-stretch shadow background-primary radius-s border">
@@ -484,7 +484,7 @@ const rnbwKeyboardTemplate = `
                   </div>
               </div>
               <div class="box align-center border-left">
-                  <span>Description</span>
+                  
               </div>
           </div>
       </div>
@@ -528,8 +528,6 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(target);
 
   let i = 0;
-
-  const textArr = ["Jumpstart Menu", "Add something", "Do something"];
 
   function toggleVisibility() {
     //find the current theme
