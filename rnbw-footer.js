@@ -20,8 +20,8 @@ const footerTemplate = `
             <a href="mailto:hello@rnbw.dev">get in touch</a>
         </div>
         <div class="column gap-s box">
-            <a class="opacity-m"">rene.css ↗</a>
-            <a class="opacity-m"">svg-icon.js ↗</a>
+            <a href="https://renecss.org" target="_blank">rene.css ↗</a>
+            <a class="opacity-m">svg-icon.js ↗</a>
             <a class="opacity-m">rfrncs.design ↗</a>
         </div>
         <div class="column gap-s box">
