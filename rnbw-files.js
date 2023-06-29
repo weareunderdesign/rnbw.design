@@ -157,16 +157,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         setTimeout(() => {
           anim1.classList.remove("background-secondary");
-          delay += 50;
-
+          anim2.classList.add("background-secondary");
+          anim3.style.opacity = 1;
           setTimeout(() => {
-            anim2.classList.add("background-secondary");
-            delay += 0;
-
-            anim3.style.opacity = 1;
             setTimeout(() => {
-              delay += 200;
-
+              delay += 500;
               reset();
             }, delay);
           }, delay);
