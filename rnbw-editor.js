@@ -56,9 +56,8 @@ style="min-height: 635px">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
                             <svg-icon src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
-                            <span class="text-s">H1</span>
+                            <span class="text-s">Heading 1</span>
                         </div>
                     </div>
                     <div class="justify-stretch padding-xs">
@@ -91,78 +90,7 @@ style="min-height: 635px">
             </div>
         </div>
     </div>
-    <div>
-        <div class="padding-m gap-s panel border-bottom">
-            <div class="justify-stretch">
-                <span class="text-s">Settings</span>
-                <div class="row gap-s justify-end">
-                    <div class="padding-xs radius-xs">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel padding-m gap-s">
-            <div class="justify-stretch">
-                <div class="gap-s box">
-                    <span class="text-s">Styles</span>
-                </div>
-                <div class="gap-s justify-end">
-                    <div class="padding-xs radius-xs">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="gap-s">
-                <div class="gap-xs border radius-xs padding-xs">
-                    <span class="text-s">Style1</span>
-                </div>
-                <div class="gap-xs border radius-xs padding-xs foreground-secondary">
-                    <svg-icon src="https://raincons.rnbw.dev/icons/cross.svg"></svg-icon>
-                    <span class="text-s">Style2</span>
-                </div>
-                <div class="padding-xs radius-xs">
-                    <svg-icon src="https://raincons.rnbw.dev/icons/states.svg"></svg-icon>
-                </div>
-                <div class="background-secondary-onhover padding-xs radius-xs">
-                    <svg-icon src="https://raincons.rnbw.dev/icons/media.svg"></svg-icon>
-                </div>
-            </div>
-            <div class="justify-stretch">
-                <div class="gap-s box justify-start">
-                    <div class="padding-xs radius-xs background-secondary">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/width.svg"></svg-icon>
-                    </div>
-                    <span class="text-s">Width</span>
-                </div>
-                <div class="gap-s">
-                    <span class="text-s">24px</span>
-                </div>
-            </div>
-            <div class="justify-stretch opacity-m">
-                <div class="gap-s box justify-start">
-                    <div class="padding-xs radius-xs">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/flex.svg"></svg-icon>
-                    </div>
-                    <span class="text-s">Display</span>
-                </div>
-                <div class="row gap-s">
-                    <span class="text-s">Flex</span>
-                </div>
-            </div>
-            <div class="justify-stretch">
-                <div class="gap-s box justify-start">
-                    <div class="padding-xs radius-xs background-secondary">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/relative.svg"></svg-icon>
-                    </div>
-                    <span class="text-s">Position</span>
-                </div>
-                <div class="row gap-s">
-                    <span class="text-s">Relative</span>
-                </div>
-            </div>
-        </div>
-    </div>
+  
 </div>
 
 <div class="box column gap-m">
