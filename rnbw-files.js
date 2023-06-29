@@ -163,13 +163,11 @@ document.addEventListener("DOMContentLoaded", function () {
             anim2.classList.add("background-secondary");
             delay += 0;
 
+            anim3.style.opacity = 1;
             setTimeout(() => {
-              anim3.style.opacity = 1;
               delay += 200;
 
-              setTimeout(() => {
-                reset();
-              }, delay);
+              reset();
             }, delay);
           }, delay);
         }, delay);
@@ -192,6 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         observer.observe(anim1);
       }, 500);
-    }, 1000);
+    }, 500);
   }
 });
