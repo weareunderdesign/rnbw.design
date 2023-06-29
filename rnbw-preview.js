@@ -96,10 +96,10 @@ const rnbwPreviewTemplate = `
                             <div class="justify-stretch padding-xs background-tertiary">
                                  <div class="gap-s padding-xs">
                                         <svg-icon
-                                              src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
+                                              src="https://raincons.rnbw.dev/icons/down.svg" id="heading3-dropdown-icon" class="hidden"></svg-icon>
                                         <svg-icon
                                             src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
-                                        <span class="text-s">H3</span>
+                                        <span class="text-s">Heading 3</span>
                                 </div>
                             </div>
                               
@@ -322,8 +322,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let text = "";
   function animateOnIntersect(entries, observer) {
-    observer.unobserve(rnbwPreviewElement);
     if (entries[0].isIntersecting) {
+      observer.unobserve(rnbwPreviewElement);
       const h3 = document.querySelector("h3");
       const spans = h3.querySelectorAll("span");
       let index = 0;
@@ -333,6 +333,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < spans.length) {
           spans[index].classList.remove("hidden");
           const originalText = spans[index].getAttribute("data-text");
+          if (index === 0) {
+            let heading3DropdownIcon = document.getElementById(
+              "heading3-dropdown-icon"
+            );
+            heading3DropdownIcon.classList.remove("hidden");
+          }
           if (charIndex < originalText.length) {
             spans[index].textContent = originalText.slice(0, charIndex + 1);
             charIndex++;
@@ -389,6 +395,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const spans = document.querySelectorAll("h3 span");
     spans.forEach((span) => span.classList.add("hidden"));
 
+    let heading3DropdownIcon = document.getElementById(
+      "heading3-dropdown-icon"
+    );
+    heading3DropdownIcon.classList.add("hidden");
+
     for (let i = 1; i <= 7; i++) {
       let element = document.getElementById("span" + i);
       element.style.opacity = 0;
@@ -407,5 +418,6 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(rnbwPreviewElement);
     }, 1500);
   }
+
   observer.observe(rnbwPreviewElement);
 });
