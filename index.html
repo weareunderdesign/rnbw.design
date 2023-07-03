@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>rnbw</title>
-    <meta name="description" content="rainbow" />
-    <meta property="og:title" content="design. develop. ship." />
-    <link rel="icon" href="./images/favicon-light.png" />
-    <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js"
-    ></script>
-    <script
-      defer
-      data-domain="rnbw.company"
-      src="https://plausible.io/js/script.js"
-    ></script>
+    <meta name="description" content="rainbow">
+    <meta property="og:title" content="design. develop. ship.">
+    <link rel="icon" href="./images/favicon-light.png">
+    <link rel="stylesheet" href="https://unpkg.com/renecss/dist/rene.min.css">
+    <script type="module" src="https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js"></script>
+    <script defer data-domain="rnbw.company" src="https://plausible.io/js/script.js"></script>
   </head>
 
   <body>
@@ -25,49 +18,28 @@
     <div class="view align-center column">
       <div class="page">
         <h1 class="text-center">
-          design, meet<br />
+          design, meet<br>
           development.
         </h1>
         <rnbw-preview></rnbw-preview>
-        <h3 class="align-center">design that works</h3>
-        <div class="box-l align-center">
-          <p class="box-s text-center">
-            rnbw is an environment to design in the web medium. build websites,
-            apps, and design systems. create with popular libraries or make your
-            stuff. while you act on your ideas, HTML & CSS are generated in the
-            background. your design (literally, your code files) is a living
-            product with unlimited capabilities. it helps you embrace HTML/CSS
-            as the ultimate design tool and common ground with your development
-            workflows. when your design is done, it’s done.
-          </p>
-        </div>
+        <rnbw-nav></rnbw-nav>
       </div>
-      <video
-        src="./images/rnbw.webm"
-        autoplay
-        loop
-        muted
-        playsinline
-        width="100%"
-      ></video>
 
       <div class="page">
-        <h3 class="align-center">we’re not in canvas anymore</h3>
+        <h3 class="text-center">we’re not in canvas anymore</h3>
         <div class="row gap-xl">
           <div class="box column">
             <p>
               HTML and CSS are powerful design tools and happen to be the
-              presentational programming languages of the web. essentially, they
+              presentational programming languages of the web. they
               are everything you see in your browser. however, it's important to
               remember that when designing with these tools, you are working on
               something other than a canvas.
             </p>
           </div>
           <div class="box column">
-            <p>
-              Canvas is a blank slate that you can paint with whatever colors
-              and shapes. however, in rnbw, you’re designing for the web, so you
-              are working within its constraints. the web is designed to display
+            <p>in rnbw, you’re designing for the web, so you
+              are working within its constraints - the web is designed to display
               content using an adaptive structure built from boxes nested inside
               boxes. this allows for flexibility in moving and composing
               content.
@@ -76,13 +48,14 @@
         </div>
 
         <rnbw-editor></rnbw-editor>
+      </div>
+      <div class="page">
 
-        <h3 class="align-center">simple yet dangerous</h3>
+        <h3 class="text-center">simple yet dangerous</h3>
         <div class="row gap-xl">
           <div class="box column">
             <p>
-              rnbw is simple enough for anyone. flexible enough for anything.
-              and open enough to use anyhow. rnbw differs from traditional
+              rnbw is simple enough for anyone and flexible enough for anything. rnbw differs from traditional
               vertical software by focusing on atomic concepts. while features
               are great "one-size-fits-all" solutions, atomic concepts multiply
               their meaning when combined.
@@ -90,7 +63,7 @@
           </div>
           <div class="box column">
             <p>
-              by breaking down complex ideas or objects into atomic concepts, we
+              by breaking down complex ideas into atomic concepts, we
               can better understand how they work and interact with each other.
               rnbw allows users to build their solutions in the most vertical
               way possible that works for them, not others. we believe this
@@ -100,21 +73,16 @@
         </div>
         <div class="box align-start">
           <a href="https://guide.rnbw.dev/" target="_blank" class="gap-m">
-            <svg-icon
-              src="https://raincons.rnbw.dev/icons/library.svg"
-              class="icon-s"
-            ></svg-icon>
+            <svg-icon src="https://raincons.rnbw.dev/icons/library.svg" class="icon-s"></svg-icon>
             <div>
-              <span class="text-l"
-                >a good way to start is to follow the quick guide ↗</span
-              >
+              <span class="text-l">a good way to start is to follow the quick guide ↗</span>
             </div>
           </a>
         </div>
         <rnbw-map></rnbw-map>
-
-        <h3 class="align-center">design at your command</h3>
-
+      </div>
+      <div class="page">
+        <h3 class="text-center">design at your command</h3>
         <div class="row gap-xl">
           <div class="box column">
             <p>
@@ -138,7 +106,9 @@
         </div>
 
         <rnbw-keyboard></rnbw-keyboard>
-        <h3 class="align-center">files, who knew?</h3>
+      </div>
+      <div class="page">
+        <h3 class="text-center">files, who knew?</h3>
 
         <div class="row box-l gap-xl">
           <div class="box">
@@ -157,11 +127,11 @@
         </div>
 
         <rnbw-files></rnbw-files>
+      </div>
+      <div class="page">
 
         <div class="align-center column gap-m opacity-m">
-          <span class="text-s padding-s radius-s border background-secondary"
-            >coming soon</span
-          >
+          <span class="text-s padding-s radius-s border background-secondary">coming soon</span>
           <h3 class="text-center">optimized for openness</h3>
         </div>
         <div class="row box-l gap-xl opacity-m">
@@ -180,10 +150,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile"
-          style="min-height: 600px"
-        >
+        <div class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile" style="min-height: 600px">
           <div class="row shadow background-primary radius-s box-s border">
             <div class="gap-m border-bottom padding-m justify-stretch box-l">
               <div class="gap-s column">
@@ -199,27 +166,22 @@
                 <div class="padding-m gap-s">
                   <span class="text-s opacity-m">Other</span>
                 </div>
-                <div
-                  class="justify-stretch padding-s background-secondary radius-xs"
-                >
+                <div class="justify-stretch padding-s background-secondary radius-xs">
                   <div class="gap-s align-center">
                     <div class="padding-xs">
-                      <svg-icon
-                        src="https://raincons.rnbw.dev/icons/events.svg"
-                      ></svg-icon>
+                      <svg-icon src="https://raincons.rnbw.dev/icons/events.svg"></svg-icon>
                     </div>
                     <span class="text-m">Create new action</span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="box-l row align-stretch"></div>
           </div>
         </div>
+      </div>
+      <div class="page">
         <div class="align-center column gap-m opacity-m">
-          <span class="text-s padding-s radius-s border background-secondary"
-            >coming soon</span
-          >
+          <span class="text-s padding-s radius-s border background-secondary">coming soon</span>
           <h3 class="text-center">more imagine, less crafting</h3>
         </div>
 
@@ -238,6 +200,20 @@
           </div>
         </div>
         <rnbw-blog></rnbw-blog>
+      </div>
+      <div class="page">
+        <h2 class="text-center">design that works</h2>
+        <div class="box-l align-center">
+          <h4 class="box-m text-center">
+            rnbw is an environment to design in the web medium. build websites,
+            apps, and design systems. create with popular libraries or make your
+            stuff. while you act on your ideas, HTML & CSS are generated in the
+            background. your design (literally, your code files) is a living
+            product with unlimited capabilities. it helps you embrace HTML/CSS
+            as the ultimate design tool and common ground with your development
+            workflows. when your design is done, it’s done.
+          </h4>
+        </div>
         <rnbw-nav></rnbw-nav>
       </div>
     </div>
