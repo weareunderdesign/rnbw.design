@@ -9,24 +9,8 @@ const navTemplate = `
                                 src="https://raincons.rnbw.dev/icons/oval.svg"
                                 class="icon-m"></svg-icon>
                             <div>
-                                <span class="text-l">start ↗</span>
+                                <p class="text-l">start</p>
                                 <p class="text-s">get it going with rnbw.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="box">
-                        <a id="nav-item"
-                            href="https://github.com/rnbwdev/rnbw"
-                            target="_blank"
-                            class="padding-l gap-m radius-s background-primary border">
-                            <svg-icon
-                                src="https://raincons.rnbw.dev/icons/github.svg"
-                                class="icon-m"></svg-icon>
-                            <div>
-                                <span class="text-l">GitHub ↗</span>
-                                <p class="text-s">
-                                    contribute or make it yours.
-                                </p>
                             </div>
                         </a>
                     </div>
@@ -39,7 +23,7 @@ const navTemplate = `
                                 src="https://raincons.rnbw.dev/icons/library.svg"
                                 class="icon-m"></svg-icon>
                             <div>
-                                <span class="text-l">guide ↗</span>
+                                <p class="text-l">guide</p>
                                 <p class="text-s">learn how to use.</p>
                             </div>
                         </a>
@@ -53,8 +37,24 @@ const navTemplate = `
                                 src="https://raincons.rnbw.dev/icons/people.svg"
                                 class="icon-m"></svg-icon>
                             <div>
-                                <span class="text-l">community ↗</span>
-                                <p class="text-s">be part of it.</p>
+                                <p class="text-l">community ↗</p>
+                                <p class="text-s">join rnbw on discord.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <a id="nav-item"
+                            href="https://github.com/rnbwdev/rnbw"
+                            target="_blank"
+                            class="padding-l gap-m radius-s background-primary border">
+                            <svg-icon
+                                src="https://raincons.rnbw.dev/icons/github.svg"
+                                class="icon-m"></svg-icon>
+                            <div>
+                                <p class="text-l">GitHub ↗</p>
+                                <p class="text-s">
+                                    contribute or make it yours.
+                                </p>
                             </div>
                         </a>
                     </div>
