@@ -104,9 +104,9 @@ style="min-height: 635px">
     <i>Sir Tim Berners-Lee</i>
     <h1 class="border" style="display:none;" id="anim-heading">Write Something</h1>
     <div class="gap-s column box-s">
-        <div class="box-l size-dropdown gap-xs padding-s" >
-        <span class="cursor"></span><p class="anim opacity-m" id="anim1" style="opacity:0.5";>
-            Press '/' for commands </p>
+        <div class="box-l size-dropdown gap-xs" >
+        <span class="cursor"></span><span class="anim opacity-m" id="anim1" style="opacity:0.5";>
+            Press '/' for commands </span>
             
         </div>
 
@@ -198,16 +198,13 @@ style.innerHTML = `
         opacity: 1;
         transform: translateY(0);
         }
-
-    
-    
       rnbw-editor .cursor {
       display: inline-block;
-      width: 0.1em;
+      width: 0.01em;
       height: 1em;
-      margin-right: 0.2em;
+      margin-right: 0.1em;
       background-color: var(--color-primary-foreground);
-      top: 0.6em;
+      
       position: relative;
       animation: blink 0.2s infinite;
     }
