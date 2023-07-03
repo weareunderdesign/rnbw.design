@@ -11,7 +11,7 @@ const rnbwKeyboardTemplate = `
   <!-- Do Something -->
   <div
     class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile hidden"
-    style="min-height: 700px"
+    style="min-height: 705px"
     id="do-something-menu"
   >
     <div class="row shadow background-primary radius-s box-s border">
@@ -193,7 +193,7 @@ const rnbwKeyboardTemplate = `
 
   <!-- Jumpstart menu --->
 
-    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile" style="min-height: 700px"
+    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile" style="min-height: 705px"
     id="jumpstart-menu"
     >
       <div class="box-s row align-stretch shadow background-primary radius-s border">
@@ -340,7 +340,7 @@ const rnbwKeyboardTemplate = `
   </div>
 
   <!-- Add something -->
-    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile hidden" style="min-height: 700px"
+    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile hidden" style="min-height: 705px"
     id="add-something-menu"
     >
       <div class="box-s row align-stretch shadow background-primary radius-s border">
