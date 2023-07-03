@@ -375,10 +375,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 element.style.opacity = 1;
                 totalSpansAnimated++;
               }, timer);
-              timer += 100;
+              timer += 70;
               spanCount++;
             }
-            setTimeout(typeCode, 100);
+            setTimeout(typeCode, 70);
           } else {
             setTimeout(typeCode, 10); // adjust the delay time as needed
           }
