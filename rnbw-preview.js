@@ -342,11 +342,11 @@ document.addEventListener("DOMContentLoaded", function () {
           if (charIndex < originalText.length) {
             spans[index].textContent = originalText.slice(0, charIndex + 1);
             charIndex++;
-            setTimeout(type, 30);
+            setTimeout(type, 20);
           } else {
             charIndex = 0;
             index++;
-            setTimeout(type, 1000);
+            setTimeout(type, 200);
           }
         } else {
           setTimeout(() => {
@@ -378,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
               timer += 100;
               spanCount++;
             }
-            setTimeout(typeCode, 1000);
+            setTimeout(typeCode, 100);
           } else {
             setTimeout(typeCode, 10); // adjust the delay time as needed
           }
