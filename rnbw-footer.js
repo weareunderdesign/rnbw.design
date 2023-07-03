@@ -11,6 +11,7 @@ const footerTemplate = `
         <div class="column gap-s box">
             <a href="https://rnbw.company/signup" target="_blank">start</a><a href="https://guide.rnbw.dev/">guide</a>
             <a href="https://rnbw.company/about">about</a>
+            <a href="https://rnbw.company/changelog">changelog</a>
         </div>
         <div class="column gap-s box">
 
