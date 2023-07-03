@@ -105,11 +105,12 @@ style="min-height: 635px">
     <h1 class="border" style="display:none;" id="anim-heading">Write Something</h1>
     <div class="gap-s column box-s">
         <div class="box-l size-dropdown gap-xs padding-s" >
-            <p class="opacity-m anim" id="anim1">/</p>
+        <span class="cursor"></span><p class="anim opacity-m" id="anim1" style="opacity:0.5";>
+            Press '/' for commands </p>
             
         </div>
 
-        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2">
+        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2" style="opacity:0;">
             <div class="border-bottom box-l column" id ="anim3">
                 <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
@@ -198,6 +199,19 @@ style.innerHTML = `
         transform: translateY(0);
         }
 
+    
+    
+      rnbw-editor .cursor {
+      display: inline-block;
+      width: 0.1em;
+      height: 1em;
+      margin-right: 0.2em;
+      background-color: var(--color-primary-foreground);
+      top: 0.6em;
+      position: relative;
+      animation: blink 0.2s infinite;
+    }
+
   `;
 document.head.appendChild(style);
 document.addEventListener("DOMContentLoaded", () => {
@@ -226,10 +240,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(async () => {
         await entry.target.classList.add("is-visible");
+        setTimeout(() => {
+          let cursor = document.querySelectorAll("rnbw-editor .cursor")[0];
+          let opacity = cursor.style.opacity;
+          if (opacity == 0) {
+            cursor.style.opacity = 1;
+          } else {
+            cursor.style.opacity = 0;
+          }
+        }, 400);
+
         if (entry.target.id == "anim2") {
-          setAnim1();
-          type();
-          filterAndSelectDiv();
+          let cursor = document.querySelectorAll("rnbw-editor .cursor")[0];
+          setTimeout(() => {
+            setAnim1();
+            cursor.style.opacity = 0;
+          }, 1000);
+          setTimeout(() => {
+            type();
+          }, 2000);
+
+          setTimeout(() => {
+            let anim1 = document.querySelectorAll("rnbw-editor #anim1");
+            anim1.forEach((span) => (span.textContent = "/h"));
+            filterAndSelectDiv();
+          }, 2000);
         }
       }, delay);
 
@@ -247,8 +282,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(fadeInOnScroll, options);
   function setAnim1() {
     let anim1 = document.querySelectorAll("rnbw-editor #anim1");
-    anim1.forEach((span) => span.setAttribute("data-text", "/h"));
+    anim1.forEach((span) => span.setAttribute("data-text", "/"));
     anim1.forEach((span) => (span.textContent = "/"));
+    document.getElementById("anim2").style.opacity = 1;
   }
 
   function type() {
@@ -274,11 +310,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const { anim1Div, anim2Div, anim3Div, anim4Div } = getAnimationSection();
     let anim3DivChildren = anim3Div.children;
     for (let i = 0; i < anim3DivChildren.length; i++) {
+      let delay = 0;
       if (anim3DivChildren[i].id == "filtered-option") {
         setTimeout(() => {
           anim3DivChildren[i].classList.add("background-secondary");
         }, delay);
-        delay += 250;
+        delay += 10;
         continue;
       }
       setTimeout(() => {
@@ -289,8 +326,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       const animHeading = document.getElementById("anim-heading");
       animHeading.style.display = "block";
-    }, delay + 1000);
-    delay += 1000;
+    }, delay);
+
     setTimeout(() => {
       anim1Div.classList.add("hide");
       anim2Div.classList.add("hide");
@@ -337,8 +374,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       let anim1 = document.querySelectorAll("rnbw-editor #anim1");
+      document.getElementById("anim2").style.opacity = 0;
       anim1.forEach((span) => {
-        span.textContent = "";
+        span.textContent = "Press '/' for commands";
         span.removeAttribute("data-text");
       });
     }, 500);
