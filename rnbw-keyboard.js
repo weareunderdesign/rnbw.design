@@ -196,7 +196,7 @@ const rnbwKeyboardTemplate = `
     <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile" style="min-height: 700px"
     id="jumpstart-menu"
     >
-      <div class="box-m row align-stretch shadow background-primary radius-s border">
+      <div class="box-s row align-stretch shadow background-primary radius-s border">
           <div class="gap-m box-l border-bottom padding-m justify-start radius-xs">
               <div class="justify-start gap-s padding-s">
                   <div>
@@ -205,7 +205,7 @@ const rnbwKeyboardTemplate = `
               </div>
           </div>
           <div class="box-l row align-stretch">
-              <div class="padding-m column align-stretch">
+              <div class="box-l padding-m column align-stretch">
                   <div class="column align-stretch">
                       <div class="padding-m gap-s">
                           <span class="text-s opacity-m">Projects</span>
@@ -334,9 +334,7 @@ const rnbwKeyboardTemplate = `
                       </div>
                   </div>
               </div>
-              <div class="box align-center border-left">
-                  
-              </div>
+          
           </div>
       </div>
   </div>
@@ -345,7 +343,7 @@ const rnbwKeyboardTemplate = `
     <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile hidden" style="min-height: 700px"
     id="add-something-menu"
     >
-      <div class="box-m row align-stretch shadow background-primary radius-s border">
+      <div class="box-s row align-stretch shadow background-primary radius-s border">
           <div class="gap-m box-l border-bottom padding-m justify-start radius-xs">
               <div class="justify-start gap-s padding-s">
                   <div>
@@ -354,7 +352,7 @@ const rnbwKeyboardTemplate = `
               </div>
           </div>
           <div class="box-l row align-stretch">
-              <div class="padding-m">
+              <div class="box-l padding-m column align-stretch">
                   <div>
                       <div class="padding-s justify-start">
                           <span class="text-s opacity-m">Files</span>
@@ -483,9 +481,7 @@ const rnbwKeyboardTemplate = `
                       </div>
                   </div>
               </div>
-              <div class="box align-center border-left">
-                  
-              </div>
+             
           </div>
       </div>
   </div>
