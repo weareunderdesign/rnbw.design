@@ -1,5 +1,5 @@
 const rnbwKeyboardTemplate = `
-<div class="page" id="keyboard-wrapper">
+<div class="gap-l column" id="keyboard-wrapper">
   <img class="dark keyboard" src="images/keyboard-dark-j.svg" />
   <img class="dark keyboard hidden" src="images/keyboard-dark-a.svg" />
   <img class="dark keyboard hidden" src="images/keyboard-dark-w.svg" />
