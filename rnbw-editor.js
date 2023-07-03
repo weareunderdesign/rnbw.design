@@ -202,10 +202,10 @@ style.innerHTML = `
       display: inline-block;
       width: 0.01em;
       height: 1em;
-      margin-right: 0.1em;
+      // margin-right: 0.1em;
       background-color: var(--color-primary-foreground);
       
-      position: relative;
+      position: absolute;
       animation: blink 0.2s infinite;
     }
 
