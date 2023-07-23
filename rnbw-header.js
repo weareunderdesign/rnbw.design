@@ -5,22 +5,15 @@ const headerTemplate = `
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
     <div class="gap-m box justify-end">
-        <a id="nav-item" href="https://rnbw.company/" class="align-center column">
-            <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
+        <a id="nav-item" href="https://rnbw.company/signup" class="align-center column">
+        <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             rnbw 0.1
         </a>
-        <a id="nav-item" href="https://guide.rnbw.dev/" class="align-center column">
-        <svg-icon src="https://rnbw.company/images/usrgd.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
-            guide
+        <a id="nav-item" href="https://renecss.org" class="align-center column">
+        <svg-icon src="https://rnbw.company/images/rene.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
+            rene.css
         </a>
-        <a id="nav-item" href="https://discord.gg/HycXz8TJkd" target="_blank" class="align-center column">
-        <svg-icon src="https://rnbw.company/images/cmnty.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
-            discord
-        </a>
-        <a id="nav-item" href="https://rnbw.company/signup" target="_blank" class="align-center column">
-        <svg-icon src="https://rnbw.company/images/gtstrt.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
-            start
-        </a>
+
     </div>
 </nav>
 `;
