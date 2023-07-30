@@ -1,8 +1,8 @@
 const rnbwPreviewTemplate = `
                 <div
-                    class="hidden-on-mobile row radius-s border padding-m gap-m">
+                    class="hidden-on-mobile row radius-s border">
                     <div
-                        class="panel justify-stretch radius-s border background-primary">
+                        class="panel justify-stretch border-right">
                         <div class="panel">
                             <div
                                 class="justify-stretch padding-s border-bottom">
@@ -271,7 +271,7 @@ const rnbwPreviewTemplate = `
                         </div>
                     </div>
 
-                    <div class="box gap-l column">
+                    <div class="box-s gap-l column padding-m">
                     <style>
                     .hidden {
                         display: none;
@@ -286,9 +286,11 @@ const rnbwPreviewTemplate = `
                 <span class="hidden" style="color: #ffa500">it fully embraces open web standards.</span>
                 <span class="hidden" style="color: #ffd700">and, it is powered by AI...</span>
                 </h3>
-                        <div
-                            class="padding-l border-left background-primary radius-s border opacity-m">
-<code style="white-space: pre-wrap;">&lt;span style="color:#006400"&gt;rnbw is a modern design and code editor.&lt;/span&gt;
+
+                    </div>
+                                            <div
+                            class="box padding-l border-left background-primary radius-s border opacity-m">
+<code>&lt;span style="color:#006400"&gt;rnbw is a modern design and code editor.&lt;/span&gt;
 &lt;span style="color:#0000CD"&gt;it's simple, flexible, and open.&lt;/span&gt;
 &lt;span style="color:#800080"&gt;it works with your files.&lt;/span&gt;
 &lt;span style="color:#EE82EE"&gt;it's powered by the web.&lt;/span&gt;
@@ -296,7 +298,6 @@ const rnbwPreviewTemplate = `
 &lt;span style="color:#FFA500"&gt;it fully embraces open web standards.&lt;/span&gt;
 &lt;span style="color:#FFD700"&gt;and, it is powered by AI...&lt;/span&gt;</code>
                         </div>
-                    </div>
                 </div>
 `;
 
