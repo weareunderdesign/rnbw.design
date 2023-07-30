@@ -1,6 +1,6 @@
 const rnbwFiles = `
-<div class="hidden-on-mobile gap-m row radius-s border padding-m">
-<div class="panel justify-stretch background-primary radius-s border">
+<div class="hidden-on-mobile row radius-s border">
+<div class="panel justify-stretch border-right">
   <div class="panel">
     <div class="justify-stretch padding-s border-bottom">
       <div class="gap-s align-center">
@@ -93,7 +93,7 @@ const rnbwFiles = `
     </div>
   </div>
 </div>
-<div class="box align-stretch">
+<div class="box align-stretch padding-m">
   <div class="box gap-m row">
     <h2>
       <span
