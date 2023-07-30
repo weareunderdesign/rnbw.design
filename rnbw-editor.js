@@ -1,7 +1,7 @@
 const rnbwEditor = `
-<div class="hidden-on-mobile row radius-s border padding-m gap-m border" id="rnbw-editor"
+<div class="hidden-on-mobile row radius-s border border" id="rnbw-editor"
 style="min-height: 635px">
-<div class="panel justify-stretch background-primary radius-s border">
+<div class="panel justify-stretch border-right">
     <div class="panel">
         <div class="justify-stretch padding-s border-bottom">
             <div class="gap-s align-center">
@@ -93,7 +93,7 @@ style="min-height: 635px">
   
 </div>
 
-<div class="box column gap-m">
+<div class="box column gap-m padding-m">
     <h4 class="border">
         "The first web browser was also an editor. The idea
         being that not only could everyone read content on
