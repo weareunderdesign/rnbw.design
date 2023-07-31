@@ -1,5 +1,5 @@
 const rnbwFiles = `
-<div class="hidden-on-mobile row radius-s border">
+<div class="hidden-on-mobile row radius-s border" style="position:relative; min-height:600px;">
 <div class="panel justify-stretch border-right">
   <div class="panel">
     <div class="justify-stretch padding-s border-bottom">
@@ -102,22 +102,21 @@ const rnbwFiles = `
         enjoying the benefits of files without the "meh".
       </span>
     </h2>
+
+  </div>
+</div>
     <div
-      class="padding-l border-left background-primary radius-s border opacity-m"
-      style="opacity:0;"
+      class="box-xs row padding-l border-left background-primary radius-s border opacity-m"
+      style="opacity:0; position:absolute; top:0; right: 0; bottom:0;"
       id="anim-3"
     >
       <code>
       const tryMeBtn = document.getElementById("try_me");
-      </code>
-      <code>
       tryMeBtn.addEventListener("click", () => {
        window.location.href = "https://rnbw.dev";
       });
       </code>
     </div>
-  </div>
-</div>
 </div>
 `;
 
