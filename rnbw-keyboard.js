@@ -1,13 +1,5 @@
 const rnbwKeyboardTemplate = `
 <div class="gap-l column" id="keyboard-wrapper">
-  <img class="dark keyboard" src="images/keyboard-dark-j.svg" />
-  <img class="dark keyboard hidden" src="images/keyboard-dark-a.svg" />
-  <img class="dark keyboard hidden" src="images/keyboard-dark-w.svg" />
-
-  <img class="light keyboard" src="images/keyboard-light-j.svg" />
-  <img class="light keyboard hidden" src="images/keyboard-light-a.svg" />
-  <img class="light keyboard hidden" src="images/keyboard-light-w.svg" />
-
   <!-- Do Something -->
   <div
     class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile hidden"
@@ -485,6 +477,13 @@ const rnbwKeyboardTemplate = `
           </div>
       </div>
   </div>
+    <img class="dark keyboard" src="images/keyboard-dark-j.svg" />
+  <img class="dark keyboard hidden" src="images/keyboard-dark-a.svg" />
+  <img class="dark keyboard hidden" src="images/keyboard-dark-w.svg" />
+
+  <img class="light keyboard" src="images/keyboard-light-j.svg" />
+  <img class="light keyboard hidden" src="images/keyboard-light-a.svg" />
+  <img class="light keyboard hidden" src="images/keyboard-light-w.svg" />
 </div>`;
 
 class RnbwKeyobard extends HTMLElement {
