@@ -230,7 +230,7 @@ const rnbwPreviewTemplate = `
                                     </div>
                                 </div>
                                 <div class="justify-stretch">
-                                    <div class="gap-s box justify-start">
+                                    <div class="gap-s box justify-start align-center">
                                         <div
                                             class="padding-xs radius-xs background-secondary">
                                             <svg-icon
@@ -243,7 +243,7 @@ const rnbwPreviewTemplate = `
                                     </div>
                                 </div>
                                 <div class="justify-stretch opacity-m">
-                                    <div class="gap-s box justify-start">
+                                    <div class="gap-s box justify-start align-center">
                                         <div class="padding-xs radius-xs">
                                             <svg-icon
                                                 src="https://raincons.rnbw.dev/icons/flex.svg"></svg-icon>
@@ -255,7 +255,7 @@ const rnbwPreviewTemplate = `
                                     </div>
                                 </div>
                                 <div class="justify-stretch">
-                                    <div class="gap-s box justify-start">
+                                    <div class="gap-s box justify-start align-center">
                                         <div
                                             class="padding-xs radius-xs background-secondary">
                                             <svg-icon
