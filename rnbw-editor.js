@@ -1,6 +1,6 @@
 const rnbwEditor = `
 <div class="hidden-on-mobile row radius-s border border" id="rnbw-editor"
-style="min-height: 635px">
+style="height: 635px">
 <div class="panel justify-stretch border-right">
     <div class="panel">
         <div class="justify-stretch padding-s border-bottom">
