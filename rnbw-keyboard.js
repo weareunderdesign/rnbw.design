@@ -2,7 +2,7 @@ const rnbwKeyboardTemplate = `
 <div class="gap-l column" id="keyboard-wrapper">
   <!-- Do Something -->
   <div
-    class="background-secondary box align-center radius-s border padding-xl hidden-on-mobile hidden"
+    class="background-secondary box align-center radius-s border padding-l hidden"
     style="min-height: 705px"
     id="do-something-menu"
   >
@@ -185,7 +185,7 @@ const rnbwKeyboardTemplate = `
 
   <!-- Jumpstart menu --->
 
-    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile" style="min-height: 705px"
+    <div class="background-secondary box align-center padding-l radius-s border" style="min-height: 705px"
     id="jumpstart-menu"
     >
       <div class="box-s row align-stretch shadow background-primary radius-s border">
@@ -332,7 +332,7 @@ const rnbwKeyboardTemplate = `
   </div>
 
   <!-- Add something -->
-    <div class="background-secondary box align-center padding-xl radius-s border hidden-on-mobile hidden" style="min-height: 705px"
+    <div class="background-secondary box align-center padding-l radius-s border hidden" style="min-height: 705px"
     id="add-something-menu"
     >
       <div class="box-s row align-stretch shadow background-primary radius-s border">
