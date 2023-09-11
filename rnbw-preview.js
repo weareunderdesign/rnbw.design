@@ -1,8 +1,8 @@
 const rnbwPreviewTemplate = `
                 <div
-                    class="hidden-on-mobile row radius-s border">
+                    class="row radius-s border">
                     <div
-                        class="panel justify-stretch border-right">
+                        class="panel hidden-on-mobile justify-stretch border-right">
                         <div class="panel">
                             <div
                                 class="justify-stretch padding-s border-bottom">
