@@ -1,6 +1,6 @@
 const rnbwBlog = `
 <div
-class="box align-center radius-s border padding-xl hidden-on-mobile"
+class="box align-center radius-s border padding-l"
 style="min-height: 605px; position: relative"
 >
 <div style="position: absolute; left: 40px; top: 40px; right: 40px"
