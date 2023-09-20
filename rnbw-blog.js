@@ -1,6 +1,6 @@
 const rnbwBlog = `
 <div
-class="box align-center radius-s border padding-l"
+class="box align-center radius-s padding-l border"
 style="min-height: 605px; position: relative"
 >
 <div style="position: absolute; left: 40px; top: 40px; right: 40px"
@@ -31,7 +31,7 @@ style="min-height: 605px; position: relative"
   </article>
 </div>
 <div
-  class="row shadow background-primary radius-s box-s border"
+  class="row shadow radius-s box-s border"
   style="z-index: 999"
   id="anim-6"
 >
