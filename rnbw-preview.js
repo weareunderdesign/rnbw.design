@@ -185,7 +185,7 @@ const rnbwPreviewTemplate = `
                         </div>
                         <div>
                             <div class="padding-m gap-s panel border-bottom">
-                                <div class="justify-stretch">
+                                <div class="justify-stretch align-center">
                                     <span class="text-s">Settings</span>
                                     <div
                                         class="row gap-s justify-end">
