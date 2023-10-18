@@ -68,7 +68,131 @@ const communityIconSvg = `
   </svg>
 </svg-icon>`;
 
+const searchBox = `
+<div class="gap-m box-l border-bottom padding-m justify-start radius-xs">
+    <div class="justify-start gap-s padding-s">
+        <div>
+            <span class="text-l opacity-m">Jumpstart...</span>
+        </div>
+    </div>
+</div>
+`;
+
+const subMenus = (menuConfigs) => {
+  const {
+    menuTitle = "",
+    options = [
+      {
+        icon: "",
+        name: "",
+        shortcut: "",
+      },
+    ],
+  } = menuConfigs;
+  return `
+
+    <div class="column align-stretch">
+      <div class="padding-m gap-s">
+        <span class="text-s opacity-m">${menuTitle}</span>
+      </div>
+
+      ${options
+        ?.map(
+          (option) => `
+        <div class="padding-s justify-stretch">
+          <div class="gap-s align-center">
+            ${option.icon}
+            <span class="text-m">${option.name}</span>
+          </div>
+          <div class="gap-s">
+            <span class="text-m">${option.shortcut}</span>
+          </div>
+       </div>    
+      `
+        )
+        .join(" ")}
+      </div> 
+`;
+};
+
 const doSomething = () => {
+  const menuWrapper = ` 
+    <div class="box-l row align-stretch">
+      <div class="column align-stretch">
+          <div class="box-l padding-m column align-stretch">
+              ${subMenus({
+                menuTitle: "Projects",
+                options: [
+                  {
+                    icon: newIconSvg,
+                    name: "New",
+                    shortcut: "N",
+                  },
+                  {
+                    icon: folderIconSvg,
+                    name: "Open",
+                    shortcut: "O",
+                  },
+                ],
+              })}
+              ${subMenus({
+                menuTitle: "Recent",
+                options: [
+                  {
+                    icon: folderIconSvg,
+                    name: "Project",
+                    shortcut: "",
+                  },
+                  {
+                    icon: githubIconSvg,
+                    name: "Project",
+                    shortcut: "",
+                  },
+                  {
+                    icon: folderIconSvg,
+                    name: "Project",
+                    shortcut: "",
+                  },
+                ],
+              })}
+              ${subMenus({
+                menuTitle: "Help",
+                options: [
+                  {
+                    icon: guideIconSvg,
+                    name: "Guide",
+                    shortcut: "",
+                  },
+                  {
+                    icon: supportIconSvg,
+                    name: "Support",
+                    shortcut: "",
+                  },
+                  {
+                    icon: communityIconSvg,
+                    name: "Community",
+                    shortcut: "",
+                  },
+                ],
+              })}
+              
+              ${subMenus({
+                menuTitle: "Settings",
+                options: [
+                  {
+                    icon: `  <div class="padding-xs">
+                      <div class="radius-m icon-xs align-center background-secondary"></div>
+                  </div>`,
+                    name: `<span class="text-m opacity-m">Theme</span>
+                      <span class="text-s opacity-m">/</span>
+                      <span class="text-m">System</span>`,
+                    shortcut: "",
+                  },
+                ],
+              })} 
+          </div>
+      </div>
+    </div>`;
   return `<div class="background-secondary box align-center radius-s border padding-l hidden" style="min-height: 705px"
 id="do-something-menu">
 <div class="row shadow background-primary radius-s box-s border">
@@ -223,127 +347,82 @@ id="do-something-menu">
 };
 
 const jumpstartMenu = () => {
-  const searchBox = `
-  <div class="gap-m box-l border-bottom padding-m justify-start radius-xs">
-      <div class="justify-start gap-s padding-s">
-          <div>
-              <span class="text-l opacity-m">Jumpstart...</span>
-          </div>
-      </div>
-  </div>
-  `;
-
-  const subMenus = (menuConfigs) => {
-    const {
-      menuTitle = "",
-      options = [
-        {
-          icon: "",
-          name: "",
-          shortcut: "",
-        },
-      ],
-    } = menuConfigs;
-    return `
-
-      <div class="box-l column align-stretch">
-        <div class="padding-m gap-s">
-          <span class="text-s opacity-m">${menuTitle}</span>
-        </div>
-
-        ${options
-          ?.map(
-            (option) => `
-          <div class="padding-m gap-s justify-stretch box-l">
-            <div class="gap-s align-center">
-              ${option.icon}
-              <span class="text-m">${option.name}</span>
-            </div>
-            <div class="gap-s">
-              <span class="text-m">${option.shortcut}</span>
-            </div>
-         </div>     
-        `
-          )
-          .join("\n")}
-  `;
-  };
   const menuWrapper = `
   
-  <div class="box-l row align-stretch">
+  <div class="box-l column align-stretch" style="align-items:stretch;">
     <div class="column align-stretch">
-    <div class="box-l padding-m column align-stretch">
-      ${subMenus({
-        menuTitle: "Projects",
-        options: [
-          {
-            icon: newIconSvg,
-            name: "New",
-            shortcut: "N",
-          },
-          {
-            icon: folderIconSvg,
-            name: "Open",
-            shortcut: "O",
-          },
-        ],
-      })}
-      ${subMenus({
-        menuTitle: "Recent",
-        options: [
-          {
-            icon: folderIconSvg,
-            name: "Project",
-            shortcut: "",
-          },
-          {
-            icon: githubIconSvg,
-            name: "Project",
-            shortcut: "",
-          },
-          {
-            icon: folderIconSvg,
-            name: "Project",
-            shortcut: "",
-          },
-        ],
-      })}
-      ${subMenus({
-        menuTitle: "Help",
-        options: [
-          {
-            icon: guideIconSvg,
-            name: "Guide",
-            shortcut: "",
-          },
-          {
-            icon: supportIconSvg,
-            name: "Support",
-            shortcut: "",
-          },
-          {
-            icon: communityIconSvg,
-            name: "Community",
-            shortcut: "",
-          },
-        ],
-      })}
-      
-      ${subMenus({
-        menuTitle: "Settings",
-        options: [
-          {
-            icon: `  <div class="padding-xs">
-            <div class="radius-m icon-xs align-center background-secondary"></div>
-        </div>`,
-            name: `<span class="text-m opacity-m">Theme</span>
-            <span class="text-s opacity-m">/</span>
-            <span class="text-m">System</span>`,
-            shortcut: "",
-          },
-        ],
-      })} 
-    </div>
+        <div class="box-l padding-m column align-stretch" style="align-items:stretch;">
+            ${subMenus({
+              menuTitle: "Projects",
+              options: [
+                {
+                  icon: newIconSvg,
+                  name: "New",
+                  shortcut: "N",
+                },
+                {
+                  icon: folderIconSvg,
+                  name: "Open",
+                  shortcut: "O",
+                },
+              ],
+            })}
+            ${subMenus({
+              menuTitle: "Recent",
+              options: [
+                {
+                  icon: folderIconSvg,
+                  name: "Project",
+                  shortcut: "",
+                },
+                {
+                  icon: githubIconSvg,
+                  name: "Project",
+                  shortcut: "",
+                },
+                {
+                  icon: folderIconSvg,
+                  name: "Project",
+                  shortcut: "",
+                },
+              ],
+            })}
+            ${subMenus({
+              menuTitle: "Help",
+              options: [
+                {
+                  icon: guideIconSvg,
+                  name: "Guide",
+                  shortcut: "",
+                },
+                {
+                  icon: supportIconSvg,
+                  name: "Support",
+                  shortcut: "",
+                },
+                {
+                  icon: communityIconSvg,
+                  name: "Community",
+                  shortcut: "",
+                },
+              ],
+            })}
+            
+            ${subMenus({
+              menuTitle: "Settings",
+              options: [
+                {
+                  icon: `  <div class="padding-xs">
+                    <div class="radius-m icon-xs align-center background-secondary"></div>
+                </div>`,
+                  name: `<span class="text-m opacity-m">Theme</span>
+                    <span class="text-s opacity-m">/</span>
+                    <span class="text-m">System</span>`,
+                  shortcut: "",
+                },
+              ],
+            })} 
+        </div>
     </div>
   </div>`;
 
@@ -351,6 +430,7 @@ const jumpstartMenu = () => {
     <div class="background-secondary box align-center padding-l radius-s border" style="min-height: 705px"
     id="jumpstart-menu">
       <div class="box-s row align-stretch shadow background-primary radius-s border">
+      
         ${searchBox}
         ${menuWrapper}
       </div>
@@ -562,6 +642,7 @@ const rnbwKeyboardTemplate = `
   <img class="light keyboard hidden" src="images/keyboard-light-w.svg" />
 </div>`;
 
+debugger;
 class RnbwKeyobard extends HTMLElement {
   constructor() {
     super();
