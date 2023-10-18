@@ -1,6 +1,6 @@
 const rnbwPreviewTemplate = `
                 <div
-                    class="row radius-s border">
+                    class="row radius-s border" id="rnbw-preview-wrapper" style="flex-direction:row; flex-wrap:nowrap; min-height:660px;">
                     <div
                         class="panel hidden-on-mobile justify-stretch border-right">
                         <div class="panel">
