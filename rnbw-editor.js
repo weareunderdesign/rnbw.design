@@ -110,7 +110,7 @@ style="height: 635px">
             
         </div>
 
-        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2" style="opacity:0;">
+        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2" style="opacity:0;width:100%;">
             <div class="border-bottom box-l column" id ="anim3">
                 <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
