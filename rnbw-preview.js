@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           setTimeout(() => {
             reset();
-          }, 2000);
+          }, 4000);
         }
       }
       const code = document.querySelector("code");
