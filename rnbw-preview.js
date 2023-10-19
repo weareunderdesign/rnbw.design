@@ -1,6 +1,6 @@
 const rnbwPreviewTemplate = `
 <div class="row radius-s border" id="rnbw-preview-wrapper"
-    style="flex-direction:row; flex-wrap:nowrap; min-height:660px;">
+    style="flex-direction:row; flex-wrap:nowrap; min-height:730px;">
     <div class="panel hidden-on-mobile justify-stretch border-right">
         <div class="panel">
             <div class="justify-stretch padding-s border-bottom">
@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             charIndex = 0;
             index++;
-            setTimeout(type, 200);
+            setTimeout(type, 800);
           }
         } else {
           setTimeout(() => {
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             setTimeout(typeCode, 70);
           } else {
-            setTimeout(typeCode, 10); // adjust the delay time as needed
+            setTimeout(typeCode, 15); // adjust the delay time as needed
           }
         }
       }
