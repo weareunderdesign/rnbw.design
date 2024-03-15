@@ -1,10 +1,10 @@
 const headerTemplate = `
-<nav class="box-l padding-l gap-l justify-stretch" id="rnbw-logo">
-    <div class="gap-l box">
+<nav class="box-l padding-l row gap-l box">
+    <div class="box gap-l">
         <a href="https://rnbw.company/"><svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon></a>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
-    <div class="gap-m justify-end box">
+    <div class="gap-m box justify-end">
         <a id="nav-item" href="https://rnbw.company/signup" class="align-center column">
         <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             rnbw 0.1
@@ -57,7 +57,6 @@ class RnbwHeader extends HTMLElement {
       }
     });
   }
-  
 }
 
 customElements.define("rnbw-header", RnbwHeader);
