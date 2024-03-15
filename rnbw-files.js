@@ -106,7 +106,7 @@ const rnbwFiles = `
   </div>
 </div>
     <div
-      class="box-xs row padding-l border-left background-primary opacity-m"
+      class="box-xs row padding-l border-left background-primary radius-s border opacity-m"
       style="opacity:0; position:absolute; top:0; right: 0; bottom:0;"
       id="anim-3"
     >

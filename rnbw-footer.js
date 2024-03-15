@@ -15,10 +15,10 @@ const footerTemplate = `
         </div>
         <div class="column gap-s box">
 
-            <a href="https://discord.gg/5CEf42mF/" target="_blank">discord ↗</a>
+            <a href="https://discord.gg/HycXz8TJkd" target="_blank">discord ↗</a>
             <a href="https://twitter.com/rnbwdev" target="_blank">twitter ↗</a>
             <a href="https://github.com/rnbwdev" target="_blank">github ↗</a>
-            <a href="mailto:hello@rnbw.company">get in touch</a>
+            <a href="mailto:hello@rnbw.dev">get in touch</a>
         </div>
         <div class="column gap-s box">
             <a href="https://renecss.org" target="_blank">rene.css ↗</a>
