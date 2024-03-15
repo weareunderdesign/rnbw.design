@@ -1,7 +1,8 @@
 const rnbwBlog = `
 <div
-class="box align-center radius-s border padding-xl hidden-on-mobile"
-style="min-height: 605px; position: relative"
+class="box align-center radius-s padding-l border"
+
+id="blog-wrapper"
 >
 <div style="position: absolute; left: 40px; top: 40px; right: 40px"
 >
@@ -31,7 +32,7 @@ style="min-height: 605px; position: relative"
   </article>
 </div>
 <div
-  class="row shadow background-primary radius-s box-s border"
+  class="row shadow radius-s box-s border"
   style="z-index: 999"
   id="anim-6"
 >
@@ -175,6 +176,22 @@ const rules = `
 
 .fade-in.show {
   opacity: 1;
+}
+
+#blog-wrapper {
+  min-height: 610px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #blog-wrapper {
+    min-height: 850px;
+  }
+}
+@media (max-width: 350px) {
+  #blog-wrapper {
+    min-height: 1000px;
+  }
 }
 `;
 if (!!style) style.innerHTML = style.innerHTML + rules;
