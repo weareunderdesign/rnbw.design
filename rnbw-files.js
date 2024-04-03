@@ -95,13 +95,13 @@ const rnbwFiles = `
 </div>
 <div class="box align-stretch padding-m">
   <div class="box gap-m row">
-    <h2>
+    <h3>
       <span
         >by adopting open standards and using files as the core, you
         can easily open and edit any HTML/CSS/JS project visually,
         enjoying the benefits of files without the "meh".
       </span>
-    </h2>
+    </h3>
 
   </div>
 </div>

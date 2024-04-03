@@ -34,7 +34,7 @@ const navTemplate = `
                             </div>
                         </a>
                         <a id="nav-item"
-                            href="https://discord.gg/5CEf42mF/"
+                            href="https://github.com/orgs/rnbwdev/discussions"
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
@@ -49,10 +49,21 @@ const navTemplate = `
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="https://raincons.rnbw.dev/icons/github.svg"
+                                src="./images/githubgradient.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">GitHub ↗</p>
+                            </div>
+                        </a>
+                        <a id="nav-item"
+                            href="https://github.com/rnbwdev/rnbw"
+                            target="_blank"
+                            class="align-center justify-start padding-l gap-m radius-s background-primary border">
+                            <svg-icon
+                                src=""
+                                class="icon-s"></svg-icon>
+                            <div>
+                                <p class="text-l">colorpaper ↗</p>
                             </div>
                         </a>
                 </div>
