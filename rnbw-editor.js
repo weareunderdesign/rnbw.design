@@ -1,6 +1,6 @@
 const rnbwEditor = `
 <div class="row radius-s border border" id="rnbw-editor"
-style="height: 635px">
+style="height: 890px">
 <div class="panel hidden-on-mobile justify-stretch border-right">
     <div class="panel">
         <div class="justify-stretch padding-s border-bottom">
@@ -101,7 +101,9 @@ style="height: 635px">
         to be a collaborative space for everyone."
         <br>
     </h4>
+    <img src="./images/tim_berners.png" style="width: 34vw; height: 22vw;">
     <i>Sir Tim Berners-Lee</i>
+
     <h1 class="border" style="display:none;" id="anim-heading">Write Something</h1>
     <div class="gap-s column box-s">
         <div class="box-l size-dropdown gap-xs" >
