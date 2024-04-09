@@ -93,17 +93,17 @@ const rnbwFiles = `
     </div>
   </div>
 </div>
-<div class="box align-stretch padding-m">
-  <div class="box gap-m row">
-    <h3>
-      <span
-        >by adopting open standards and using files as the core, you
-        can easily open and edit any HTML/CSS/JS project visually,
-        enjoying the benefits of files without the "meh".
-      </span>
-    </h3>
-
+<div class="box align-stretch padding-m column">
+  <div id="image-container" class="box gap-m row">
+    <img src="images/HTML.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
+    <img src="images/CSS.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
+    <img src="images/JS.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw;">
   </div>
+  <h3>
+    <span>
+        by adopting open standards and using files as the core, you can easily open and edit any HTML/CSS/JS project visually, enjoying the benefits of files without the "meh".
+    </span>
+  </h3>
 </div>
     <div
       class="box-xs row padding-l border-left background-primary opacity-m"
@@ -187,3 +187,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   }
 });
+
+// inverting folders images
+
+const images = document.querySelectorAll('#image-container img');
+
+function checkDarkMode() {
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+function invertImages() {
+  images.forEach(image => {
+    if (checkDarkMode()) {
+      image.style.filter = 'invert(1)';
+    } else {
+      image.style.filter = 'none';
+    }
+  });
+}
+
+invertImages();
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  invertImages();
+});
+
+//

@@ -229,13 +229,13 @@ const rnbwPreviewTemplate = `
             }
         </style>
         <h3>
-            <span class="hidden" style="color: #006400">rnbw is a modern design and code editor.</span>
+            <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻 .</span>
             <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
             <span class="hidden" style="color: #800080">It works with your files.</span>
             <span class="hidden" style="color: #ee82ee">it's powered by the web.</span>
             <span class="hidden" style="color: #ff4500">it's open source.</span>
             <span class="hidden" style="color: #ffa500">it fully embraces open web standards.</span>
-            <span class="hidden" style="color: #ffd700">and, it is powered by AI...</span>
+            <span class="hidden" style="color: #ffd700">and, it is powered by AI 🤖 ...</span>
         </h3>
 
     </div>
