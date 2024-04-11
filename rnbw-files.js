@@ -95,9 +95,9 @@ const rnbwFiles = `
 </div>
 <div class="box align-stretch padding-m column">
   <div id="image-container" class="box gap-m row">
-    <img src="images/HTML.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
-    <img src="images/CSS.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
-    <img src="images/JS.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw;">
+    <img src="images/HTMLfolder.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
+    <img src="images/CSSfolder.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
+    <img src="images/JSfolder.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw;">
   </div>
   <h3>
     <span>
