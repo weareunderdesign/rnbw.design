@@ -190,6 +190,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // inverting folders images
 
+function checkDarkMode() {
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
 const images = document.querySelectorAll('#image-container img');
 
 function checkDarkMode() {
@@ -211,5 +214,3 @@ invertImages();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
   invertImages();
 });
-
-//

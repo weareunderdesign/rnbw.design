@@ -225,13 +225,13 @@ const rnbwPreviewTemplate = `
     <div class="rnbw-animation-container padding-l" id="container">
         <style>
             .rnbw-animation-container {
-                width: 28.9vw;
+                width: 30vw;
                 height: 42.2vw;
                 overflow: auto;
             }
 
             .animated-element {
-                margin-right: 0.57vw;
+                margin-right: 0.56vw;
             }
               
             .hidden {
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var delay = 0;
         for (let i = 0; i < texts.length; i++) {
             await typeEffect(texts[i], colors[i]);
-            container.lastChild.style.marginRight = "0.57vw";
+            container.lastChild.style.marginRight = "0.56vw";
 
             if (i === 3) {
                 await new Promise(resolve => setTimeout(resolve, 130));
