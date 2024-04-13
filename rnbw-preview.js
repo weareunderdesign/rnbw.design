@@ -222,155 +222,168 @@ const rnbwPreviewTemplate = `
         </div>
     </div>
 
-    <div class="box-s gap-l column padding-m">
+    <div class="rnbw-animation-container padding-l" id="container">
         <style>
+            .rnbw-animation-container {
+                width: 28.9vw;
+                height: 42.2vw;
+                overflow: auto;
+            }
+
+            .animated-element {
+                margin-right: 0.57vw;
+            }
+              
             .hidden {
                 display: none;
             }
-        </style>
-        <h3>
-            <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻 .</span>
-            <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
-            <span class="hidden" style="color: #800080">It works with your files.</span>
-            <span class="hidden" style="color: #ee82ee">it's powered by the web.</span>
-            <span class="hidden" style="color: #ff4500">it's open source.</span>
-            <span class="hidden" style="color: #ffa500">it fully embraces open web standards.</span>
-            <span class="hidden" style="color: #ffd700">and, it is powered by AI 🤖 ...</span>
-        </h3>
+              
+            .custom-text {
+                font-size: 2.31vw;
+                line-height: 2.71vw;
+            }
 
+            .custom-image {
+                display: inline-block;
+                width: auto;
+                height: 2.19vw;
+                margin-bottom: -0.28vw;
+            } 
+
+        </style>
     </div>
+
     <div class="box-s padding-l border-left background-primary radius-s border opacity-m" style="word-break: break-word;">
-        <code>
-            &lt;span style="color:#006400"&gt;rnbw is a modern design and code editor.&lt;/span&gt;
-            &lt;span style="color:#0000CD"&gt;it's simple, flexible, and open.&lt;/span&gt;
-            &lt;span style="color:#800080"&gt;it works with your files.&lt;/span&gt;
-            &lt;span style="color:#EE82EE"&gt;it's powered by the web.&lt;/span&gt;
-            &lt;span style="color:#FF4500"&gt;it's open source.&lt;/span&gt;
-            &lt;span style="color:#FFA500"&gt;it fully embraces open web standards.&lt;/span&gt;
-            &lt;span style="color:#FFD700"&gt;and, it is powered by AI...&lt;/span&gt;
+        <style>
+        .text-animation div {
+            display: inline-block;
+            margin-bottom: 0.57vw;
+        }
+        </style>
+        <code class="text-animation">
         </code>
     </div>
+
 </div>
 `;
 
 class RnbwPreview extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = rnbwPreviewTemplate;
-  }
+    constructor() {
+        super();
+        this.innerHTML = rnbwPreviewTemplate;
+    }
 }
 
 customElements.define("rnbw-preview", RnbwPreview);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const rnbwPreviewElement = document.querySelector("rnbw-preview");
+    var texts = ["rnbw 🌈 is a modern design and code editor 💻 .", "it's simple, flexible, and open.", "it works with your files.", "it's powered by the web", ".", "it's open source.", "it fully embraces open web", "standards.", "and, it is powered by AI 🤖 ..."];
+    var colors = ["#006400", "#0000cd", "#800080", "#ee82ee", "#ee82ee", "#ff4500", "#ffa500", "#ffa500", "#ffd700"];
+    var images = ["images/rnbwanimation1.png", "images/rnbwanimation2.png"];
+    var container = document.getElementById("container");
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
+    function typeEffect(text, color) {
+        return new Promise((resolve, reject) => {
+            var charIndex = 0;
+            var textElement = document.createElement('span');
+            textElement.className = "custom-text";
+            textElement.style.color = color;
+            container.appendChild(textElement);
 
-  const observer = new IntersectionObserver(animateOnIntersect, options);
-
-  let text = "";
-  function animateOnIntersect(entries, observer) {
-    if (entries[0].isIntersecting) {
-      observer.unobserve(rnbwPreviewElement);
-      const h3 = document.querySelector("h3");
-      const spans = h3.querySelectorAll("span");
-      let index = 0;
-      let charIndex = 0;
-
-      function type() {
-        if (index < spans.length) {
-          spans[index].classList.remove("hidden");
-          const originalText = spans[index].getAttribute("data-text");
-          if (index === 0) {
-            let heading3DropdownIcon = document.getElementById(
-              "heading3-dropdown-icon"
-            );
-            heading3DropdownIcon.classList.remove("hidden");
-          }
-          if (charIndex < originalText.length) {
-            spans[index].textContent = originalText.slice(0, charIndex + 1);
-            charIndex++;
-            setTimeout(type, 20);
-          } else {
-            charIndex = 0;
-            index++;
-            setTimeout(type, 800);
-          }
-        } else {
-          setTimeout(() => {
-            reset();
-          }, 4000);
-        }
-      }
-      const code = document.querySelector("code");
-      if (!text) {
-        text = code.textContent;
-      }
-      code.textContent = "";
-
-      let i = 0;
-      let spanCount = 1;
-      let totalSpansAnimated = 0;
-      let timer = 100;
-      function typeCode() {
-        if (i < text.length) {
-          code.textContent += text.charAt(i);
-          i++;
-          if (text.charAt(i) === ".") {
-            if (spanCount <= 7) {
-              let element = document.getElementById("span" + spanCount);
-              setTimeout(() => {
-                element.style.opacity = 1;
-                totalSpansAnimated++;
-              }, timer);
-              timer += 70;
-              spanCount++;
+            function type() {
+                if (charIndex < text.length) {
+                    var char = text.charAt(charIndex);
+                    textElement.textContent += char;
+                    charIndex++;
+                    setTimeout(type, 100);
+                } else {
+                    resolve();
+                }
             }
-            setTimeout(typeCode, 70);
-          } else {
-            setTimeout(typeCode, 15); // adjust the delay time as needed
-          }
+
+            type();
+        });
+    }
+
+    async function animateElements() {
+        var delay = 0;
+        for (let i = 0; i < texts.length; i++) {
+            await typeEffect(texts[i], colors[i]);
+            container.lastChild.style.marginRight = "0.57vw";
+
+            if (i === 3) {
+                await new Promise(resolve => setTimeout(resolve, 130));
+                var img = document.createElement('img');
+                img.classList.add('animated-element');
+                img.classList.add('custom-image');
+                img.src = images[0];
+                container.appendChild(img);
+            } else if (i === 6) {
+                await new Promise(resolve => setTimeout(resolve, 130));
+                var img = document.createElement('img');
+                img.classList.add('animated-element');
+                img.classList.add('custom-image');
+                img.src = images[1];
+                container.appendChild(img);
+            }
+            delay = (texts[i].length * 10) + (i === 3 || i === 6 ? 250 : 0);
+            await new Promise(resolve => setTimeout(resolve, delay));
         }
-      }
-
-      typeCode();
-      spans.forEach((span) => span.setAttribute("data-text", span.textContent));
-      spans.forEach((span) => (span.textContent = ""));
-      type();
     }
-  }
-  function reset() {
-    const spans = document.querySelectorAll("h3 span");
-    spans.forEach((span) => span.classList.add("hidden"));
+    animateElements();
+});
 
-    let heading3DropdownIcon = document.getElementById(
-      "heading3-dropdown-icon"
-    );
-    heading3DropdownIcon.classList.add("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+    const textContainer = document.querySelector('.text-animation');
+    const texts = [
+        'function typeEffect(text, color) {',
+        'return new Promise((resolve, reject) => {',
+        'var charIndex = 0;',
+        'var textElement = document.createElement("span");',
+        'textElement.className = "custom-text";',
+        'textElement.style.color = color;',
+        'container.appendChild(textElement);',
+        'function type() {',
+        'if (charIndex < text.length) {',
+        'var char = text.charAt(charIndex);',
+        'textElement.textContent += char;',
+        'charIndex++;',
+        'setTimeout(type, 100);',
+        '} else {',
+        'resolve();',
+        '}',
+        '}',
+        'type();',
+        '});',
+        '}',
+    ];
+    const margins = ['0vw', '0.57vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.73vw', '2.31vw', '2.31vw', '2.31vw', '2.31vw', '1.73vw', '2.31vw', '1.73vw', '1.16vw', '1.16vw', '0.57vw', '0vw'];
+    let currentIndex = 0;
+    let charIndex = 0;
+    function type() {
+        if (currentIndex < texts.length) {
+            const currentText = texts[currentIndex].trim();
+            const marginLeft = margins[currentIndex];
+            const textDiv = document.createElement('div');
+            textDiv.style.marginLeft = marginLeft;
+            textContainer.appendChild(textDiv);
 
-    for (let i = 1; i <= 7; i++) {
-      let element = document.getElementById("span" + i);
-      element.style.opacity = 0;
+            function typeChar() {
+                if (charIndex < currentText.length) {
+                    const charSpan = document.createElement('span');
+                    charSpan.textContent = currentText[charIndex];
+                    textDiv.appendChild(charSpan);
+                    charIndex++;
+                    setTimeout(typeChar, 40);
+                } else {
+                    currentIndex++;
+                    charIndex = 0;
+                    textContainer.innerHTML += "<br>";
+                    setTimeout(type, 330);
+                }
+            }
+            typeChar();
+        }
     }
-    const code = document.querySelector("code");
-    code.textContent = "";
-    observer.unobserve(rnbwPreviewElement);
-    index = 0;
-    charIndex = 0;
-    i = 0;
-    spanCount = 1;
-    totalSpansAnimated = 0;
-    timer = 1500;
-
-    setTimeout(() => {
-      observer.observe(rnbwPreviewElement);
-    }, 1500);
-  }
-
-  observer.observe(rnbwPreviewElement);
+    type();
 });
