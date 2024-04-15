@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     var char = text.charAt(charIndex);
                     textElement.textContent += char;
                     charIndex++;
-                    setTimeout(type, 20); 
+                    setTimeout(type, 20);
                 } else {
                     resolve();
                 }
@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 img.src = images1[1];
                 container1.appendChild(img);
             }
-            delay = 70; 
+            delay = 70;
             await new Promise(resolve => setTimeout(resolve, delay));
         }
         animation1Finished = true;
@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const margins = ['0vw', '0.57vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.73vw', '2.31vw', '2.31vw', '2.31vw', '2.31vw', '1.73vw', '2.31vw', '1.73vw', '1.16vw', '1.16vw', '0.57vw', '0vw'];
     let currentIndex2 = 0;
     let charIndex2 = 0;
-    
+
     async function typeText2() {
         if (currentIndex2 < texts2.length) {
             const currentText = texts2[currentIndex2].trim();
@@ -401,10 +401,61 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     typeText2();
+
+    // Animation 2(2)
+
+    // const textContainer = document.querySelector('.text-animation');
+    // const combinedText = 
+    // `function typeEffect(text, color) {
+    //     return new Promise((resolve, reject) => {
+    //         var charIndex = 0;
+    //         var textElement = document.createElement("span");
+    //         textElement.className = "custom-text";
+    //         textElement.style.color = color;
+    //         container.appendChild(textElement);
+    //         function type() {
+    //             if (charIndex < text.length) {
+    //                 var char = text.charAt(charIndex);
+    //                 textElement.textContent += char;
+    //                 charIndex++;
+    //                 setTimeout(type, 100);
+    //             } else {
+    //                 resolve();
+    //             }
+    //         }
+    //         type();
+    //     });
+    // }`;
+
+    // let charIndex = 0;
+
+    // async function typeText2() {
+    //     const currentText = combinedText.trim();
+    //     const textDiv = document.createElement('div');
+    //     textContainer.appendChild(textDiv);
     
+    //     function typeChar() {
+    //         if (charIndex < currentText.length) {
+    //             const charSpan = document.createElement('span');
+    //             charSpan.textContent = currentText[charIndex];
+    //             textDiv.appendChild(charSpan);
+    //             charIndex++;
+    //             setTimeout(typeChar, 7.5);
+    //         } else {
+    //             animation2Finished = true;
+    //             if (animation1Finished) {
+    //                 restartAnimations();
+    //             }
+    //         }
+    //     }
+    //     typeChar();
+    // }
+    
+    // typeText2();
+
     // Restart
     function restartAnimations() {
-        setTimeout(function() {
+        setTimeout(function () {
             var children = Array.from(container1.childNodes);
             children.forEach(child => {
                 if (child.tagName === "SPAN" || child.tagName === "IMG") {
@@ -412,18 +463,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }, 4000);
-    
-        setTimeout(function() {
+
+        setTimeout(function () {
             textContainer.innerHTML = '';
         }, 4000);
-    
-        setTimeout(function() {
+
+        setTimeout(function () {
             animation1Finished = false;
             animation2Finished = false;
             currentIndex2 = 0;
             animateTexts();
+            // charIndex = 0;
             typeText2();
         }, 5500);
     }
-    
+
 });

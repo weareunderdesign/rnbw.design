@@ -27,7 +27,7 @@ const rnbwFiles = `
         </div>
         <div class="row"></div>
       </div>
-      <div class="justify-stretch padding-xs">
+      <div class="justify-stretch padding-xs" id="anim-2">
         <div class="justify-start gap-s padding-xs">
           <div class="icon-xs"></div>
           <svg-icon
@@ -40,7 +40,7 @@ const rnbwFiles = `
           ></div>
         </div>
       </div>
-      <div class="justify-stretch padding-xs" id="anim-2">
+      <div class="justify-stretch padding-xs" id="anim-3">
         <div class="gap-s padding-xs">
           <div class="icon-xs"></div>
           <svg-icon
@@ -95,26 +95,26 @@ const rnbwFiles = `
 </div>
 <div class="box align-stretch padding-m column">
   <div id="image-container" class="box gap-m row">
-    <img src="images/HTMLfolder.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
-    <img src="images/CSSfolder.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw; margin-right: 1.73vw;">
-    <img src="images/JSfolder.svg" class="svg-image" style="width: 12.4vw; height: 13.5vw;">
+  <style>
+    .svg-image{
+      width: 13.64vw; 
+      height: 14.85vw;
+    }
+  </style>
+    <img src="images/HTMLfolder.svg" class="svg-image">
+    <img src="images/CSSfolder.svg" class="svg-image">
+    <img src="images/JSfolder.svg" class="svg-image">
   </div>
   <h3>
     <span>
-        by adopting open standards and using files as the core, you can easily open and edit any HTML/CSS/JS project visually, enjoying the benefits of files without the "meh".
     </span>
   </h3>
 </div>
     <div
       class="box-xs row padding-l border-left background-primary opacity-m"
-      style="opacity:0; position:absolute; top:0; right: 0; bottom:0;"
-      id="anim-3"
+      style="opacity:1; position:absolute; top:0; right: 0; bottom:0;"
     >
-      <code>
-      const tryMeBtn = document.getElementById("try_me");
-      tryMeBtn.addEventListener("click", () => {
-       window.location.href = "https://rnbw.dev";
-      });
+      <code id="code_text_block">
       </code>
     </div>
 </div>
@@ -132,10 +132,86 @@ customElements.define("rnbw-files", RnbwFiles);
 document.addEventListener("DOMContentLoaded", function () {
   const rnbwFilesElement = document.querySelector("rnbw-files");
 
+  var spanElement = document.querySelector('.box h3 span');
+  spanElement.textContent += " by adopting open standards and using files as the core, you can easily open and edit any HTML/CSS/JS project visually, enjoying the benefits of files without the 'meh'.";
+
+  const сodeTextElement = document.getElementById("code_text_block");
+  const codeStrings = [
+    `
+    <div class="box align-stretch padding-m column">
+      <div id="image-container" class="box gap-m row">
+      <style>
+        .svg-image{
+          width: 13.64vw; 
+          height: 14.85vw;
+        }
+      </style>
+      <img src="images/HTMLfolder.svg" class="svg-image" style="display: block">
+      <img src="images/CSSfolder.svg" class="svg-image" style="display: none">
+      <img src="images/JSfolder.svg" class="svg-image" style="display: none">
+      </div>
+      <h3>
+        <span>
+        </span>
+      </h3>
+    </div>
+    `,
+    `
+    <div class="box align-stretch padding-m column">
+      <div id="image-container" class="box gap-m row">
+      <style>
+        .svg-image{
+          width: 13.64vw; 
+          height: 14.85vw;
+        }
+      </style>
+      <img src="images/HTMLfolder.svg" class="svg-image" style="display: none">
+      <img src="images/CSSfolder.svg" class="svg-image" style="display: block">
+      <img src="images/JSfolder.svg" class="svg-image" style="display: none">
+      </div>
+      <h3>
+        <span>
+        </span>
+      </h3>
+    </div>
+    `,
+    `
+    <div class="box align-stretch padding-m column">
+      <div id="image-container" class="box gap-m row">
+      <style>
+        .svg-image{
+          width: 13.64vw; 
+          height: 14.85vw;
+        }
+      </style>
+      <img src="images/HTMLfolder.svg" class="svg-image" style="display: none">
+      <img src="images/CSSfolder.svg" class="svg-image" style="display: none">
+      <img src="images/JSfolder.svg" class="svg-image" style="display: block">
+      </div>
+      <h3>
+        <span>
+        </span>
+      </h3>
+    </div>
+    `
+  ]; 
+  сodeTextElement.textContent = codeStrings[0];
+  
+
+  const images = rnbwFilesElement.querySelectorAll(".svg-image");
+
+  images.forEach((image, index) => {
+    if (index === 0) {
+      image.style.display = "block";
+    } else {
+      image.style.display = "none";
+    }
+  });
+
   const getAnims = () => {
-    let anim1 = rnbwFilesElement.querySelectorAll("#anim-1")[0];
-    let anim2 = rnbwFilesElement.querySelectorAll("#anim-2")[0];
-    let anim3 = rnbwFilesElement.querySelectorAll("#anim-3")[0];
+    let anim1 = rnbwFilesElement.querySelector("#anim-1");
+    let anim2 = rnbwFilesElement.querySelector("#anim-2");
+    let anim3 = rnbwFilesElement.querySelector("#anim-3");
     return { anim1, anim2, anim3 };
   };
 
@@ -155,13 +231,32 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
+          сodeTextElement.textContent = codeStrings[1];
+          images[0].style.display = "none";
+          images[1].style.display = "block";
           anim1.classList.remove("background-secondary");
           anim2.classList.add("background-secondary");
-          anim3.style.opacity = 1;
           setTimeout(() => {
+            сodeTextElement.textContent = codeStrings[2];
+            images[1].style.display = "none";
+            images[2].style.display = "block";
+            anim2.classList.remove("background-secondary");
+            anim3.classList.add("background-secondary");
             setTimeout(() => {
-              delay += 500;
-              reset();
+              сodeTextElement.textContent = codeStrings[1];
+              images[2].style.display = "none";
+              images[1].style.display = "block";
+              anim3.classList.remove("background-secondary");
+              anim2.classList.add("background-secondary");
+              setTimeout(() => {
+                сodeTextElement.textContent = codeStrings[0];
+                images[1].style.display = "none";
+                images[0].style.display = "block";
+                anim2.classList.remove("background-secondary");
+                anim1.classList.add("background-secondary");
+                delay += 350;
+                reset();
+              }, delay);
             }, delay);
           }, delay);
         }, delay);
@@ -175,18 +270,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const { anim1, anim2, anim3 } = getAnims();
 
     setTimeout(() => {
-      anim3.style.opacity = 0;
       anim1.classList.add("background-secondary");
       anim2.classList.remove("background-secondary");
-    }, 200);
+      anim3.classList.remove("background-secondary");
+    }, 250);
     setTimeout(() => {
       delay = 250;
       setTimeout(() => {
         observer.observe(anim1);
-      }, 500);
-    }, 500);
+      }, 350);
+    }, 350);
   }
 });
+
+
 
 // inverting folders images
 
