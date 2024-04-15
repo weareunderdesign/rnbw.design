@@ -26,11 +26,15 @@ const footerTemplate = `
             <a class="opacity-m">rfrncs.design ↗</a>
         </div>
         <div class="column gap-s box">
-            <a href="https://www.notion.so/rnbw/Terms-Conditions-0f1a79a92cd84cbdb84c99ed48445db2"
-                target="_blank">terms</a><a
-                href="https://www.notion.so/rnbw/Privacy-Policy-d490b0e9792e460289985feddf601097"
-                target="_blank">privacy</a><a href="https://www.notion.so/rnbw/GDPR-e0ff3e4d10f649ffbf0c81b99629ec84"
-                target="_blank">gdpr</a>
+            <a href="https://rnbw.company/terms"
+                target="_blank">terms
+            </a>
+            <a href="https://rnbw.company/privacy"
+                target="_blank">privacy
+            </a>
+            <a href="https://rnbw.company/GDPR"
+                target="_blank">gdpr
+            </a>
                 <div>
                     <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer;"><span class="opacity-m" id="theme-name"></span></button>
                 </div>
