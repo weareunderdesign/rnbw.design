@@ -222,8 +222,9 @@ const rnbwPreviewTemplate = `
         </div>
     </div>
 
-    <div class="rnbw-animation-container padding-l" id="container">
+    <div class="rnbw-animation-container padding-m" id="container">
         <style>
+        
             .rnbw-animation-container {
                 width: 30vw;
                 height: 42.2vw;
@@ -239,8 +240,8 @@ const rnbwPreviewTemplate = `
             }
               
             .custom-text {
-                font-size: 2.31vw;
-                line-height: 2.71vw;
+                font-size: 2.45vw;
+                line-height: 1.12;
             }
 
             .custom-image {
@@ -277,10 +278,15 @@ class RnbwPreview extends HTMLElement {
 customElements.define("rnbw-preview", RnbwPreview);
 
 document.addEventListener("DOMContentLoaded", function () {
-    var texts = ["rnbw 🌈 is a modern design and code editor 💻 .", "it's simple, flexible, and open.", "it works with your files.", "it's powered by the web", ".", "it's open source.", "it fully embraces open web", "standards.", "and, it is powered by AI 🤖 ..."];
-    var colors = ["#006400", "#0000cd", "#800080", "#ee82ee", "#ee82ee", "#ff4500", "#ffa500", "#ffa500", "#ffd700"];
-    var images = ["images/rnbwanimation1.png", "images/rnbwanimation2.png"];
-    var container = document.getElementById("container");
+
+    var animation1Finished = false;
+    var animation2Finished = false;
+
+    // Animation 1
+    var texts1 = ["rnbw 🌈 is a modern design and code editor 💻 .", "it's simple, flexible, and open.", "it works with your files.", "it's powered by the web", ".", "it's open source.", "it fully embraces open web", "standards.", "and, it is powered by AI 🤖 ..."];
+    var colors1 = ["#006400", "#0000cd", "#800080", "#ee82ee", "#ee82ee", "#ff4500", "#ffa500", "#ffa500", "#ffd700"];
+    var images1 = ["images/rnbwanimation1.png", "images/rnbwanimation2.png"];
+    var container1 = document.getElementById("container");
 
     function typeEffect(text, color) {
         return new Promise((resolve, reject) => {
@@ -288,14 +294,14 @@ document.addEventListener("DOMContentLoaded", function () {
             var textElement = document.createElement('span');
             textElement.className = "custom-text";
             textElement.style.color = color;
-            container.appendChild(textElement);
+            container1.appendChild(textElement);
 
             function type() {
                 if (charIndex < text.length) {
                     var char = text.charAt(charIndex);
                     textElement.textContent += char;
                     charIndex++;
-                    setTimeout(type, 100);
+                    setTimeout(type, 20); 
                 } else {
                     resolve();
                 }
@@ -305,37 +311,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    async function animateElements() {
+    async function animateTexts() {
         var delay = 0;
-        for (let i = 0; i < texts.length; i++) {
-            await typeEffect(texts[i], colors[i]);
-            container.lastChild.style.marginRight = "0.56vw";
+        for (let i = 0; i < texts1.length; i++) {
+            await typeEffect(texts1[i], colors1[i]);
+            container1.lastChild.style.marginRight = "0.56vw";
 
             if (i === 3) {
-                await new Promise(resolve => setTimeout(resolve, 130));
+                await new Promise(resolve => setTimeout(resolve, 20));
                 var img = document.createElement('img');
                 img.classList.add('animated-element');
                 img.classList.add('custom-image');
-                img.src = images[0];
-                container.appendChild(img);
+                img.src = images1[0];
+                container1.appendChild(img);
             } else if (i === 6) {
-                await new Promise(resolve => setTimeout(resolve, 130));
+                await new Promise(resolve => setTimeout(resolve, 20));
                 var img = document.createElement('img');
                 img.classList.add('animated-element');
                 img.classList.add('custom-image');
-                img.src = images[1];
-                container.appendChild(img);
+                img.src = images1[1];
+                container1.appendChild(img);
             }
-            delay = (texts[i].length * 10) + (i === 3 || i === 6 ? 250 : 0);
+            delay = 70; 
             await new Promise(resolve => setTimeout(resolve, delay));
         }
+        animation1Finished = true;
+        if (animation2Finished) {
+            restartAnimations();
+        }
     }
-    animateElements();
-});
+    animateTexts();
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Animation 2
     const textContainer = document.querySelector('.text-animation');
-    const texts = [
+    const texts2 = [
         'function typeEffect(text, color) {',
         'return new Promise((resolve, reject) => {',
         'var charIndex = 0;',
@@ -358,32 +367,63 @@ document.addEventListener("DOMContentLoaded", function () {
         '}',
     ];
     const margins = ['0vw', '0.57vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.73vw', '2.31vw', '2.31vw', '2.31vw', '2.31vw', '1.73vw', '2.31vw', '1.73vw', '1.16vw', '1.16vw', '0.57vw', '0vw'];
-    let currentIndex = 0;
-    let charIndex = 0;
-    function type() {
-        if (currentIndex < texts.length) {
-            const currentText = texts[currentIndex].trim();
-            const marginLeft = margins[currentIndex];
+    let currentIndex2 = 0;
+    let charIndex2 = 0;
+    
+    async function typeText2() {
+        if (currentIndex2 < texts2.length) {
+            const currentText = texts2[currentIndex2].trim();
+            const marginLeft = margins[currentIndex2];
             const textDiv = document.createElement('div');
             textDiv.style.marginLeft = marginLeft;
             textContainer.appendChild(textDiv);
 
-            function typeChar() {
-                if (charIndex < currentText.length) {
+            function typeChar2() {
+                if (charIndex2 < currentText.length) {
                     const charSpan = document.createElement('span');
-                    charSpan.textContent = currentText[charIndex];
+                    charSpan.textContent = currentText[charIndex2];
                     textDiv.appendChild(charSpan);
-                    charIndex++;
-                    setTimeout(typeChar, 40);
+                    charIndex2++;
+                    setTimeout(typeChar2, 10);
                 } else {
-                    currentIndex++;
-                    charIndex = 0;
+                    currentIndex2++;
+                    charIndex2 = 0;
                     textContainer.innerHTML += "<br>";
-                    setTimeout(type, 330);
+                    setTimeout(typeText2, 20);
                 }
             }
-            typeChar();
+            typeChar2();
+        } else {
+            animation2Finished = true; 
+            if (animation1Finished) { 
+                restartAnimations(); 
+            }
         }
     }
-    type();
+    typeText2();
+    
+    // Restart
+    function restartAnimations() {
+        setTimeout(function() {
+            var children = Array.from(container1.childNodes);
+            children.forEach(child => {
+                if (child.tagName === "SPAN" || child.tagName === "IMG") {
+                    container1.removeChild(child);
+                }
+            });
+        }, 4000);
+    
+        setTimeout(function() {
+            textContainer.innerHTML = '';
+        }, 4000);
+    
+        setTimeout(function() {
+            animation1Finished = false;
+            animation2Finished = false;
+            currentIndex2 = 0;
+            animateTexts();
+            typeText2();
+        }, 5500);
+    }
+    
 });
