@@ -338,13 +338,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         if (index === 4) {
                             setTimeout(type, 20);
                             document.getElementById("span4").style.opacity = 1;
-                            document.getElementById("span5").style.opacity = 1;
                             document.getElementById("span10").style.opacity = 1;
+                            document.getElementById("span5").style.opacity = 1;
                         } else if (index === 7) {
                             setTimeout(type, 20);
                             document.getElementById("span7").style.opacity = 1;
-                            document.getElementById("span8").style.opacity = 1;
                             document.getElementById("span11").style.opacity = 1;
+                            document.getElementById("span8").style.opacity = 1;
                         } else {
                             if (index !== 4 && index !== 7) {
                                 document.getElementById("span" + (index)).style.opacity = 1;
