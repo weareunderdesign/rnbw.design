@@ -440,7 +440,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const spans = document.querySelectorAll("h3 span");
         spans.forEach((span, i) => {
             span.classList.add("hidden");
-            // Reset opacity for each span
             document.getElementById("span" + (i + 1)).style.opacity = 0
             document.getElementById("span11").style.opacity = 0;
         });
