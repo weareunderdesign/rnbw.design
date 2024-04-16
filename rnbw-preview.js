@@ -1,6 +1,6 @@
 const rnbwPreviewTemplate = `
 <div class="row radius-s border" id="rnbw-preview-wrapper"
-    style="flex-direction:row; flex-wrap:nowrap; min-height:730px;">
+    style="flex-direction:row; flex-wrap:nowrap; min-height:850px;">
     <div class="panel hidden-on-mobile justify-stretch border-right">
         <div class="panel">
             <div class="justify-stretch padding-s border-bottom">
@@ -72,7 +72,7 @@ const rnbwPreviewTemplate = `
                     </div>
                 </div>
             </div>
-            <div class="border-bottom">
+            <div class="">
                 <div class="justify-stretch padding-xs background-tertiary">
                     <div class="gap-s padding-xs">
                         <svg-icon src="https://raincons.rnbw.dev/icons/down.svg" id="heading3-dropdown-icon"
@@ -118,6 +118,15 @@ const rnbwPreviewTemplate = `
                         </div>
                     </div>
 
+                    <div class="justify-stretch padding-xs background-secondary" id="span10" style="opacity:0;">
+                        <div class="gap-s padding-xs">
+                            <div class="icon-xs"></div>
+                            <div class="icon-xs"></div>
+                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <span class="text-s">Image</span>
+                        </div>
+                    </div>
+
                     <div class="justify-stretch padding-xs background-secondary" id="span5" style="opacity:0;">
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
@@ -144,12 +153,39 @@ const rnbwPreviewTemplate = `
                             <span class="text-s">Span</span>
                         </div>
                     </div>
+
+                    <div class="justify-stretch padding-xs background-secondary" id="span11" style="opacity:0;">
+                        <div class="gap-s padding-xs">
+                            <div class="icon-xs"></div>
+                            <div class="icon-xs"></div>
+                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <span class="text-s">Image</span>
+                        </div>
+                    </div>
+
+                    <div class="justify-stretch padding-xs background-secondary" id="span8" style="opacity:0;">
+                        <div class="gap-s padding-xs">
+                            <div class="icon-xs"></div>
+                            <div class="icon-xs"></div>
+                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <span class="text-s">Span</span>
+                        </div>
+                    </div>
+
+                    <div class="justify-stretch padding-xs background-secondary" id="span9" style="opacity:0;">
+                        <div class="gap-s padding-xs">
+                            <div class="icon-xs"></div>
+                            <div class="icon-xs"></div>
+                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <span class="text-s">Span</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
         <div>
-            <div class="padding-m gap-s panel border-bottom">
+            <div class="padding-m gap-s panel border-bottom border-top">
                 <div class="justify-stretch align-center">
                     <span class="text-s">Settings</span>
                     <div class="row gap-s justify-end">
@@ -222,49 +258,33 @@ const rnbwPreviewTemplate = `
         </div>
     </div>
 
-    <div class="rnbw-animation-container padding-m" id="container">
-        <style>
-        
-            .rnbw-animation-container {
-                width: 30vw;
-                height: 42.2vw;
-                overflow: auto;
-            }
-
-            .animated-element {
-                margin-right: 0.56vw;
-            }
-              
-            .hidden {
-                display: none;
-            }
-              
-            .custom-text {
-                font-size: 2.45vw;
-                line-height: 1.12;
-            }
-
-            .custom-image {
-                display: inline-block;
-                width: auto;
-                height: 2.19vw;
-                margin-bottom: -0.28vw;
-            } 
-
-        </style>
-    </div>
-
-    <div class="box-s padding-l border-left background-primary radius-s border opacity-m" style="word-break: break-word;">
-        <style>
-        .text-animation div {
-            display: inline-block;
-            margin-bottom: 0.57vw;
+    <div class="box-s gap-l column padding-m">
+    <style>
+        .hidden {
+            display: none;
         }
-        </style>
-        <code class="text-animation">
+        img {
+            display: inline; /* Добавляем свойство display: inline для картинок */
+        }
+    </style>
+    <h3>
+        <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻.</span>
+        <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
+        <span class="hidden" style="color: #800080">It works with your files.</span>
+        <span class="hidden" style="color: #ee82ee">it's powered by the web</span>
+        <img class="hidden" src="images/rnbwanimation1.png" style="width: auto; height: 2.19vw;">
+        <span class="hidden" style="color: #ee82ee">.</span>
+        <span class="hidden" style="color: #ff4500">it's open source.</span>
+        <span class="hidden" style="color: #ffa500">it fully embraces open web</span>
+        <img class="hidden" src="images/rnbwanimation2.png" style="width: auto; height: 2.19vw;">
+        <span class="hidden" style="color: #ffa500">standards.</span>
+        <span class="hidden" style="color: #ffd700">and, it is powered by AI 🤖 ...</span>
+    </h3>
+</div>
+    <div class="box-s padding-l border-left background-primary radius-s border opacity-m" style="word-break: break-word;">
+        <code>
         </code>
     </div>
-
 </div>
 `;
 
@@ -278,204 +298,167 @@ class RnbwPreview extends HTMLElement {
 customElements.define("rnbw-preview", RnbwPreview);
 
 document.addEventListener("DOMContentLoaded", function () {
+    const rnbwPreviewElement = document.querySelector("rnbw-preview");
 
-    var animation1Finished = false;
-    var animation2Finished = false;
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+    };
 
-    // Animation 1
-    var texts1 = ["rnbw 🌈 is a modern design and code editor 💻 .", "it's simple, flexible, and open.", "it works with your files.", "it's powered by the web", ".", "it's open source.", "it fully embraces open web", "standards.", "and, it is powered by AI 🤖 ..."];
-    var colors1 = ["#006400", "#0000cd", "#800080", "#ee82ee", "#ee82ee", "#ff4500", "#ffa500", "#ffa500", "#ffd700"];
-    var images1 = ["images/rnbwanimation1.png", "images/rnbwanimation2.png"];
-    var container1 = document.getElementById("container");
+    const observer = new IntersectionObserver(animateOnIntersect, options);
 
-    function typeEffect(text, color) {
-        return new Promise((resolve, reject) => {
-            var charIndex = 0;
-            var textElement = document.createElement('span');
-            textElement.className = "custom-text";
-            textElement.style.color = color;
-            container1.appendChild(textElement);
+    let text = "";
+
+    function animateOnIntersect(entries, observer) {
+        if (entries[0].isIntersecting) {
+            observer.unobserve(rnbwPreviewElement);
+            const h3 = document.querySelector("h3");
+            const spans = h3.querySelectorAll("span");
+            let index = 0;
+            let charIndex = 0;
 
             function type() {
-                if (charIndex < text.length) {
-                    var char = text.charAt(charIndex);
-                    textElement.textContent += char;
-                    charIndex++;
-                    setTimeout(type, 20);
+                if (index < spans.length) {
+                    spans[index].classList.remove("hidden");
+                    const originalText = spans[index].getAttribute("data-text");
+                    if (index === 0) {
+                        let heading3DropdownIcon = document.getElementById(
+                            "heading3-dropdown-icon"
+                        );
+                        heading3DropdownIcon.classList.remove("hidden");
+                    }
+                    if (charIndex < originalText.length) {
+                        spans[index].textContent = originalText.slice(0, charIndex + 1);
+                        charIndex++;
+                        setTimeout(type, 20);
+                    } else {
+                        charIndex = 0;
+                        index++;
+                        if (index === 4) {
+                            setTimeout(type, 20);
+                            document.getElementById("span4").style.opacity = 1;
+                            document.getElementById("span5").style.opacity = 1;
+                            document.getElementById("span10").style.opacity = 1;
+                        } else if (index === 7) {
+                            setTimeout(type, 20);
+                            document.getElementById("span7").style.opacity = 1;
+                            document.getElementById("span8").style.opacity = 1;
+                            document.getElementById("span11").style.opacity = 1;
+                        } else {
+                            if (index !== 4 && index !== 7) {
+                                document.getElementById("span" + (index)).style.opacity = 1;
+                            }
+                            setTimeout(type, 800);
+                        }
+                    }
                 } else {
-                    resolve();
+                    setTimeout(() => {
+                        reset();
+                    }, 4000);
+                }
+                if (index === 4) {
+                    setTimeout(() => {
+                        const firstImage = h3.querySelector("img:nth-of-type(1)");
+                        firstImage.classList.remove("hidden");
+                    }, 20);
+                }
+
+                if (index === 7) {
+                    setTimeout(() => {
+                        const secondImage = h3.querySelector("img:nth-of-type(2)");
+                        secondImage.classList.remove("hidden");
+                    }, 20);
+                }
+
+            }
+
+            const textArray = ["<span class=\"hidden\" style=\"color: #006400\">rnbw is a modern design and code editor.</span>",
+                "<span class=\"hidden\" style=\"color: #0000cd\">it's simple, flexible, and open.</span>",
+                "<span class=\"hidden\" style=\"color: #800080\">It works with your files.</span>",
+                "<span class=\"hidden\" style=\"color: #ee82ee\">it's powered by the web</span>",
+                "<img class=\"hidden\" src=\"images/rnbwanimation1.png\" style=\"width: auto; height: 2.19vw;\">",
+                "<span class=\"hidden\" style=\"color: #ee82ee\">.</span>",
+                "<span class=\"hidden\" style=\"color: #ff4500\">it's open source.</span>",
+                "<span class=\"hidden\" style=\"color: #ffa500\">it fully embraces open web</span>",
+                "<img class=\"hidden\" src=\"images/rnbwanimation2.png\" style=\"width: auto; height: 2.19vw;\">",
+                "<span class=\"hidden\" style=\"color: #ffa500\">standards.</span>",
+                "<span class=\"hidden\" style=\"color: #ffd700\">and, it is powered by AI 🤖 ...</span>"];
+
+            const code = document.querySelector("code");
+
+            async function typeText(text, delay = 7) {
+                return new Promise(resolve => {
+                    const span = document.createElement('span');
+                    span.style.marginBottom = "0.35vw";
+                    span.style.display = 'block';
+                    code.appendChild(span);
+
+                    let index = 0;
+                    const intervalId = setInterval(() => {
+                        span.textContent += text[index];
+                        index++;
+                        if (index === text.length) {
+                            clearInterval(intervalId);
+                            resolve();
+                        }
+                    }, delay);
+                });
+            }
+
+            async function typeCode() {
+                for (let i = 0; i < textArray.length; i++) {
+                    if (i === 0) {
+                        await new Promise(resolve => setTimeout(resolve, 0));
+                    } else if (i === 4 || i === 5 || i === 6 || i === 8 || i === 9 || i === 10) {
+                        await new Promise(resolve => setTimeout(resolve, 7));
+                    }
+                    else if (i === 1 || i === 2) {
+                        await new Promise(resolve => setTimeout(resolve, 950));
+                    }
+                    else {
+                        await new Promise(resolve => setTimeout(resolve, 800));
+                    }
+                    await typeText(textArray[i]);
                 }
             }
 
+            typeCode();
+            spans.forEach((span) => span.setAttribute("data-text", span.textContent));
+            spans.forEach((span) => (span.textContent = ""));
             type();
+        }
+    }
+
+
+
+    function reset() {
+        const code = document.querySelector("code");
+        while (code.firstChild) {
+            code.removeChild(code.firstChild);
+        }
+        const spans = document.querySelectorAll("h3 span");
+        spans.forEach((span, i) => {
+            span.classList.add("hidden");
+            // Reset opacity for each span
+            document.getElementById("span" + (i + 1)).style.opacity = 0
+            document.getElementById("span11").style.opacity = 0;
         });
+
+        let heading3DropdownIcon = document.getElementById(
+            "heading3-dropdown-icon"
+        );
+        heading3DropdownIcon.classList.add("hidden");
+
+        const images = document.querySelectorAll("h3 img");
+        images.forEach((img) => img.classList.add("hidden"));
+
+        timer = 1500;
+
+        setTimeout(() => {
+            observer.observe(rnbwPreviewElement);
+        }, 1500);
     }
 
-    async function animateTexts() {
-        var delay = 0;
-        for (let i = 0; i < texts1.length; i++) {
-            await typeEffect(texts1[i], colors1[i]);
-            container1.lastChild.style.marginRight = "0.56vw";
-
-            if (i === 3) {
-                await new Promise(resolve => setTimeout(resolve, 20));
-                var img = document.createElement('img');
-                img.classList.add('animated-element');
-                img.classList.add('custom-image');
-                img.src = images1[0];
-                container1.appendChild(img);
-            } else if (i === 6) {
-                await new Promise(resolve => setTimeout(resolve, 20));
-                var img = document.createElement('img');
-                img.classList.add('animated-element');
-                img.classList.add('custom-image');
-                img.src = images1[1];
-                container1.appendChild(img);
-            }
-            delay = 70;
-            await new Promise(resolve => setTimeout(resolve, delay));
-        }
-        animation1Finished = true;
-        if (animation2Finished) {
-            restartAnimations();
-        }
-    }
-    animateTexts();
-
-    // Animation 2
-    const textContainer = document.querySelector('.text-animation');
-    const texts2 = [
-        'function typeEffect(text, color) {',
-        'return new Promise((resolve, reject) => {',
-        'var charIndex = 0;',
-        'var textElement = document.createElement("span");',
-        'textElement.className = "custom-text";',
-        'textElement.style.color = color;',
-        'container.appendChild(textElement);',
-        'function type() {',
-        'if (charIndex < text.length) {',
-        'var char = text.charAt(charIndex);',
-        'textElement.textContent += char;',
-        'charIndex++;',
-        'setTimeout(type, 100);',
-        '} else {',
-        'resolve();',
-        '}',
-        '}',
-        'type();',
-        '});',
-        '}',
-    ];
-    const margins = ['0vw', '0.57vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.16vw', '1.73vw', '2.31vw', '2.31vw', '2.31vw', '2.31vw', '1.73vw', '2.31vw', '1.73vw', '1.16vw', '1.16vw', '0.57vw', '0vw'];
-    let currentIndex2 = 0;
-    let charIndex2 = 0;
-
-    async function typeText2() {
-        if (currentIndex2 < texts2.length) {
-            const currentText = texts2[currentIndex2].trim();
-            const marginLeft = margins[currentIndex2];
-            const textDiv = document.createElement('div');
-            textDiv.style.marginLeft = marginLeft;
-            textContainer.appendChild(textDiv);
-
-            function typeChar2() {
-                if (charIndex2 < currentText.length) {
-                    const charSpan = document.createElement('span');
-                    charSpan.textContent = currentText[charIndex2];
-                    textDiv.appendChild(charSpan);
-                    charIndex2++;
-                    setTimeout(typeChar2, 10);
-                } else {
-                    currentIndex2++;
-                    charIndex2 = 0;
-                    textContainer.innerHTML += "<br>";
-                    setTimeout(typeText2, 20);
-                }
-            }
-            typeChar2();
-        } else {
-            animation2Finished = true; 
-            if (animation1Finished) { 
-                restartAnimations(); 
-            }
-        }
-    }
-    typeText2();
-
-    // Animation 2(2)
-
-    // const textContainer = document.querySelector('.text-animation');
-    // const combinedText = 
-    // `function typeEffect(text, color) {
-    //     return new Promise((resolve, reject) => {
-    //         var charIndex = 0;
-    //         var textElement = document.createElement("span");
-    //         textElement.className = "custom-text";
-    //         textElement.style.color = color;
-    //         container.appendChild(textElement);
-    //         function type() {
-    //             if (charIndex < text.length) {
-    //                 var char = text.charAt(charIndex);
-    //                 textElement.textContent += char;
-    //                 charIndex++;
-    //                 setTimeout(type, 100);
-    //             } else {
-    //                 resolve();
-    //             }
-    //         }
-    //         type();
-    //     });
-    // }`;
-
-    // let charIndex = 0;
-
-    // async function typeText2() {
-    //     const currentText = combinedText.trim();
-    //     const textDiv = document.createElement('div');
-    //     textContainer.appendChild(textDiv);
-    
-    //     function typeChar() {
-    //         if (charIndex < currentText.length) {
-    //             const charSpan = document.createElement('span');
-    //             charSpan.textContent = currentText[charIndex];
-    //             textDiv.appendChild(charSpan);
-    //             charIndex++;
-    //             setTimeout(typeChar, 7.5);
-    //         } else {
-    //             animation2Finished = true;
-    //             if (animation1Finished) {
-    //                 restartAnimations();
-    //             }
-    //         }
-    //     }
-    //     typeChar();
-    // }
-    
-    // typeText2();
-
-    // Restart
-    function restartAnimations() {
-        setTimeout(function () {
-            var children = Array.from(container1.childNodes);
-            children.forEach(child => {
-                if (child.tagName === "SPAN" || child.tagName === "IMG") {
-                    container1.removeChild(child);
-                }
-            });
-        }, 4000);
-
-        setTimeout(function () {
-            textContainer.innerHTML = '';
-        }, 4000);
-
-        setTimeout(function () {
-            animation1Finished = false;
-            animation2Finished = false;
-            currentIndex2 = 0;
-            animateTexts();
-            // charIndex = 0;
-            typeText2();
-        }, 5500);
-    }
-
+    observer.observe(rnbwPreviewElement);
 });
