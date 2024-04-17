@@ -37,9 +37,9 @@ const navTemplate = `
                             href="https://github.com/rnbwdev/rnbw"
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
-                            <svg-icon
+                            <img
                                 src="images/githubgradient.svg"
-                                class="icon-s"></svg-icon>
+                                class="icon-s">
                             <div>
                                 <p class="text-l">GitHub ↗</p>
                             </div>

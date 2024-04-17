@@ -1,6 +1,6 @@
 const rnbwPreviewTemplate = `
 <div class="row radius-s border" id="rnbw-preview-wrapper"
-    style="flex-direction:row; flex-wrap:nowrap; min-height:850px;">
+    style="flex-direction:row; flex-wrap:nowrap; min-height: 820px;">
     <div class="panel hidden-on-mobile justify-stretch border-right">
         <div class="panel">
             <div class="justify-stretch padding-s border-bottom">
@@ -23,16 +23,18 @@ const rnbwPreviewTemplate = `
                     <div class="row"></div>
                 </div>
                 <div class="justify-stretch padding-xs">
-                    <div class="justify-start gap-s padding-xs">
+                    <div class="justify-start gap-s padding-xs" style="display: flex; align-items: center;">
                         <div class="icon-xs"></div>
                         <svg-icon src="https://raincons.rnbw.dev/icons/brush.svg"></svg-icon>
                         <span class="text-s">Stylesheet</span>
                         <div class="radius-s foreground-primary" style="
                             width: 6px;
                             height: 6px;
+                            margin-bottom: -0.116vw;
                         "></div>
                     </div>
                 </div>
+
                 <div class="justify-stretch padding-xs">
                     <div class="gap-s padding-xs">
                         <div class="icon-xs"></div>
@@ -264,11 +266,11 @@ const rnbwPreviewTemplate = `
             display: none;
         }
         img {
-            display: inline; /* Добавляем свойство display: inline для картинок */
+            display: inline;
         }
     </style>
-    <h3>
-        <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻.</span>
+    <h3 style="font-size: 2.38rem;">
+        <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻 .</span>
         <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
         <span class="hidden" style="color: #800080">It works with your files.</span>
         <span class="hidden" style="color: #ee82ee">it's powered by the web</span>
@@ -373,24 +375,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
-            const textArray = ["<span class=\"hidden\" style=\"color: #006400\">rnbw is a modern design and code editor.</span>",
-                "<span class=\"hidden\" style=\"color: #0000cd\">it's simple, flexible, and open.</span>",
-                "<span class=\"hidden\" style=\"color: #800080\">It works with your files.</span>",
-                "<span class=\"hidden\" style=\"color: #ee82ee\">it's powered by the web</span>",
-                "<img class=\"hidden\" src=\"images/rnbwanimation1.png\" style=\"width: auto; height: 2.19vw;\">",
-                "<span class=\"hidden\" style=\"color: #ee82ee\">.</span>",
-                "<span class=\"hidden\" style=\"color: #ff4500\">it's open source.</span>",
-                "<span class=\"hidden\" style=\"color: #ffa500\">it fully embraces open web</span>",
-                "<img class=\"hidden\" src=\"images/rnbwanimation2.png\" style=\"width: auto; height: 2.19vw;\">",
-                "<span class=\"hidden\" style=\"color: #ffa500\">standards.</span>",
-                "<span class=\"hidden\" style=\"color: #ffd700\">and, it is powered by AI 🤖 ...</span>"];
+            const textArray = ["<span>rnbw 🌈 is a modern design and code editor 💻 .</span>",
+                "<span>it's simple, flexible, and open.</span>",
+                "<span>It works with your files.</span>",
+                "<span>it's powered by the web</span>",
+                "<img>",
+                "<span>.</span>",
+                "<span>it's open source.</span>",
+                "<span>it fully embraces open web</span>",
+                "<img>",
+                "<span>standards.</span>",
+                "<span>and, it is powered by AI 🤖 ...</span>"];
 
             const code = document.querySelector("code");
 
-            async function typeText(text, delay = 7) {
+            async function typeText(text, delay = 12) {
                 return new Promise(resolve => {
                     const span = document.createElement('span');
-                    span.style.marginBottom = "0.35vw";
+                    // span.style.marginBottom = "0.35vw";
                     span.style.display = 'block';
                     code.appendChild(span);
 
@@ -410,8 +412,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 for (let i = 0; i < textArray.length; i++) {
                     if (i === 0) {
                         await new Promise(resolve => setTimeout(resolve, 0));
-                    } else if (i === 4 || i === 5 || i === 6 || i === 8 || i === 9 || i === 10) {
-                        await new Promise(resolve => setTimeout(resolve, 7));
+                    } else if (i === 4 || i === 5 || i === 8 || i === 9) {
+                        await new Promise(resolve => setTimeout(resolve, 12));
                     }
                     else if (i === 1 || i === 2) {
                         await new Promise(resolve => setTimeout(resolve, 950));

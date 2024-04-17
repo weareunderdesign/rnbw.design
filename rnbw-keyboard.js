@@ -527,6 +527,7 @@ const addSomething = () => {
         </div>
     </div>
   </div>`;
+  // change here
   return `
   <div class="background-secondary box align-center padding-l radius-s border hidden" style="min-height: 705px"
   id="add-something-menu">
@@ -548,11 +549,11 @@ const keyboardImages = () => {
 };
 
 const rnbwKeyboardTemplate = `
-<div class="gap-l column" id="keyboard-wrapper">
+<div class="gap-l" id="keyboard-wrapper">
+  ${keyboardImages()}
   ${doSomething()}
   ${jumpstartMenu()}
   ${addSomething()}
-  ${keyboardImages()}
 </div>`;
 
 class RnbwKeyobard extends HTMLElement {
