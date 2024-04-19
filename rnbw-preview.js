@@ -283,7 +283,7 @@ const rnbwPreviewTemplate = `
         <span class="hidden" style="color: #ffd700">and, it is powered by AI 🤖 ...</span>
     </h3>
 </div>
-    <div class="box-s padding-l border-left background-primary radius-s border opacity-m" style="word-break: break-word;">
+    <div class="box-s padding-l border-left background-primary radius-s border" style="word-break: break-word;">
         <code>
         </code>
     </div>
@@ -387,26 +387,55 @@ document.addEventListener("DOMContentLoaded", function () {
                 "<span>standards.</span>",
                 "<span>and, it is powered by AI 🤖 ...</span>"];
 
+
+            let darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; // из-за этого ломается анимация
+
             const code = document.querySelector("code");
 
             async function typeText(text, delay = 12) {
                 return new Promise(resolve => {
                     const span = document.createElement('span');
-                    // span.style.marginBottom = "0.35vw";
                     span.style.display = 'block';
                     code.appendChild(span);
 
                     let index = 0;
                     const intervalId = setInterval(() => {
-                        span.textContent += text[index];
-                        index++;
                         if (index === text.length) {
                             clearInterval(intervalId);
                             resolve();
+                        } else {
+                            const charSpan = document.createElement('span');
+                            charSpan.textContent = text[index];
+                            if (darkTheme) {
+                                if (text[index] === "s" && text[index + 1] === "p" && text[index + 2] === "a" && text[index + 3] === "n" ||
+                                    text[index - 1] === "s" && text[index] === "p" && text[index + 1] === "a" && text[index + 2] === "n" ||
+                                    text[index - 2] === "s" && text[index - 1] === "p" && text[index] === "a" && text[index + 1] === "n" ||
+                                    text[index - 3] === "s" && text[index - 2] === "p" && text[index - 1] === "a" && text[index] === "n" ||
+                                    text[index] === "i" && text[index + 1] === "m" && text[index + 2] === "g" ||
+                                    text[index - 1] === "i" && text[index] === "m" && text[index + 1] === "g" ||
+                                    text[index - 2] === "i" && text[index - 1] === "m" && text[index] === "g"
+                                ) {
+                                    charSpan.style.color = '#569CD6';
+                                }
+                            } else {
+                                if (text[index] === "s" && text[index + 1] === "p" && text[index + 2] === "a" && text[index + 3] === "n" ||
+                                    text[index - 1] === "s" && text[index] === "p" && text[index + 1] === "a" && text[index + 2] === "n" ||
+                                    text[index - 2] === "s" && text[index - 1] === "p" && text[index] === "a" && text[index + 1] === "n" ||
+                                    text[index - 3] === "s" && text[index - 2] === "p" && text[index - 1] === "a" && text[index] === "n" ||
+                                    text[index] === "i" && text[index + 1] === "m" && text[index + 2] === "g" ||
+                                    text[index - 1] === "i" && text[index] === "m" && text[index + 1] === "g" ||
+                                    text[index - 2] === "i" && text[index - 1] === "m" && text[index] === "g"
+                                ) {
+                                    charSpan.style.color = '#95261F';
+                                }
+                            }
+                            span.appendChild(charSpan);
+                            index++;
                         }
                     }, delay);
                 });
             }
+
 
             async function typeCode() {
                 for (let i = 0; i < textArray.length; i++) {
@@ -425,14 +454,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
+            // function updateTheme() {
+            //     darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            //     const code = document.querySelector("code");
+            //     while (code.firstChild) {
+            //         code.removeChild(code.firstChild);
+            //     }
+            //     typeCode();
+            // }
+
+            // window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+
             typeCode();
             spans.forEach((span) => span.setAttribute("data-text", span.textContent));
             spans.forEach((span) => (span.textContent = ""));
             type();
         }
     }
-
-
 
     function reset() {
         const code = document.querySelector("code");
@@ -443,6 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spans.forEach((span, i) => {
             span.classList.add("hidden");
             document.getElementById("span" + (i + 1)).style.opacity = 0
+            document.getElementById("span10").style.opacity = 0;
             document.getElementById("span11").style.opacity = 0;
         });
 

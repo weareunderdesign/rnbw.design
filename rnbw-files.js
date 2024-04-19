@@ -101,14 +101,12 @@ const rnbwFiles = `
     }
   </style>
     <img src="images/HTMLfolder.svg" class="svg-image">
-    <img src="images/CSSfolder.svg" class="svg-image">
-    <img src="images/JSfolder.svg" class="svg-image">
   </div>
     <div
       class="box-xs row padding-l border-left background-primary opacity-m"
       style="opacity:1; flex-grow: 0; flex-shrink: 0; width: 40%;"
     >
-      <code id="code_text_block">
+      <code id="code_text_block" style="width: 100%; box-sizing: border-box;">
       </code>
     </div>
 </div>
@@ -130,41 +128,201 @@ document.addEventListener("DOMContentLoaded", function () {
   // spanElement.textContent += " by adopting open standards and using files as the core, you can easily open and edit any HTML/CSS/JS project visually, enjoying the benefits of files without the 'meh'.";
 
   const сodeTextElement = document.getElementById("code_text_block");
+
   const codeStrings = [
-    ["&lt;div class=\"box align-stretch padding-m column\"&gt;", 
-    "&lt;div class=\"box gap-m row\"&gt;", 
-    "&lt;img class=\"svg-image\"&gt;", 
-    "&lt;img class=\"svg-image\"&gt;", 
-    "&lt;img class=\"svg-image\"&gt;", 
-    "&lt;/div&gt;", 
-    "&lt;h3&gt;", 
-    "&lt;span&gt;", 
-    "&lt;/span&gt;", 
-    "&lt;/h3&gt;", 
-    "&lt;/div&gt;"],
-    ["&lt;style&gt;", 
-    ".svg-image{", 
-    "width: 13.64vw;", 
-    "height: 14.85vw;", 
-    "}", 
-    "&lt;/style&gt;"], 
-    ["const getAnims = () => {", 
-    "let anim1 = rnbwFilesElement.querySelector(\"#anim-1\");", 
-    "let anim2 = rnbwFilesElement.querySelector(\"#anim-2\");", 
-    "let anim3 = rnbwFilesElement.querySelector(\"#anim-3\");", 
-    "return { anim1, anim2, anim3 };", 
-    "};"] 
+    ["&lt;div class=\"box align-stretch padding-m column\"&gt;",
+      "&lt;div class=\"box gap-m row\"&gt;",
+      "&lt;img class=\"svg-image\"&gt;",
+      "&lt;img class=\"svg-image\"&gt;",
+      "&lt;img class=\"svg-image\"&gt;",
+      "&lt;/div&gt;",
+      "&lt;h3&gt;",
+      "&lt;span&gt;",
+      "&lt;/span&gt;",
+      "&lt;/h3&gt;",
+      "&lt;/div&gt;"],
+    ["&lt;style&gt;",
+      ".svg-image{",
+      "width: 13.64vw;",
+      "height: 14.85vw;",
+      "}",
+      "&lt;/style&gt;"],
+    ["const getAnims = () => {",
+      "let anim1 = rnbwFilesElement. querySelector(\"#anim-1\");",
+      "let anim2 = rnbwFilesElement. querySelector(\"#anim-2\");",
+      "let anim3 = rnbwFilesElement. querySelector(\"#anim-3\");",
+      "return { anim1, anim2, anim3 };",
+      "};"]
   ];
-  
+
   const marginValues = [
     ["0rem", "0.578rem", "1.156rem", "1.156rem", "1.156rem", "0.578rem", "0.578rem", "1.156rem", "1.156rem", "0.578rem", "0rem"],
     ["0rem", "0.578rem", "1.156rem", "1.156rem", "0.578rem", "0rem"],
     ["0rem", "0.578rem", "0.578rem", "0.578rem", "0.578rem", "0rem"]
-];
-    
-  сodeTextElement.innerHTML = codeStrings[0].map((item, index) => {
-    return `<div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
-  }).join(' ');
+  ];
+
+  const imageSourcesLight = [
+    "images/HTMLfolder.svg",
+    "images/CSSfolder.svg",
+    "images/JSfolder.svg"
+  ];
+
+  const imageSourcesDark = [
+    "images/HTMLfolder1.svg",
+    "images/CSSfolder1.svg",
+    "images/JSfolder1.svg"
+  ];
+  const preloadedImages = document.createElement("div");
+  preloadedImages.style.display = "none";
+  
+  imageSourcesLight.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    preloadedImages.appendChild(img);
+  });
+
+  imageSourcesDark.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    preloadedImages.appendChild(img);
+  });
+
+  document.body.appendChild(preloadedImages);
+  
+  let darkTheme;
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkTheme = true;
+  } else {
+    darkTheme = false;
+  }
+
+  function updateImagesForTheme() {
+    const images = rnbwFilesElement.querySelectorAll(".svg-image");
+    images.forEach((image, index) => {
+      if (darkTheme) {
+        image.src = imageSourcesDark[index];
+      } else {
+        image.src = imageSourcesLight[index];
+      }
+    });
+  }
+
+  updateImagesForTheme();
+
+  function highlightCharacters() {
+
+    const keywords = {
+      'div': '#95261F',
+      'style': '#95261F',
+      'h3': '#95261F',
+      'span': '#95261F',
+      '"#anim-1"': '#95261F',
+      '"#anim-2"': '#95261F',
+      '"#anim-3"': '#95261F',
+      '.svg-image': '#95261F',
+      'class': '#FF0000',
+      'width': '#FF0000',
+      'height': '#FF0000',
+      '{ anim1, anim2, anim3 }': '#10865A',
+      '13.64vw': '#10865A',
+      '14.85vw': '#10865A',
+      'img': '#95261F',
+      '"svg-image"': '#0000FF',
+      '{': '#0000FF',
+      '(': '#10865A',
+      ')': '#10865A',
+      '}': '#0000FF',
+      '()': '#0000FF',
+      'let': '#0000FF',
+      'return': '#0000FF',
+      'const': '#0000FF',
+      '"box gap-m row"': '#0000FF',
+      '"box align-stretch padding-m column"': '#0000FF'
+    };
+
+    const darkKeywords = {
+      'div': '#569CD6',
+      'style': '#569CD6',
+      'h3': '#569CD6',
+      'span': '#569CD6',
+      '"#anim-1"': '#569CD6',
+      '"#anim-2"': '#569CD6',
+      '"#anim-3"': '#569CD6',
+      '.svg-image': '#569CD6',
+      'class': '#9CDCFE',
+      'width': '#9CDCFE',
+      'height': '#9CDCFE',
+      '{ anim1, anim2, anim3 }': '#DA70D6',
+      '13.64vw': '#DA70D6',
+      '14.85vw': '#DA70D6',
+      'img': '#E9B0A8',
+      '"svg-image"': '#CE9178',
+      '{': '#CE9178',
+      '(': '#DA70D6',
+      ')': '#DA70D6',
+      '}': '#CE9178',
+      '()': '#CE9178',
+      'let': '#CE9178',
+      'return': '#CE9178',
+      'const': '#CE9178',
+      '"box gap-m row"': '#CE9178',
+      '"box align-stretch padding-m column"': '#CE9178'
+    };
+
+    const currentKeywords = darkTheme ? darkKeywords : keywords;
+
+    const highlightedCodeStrings = [];
+
+    for (let i = 0; i < codeStrings.length; i++) {
+      const codeStringArray = [];
+      for (let j = 0; j < codeStrings[i].length; j++) {
+        let str = codeStrings[i][j];
+        let newStr = '';
+        for (let k = 0; k < str.length; k++) {
+          let matched = false;
+          for (const keyword in currentKeywords) {
+            if (str.slice(k, k + keyword.length) === keyword) {
+              if (keyword === '{ anim1, anim2, anim3 }') {
+                newStr += `<span style="color:${currentKeywords[keyword]};">${str[k]}</span>`;
+                newStr += str.slice(k + 1, k + keyword.length - 1);
+                newStr += `<span style="color:${currentKeywords[keyword]};">${str[k + keyword.length - 1]}</span>`;
+              } else {
+                newStr += `<span style="color:${currentKeywords[keyword]};">${str.slice(k, k + keyword.length)}</span>`;
+              }
+              k += keyword.length - 1;
+              matched = true;
+              break;
+            }
+          }
+          if (!matched) {
+            newStr += str[k];
+          }
+        }
+        codeStringArray.push(newStr);
+      }
+      highlightedCodeStrings.push(codeStringArray);
+    }
+
+    return highlightedCodeStrings;
+  }
+
+
+  function updateCodeText() {
+    const highlightedCodeStrings = highlightCharacters();
+
+    сodeTextElement.innerHTML = highlightedCodeStrings[0].map((item, index) => {
+      return `<div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+    }).join(' ');
+  }
+
+
+  updateCodeText();
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    darkTheme = event.matches;
+    updateImagesForTheme();
+    updateCodeText();
+  });
 
   const images = rnbwFilesElement.querySelectorAll(".svg-image");
 
@@ -184,11 +342,11 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const { anim1 } = getAnims();
-  let delay = 650;
+  let delay = 800;
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.1,
+    threshold: 1,
   };
 
   const observer = new IntersectionObserver(animateOnIntersect, options);
@@ -199,38 +357,69 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
-          сodeTextElement.innerHTML = codeStrings[1].map((item, index) => {
-            return `<div style="margin-left: ${marginValues[1][index]};">${item}</div>`;
+          const highlightedCodeStrings = highlightCharacters();
+          сodeTextElement.innerHTML = highlightedCodeStrings[1].map((item, index) => {
+            if (darkTheme) {
+              if (index === 0) {
+                return `<div><img src="${imageSourcesDark[1]}" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 1rem;"></div><div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+              } else {
+                return `<div style="margin-left: ${marginValues[1][index]};">${item}</div>`;
+              }
+            } else {
+              if (index === 0) {
+                return `<div><img src="${imageSourcesLight[1]}" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 1rem;"></div><div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+              } else {
+                return `<div style="margin-left: ${marginValues[1][index]};">${item}</div>`;
+              }
+            }
           }).join(' ');
-          images[0].style.display = "none";
-          images[1].style.display = "block";
           anim1.classList.remove("background-secondary");
           anim2.classList.add("background-secondary");
           setTimeout(() => {
-            сodeTextElement.innerHTML = codeStrings[2].map((item, index) => {
-              return `<div style="margin-left: ${marginValues[2][index]};">${item}</div>`;
+            const highlightedCodeStrings = highlightCharacters();
+            сodeTextElement.innerHTML = highlightedCodeStrings[2].map((item, index) => {
+              if (darkTheme) {
+                if (index === 0) {
+                  return `<div><img src="${imageSourcesDark[2]}" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 1rem;"></div><div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+                } else {
+                  return `<div style="margin-left: ${marginValues[2][index]};">${item}</div>`;
+                }
+              } else {
+                if (index === 0) {
+                  return `<div><img src="${imageSourcesLight[2]}" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 1rem;"></div><div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+                } else {
+                  return `<div style="margin-left: ${marginValues[2][index]};">${item}</div>`;
+                }
+              }
             }).join(' ');
-            images[1].style.display = "none";
-            images[2].style.display = "block";
             anim2.classList.remove("background-secondary");
             anim3.classList.add("background-secondary");
             setTimeout(() => {
-              сodeTextElement.innerHTML = codeStrings[1].map((item, index) => {
-                return `<div style="margin-left: ${marginValues[1][index]};">${item}</div>`;
+              const highlightedCodeStrings = highlightCharacters();
+              сodeTextElement.innerHTML = highlightedCodeStrings[1].map((item, index) => {
+                if (darkTheme) {
+                  if (index === 0) {
+                    return `<div><img src="${imageSourcesDark[1]}" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 1rem;"></div><div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+                  } else {
+                    return `<div style="margin-left: ${marginValues[1][index]};">${item}</div>`;
+                  }
+                } else {
+                  if (index === 0) {
+                    return `<div><img src="${imageSourcesLight[1]}" style="margin-left: 50%; transform: translateX(-50%); margin-bottom: 1rem;"></div><div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
+                  } else {
+                    return `<div style="margin-left: ${marginValues[1][index]};">${item}</div>`;
+                  }
+                }
               }).join(' ');
-              images[2].style.display = "none";
-              images[1].style.display = "block";
               anim3.classList.remove("background-secondary");
               anim2.classList.add("background-secondary");
               setTimeout(() => {
-                сodeTextElement.innerHTML = codeStrings[0].map((item, index) => {
+                const highlightedCodeStrings = highlightCharacters();
+                сodeTextElement.innerHTML = highlightedCodeStrings[0].map((item, index) => {
                   return `<div style="margin-left: ${marginValues[0][index]};">${item}</div>`;
                 }).join(' ');
-                images[1].style.display = "none";
-                images[0].style.display = "block";
                 anim2.classList.remove("background-secondary");
                 anim1.classList.add("background-secondary");
-                delay += 750;
                 reset();
               }, delay);
             }, delay);
@@ -244,46 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function reset() {
     const { anim1, anim2, anim3 } = getAnims();
-
-    setTimeout(() => {
-      anim1.classList.add("background-secondary");
-      anim2.classList.remove("background-secondary");
-      anim3.classList.remove("background-secondary");
-    }, 650);
-    setTimeout(() => {
-      delay = 650;
-      setTimeout(() => {
-        observer.observe(anim1);
-      }, 650);
-    }, 750);
+    delay = 800;
+    observer.observe(anim1);
   }
-});
-
-
-
-// inverting folders images
-
-function checkDarkMode() {
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-const images = document.querySelectorAll('#image-container img');
-
-function checkDarkMode() {
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-
-function invertImages() {
-  images.forEach(image => {
-    if (checkDarkMode()) {
-      image.style.filter = 'invert(1)';
-    } else {
-      image.style.filter = 'none';
-    }
-  });
-}
-
-invertImages();
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-  invertImages();
 });
