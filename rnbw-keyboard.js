@@ -565,6 +565,7 @@ class RnbwKeyobard extends HTMLElement {
 }
 
 customElements.define("rnbw-keyboard", RnbwKeyobard);
+
 document.addEventListener("DOMContentLoaded", function () {
   const options = {
     root: null,
@@ -581,6 +582,7 @@ document.addEventListener("DOMContentLoaded", function () {
         i = 0;
         clearInterval(keyboardToggleIntervalId);
         keyboardToggleIntervalId = setInterval(toggleVisibility, 1500);
+        
       }
     });
   });
@@ -604,29 +606,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const jumpstartMenu = document.getElementById("jumpstart-menu");
       const doSomethingMenu = document.getElementById("do-something-menu");
       const addSomethingMenu = document.getElementById("add-something-menu");
-      keyboards[0].style.opacity = "1";
-      keyboards[1].style.opacity = "0.3";
-      keyboards[2].style.opacity = "0.3";
+      keyboards[j].style.opacity = j === i ? "1" : "0.3";
       if (i === 0) {
-        keyboards[0].style.opacity = "1";
-        keyboards[1].style.opacity = "0.3";
-        keyboards[2].style.opacity = "0.3";
         jumpstartMenu.classList.remove("hidden");
         doSomethingMenu.classList.add("hidden");
         addSomethingMenu.classList.add("hidden");
-      }
-      if (i === 1) {
-        keyboards[0].style.opacity = "0.3";
-        keyboards[1].style.opacity = "1";
-        keyboards[2].style.opacity = "0.3";
+      } else if (i === 1) {
         jumpstartMenu.classList.add("hidden");
         doSomethingMenu.classList.add("hidden");
         addSomethingMenu.classList.remove("hidden");
-      }
-      if (i === 2) {
-        keyboards[0].style.opacity = "0.3";
-        keyboards[1].style.opacity = "0.3";
-        keyboards[2].style.opacity = "1";
+      } else if (i === 2) {
         jumpstartMenu.classList.add("hidden");
         doSomethingMenu.classList.remove("hidden");
         addSomethingMenu.classList.add("hidden");
@@ -645,43 +634,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const keyboards = document.querySelectorAll(".keyboard");
-  keyboards[0].addEventListener("click", () => {
-    clearInterval(keyboardToggleIntervalId);
-    const jumpstartMenu = document.getElementById("jumpstart-menu");
-    const doSomethingMenu = document.getElementById("do-something-menu");
-    const addSomethingMenu = document.getElementById("add-something-menu");
-    jumpstartMenu.classList.remove("hidden");
-    doSomethingMenu.classList.add("hidden");
-    addSomethingMenu.classList.add("hidden");
-    keyboards[0].style.opacity = "1";
-    keyboards[1].style.opacity = "0.3";
-    keyboards[2].style.opacity = "0.3";
-  });
 
-  keyboards[1].addEventListener("click", () => {
-    clearInterval(keyboardToggleIntervalId);
-    const jumpstartMenu = document.getElementById("jumpstart-menu");
-    const doSomethingMenu = document.getElementById("do-something-menu");
-    const addSomethingMenu = document.getElementById("add-something-menu");
-    jumpstartMenu.classList.add("hidden");
-    doSomethingMenu.classList.add("hidden");
-    addSomethingMenu.classList.remove("hidden");
-    keyboards[0].style.opacity = "0.3";
-    keyboards[1].style.opacity = "1";
-    keyboards[2].style.opacity = "0.3";
-  });
+  keyboards.forEach((keyboard, index) => {
+    keyboard.addEventListener("click", () => {
+      clearInterval(keyboardToggleIntervalId);
+      const jumpstartMenu = document.getElementById("jumpstart-menu");
+      const doSomethingMenu = document.getElementById("do-something-menu");
+      const addSomethingMenu = document.getElementById("add-something-menu");
 
-  keyboards[2].addEventListener("click", () => {
-    clearInterval(keyboardToggleIntervalId);
-    const jumpstartMenu = document.getElementById("jumpstart-menu");
-    const doSomethingMenu = document.getElementById("do-something-menu");
-    const addSomethingMenu = document.getElementById("add-something-menu");
-    jumpstartMenu.classList.add("hidden");
-    doSomethingMenu.classList.remove("hidden");
-    addSomethingMenu.classList.add("hidden");
-    keyboards[0].style.opacity = "0.3";
-    keyboards[1].style.opacity = "0.3";
-    keyboards[2].style.opacity = "1";
+      keyboards.forEach((kb, idx) => {
+        kb.style.opacity = idx === index ? "1" : "0.3";
+      });
+
+      if (index === 0 || index === 3) {
+        jumpstartMenu.classList.remove("hidden");
+        doSomethingMenu.classList.add("hidden");
+        addSomethingMenu.classList.add("hidden");
+      } else if (index === 1 || index === 4) {
+        jumpstartMenu.classList.add("hidden");
+        doSomethingMenu.classList.add("hidden");
+        addSomethingMenu.classList.remove("hidden");
+      } else if (index === 2 || index === 5) {
+        jumpstartMenu.classList.add("hidden");
+        doSomethingMenu.classList.remove("hidden");
+        addSomethingMenu.classList.add("hidden");
+      }
+    });
   });
 
 });
