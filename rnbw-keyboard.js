@@ -239,11 +239,10 @@ const subMenus = (menuConfigs) => {
       </div>
 
       ${options
-        ?.map(
-          (option) => `
-        <div class="padding-m justify-stretch ${
-          option.disabled && "opacity-m"
-        } ${option.isHighlighted && "background-secondary radius-xs"}">
+      ?.map(
+        (option) => `
+        <div class="padding-m justify-stretch ${option.disabled && "opacity-m"
+          } ${option.isHighlighted && "background-secondary radius-xs"}">
           <div class="gap-s align-center">
             ${option.icon}
             <span class="text-m">${option.name}</span>
@@ -253,8 +252,8 @@ const subMenus = (menuConfigs) => {
           </div>
        </div>    
       `
-        )
-        .join(" ")}
+      )
+      .join(" ")}
       </div> 
 `;
 };
@@ -265,87 +264,87 @@ const doSomething = () => {
     <div class="column align-stretch">
         <div class="box-l padding-m column align-stretch" style="align-items:stretch;">
             ${subMenus({
-              menuTitle: "Project",
-              options: [
-                {
-                  icon: plusIconSvg,
-                  name: "Add",
-                  shortcut: "A",
-                  isHighlighted: true,
-                },
-                {
-                  icon: codeHtmlIconSvg,
-                  name: "Code",
-                  shortcut: "C",
-                },
-                {
-                  icon: playIconSvg,
-                  name: "Run",
-                  shortcut: "R",
-                },
-                {
-                  icon: editIconSvg,
-                  name: "Design",
-                  shortcut: "/",
-                },
-                {
-                  icon: cloudUploadIconSvg,
-                  name: "Publish",
-                  shortcut: "P",
-                  disabled: true,
-                },
-                {
-                  icon: shareIconSvg,
-                  name: "Share",
-                  shortcut: "O",
-                  disabled: true,
-                },
-              ],
-            })}
+    menuTitle: "Project",
+    options: [
+      {
+        icon: plusIconSvg,
+        name: "Add",
+        shortcut: "A",
+        isHighlighted: true,
+      },
+      {
+        icon: codeHtmlIconSvg,
+        name: "Code",
+        shortcut: "C",
+      },
+      {
+        icon: playIconSvg,
+        name: "Run",
+        shortcut: "R",
+      },
+      {
+        icon: editIconSvg,
+        name: "Design",
+        shortcut: "/",
+      },
+      {
+        icon: cloudUploadIconSvg,
+        name: "Publish",
+        shortcut: "P",
+        disabled: true,
+      },
+      {
+        icon: shareIconSvg,
+        name: "Share",
+        shortcut: "O",
+        disabled: true,
+      },
+    ],
+  })}
             ${subMenus({
-              menuTitle: "Actions",
-              options: [
-                {
-                  icon: copyIconSvg,
-                  name: "Cut",
-                  shortcut: "",
-                },
-                {
-                  icon: copyIconSvg,
-                  name: "Copy",
-                  shortcut: "",
-                },
-                {
-                  icon: copyIconSvg,
-                  name: "Paste",
-                  shortcut: "",
-                },
-              ],
-            })}
+    menuTitle: "Actions",
+    options: [
+      {
+        icon: copyIconSvg,
+        name: "Cut",
+        shortcut: "",
+      },
+      {
+        icon: copyIconSvg,
+        name: "Copy",
+        shortcut: "",
+      },
+      {
+        icon: copyIconSvg,
+        name: "Paste",
+        shortcut: "",
+      },
+    ],
+  })}
 
             ${subMenus({
-              menuTitle: "Other",
-              options: [
-                {
-                  icon: componentIconSvg,
-                  name: "Create Component",
-                  shortcut: "",
-                },
-                {
-                  icon: crossIconSvg,
-                  name: `
+    menuTitle: "Other",
+    options: [
+      {
+        icon: componentIconSvg,
+        name: "Create Component",
+        shortcut: "",
+      },
+      {
+        icon: crossIconSvg,
+        name: `
                   <span class="text-m">Remove unused styles</span>
                   <span class="text-m">(28)</span>
                   `,
-                  shortcut: "",
-                },
-                {
-                  icon: copyIconSvg,
-                  name: "Copy class names",
-                  shortcut: "",
-                },
-              ],
-            })}
+        shortcut: "",
+      },
+      {
+        icon: copyIconSvg,
+        name: "Copy class names",
+        shortcut: "",
+      },
+    ],
+  })}
         </div>
     </div>
   </div>`;
@@ -366,76 +365,76 @@ const jumpstartMenu = () => {
     <div class="column align-stretch">
         <div class="box-l padding-m column align-stretch" style="align-items:stretch;">
             ${subMenus({
-              menuTitle: "Projects",
-              options: [
-                {
-                  icon: newIconSvg,
-                  name: "New",
-                  shortcut: "N",
-                },
-                {
-                  icon: folderIconSvg,
-                  name: "Open",
-                  shortcut: "O",
-                  isHighlighted: true,
-                },
-              ],
-            })}
+    menuTitle: "Projects",
+    options: [
+      {
+        icon: newIconSvg,
+        name: "New",
+        shortcut: "N",
+      },
+      {
+        icon: folderIconSvg,
+        name: "Open",
+        shortcut: "O",
+        isHighlighted: true,
+      },
+    ],
+  })}
             ${subMenus({
-              menuTitle: "Recent",
-              options: [
-                {
-                  icon: folderIconSvg,
-                  name: "Project",
-                  shortcut: "",
-                },
-                {
-                  icon: githubIconSvg,
-                  name: "Project",
-                  shortcut: "",
-                },
-                {
-                  icon: folderIconSvg,
-                  name: "Project",
-                  shortcut: "",
-                },
-              ],
-            })}
+    menuTitle: "Recent",
+    options: [
+      {
+        icon: folderIconSvg,
+        name: "Project",
+        shortcut: "",
+      },
+      {
+        icon: githubIconSvg,
+        name: "Project",
+        shortcut: "",
+      },
+      {
+        icon: folderIconSvg,
+        name: "Project",
+        shortcut: "",
+      },
+    ],
+  })}
             ${subMenus({
-              menuTitle: "Help",
-              options: [
-                {
-                  icon: guideIconSvg,
-                  name: "Guide",
-                  shortcut: "",
-                },
-                {
-                  icon: supportIconSvg,
-                  name: "Support",
-                  shortcut: "",
-                },
-                {
-                  icon: communityIconSvg,
-                  name: "Community",
-                  shortcut: "",
-                },
-              ],
-            })}
+    menuTitle: "Help",
+    options: [
+      {
+        icon: guideIconSvg,
+        name: "Guide",
+        shortcut: "",
+      },
+      {
+        icon: supportIconSvg,
+        name: "Support",
+        shortcut: "",
+      },
+      {
+        icon: communityIconSvg,
+        name: "Community",
+        shortcut: "",
+      },
+    ],
+  })}
             
             ${subMenus({
-              menuTitle: "Settings",
-              options: [
-                {
-                  icon: `  <div class="padding-xs">
+    menuTitle: "Settings",
+    options: [
+      {
+        icon: `  <div class="padding-xs">
                     <div class="radius-m icon-xs align-center background-secondary"></div>
                 </div>`,
-                  name: `<span class="text-m opacity-m">Theme</span>
+        name: `<span class="text-m opacity-m">Theme</span>
                     <span class="text-s opacity-m">/</span>
                     <span class="text-m">System</span>`,
-                  shortcut: "",
-                },
-              ],
-            })} 
+        shortcut: "",
+      },
+    ],
+  })} 
         </div>
     </div>
   </div>`;
@@ -457,73 +456,73 @@ const addSomething = () => {
     <div class="column align-stretch">
         <div class="box-l padding-m column align-stretch" style="align-items:stretch;">
             ${subMenus({
-              menuTitle: "Files",
-              options: [
-                {
-                  icon: pageIconSvg,
-                  name: "Page",
-                  shortcut: "",
-                },
-                {
-                  icon: codeJSIconSvg,
-                  name: "Script",
-                  shortcut: "",
-                },
-              ],
-            })}
+    menuTitle: "Files",
+    options: [
+      {
+        icon: pageIconSvg,
+        name: "Page",
+        shortcut: "",
+      },
+      {
+        icon: codeJSIconSvg,
+        name: "Script",
+        shortcut: "",
+      },
+    ],
+  })}
             ${subMenus({
-              menuTitle: "Elements",
-              options: [
-                {
-                  icon: divIconSvg,
-                  name: "Div",
-                  shortcut: "",
-                  isHighlighted: true,
-                },
-                {
-                  icon: textIconSvg,
-                  name: "Text",
-                  shortcut: "",
-                },
-                {
-                  icon: imageIconSvg,
-                  name: "Image",
-                  shortcut: "",
-                },
-                {
-                  icon: linkIconSvg,
-                  name: "Link",
-                  shortcut: "",
-                },
-              ],
-            })}
+    menuTitle: "Elements",
+    options: [
+      {
+        icon: divIconSvg,
+        name: "Div",
+        shortcut: "",
+        isHighlighted: true,
+      },
+      {
+        icon: textIconSvg,
+        name: "Text",
+        shortcut: "",
+      },
+      {
+        icon: imageIconSvg,
+        name: "Image",
+        shortcut: "",
+      },
+      {
+        icon: linkIconSvg,
+        name: "Link",
+        shortcut: "",
+      },
+    ],
+  })}
 
             ${subMenus({
-              menuTitle: "Recent",
-              options: [
-                {
-                  icon: brushIconSvg,
-                  name: `
+    menuTitle: "Recent",
+    options: [
+      {
+        icon: brushIconSvg,
+        name: `
                   <span class="opacity-m text-m">
                   Stylesheet1/</span>
                   <span class="text-m">Style1</span>
                   `,
-                  shortcut: "",
-                },
-                {
-                  icon: componentIconSvg,
-                  name: "Component 1",
-                  shortcut: "",
-                },
-                {
-                  icon: `<div class="icon-s radius-m border"></div>`,
-                  name: ` 
+        shortcut: "",
+      },
+      {
+        icon: componentIconSvg,
+        name: "Component 1",
+        shortcut: "",
+      },
+      {
+        icon: `<div class="icon-s radius-m border"></div>`,
+        name: ` 
                   <span class="opacity-m text-m">images/</span><span class="text-m">image1.png</span>
                   `,
-                  shortcut: "",
-                },
-              ],
-            })}
+        shortcut: "",
+      },
+    ],
+  })}
         </div>
     </div>
   </div>`;
@@ -539,21 +538,23 @@ const addSomething = () => {
 };
 
 const keyboardImages = () => {
-  return `<img class="dark keyboard" src="images/keyboard-dark-j.svg" />
-<img class="dark keyboard hidden" src="images/keyboard-dark-a.svg" />
-<img class="dark keyboard hidden" src="images/keyboard-dark-w.svg" />
+  return `<img class="dark keyboard" style="width: 4rem; opacity: 1; margin-bottom: 0.578rem" src="images/keyboard-dark-j.svg" />
+          <img class="dark keyboard" style="width: 4rem; opacity: 0.3; margin-bottom: 0.578rem" src="images/keyboard-dark-a.svg" />
+          <img class="dark keyboard" style="width: 4rem; opacity: 0.3;" src="images/keyboard-dark-w.svg" />
 
-<img class="light keyboard" src="images/keyboard-light-j.svg" />
-<img class="light keyboard hidden" src="images/keyboard-light-a.svg" />
-<img class="light keyboard hidden" src="images/keyboard-light-w.svg" />`;
+          <img class="light keyboard" style="width: 4rem; opacity: 1; margin-bottom: 0.578rem" src="images/keyboard-light-j.svg" />
+          <img class="light keyboard" style="width: 4rem; opacity: 0.3; margin-bottom: 0.578rem" src="images/keyboard-light-a.svg" />
+          <img class="light keyboard" style="width: 4rem; opacity: 0.3;" src="images/keyboard-light-w.svg" />`;
 };
 
 const rnbwKeyboardTemplate = `
-<div class="gap-l" id="keyboard-wrapper">
-  ${keyboardImages()}
-  ${doSomething()}
-  ${jumpstartMenu()}
-  ${addSomething()}
+<div class="gap-l" id="keyboard-wrapper" style="position: relative;">
+<div style="position: absolute; top: 0; left: 0; display: flex; flex-direction: column; margin-left: 1.156rem; height: 100%; justify-content: center; align-items: center;">
+    ${keyboardImages()}
+  </div>
+${doSomething()}
+${jumpstartMenu()}
+${addSomething()}
 </div>`;
 
 class RnbwKeyobard extends HTMLElement {
@@ -603,28 +604,34 @@ document.addEventListener("DOMContentLoaded", function () {
       const jumpstartMenu = document.getElementById("jumpstart-menu");
       const doSomethingMenu = document.getElementById("do-something-menu");
       const addSomethingMenu = document.getElementById("add-something-menu");
-      if (j === i) {
-        keyboards[j].classList.remove("hidden");
-        if (i === 0) {
-          jumpstartMenu.classList.remove("hidden");
-          doSomethingMenu.classList.add("hidden");
-          addSomethingMenu.classList.add("hidden");
-        }
-        if (i === 1) {
-          jumpstartMenu.classList.add("hidden");
-          doSomethingMenu.classList.add("hidden");
-          addSomethingMenu.classList.remove("hidden");
-        }
-        if (i === 2) {
-          jumpstartMenu.classList.add("hidden");
-          doSomethingMenu.classList.remove("hidden");
-          addSomethingMenu.classList.add("hidden");
-        }
-      } else {
-        keyboards[j].classList.add("hidden");
+      keyboards[0].style.opacity = "1";
+      keyboards[1].style.opacity = "0.3";
+      keyboards[2].style.opacity = "0.3";
+      if (i === 0) {
+        keyboards[0].style.opacity = "1";
+        keyboards[1].style.opacity = "0.3";
+        keyboards[2].style.opacity = "0.3";
+        jumpstartMenu.classList.remove("hidden");
+        doSomethingMenu.classList.add("hidden");
+        addSomethingMenu.classList.add("hidden");
+      }
+      if (i === 1) {
+        keyboards[0].style.opacity = "0.3";
+        keyboards[1].style.opacity = "1";
+        keyboards[2].style.opacity = "0.3";
+        jumpstartMenu.classList.add("hidden");
+        doSomethingMenu.classList.add("hidden");
+        addSomethingMenu.classList.remove("hidden");
+      }
+      if (i === 2) {
+        keyboards[0].style.opacity = "0.3";
+        keyboards[1].style.opacity = "0.3";
+        keyboards[2].style.opacity = "1";
+        jumpstartMenu.classList.add("hidden");
+        doSomethingMenu.classList.remove("hidden");
+        addSomethingMenu.classList.add("hidden");
       }
     }
-
     i = (i + 1) % keyboards.length;
   }
 
@@ -636,4 +643,45 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const keyboards = document.querySelectorAll(".keyboard");
+  keyboards[0].addEventListener("click", () => {
+    clearInterval(keyboardToggleIntervalId);
+    const jumpstartMenu = document.getElementById("jumpstart-menu");
+    const doSomethingMenu = document.getElementById("do-something-menu");
+    const addSomethingMenu = document.getElementById("add-something-menu");
+    jumpstartMenu.classList.remove("hidden");
+    doSomethingMenu.classList.add("hidden");
+    addSomethingMenu.classList.add("hidden");
+    keyboards[0].style.opacity = "1";
+    keyboards[1].style.opacity = "0.3";
+    keyboards[2].style.opacity = "0.3";
+  });
+
+  keyboards[1].addEventListener("click", () => {
+    clearInterval(keyboardToggleIntervalId);
+    const jumpstartMenu = document.getElementById("jumpstart-menu");
+    const doSomethingMenu = document.getElementById("do-something-menu");
+    const addSomethingMenu = document.getElementById("add-something-menu");
+    jumpstartMenu.classList.add("hidden");
+    doSomethingMenu.classList.add("hidden");
+    addSomethingMenu.classList.remove("hidden");
+    keyboards[0].style.opacity = "0.3";
+    keyboards[1].style.opacity = "1";
+    keyboards[2].style.opacity = "0.3";
+  });
+
+  keyboards[2].addEventListener("click", () => {
+    clearInterval(keyboardToggleIntervalId);
+    const jumpstartMenu = document.getElementById("jumpstart-menu");
+    const doSomethingMenu = document.getElementById("do-something-menu");
+    const addSomethingMenu = document.getElementById("add-something-menu");
+    jumpstartMenu.classList.add("hidden");
+    doSomethingMenu.classList.remove("hidden");
+    addSomethingMenu.classList.add("hidden");
+    keyboards[0].style.opacity = "0.3";
+    keyboards[1].style.opacity = "0.3";
+    keyboards[2].style.opacity = "1";
+  });
+
 });
