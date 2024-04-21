@@ -299,6 +299,8 @@ class RnbwPreview extends HTMLElement {
 
 customElements.define("rnbw-preview", RnbwPreview);
 
+let darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 document.addEventListener("DOMContentLoaded", function () {
     const rnbwPreviewElement = document.querySelector("rnbw-preview");
 
@@ -375,6 +377,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
+            function updateTextColor() {
+                darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const spans = document.querySelectorAll("code span");
+                spans.forEach(span => {
+                    if (span.textContent === "s" && span.nextElementSibling && span.nextElementSibling.textContent === "p" &&
+                        span.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.textContent === "a" &&
+                        span.nextElementSibling.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.nextElementSibling.textContent === "n" ||
+                        span.previousElementSibling && span.previousElementSibling.textContent === "s" && span.textContent === "p" &&
+                        span.nextElementSibling && span.nextElementSibling.textContent === "a" &&
+                        span.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.textContent === "n" ||
+                        span.previousElementSibling && span.previousElementSibling.previousElementSibling && span.previousElementSibling.previousElementSibling.textContent === "s" &&
+                        span.previousElementSibling.textContent === "p" && span.textContent === "a" &&
+                        span.nextElementSibling && span.nextElementSibling.textContent === "n" ||
+                        span.previousElementSibling && span.previousElementSibling.previousElementSibling && span.previousElementSibling.previousElementSibling.previousElementSibling &&
+                        span.previousElementSibling.previousElementSibling.previousElementSibling.textContent === "s" &&
+                        span.previousElementSibling.previousElementSibling.textContent === "p" && span.previousElementSibling.textContent === "a" &&
+                        span.textContent === "n" ||
+                        span.textContent === "i" && span.nextElementSibling && span.nextElementSibling.textContent === "m" &&
+                        span.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.textContent === "g" ||
+                        span.previousElementSibling && span.previousElementSibling.textContent === "i" && span.textContent === "m" &&
+                        span.nextElementSibling && span.nextElementSibling.textContent === "g" ||
+                        span.previousElementSibling && span.previousElementSibling.previousElementSibling && span.previousElementSibling.previousElementSibling.textContent === "i" &&
+                        span.previousElementSibling.textContent === "m" && span.textContent === "g"
+                    ) {
+                        span.style.color = darkTheme ? '#569CD6' : '#95261F';
+                    }
+                });
+            }
+
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTextColor);
+            }
+
             const textArray = ["<span>rnbw 🌈 is a modern design and code editor 💻 .</span>",
                 "<span>it's simple, flexible, and open.</span>",
                 "<span>It works with your files.</span>",
@@ -387,12 +422,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 "<span>standards.</span>",
                 "<span>and, it is powered by AI 🤖 ...</span>"];
 
-
-            let darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; // из-за этого ломается анимация
-
             const code = document.querySelector("code");
 
-            async function typeText(text, delay = 12) {
+            async function typeText(text, delay = 12, darkTheme) {
                 return new Promise(resolve => {
                     const span = document.createElement('span');
                     span.style.display = 'block';
@@ -430,12 +462,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                 }
                             }
                             span.appendChild(charSpan);
+                            updateTextColor();
                             index++;
                         }
                     }, delay);
                 });
             }
-
 
             async function typeCode() {
                 for (let i = 0; i < textArray.length; i++) {
@@ -450,20 +482,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     else {
                         await new Promise(resolve => setTimeout(resolve, 800));
                     }
-                    await typeText(textArray[i]);
+                    await typeText(textArray[i], 12, darkTheme);
                 }
             }
 
-            // function updateTheme() {
-            //     darkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            //     const code = document.querySelector("code");
-            //     while (code.firstChild) {
-            //         code.removeChild(code.firstChild);
-            //     }
-            //     typeCode();
-            // }
-
-            // window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
             typeCode();
             spans.forEach((span) => span.setAttribute("data-text", span.textContent));
