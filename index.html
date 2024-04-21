@@ -25,7 +25,7 @@
           <span class="text-l">colorpaper ↗</span>
         </div>
       </a>
-      <h1 class="text-center">        design, code</h1>
+      <h1 class="text-center"> design, code</h1>
       <rnbw-preview></rnbw-preview>
       <rnbw-nav></rnbw-nav>
     </div>
@@ -35,21 +35,24 @@
           <span class="text-s padding-s radius-s background-secondary">coming soon</span>
           <h3 class="text-center">a design tool that gets you</h3>
         </div>
-        <div class="row gap-column-xl"><div class="box column">
-            <p>rnbw uses artificial intelligence to understand your project and provides you with a range of tools to manage it. ask  things and let ai do things for you.</p>
+        <div class="row gap-column-xl">
+          <div class="box column">
+            <p>rnbw uses artificial intelligence to understand your project and provides you with a range of tools to
+              manage it. ask  things and let ai do things for you.</p>
           </div>
           <div class="box column">
-            <p>rnbw is a design tool that “get you” - let digital mind do the work and unleash your creativity! ai-powered commands allows you to focus on creating.</p>
+            <p>rnbw is a design tool that “get you” - let digital mind do the work and unleash your creativity!
+              ai-powered commands allows you to focus on creating.</p>
           </div>
-        </div> 
+        </div>
         <div class="box gap-xl align-start align-center">
           <a href="" target="_blank" class="gap-s">
             <svg-icon src="https://raincons.rnbw.dev/icons/phone.svg" class="icon-s"></svg-icon>
             <div>
               <span class="text-l">book a demo ↗</span>
             </div>
-          </a>      
-        </div>  
+          </a>
+        </div>
         <rnbw-blog></rnbw-blog>
       </div>
     </div>
@@ -205,12 +208,49 @@
       </div>
       <div class="background-secondary align-center radius-s border padding-l gap-xl" style="min-height: 600px">
         <div class="column box-s align-end gap-xl">
-          <code class="box-m padding-l radius-s background-primary shadow">
-      const tryMeBtn = document.getElementById("try_me");
-      tryMeBtn.addEventListener("click", () => {
-       window.location.href = "https://rnbw.dev";
-      });
-      </code>
+          <code class="box-m padding-l radius-s background-primary shadow" style="display: inline-block; flex-direction: column;">
+            <style>
+              :root {
+                --text-color-blue: #0000FF;
+                --text-color-red: #A31515;
+                --text-color-green: #309331;
+              }          
+              .color-blue {
+                color: var(--text-color-blue);
+              }
+              .color-red {
+                color: var(--text-color-red);
+              }
+              .color-green {
+                color: var(--text-color-green);
+              }         
+              @media (prefers-color-scheme: dark) {
+                :root {
+                  --text-color-blue: #569CD6;
+                  --text-color-red: #CE9178;
+                  --text-color-green: #DA70D6;
+                }
+              }
+            </style>                   
+            <span class="color-blue">const</span> 
+            tryMeBtn = document.getElementById
+            <span class="color-blue">(</span>
+            <span class="color-red">"try_me"</span>
+            <span class="color-blue">)</span>
+            ;tryMeBtn.addEventListener
+            <span class="color-blue">(</span>
+            <span class="color-red">"click"</span>
+            , 
+            <span class="color-green">()</span> 
+            => 
+            <span class="color-green">{</span>
+            <div style="margin-left: 0.578rem;">
+              window.location.href = 
+              <span class="color-red">"https://rnbw.dev"</span>;
+            </div>
+            <span class="color-green">}</span>
+            <span class="color-blue">)</span>;
+          </code>          
           <div class="row box-l shadow background-primary radius-s box-s">
             <div class="gap-m border-bottom padding-m justify-stretch box-l">
               <div class="gap-s column">
@@ -392,5 +432,4 @@
 <script src="rnbw-keyboard.js"></script>
 <script src="rnbw-footer.js"></script>
 <script src="rnbw-preview.js"></script>
-
 </html>
