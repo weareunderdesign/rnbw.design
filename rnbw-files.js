@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const { anim1 } = getAnims();
-  let delay = 800;
+  let delay = 1000;
   const options = {
     root: null,
     rootMargin: "0px",
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function reset() {
     const { anim1, anim2, anim3 } = getAnims();
-    delay = 800;
+    delay = 1000;
     observer.observe(anim1);
   }
 });
