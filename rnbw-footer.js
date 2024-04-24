@@ -26,17 +26,11 @@ const footerTemplate = `
             <a class="opacity-m">rfrncs.design ↗</a>
         </div>
         <div class="column gap-s box">
-            <a href="https://rnbw.company/terms"
-                target="_blank">terms
-            </a>
-            <a href="https://rnbw.company/privacy"
-                target="_blank">privacy
-            </a>
-            <a href="https://rnbw.company/GDPR"
-                target="_blank">gdpr
+            <a href="legal.html"
+                target="_blank">legal
             </a>
                 <div>
-                    <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer;"><span class="opacity-m" id="theme-name"></span></button>
+                    <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer; margin-top: 0.25rem;"><span class="opacity-m" id="theme-name"></span></button>
                 </div>
         </div>
     </div>
