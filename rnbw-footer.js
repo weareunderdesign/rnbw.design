@@ -149,18 +149,18 @@ function switchFavicon(theme) {
   document.getElementsByTagName('head')[0].appendChild(link);
 }
 
-document.addEventListener("click", function(event) {
-  if (event.target.tagName === "A" && event.target.href !== "") {
-      var hostname = new URL(event.target.href).hostname;
-      if (hostname === "guide.rnbw.dev") {
-          event.preventDefault();
-          var testImage = new Image();
-          testImage.src = "https://" + hostname + "/favicon.ico";
-          testImage.onerror = function() {
-              window.location.href = "404.html";
-          };
-      }
-  }
-});
+// document.addEventListener("click", function(event) {
+//   if (event.target.tagName === "A" && event.target.href !== "") {
+//       var hostname = new URL(event.target.href).hostname;
+//       if (hostname === "guide.rnbw.dev") {
+//           event.preventDefault();
+//           var testImage = new Image();
+//           testImage.src = "https://" + hostname + "/favicon.ico";
+//           testImage.onerror = function() {
+//               window.location.href = "404.html";
+//           };
+//       }
+//   }
+// });
 
 
