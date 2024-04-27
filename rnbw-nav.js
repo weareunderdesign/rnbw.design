@@ -12,7 +12,7 @@ const navTemplate = `
                             </div>
                         </a>
                         <a id="nav-item"
-                            href="https://guide.rnbw.dev/"
+                            href="https://rnbw.design/"
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
