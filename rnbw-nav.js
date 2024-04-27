@@ -1,6 +1,5 @@
 const navTemplate = `
-                <div class="row box-l gap-l">
-                    <div class="box">
+                <div class="row box-l gap-m align-center">
                         <a id="nav-item"
                             href="https://rnbw.company/signup"
                             target="_blank"
@@ -12,10 +11,8 @@ const navTemplate = `
                                 <p class="text-l">start</p>
                             </div>
                         </a>
-                    </div>
-                    <div class="box">
                         <a id="nav-item"
-                            href="https://guide.rnbw.dev/"
+                            href="https://rnbw.design/"
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
@@ -25,10 +22,8 @@ const navTemplate = `
                                 <p class="text-l">guide</p>
                             </div>
                         </a>
-                    </div>
-                    <div class="box">
                         <a id="nav-item"
-                            href="https://discord.gg/HycXz8TJkd/"
+                            href="https://github.com/orgs/rnbwdev/discussions"
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
@@ -38,20 +33,17 @@ const navTemplate = `
                                 <p class="text-l">community ↗</p>
                             </div>
                         </a>
-                    </div>
-                    <div class="box">
                         <a id="nav-item"
                             href="https://github.com/rnbwdev/rnbw"
                             target="_blank"
                             class="align-center justify-start padding-l gap-m radius-s background-primary border">
-                            <svg-icon
-                                src="https://raincons.rnbw.dev/icons/github.svg"
-                                class="icon-s"></svg-icon>
+                            <img
+                                src="images/githubgradient.svg"
+                                class="icon-s">
                             <div>
                                 <p class="text-l">GitHub ↗</p>
                             </div>
                         </a>
-                    </div>
                 </div>
 `;
 

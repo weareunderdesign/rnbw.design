@@ -26,13 +26,11 @@ const footerTemplate = `
             <a class="opacity-m">rfrncs.design ↗</a>
         </div>
         <div class="column gap-s box">
-            <a href="https://www.notion.so/rnbw/Terms-Conditions-0f1a79a92cd84cbdb84c99ed48445db2"
-                target="_blank">terms</a><a
-                href="https://www.notion.so/rnbw/Privacy-Policy-d490b0e9792e460289985feddf601097"
-                target="_blank">privacy</a><a href="https://www.notion.so/rnbw/GDPR-e0ff3e4d10f649ffbf0c81b99629ec84"
-                target="_blank">gdpr</a>
+            <a href="legal.html"
+                target="_blank">legal
+            </a>
                 <div>
-                    <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer;"><span class="opacity-m" id="theme-name"></span></button>
+                    <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer; margin-top: 0.25rem;"><span class="opacity-m" id="theme-name"></span></button>
                 </div>
         </div>
     </div>
@@ -150,3 +148,19 @@ function switchFavicon(theme) {
 
   document.getElementsByTagName('head')[0].appendChild(link);
 }
+
+// document.addEventListener("click", function(event) {
+//   if (event.target.tagName === "A" && event.target.href !== "") {
+//       var hostname = new URL(event.target.href).hostname;
+//       if (hostname === "guide.rnbw.dev") {
+//           event.preventDefault();
+//           var testImage = new Image();
+//           testImage.src = "https://" + hostname + "/favicon.ico";
+//           testImage.onerror = function() {
+//               window.location.href = "404.html";
+//           };
+//       }
+//   }
+// });
+
+

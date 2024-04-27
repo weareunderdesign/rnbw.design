@@ -1,7 +1,7 @@
 const rnbwEditor = `
-<div class="hidden-on-mobile row radius-s border border" id="rnbw-editor"
-style="min-height: 635px">
-<div class="panel justify-stretch border-right">
+<div class="row radius-s border border" id="rnbw-editor"
+style="height: 950px">
+<div class="panel hidden-on-mobile justify-stretch border-right">
     <div class="panel">
         <div class="justify-stretch padding-s border-bottom">
             <div class="gap-s align-center">
@@ -101,7 +101,9 @@ style="min-height: 635px">
         to be a collaborative space for everyone."
         <br>
     </h4>
+    <img src="./images/tim_berners.png" style="width: 34vw; height: 22vw;">
     <i>Sir Tim Berners-Lee</i>
+
     <h1 class="border" style="display:none;" id="anim-heading">Write Something</h1>
     <div class="gap-s column box-s">
         <div class="box-l size-dropdown gap-xs" >
@@ -110,7 +112,7 @@ style="min-height: 635px">
             
         </div>
 
-        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2" style="opacity:0;">
+        <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2" style="opacity:0;width:100%;">
             <div class="border-bottom box-l column" id ="anim3">
                 <div class="padding-s background-secondary-onhover row gap-s box-l">
                     <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
