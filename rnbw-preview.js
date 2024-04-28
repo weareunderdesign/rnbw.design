@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
-             function updateTextColor() {
+            function updateTextColor() {
                 darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 const spans = document.querySelectorAll("code span");
                 spans.forEach(span => {
@@ -395,11 +395,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "i") ||
                             ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "i" && text[i] === "m") ||
                             ((text[i - 3] === "<" || text[i - 3] === "/") && text[i - 2] === "i" && text[i - 1] === "m" && text[i] === "g") ||
-            
+
                             ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "d") ||
                             ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "d" && text[i] === "i") ||
-                            ((text[i - 3] === "<" || text[i - 3] === "/")&& text[i - 2] === "d" && text[i - 1] === "i" && text[i] === "v") ||
-            
+                            ((text[i - 3] === "<" || text[i - 3] === "/") && text[i - 2] === "d" && text[i - 1] === "i" && text[i] === "v") ||
+
                             ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "h") ||
                             ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "h" && text[i] === "3")
                         ) {
@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 (text[index] === "i" && text[index + 1] === "m" && text[index + 2] === "g") ||
                                 (text[index - 1] === "i" && text[index] === "m" && text[index + 1] === "g") ||
                                 (text[index - 2] === "i" && text[index - 1] === "m" && text[index] === "g") ||
-                                
+
                                 (text[index] === "d" && text[index + 1] === "i" && text[index + 2] === "v") ||
                                 (text[index - 1] === "d" && text[index] === "i" && text[index + 1] === "v") ||
                                 (text[index - 2] === "d" && text[index - 1] === "i" && text[index] === "v") ||

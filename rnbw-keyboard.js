@@ -549,7 +549,7 @@ const keyboardImages = () => {
 
 const rnbwKeyboardTemplate = `
 <div class="gap-l" id="keyboard-wrapper" style="position: relative;">
-<div style="position: absolute; top: 0; left: 17%; display: flex; flex-direction: column; height: 100%; justify-content: center; align-items: center;">
+<div style="position: absolute; top: 0; left: 15%; display: flex; flex-direction: column; height: 100%; justify-content: center; align-items: center;">
     ${keyboardImages()}
   </div>
 ${doSomething()}
