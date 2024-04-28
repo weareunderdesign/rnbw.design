@@ -14,8 +14,6 @@ const footerTemplate = `
             <a href="https://rnbw.company/changelog">changelog</a>
         </div>
         <div class="column gap-s box">
-
-            <a href="https://discord.gg/5CEf42mF/" target="_blank">discord ↗</a>
             <a href="https://twitter.com/rnbwdev" target="_blank">twitter ↗</a>
             <a href="https://github.com/rnbwdev" target="_blank">github ↗</a>
             <a href="mailto:hello@rnbw.company">get in touch</a>

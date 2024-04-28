@@ -6,7 +6,7 @@ const headerTemplate = `
     </div>
     <div class="gap-m justify-end box">
         <a id="nav-item" href="https://rnbw.company/signup" class="align-center column">
-        <svg-icon src="https://rnbw.company/images/ovrvw.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/logo.svg" class="border radius-s icon-xl" id="header-item"></svg-icon>
             rnbw 0.1
         </a>
         <a id="nav-item" href="https://renecss.org" class="align-center column">
