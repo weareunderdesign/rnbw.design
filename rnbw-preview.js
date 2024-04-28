@@ -377,31 +377,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
-            function updateTextColor() {
+             function updateTextColor() {
                 darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 const spans = document.querySelectorAll("code span");
                 spans.forEach(span => {
-                    if (span.textContent === "s" && span.nextElementSibling && span.nextElementSibling.textContent === "p" &&
-                        span.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.textContent === "a" &&
-                        span.nextElementSibling.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.nextElementSibling.textContent === "n" ||
-                        span.previousElementSibling && span.previousElementSibling.textContent === "s" && span.textContent === "p" &&
-                        span.nextElementSibling && span.nextElementSibling.textContent === "a" &&
-                        span.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.textContent === "n" ||
-                        span.previousElementSibling && span.previousElementSibling.previousElementSibling && span.previousElementSibling.previousElementSibling.textContent === "s" &&
-                        span.previousElementSibling.textContent === "p" && span.textContent === "a" &&
-                        span.nextElementSibling && span.nextElementSibling.textContent === "n" ||
-                        span.previousElementSibling && span.previousElementSibling.previousElementSibling && span.previousElementSibling.previousElementSibling.previousElementSibling &&
-                        span.previousElementSibling.previousElementSibling.previousElementSibling.textContent === "s" &&
-                        span.previousElementSibling.previousElementSibling.textContent === "p" && span.previousElementSibling.textContent === "a" &&
-                        span.textContent === "n" ||
-                        span.textContent === "i" && span.nextElementSibling && span.nextElementSibling.textContent === "m" &&
-                        span.nextElementSibling.nextElementSibling && span.nextElementSibling.nextElementSibling.textContent === "g" ||
-                        span.previousElementSibling && span.previousElementSibling.textContent === "i" && span.textContent === "m" &&
-                        span.nextElementSibling && span.nextElementSibling.textContent === "g" ||
-                        span.previousElementSibling && span.previousElementSibling.previousElementSibling && span.previousElementSibling.previousElementSibling.textContent === "i" &&
-                        span.previousElementSibling.textContent === "m" && span.textContent === "g"
-                    ) {
-                        span.style.color = darkTheme ? '#569CD6' : '#95261F';
+                    const text = span.textContent;
+                    span.innerHTML = '';
+                    for (let i = 0; i < text.length; i++) {
+                        const charSpan = document.createElement('span');
+                        charSpan.textContent = text[i];
+                        if (
+                            ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "s") ||
+                            ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "s" && text[i] === "p") ||
+                            ((text[i - 3] === "<" || text[i - 3] === "/") && text[i - 2] === "s" && text[i - 1] === "p" && text[i] === "a") ||
+                            ((text[i - 4] === "<" || text[i - 4] === "/") && text[i - 3] === "s" && text[i - 2] === "p" && text[i - 1] === "a" && text[i] === "n") ||
+
+                            ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "i") ||
+                            ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "i" && text[i] === "m") ||
+                            ((text[i - 3] === "<" || text[i - 3] === "/") && text[i - 2] === "i" && text[i - 1] === "m" && text[i] === "g") ||
+            
+                            ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "d") ||
+                            ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "d" && text[i] === "i") ||
+                            ((text[i - 3] === "<" || text[i - 3] === "/")&& text[i - 2] === "d" && text[i - 1] === "i" && text[i] === "v") ||
+            
+                            ((text[i - 1] === "<" || text[i - 1] === "/") && text[i] === "h") ||
+                            ((text[i - 2] === "<" || text[i - 2] === "/") && text[i - 1] === "h" && text[i] === "3")
+                        ) {
+                            charSpan.style.color = darkTheme ? '#569CD6' : '#95261F';
+                        }
+                        span.appendChild(charSpan);
                     }
                 });
             }
@@ -410,7 +414,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTextColor);
             }
 
-            const textArray = ["<span>rnbw 🌈 is a modern design and code editor 💻 .</span>",
+            const textArray = [
+                "<div>",
+                "<h3>",
+                "<span>rnbw 🌈 is a modern design and code editor 💻 .</span>",
                 "<span>it's simple, flexible, and open.</span>",
                 "<span>It works with your files.</span>",
                 "<span>it's powered by the web</span>",
@@ -420,7 +427,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 "<span>it fully embraces open web</span>",
                 "<img>",
                 "<span>standards.</span>",
-                "<span>and, it is powered by AI 🤖 ...</span>"];
+                "<span>and, it is powered by AI 🤖 ...</span>",
+                "</h3>",
+                "</div>"
+            ];
+
+            const marginValues = [
+                "0rem",
+                "0.578rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "1.156rem",
+                "0.578rem",
+                "0rem"
+            ];
 
             const code = document.querySelector("code");
 
@@ -428,8 +456,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 return new Promise(resolve => {
                     const span = document.createElement('span');
                     span.style.display = 'block';
+                    span.style.marginLeft = marginValues.shift();
                     code.appendChild(span);
-
                     let index = 0;
                     const intervalId = setInterval(() => {
                         if (index === text.length) {
@@ -438,31 +466,27 @@ document.addEventListener("DOMContentLoaded", function () {
                         } else {
                             const charSpan = document.createElement('span');
                             charSpan.textContent = text[index];
-                            if (darkTheme) {
-                                if (text[index] === "s" && text[index + 1] === "p" && text[index + 2] === "a" && text[index + 3] === "n" ||
-                                    text[index - 1] === "s" && text[index] === "p" && text[index + 1] === "a" && text[index + 2] === "n" ||
-                                    text[index - 2] === "s" && text[index - 1] === "p" && text[index] === "a" && text[index + 1] === "n" ||
-                                    text[index - 3] === "s" && text[index - 2] === "p" && text[index - 1] === "a" && text[index] === "n" ||
-                                    text[index] === "i" && text[index + 1] === "m" && text[index + 2] === "g" ||
-                                    text[index - 1] === "i" && text[index] === "m" && text[index + 1] === "g" ||
-                                    text[index - 2] === "i" && text[index - 1] === "m" && text[index] === "g"
-                                ) {
-                                    charSpan.style.color = '#569CD6';
-                                }
-                            } else {
-                                if (text[index] === "s" && text[index + 1] === "p" && text[index + 2] === "a" && text[index + 3] === "n" ||
-                                    text[index - 1] === "s" && text[index] === "p" && text[index + 1] === "a" && text[index + 2] === "n" ||
-                                    text[index - 2] === "s" && text[index - 1] === "p" && text[index] === "a" && text[index + 1] === "n" ||
-                                    text[index - 3] === "s" && text[index - 2] === "p" && text[index - 1] === "a" && text[index] === "n" ||
-                                    text[index] === "i" && text[index + 1] === "m" && text[index + 2] === "g" ||
-                                    text[index - 1] === "i" && text[index] === "m" && text[index + 1] === "g" ||
-                                    text[index - 2] === "i" && text[index - 1] === "m" && text[index] === "g"
-                                ) {
-                                    charSpan.style.color = '#95261F';
-                                }
+                            if (
+                                (text[index] === "s" && text[index + 1] === "p" && text[index + 2] === "a" && text[index + 3] === "n") ||
+                                (text[index - 1] === "s" && text[index] === "p" && text[index + 1] === "a" && text[index + 2] === "n") ||
+                                (text[index - 2] === "s" && text[index - 1] === "p" && text[index] === "a" && text[index + 1] === "n") ||
+                                (text[index - 3] === "s" && text[index - 2] === "p" && text[index - 1] === "a" && text[index] === "n") ||
+
+                                (text[index] === "i" && text[index + 1] === "m" && text[index + 2] === "g") ||
+                                (text[index - 1] === "i" && text[index] === "m" && text[index + 1] === "g") ||
+                                (text[index - 2] === "i" && text[index - 1] === "m" && text[index] === "g") ||
+                                
+                                (text[index] === "d" && text[index + 1] === "i" && text[index + 2] === "v") ||
+                                (text[index - 1] === "d" && text[index] === "i" && text[index + 1] === "v") ||
+                                (text[index - 2] === "d" && text[index - 1] === "i" && text[index] === "v") ||
+
+                                (text[index] === "h" && text[index + 1] === "3") ||
+                                (text[index - 1] === "h" && text[index] === "3")
+                            ) {
+                                darkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                                charSpan.style.color = darkTheme ? '#569CD6' : '#95261F';
                             }
                             span.appendChild(charSpan);
-                            updateTextColor();
                             index++;
                         }
                     }, delay);
@@ -473,14 +497,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 for (let i = 0; i < textArray.length; i++) {
                     if (i === 0) {
                         await new Promise(resolve => setTimeout(resolve, 0));
-                    } else if (i === 4 || i === 5 || i === 8 || i === 9) {
+                    } else if (i === 1 || i === 2 || i === 6 || i === 7 || i === 10 || i === 11 || i === 13 || i === 14) {
                         await new Promise(resolve => setTimeout(resolve, 12));
                     }
-                    else if (i === 1 || i === 2) {
+                    else if (i === 3 || i === 4) {
                         await new Promise(resolve => setTimeout(resolve, 950));
                     }
                     else {
-                        await new Promise(resolve => setTimeout(resolve, 800));
+                        await new Promise(resolve => setTimeout(resolve, 700));
                     }
                     await typeText(textArray[i], 12, darkTheme);
                 }
