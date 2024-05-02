@@ -2,7 +2,8 @@ const footerTemplate = `
 <footer class="padding-xl box-l">
     <div class="gap-s row align-start box-l">
         <div class="gap-l column align-start box">
-            <a href="https://rnbw.company"><svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon></a>
+            <a href="https://rnbw.company"><svg-icon class="light" src="images/rnbw-light.svg"></svg-icon>
+            <svg-icon class="dark" src="images/rnbw-dark.svg"></svg-icon></a>
             <div class="text-s">
                 © <span id="year"></span> Rainbow Design, Ltd.
             </div>
@@ -142,7 +143,7 @@ function switchFavicon(theme) {
   const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
   link.type = 'image/png';
   link.rel = 'shortcut icon';
-  link.href = `https://rnbw.company/images/favicon-${theme}.png`;
+  link.href = `images/favicon-${theme}.png`;
 
   document.getElementsByTagName('head')[0].appendChild(link);
 }
