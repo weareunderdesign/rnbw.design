@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuLinks = document.querySelectorAll("aside a");
+    const menu = document.querySelector("aside");
+
+    function createMenuLinks() {
+        const headersWithIds = document.querySelectorAll("article [id]");
+        headersWithIds.forEach(header => {
+            const link = document.createElement("a");
+            link.href = `#${header.id}`;
+            link.textContent = header.textContent;
+            const menuItem = document.createElement("div");
+            menuItem.classList.add("menu-item");
+            menuItem.appendChild(link);
+            menu.appendChild(menuItem);
+        });
+    }
+
+    createMenuLinks();
+
     let lastScrollTop = 0;
+
+    const menuLinks = document.querySelectorAll("aside .menu-item a");
 
     function getHeaderLevel(headerId) {
         const header = document.getElementById(headerId);
@@ -57,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function highlightMenuLink() {
         let st = window.scrollY || document.documentElement.scrollTop;
         if (st > lastScrollTop) {
-            // Scroll down
             let newActiveLink = null;
             menuLinks.forEach(link => {
                 const targetId = link.getAttribute("href").substring(1);
@@ -76,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         } else {
-            // Scroll up
             let newActiveIndex = null;
             menuLinks.forEach((link, index) => {
                 const targetId = link.getAttribute("href").substring(1);
@@ -101,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         lastScrollTop = st <= 0 ? 0 : st;
     }
-
 
     window.addEventListener("scroll", highlightMenuLink);
 });
