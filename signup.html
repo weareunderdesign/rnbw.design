@@ -1,127 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>sign up</title>
   <meta name="description" content="let us know a lil bit about you?">
-  <meta name="keywords"
-    content="sign up, subscribe, rnbw.dev, web design, web app development, design systems, code editor, design editor, interactive design, live design, prototyping, design libraries, user interface, cross-platform development, visual programming, adaptive design">
+  <meta name="keywords" content="sign up, subscribe, rnbw.dev, web design, web app development, design systems, code editor, design editor, interactive design, live design, prototyping, design libraries, user interface, cross-platform development, visual programming, adaptive design">
   <meta property="og:title" content="sign up">
   <meta name="og:description" content="let us know a lil bit about you?">
   <meta property="og:image" content="./images/rnbw.dev.png">
   <meta property="og:image:type" content="./images/post.png">
   <meta property="og:url" content="https://rnbw.company/signup">
   <meta property="og:type" content="website">
-
   <link rel="icon" href="./images/favicon-light.png">
   <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
   <script src="https://unpkg.com/@rnbws/svg-icon.js/dist/svg-icon.min.js"></script>
   <script defer data-domain="rnbw.company" src="https://plausible.io/js/script.js"></script>
 </head>
-
 <body class="background-secondary">
   <div class="view align-center column">
     <div class="page" style="align-items: center">
       <h5>let us know a lil bit about you?</h5>
-      <form id="signup-form" class="padding-l radius-s shadow background-primary border box-s column gap-m">
-        <input class="background-primary border padding-m radius-xs box-l text-l" type="text" id="full-name"
-          placeholder="full name" required />
-        <input class="background-primary border padding-m radius-xs box-l text-l" type="email" id="email"
-          placeholder="email" required />
-        <input class="background-primary border padding-m radius-xs box-l text-l" type="text" id="company-name"
-          placeholder="company name (if any)" />
-        <button class="foreground-primary border padding-m radius-xs box-l text-l align-center" type="submit">
-          subscribe
-        </button>
+      <form id="subscribeForm" class="embeddable-buttondown-form">
+        <input class="radius-m background-primary border padding-s" style="height: 48px" type="email" name="email" id="bd-email" placeholder="enter your email" />
+        <input class="radius-m foreground-primary border padding-s" style="height: 48px" type="submit" value="subscribe" id="subscribeButton" />
       </form>
       <a href="https://rnbw.dev" class="text-m"><span>skip! go directly to rnbw.dev →</span></a>
-      <!-- Include the Intercom snippet here -->
-
       <script>
-        window.intercomSettings = {
-          api_base: "https://api-iam.intercom.io",
-          app_id: "efp5cdu4",
-        };
-      </script>
-
-      <script>
-        // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/efp5cdu4'
-        (function () {
-          var w = window;
-          var ic = w.Intercom;
-          if (typeof ic === "function") {
-            ic("reattach_activator");
-            ic("update", w.intercomSettings);
-          } else {
-            var d = document;
-            var i = function () {
-              i.c(arguments);
-            };
-            i.q = [];
-            i.c = function (args) {
-              i.q.push(args);
-            };
-            w.Intercom = i;
-            var l = function () {
-              var s = d.createElement("script");
-              s.type = "text/javascript";
-              s.async = true;
-              s.src = "https://widget.intercom.io/widget/efp5cdu4";
-              var x = d.getElementsByTagName("script")[0];
-              x.parentNode.insertBefore(s, x);
-            };
-            if (document.readyState === "complete") {
-              l();
-            } else if (w.attachEvent) {
-              w.attachEvent("onload", l);
-            } else {
-              w.addEventListener("load", l, false);
-            }
-          }
-        })();
-      </script>
-
-      <script>
-        function generateUniqueId() {
-          const timestamp = Date.now().toString(16);
-          const randomString = Math.random().toString(16).substring(2, 8);
-          return timestamp + randomString;
-        }
-        // Handle form submission, send data to Intercom, and redirect
         document
-          .getElementById("signup-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the form from submitting the default way
-
-            // Get the full name, email, and company name values
-            const fullName = document.getElementById("full-name").value;
-            const email = document.getElementById("email").value;
-            const companyName = document.getElementById("company-name").value;
-
-            // Prepare the Intercom data object
-            const intercomData = {
-              name: fullName,
-              email: email,
-              user_hash: null, // For added security, consider generating a user_hash server-side
+          .getElementById("subscribeForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            var subscribeButton = document.querySelector('[type="submit"]');
+            subscribeButton.value = "on it";
+            var dotCount = 0;
+            var interval = setInterval(function () {
+              if (dotCount < 3) {
+                subscribeButton.value += ".";
+                dotCount++;
+              } else {
+                dotCount = 0;
+                subscribeButton.value = "on it";
+              }
+            }, 500);
+            var xhr = new XMLHttpRequest();
+            var email = document.getElementById("bd-email").value;
+            xhr.open(
+              "POST",
+              "https://buttondown.email/api/emails/embed-subscribe/edenvidal",
+              true
+            );
+            xhr.setRequestHeader(
+              "Content-Type",
+              "application/x-www-form-urlencoded"
+            );
+            xhr.onload = function () {
+              clearInterval(interval);
+              if (xhr.status === 200) {
+                var form = document.getElementById("subscribeForm");
+                form.style.display = "none";
+                var message = document.createElement("p");
+                message.innerHTML = "got it!";
+                form.parentNode.insertBefore(message, form);
+                window.location.href = "https://rnbw.dev";
+              } else {
+                document.getElementById("bd-email").style.border =
+                  "1px solid red";
+                subscribeButton.value = "subscribe";
+              }
             };
-
-            // Add the company name to the Intercom data object only if it has a value
-            const uniqueId = generateUniqueId();
-            if (companyName) {
-              intercomData.company = {
-                id: uniqueId,
-                name: companyName,
-              };
-            }
-
-            // Send data to Intercom
-            window.Intercom("boot", intercomData);
-
-            // Redirect to another site
-            window.location.href = "https://rnbw.dev";
+            xhr.send("email=" + encodeURIComponent(email));
+          });
+        document
+          .getElementById("bd-email")
+          .addEventListener("input", function () {
+            this.style.border = "";
           });
       </script>
     </div>
@@ -129,6 +83,4 @@
   <rnbw-footer class="hidden"></rnbw-footer>
 </body>
 <script src="https://rnbw.design/rnbw-footer.js"></script>
-
-
 </html>
