@@ -101,7 +101,7 @@ style="height: 950px">
         to be a collaborative space for everyone."
         <br>
     </h4>
-    <img src="https://rnbw.design/images/tim_berners.png" style="width: 34vw; height: 22vw;">
+    <img src="./images/tim_berners.png" style="width: 34vw; height: 22vw;">
     <i>Sir Tim Berners-Lee</i>
 
     <h1 class="border" style="display:none;" id="anim-heading">Write Something</h1>

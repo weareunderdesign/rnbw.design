@@ -539,9 +539,9 @@ const addSomething = () => {
 
 
 const keyboardImages = () => {
-  return `<svg-icon class="keyboard" style="width: 4rem; opacity: 1; margin-bottom: 0.578rem" src="https://rnbw.design/images/jumpstart.svg"></svg-icon>
-  <svg-icon class="keyboard" style="width: 4rem; opacity: 0.3; margin-bottom: 0.578rem" src="https://rnbw.design/images/add.svg"></svg-icon>
-  <svg-icon class="keyboard" style="width: 4rem; opacity: 0.3;" src="https://rnbw.design/images/do.svg"></svg-icon>`;
+  return `<svg-icon class="keyboard" style="width: 4rem; opacity: 1; margin-bottom: 0.578rem" src="./images/jumpstart.svg"></svg-icon>
+  <svg-icon class="keyboard" style="width: 4rem; opacity: 0.3; margin-bottom: 0.578rem" src="./images/add.svg"></svg-icon>
+  <svg-icon class="keyboard" style="width: 4rem; opacity: 0.3;" src="./images/do.svg"></svg-icon>`;
 };
 
 const hideKeyboardOnMobilePortrait = () => {
