@@ -12,7 +12,7 @@ const navTemplate = `
                             </div>
                         </a>
                         <a id="nav-item-2"
-                            href="https://rnbw.design/"
+                            href="https://rnbw.company/guide"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
@@ -38,7 +38,7 @@ const navTemplate = `
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <img
-                                src="https://rnbw.design/images/githubgradient.svg"
+                                src="https://rnbw.company/images/githubgradient.svg"
                                 class="icon-s">
                             <div>
                                 <p class="text-l">GitHub ↗</p>

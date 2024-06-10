@@ -3,14 +3,15 @@ const footerTemplate = `
     <div class="gap-s row align-start box-l">
         <div class="gap-l column align-start box">
             <a href="https://rnbw.company">
-            <svg-icon src="./images/rnbw.svg"></svg-icon></a>
+            <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon></a>
             <div class="text-s">
                 © <span id="year"></span> Rainbow Design, Ltd.
             </div>
 
         </div>
         <div class="column gap-s box">
-            <a href="https://rnbw.company/signup" target="_blank">start</a><a href="https://rnbw.design/">guide</a>
+            <a href="https://rnbw.company/signup" target="_blank">start</a>
+            <a href="https://rnbw.company/guide">guide</a>
             <a href="https://rnbw.company/about">about</a>
             <a href="https://rnbw.company/changelog">changelog</a>
         </div>
@@ -146,7 +147,6 @@ function switchFavicon(theme) {
 
   document.getElementsByTagName('head')[0].appendChild(link);
 }
-
 
 // document.addEventListener("click", function(event) {
 //   if (event.target.tagName === "A" && event.target.href !== "") {
