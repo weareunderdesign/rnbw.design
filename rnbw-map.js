@@ -29,7 +29,7 @@ const rnbwMapTemplate = `
           <p class="text-s">Navigate files and subfolders.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/files.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/files.svg"></svg-icon>
         </div>
       </div>
       <div class="border-bottom padding-m box shortcutbox">
@@ -47,7 +47,7 @@ const rnbwMapTemplate = `
           </p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/open.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/open.svg"></svg-icon>
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@ const rnbwMapTemplate = `
     <div class="column gap-m">
     <svg-icon
       class="opacity-xl"
-      src="./images/shapes.svg"
+      src="https://rnbw.company/images/shapes.svg"
     ></svg-icon>
     <a id="anim2" href="https://guide.rnbw.dev/quick-start#elements">
       <span class="text-l">
@@ -84,7 +84,7 @@ const rnbwMapTemplate = `
     </a>
     </div>
     <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/toggle.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/toggle.svg"></svg-icon>
         </div>
     </div>
     <div
@@ -107,7 +107,7 @@ const rnbwMapTemplate = `
           </p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/jumpstart.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/jumpstart.svg"></svg-icon>
         </div>
       </div>
       <div class="border-bottom box-l padding-m shortcutbox">
@@ -123,7 +123,7 @@ const rnbwMapTemplate = `
           <p class="text-s">Add different things in different contexts.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/add.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/add.svg"></svg-icon>
         </div>
       </div>
       <div class="box-l padding-m border-bottom shortcutbox">
@@ -139,7 +139,7 @@ const rnbwMapTemplate = `
           <p class="text-s">All of the actions offered by rnbw.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/do.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/do.svg"></svg-icon>
         </div>
       </div>
       <div class="box-l padding-m shortcutbox">
@@ -155,7 +155,7 @@ const rnbwMapTemplate = `
           <p class="text-s">let AI do the work and unleash your creativity.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/ask.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/ask.svg"></svg-icon>
         </div>
       </div>
     </div>
@@ -173,7 +173,7 @@ const rnbwMapTemplate = `
     </a>
     <div style="width: 70px; height: 70px;">
     <div style="width: 70px; height: 70px;">
-        <svg-icon src="./images/code.svg"></svg-icon>
+        <svg-icon src="https://rnbw.company/images/code.svg"></svg-icon>
         </div>
     </div>
   </div>

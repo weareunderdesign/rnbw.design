@@ -100,7 +100,7 @@ const rnbwFiles = `
       height: 13.36rem;
     }
   </style>
-    <svg-icon class="svg-image" src="./images/HTML.svg"></svg-icon>
+    <svg-icon class="svg-image" src="https://rnbw.company/images/HTML.svg"></svg-icon>
   </div>
     <div
       class="box-xs row padding-l border-left background-primary opacity-m"
@@ -162,9 +162,9 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const imageSourcesLight = [
-    "./images/HTML.svg",
-    "./images/CSS.svg",
-    "./images/JS.svg"
+    "https://rnbw.company/images/HTML.svg",
+    "https://rnbw.company/images/CSS.svg",
+    "https://rnbw.company/images/JS.svg"
   ];
 
   const preloadedImages = document.createElement("div");

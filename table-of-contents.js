@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
 
     function createMenuLinks() {
-        const articles = document.querySelectorAll("div.row > div.view > div"); // A temporary fix to prevent text from breaking the layout by extending above the sidebar
+        const articles = document.querySelectorAll("div.row > div.view > div");
+        // A temporary fix to prevent text from breaking the layout by extending above the sidebar
         // const articles = document.querySelectorAll("div");
-
+    
         const headerCounts = {}; // object for tracking header repetitions
     
         articles.forEach(article => {
@@ -29,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.href = `#${id}`;
                 link.style.display = "block";
                 link.textContent = text;
-    
+
                 const menuItem = document.createElement("div");
-                menuItem.classList.add("menu-item");
+                menuItem.classList.add("menu-item", "text-m");
                 menuItem.appendChild(link);
                 menu.appendChild(menuItem);
                 header.id = id;
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         applyMenuOffsets();
     }
+    
     
     createMenuLinks();
 
