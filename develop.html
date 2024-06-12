@@ -605,17 +605,16 @@
                   <li>
                     tagName: (string) The name of the HTML tag to be added.
                   </li>
-                  <li>
-                    skipUpdate: (boolean) Optional. If true, the code view
-                    will not be updated after adding the element. Default is
-                    false.
+                  <li>                    skipUpdate: (boolean - optional) - If true, the code view will not be updated after adding the element. Default is false.
                   </li>
-                </ul>
+                </ul><p>                       
+                  Returns the updated code, if successful.
+                </p>
               </div>
             </div>
             <div class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">
-                  <pre>rnbw.elements.add(params: Iadd)</pre>
+                  <pre>rnbw.elements.add(params)</pre>
                 </code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -640,17 +639,15 @@ const result: string = rnbw.elements.add
                   (optional):
                 </p>
                 <ul>
-                  <li>
-                    skipUpdate: (boolean) Optional. If true, the code view
-                    will not be updated after adding the element. Default is
+                  <li>                    skipUpdate: (boolean - optional) - If true, the code view                    will not be updated after duplicating the element. Default is
                     false.
                   </li>
                 </ul>
-              </div>
+              </div><p>Returns the updated code, if successful.</p>
             </div>
             <div class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">
-                  <pre>rnbw.elements.duplicate(params: Iduplicate = {})</pre>
+                  <pre>rnbw.elements.duplicate(params)</pre>
                 </code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -667,7 +664,12 @@ const result: string = rnbw.elements.add
         </div>
           <div class="row gap-xl">
             <div class="box">
-              <p>returns the details of the element whose uid is passed</p>
+              <p>returns the details of the element whose uid is passed</p><div>
+                                                                             <p>params:&nbsp;</p>
+                                                                             <ul>
+                                                                               <li>                                                                                 uid: (string) - uid of the element whose detail is required.</li>
+                                                                             </ul>
+                                                                           </div>
             </div>
             <div class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.getElement(elementUid)</code>
@@ -727,10 +729,12 @@ const result: string = rnbw.elements.add
           </div>
           <div class="row gap-xl">
             <div class="box">
-              <p>
-                Returns the settings object of the elements selected on the
-                stage.
-              </p>
+              <p>                Returns the settings object of the elements whose uid is passed.</p><div>
+                    <p>params:&nbsp;</p>
+                    <ul>
+                      <li>uid: (string) - uid of the element whose detail is required. Defaults to selected element.</li>
+                    </ul>
+                  </div>
             </div>
             <div class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.getElementSettings()</code>
@@ -739,8 +743,7 @@ const result: string = rnbw.elements.add
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.getElementSettings()</code>
 
                 <h6>Output</h6>
-                <code class="padding-l radius-s background-secondary border">
-                    {class:"box column" style: "border: 1px solid white"}</code>
+                <code class="padding-l radius-s background-secondary border">                    {<br>class:"box column" <br >style: "border: 1px solid white"<br>}</code>
               </div>
             </div>
           </div>
@@ -761,24 +764,18 @@ const result: string = rnbw.elements.add
                   params: An object containing the following properties
                   (optional):
                 </p>
-                <ul>
-                  <li>
-                    skipUpdate: (boolean) Optional. If true, the code view
-                    will not be updated after adding the element. Default is
-                    false.
-                  </li>
-                  <li>
-                    <div>
-                      uids: (string[ ]) Optional. An array of unique
-                      identifiers (UIDs) of the selected items. If not
-                      provided, defaults to the currently selected items.
-                    </div>
-                  </li>
-                </ul>
+                <ul><li>
+                      <div>                        uids: (string[ ] - optional) - An array of unique identifiers (UIDs) of the
+                        selected items. If not provided, defaults to the currently selected items.
+                      </div>
+                    </li>
+                  <li>                    skipUpdate: (boolean - optional) - If true, the clipboard will be updated with the code of the copied element.</li>
+                  
+                </ul><p>Returns the copied code, if successful.</p>
               </div>
             </div>
             <div class="box column gap-l">
-              <code class="padding-l radius-s background-secondary border">rnbw.elements.copy(params: Icopy = {})</code>
+              <code class="padding-l radius-s background-secondary border">rnbw.elements.copy(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.copy()</code>
@@ -810,10 +807,7 @@ const result: string = rnbw.elements.add
           </div>
           <div class="row gap-xl">
             <div class="box">
-              <p>
-                Cuts the selected element. Cut operation is a combination of
-                two operations - copy and delete
-              </p>
+              <p>                Cuts the selected element.</p><p>Returns the cut code, and the updated code after cut, if successful.</p>
             </div>
             <div class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.cut()</code>
@@ -835,29 +829,24 @@ const result: string = rnbw.elements.add
                   (optional):
                 </p>
                 <ul>
-                  <li>
-                    content: (string) Optional. The content to be pasted. If
+                  <li>                    content: (string - optional) - The content to be pasted. If
                     not provided, the content will be retrieved from the
                     clipboard.
                   </li>
-                  <li>
-                    skipUpdate: (boolean) Optional. If true, the code view
+                  <li>                    skipUpdate: (boolean - optional) - If true, the code view
                     will not be updated after pasting the content. Default is
                     false.
                   </li>
-                  <li>
-                    pastePosition: (string) Optional. Specifies where to paste
+                  <li>                    pastePosition: (string - optional) - Specifies where to paste
                     the content in relation to the target node. Possible
                     values are "before", "after", or "inside". Default is
                     "after".
                   </li>
-                  <li>
-                    targetUid: (string) Optional. The unique identifier (UID)
+                  <li>                    targetUid: (string - optional) - The unique identifier (UID)
                     of the target node. If not provided, the focused node will
                     be the target node.
                   </li>
-                  <li>
-                    pasteContent: (string) Optional. The content to be pasted.
+                  <li>                    pasteContent: (string - optional). The content to be pasted.
                     If provided, it takes precedence over the clipboard
                     content.
                   </li>
@@ -880,10 +869,23 @@ const result: string = rnbw.elements.add
               <p>
                 Groups the selected elements by wrapping them in a &lt;div&gt;
                 container.
-              </p>
+              </p><div>
+                    <p>params: An object containing the following properties (optional):</p>
+                    <ul>
+                      <li>
+                        <div>                          uids: (string[ ] - optional) - An array of unique identifiers (UIDs) of the
+                          selected items. If not provided, defaults to the currently selected
+                          items.
+                        </div>
+                      </li>
+                      <li>                        skipUpdate: (boolean - optional) - If true, the code view will not be updated
+                        after adding the element. Default is false.
+                      </li>
+                    </ul><p>Returns the updated code, if successful.</p>
+                  </div>
             </div>
             <div class="box column gap-m">
-              <code class="padding-l radius-s background-secondary border">rnbw.elements.group()</code>
+              <code class="padding-l radius-s background-secondary border">rnbw.elements.group(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.group()</code>
@@ -892,15 +894,24 @@ const result: string = rnbw.elements.add
           </div>
           <div class="row gap-xl">
             <div class="box">
-              <p>Ungroups the selected elements.</p>
-              <p>
-                This results in the children of the elements selected to
-                become child of the selected element's parent and the selected
-                elements to be deleted.
-              </p>
+              <p>Ungroups the selected elements.</p><div>
+                                                      <p>params: An object containing the following properties (optional):</p>
+                                                      <ul>
+                                                        <li>
+                                                          <div>                                                            uids: (string[ ] - optional) - An array of unique identifiers (UIDs) of the
+                                                            selected items. If not provided, defaults to the currently selected
+                                                            items.
+                                                          </div>
+                                                        </li>
+                                                        <li>                                                          skipUpdate: (boolean - optional) - If true, the code view will not be updated
+                                                          after adding the element. Default is false.
+                                                        </li>
+                                                      </ul>
+                                                    </div><p>Returns the updated code, if successful.</p>
+              
             </div>
             <div class="box column gap-m">
-              <code class="padding-l radius-s background-secondary border">rnbw.elements.ungroup()</code>
+              <code class="padding-l radius-s background-secondary border">rnbw.elements.ungroup(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.ungroup()</code>
@@ -920,8 +931,7 @@ const result: string = rnbw.elements.add
                     targetUid: (string) The unique identifier (UID) of the
                     target node where the selected nodes will be moved.
                   </li>
-                  <li>
-                    skipUpdate: (boolean) Optional. If true, the code view
+                  <li>                    skipUpdate: (boolean -optional) - If true, the code view
                     will not be updated after pasting the content. Default is
                     false.
                   </li>
@@ -974,17 +984,16 @@ const result: string = rnbw.elements.add
                     updated. Each key-value pair corresponds to an attribute
                     name and its new value.
                   </li>
-                  <li>
-                    skipUpdate: (boolean) Optional. If true, the code view
+                  <li>                    skipUpdate: (boolean -optional). If true, the code view
                     will not be updated after pasting the content. Default is
                     false.
                   </li>
                 </ul>
-              </div>
+              </div><p>Returns:</p><ul><li>isSuccess: true/false</li><li>settings (updated settings object)</li><li>code (updated code)</li></ul>
             </div>
             <div class="box column gap-l">
               <code
-                class="padding-l radius-s background-secondary border">rnbw.elements.updateSettings(params: IupdateSettings)</code><code
+                class="padding-l radius-s background-secondary border">rnbw.elements.updateSettings(params)</code><code
                 class="padding-l radius-s background-secondary border">rnbw.elements.updateSetting({<br />settings:{<br />class:"box
                   column",<br />id:"hero-section"<br />}})</code>
             </div>
@@ -1022,29 +1031,26 @@ const result: string = rnbw.elements.add
         </div>
           <div class="row gap-xl">
             <div class="box">
-              <p>Deletes the selected elements.</p>
+              <p><span style="color: rgb(255, 255, 255);">Deletes the elements whose uids are passed.</span><div>
+                                                                                                              <p>params: An object containing the following properties:</p>
+                                                                                                              <ul>
+                                                                                                                <li>                                                                                                                  uids: (string [ ] - optional)- uids of the elements to be removed. Defaults to selected element.</li>
+                                                                                                                <li>                                                                                                                  skipUpdate: (boolean - optional) - If true, the code view will not be updated                                                                                                                  after removing the selected elements. Default is false.
+                                                                                                                </li>
+                                                                                                              </ul>
+                                                                                                            </div><p>Returns the updated code, if successful.</p></p>
             </div>
             <div class="box column gap-l">
-              <code class="padding-l radius-s background-secondary border">rnbw.elements.remove()</code>
+              <code class="padding-l radius-s background-secondary border">rnbw.elements.remove(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
-                <code class="padding-l radius-s background-secondary border">rnbw.elements.remove()</code>
+                <code class="padding-l radius-s background-secondary border"
+                                                                                                            >rnbw.elements.remove({<br>uids:["261","351","401"],<br>skipUpdate:false<br>})</code
+                                                                                                          >
               </div>
             </div>
           </div>
-          <div class="row gap-xl">
-            <div class="box">
-              <p>Deletes the elements whose uids are passed.</p>
-            </div>
-            <div class="box column gap-l">
-              <code class="padding-l radius-s background-secondary border">rnbw.elements.remove(elementsUids)</code>
-              <div class="column gap-m">
-                <h6>Example</h6>
-                <code
-                  class="padding-l radius-s background-secondary border">rnbw.elements.remove(["261","351","401"])</code>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
 
@@ -1150,10 +1156,7 @@ const result: string = rnbw.elements.add
             </div>
             <div class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">
-                  <pre>export default function useTurnInto() {    const rnbw = useRnbw();
-  const selectedElements = 
-  rnbw.elements.getSelectedElements();
-
+                  <pre>export default function useTurnInto() {    <div>const rnbw = useRnbw();  <div>const selectedElements =   <div>rnbw.elements.getSelectedElements();
   function turnInto(tagName: string) {
      /*perform all the steps 
       the get the desired results.*/
@@ -1169,7 +1172,7 @@ const result: string = rnbw.elements.add
 
   return config;
 }
-</pre
+</div></div></div></pre
                   >
                 </code>
             </div>
