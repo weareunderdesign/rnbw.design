@@ -48,6 +48,8 @@ function updateThemeElementsVisibility() {
   darkElements.forEach((element) => {
     element.style.display = theme === "dark" ? "" : "none";
   });
+
+  updateThemeImage(theme);
 }
 
 function handleSystemThemeChange(e) {
@@ -148,16 +150,13 @@ function switchFavicon(theme) {
   document.getElementsByTagName('head')[0].appendChild(link);
 }
 
-// document.addEventListener("click", function(event) {
-//   if (event.target.tagName === "A" && event.target.href !== "") {
-//       var hostname = new URL(event.target.href).hostname;
-//       if (hostname === "guide.rnbw.dev") {
-//           event.preventDefault();
-//           var testImage = new Image();
-//           testImage.src = "https://" + hostname + "/favicon.ico";
-//           testImage.onerror = function() {
-//               window.location.href = "404.html";
-//           };
-//       }
-//   }
-// });
+function updateThemeImage(theme) {
+  const image = document.getElementById('theme-image');
+  if (theme === 'dark') {
+    image.src = 'images/guide-dark.png';
+  } else {
+    image.src = 'images/guide-light.png';
+  }
+}
+
+setSystemTheme();
