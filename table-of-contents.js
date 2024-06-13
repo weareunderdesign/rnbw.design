@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function createMenuLinks() {
         const articles = document.querySelectorAll("div.row > div.view > div");
-        // A temporary fix to prevent text from breaking the layout by extending above the sidebar
-        // const articles = document.querySelectorAll("div");
     
         const headerCounts = {}; // object for tracking header repetitions
     
@@ -15,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const headers = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
     
             headers.forEach(header => {
+                // Check if the header is within a <design> tag
+                if (header.closest('design') !== null) {
+                    return; // Skip this header if it's within a <design> tag
+                }
+    
                 const text = header.textContent.trim();
                 let id = "@" + text.toLowerCase().replace(/\s+/g, "-");
     
@@ -30,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.href = `#${id}`;
                 link.style.display = "block";
                 link.textContent = text;
-
+    
                 const menuItem = document.createElement("div");
                 menuItem.classList.add("menu-item", "text-m");
                 menuItem.appendChild(link);
@@ -41,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         applyMenuOffsets();
     }
+    
     
     
     createMenuLinks();
