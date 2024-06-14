@@ -27,14 +27,14 @@
   <rnbw-header></rnbw-header>
   <div class="row" style="flex-wrap: nowrap">
     <div>
-      <aside class="column justify-stretch sticky padding-l" style="width: 20rem; display: inline-block;">
+      <aside class="column justify-stretch sticky padding-l" style="width: 15rem; display: inline-block;">
       </aside>
     </div>
     <div class="view column align-center">
       <div class="page border-bottom">
         <div class="row">
           <div class="box">
-            <div class="box gap-m justify-start align-start">
+            <div class="box gap-m justify-start align-start" id="develop">
               <h2 id="rnbwdev">develop</h2>
               <span class="text-m padding-s border radius-s">beta</span>
             </div>
@@ -129,7 +129,7 @@
           <div>
           <h5>create</h5>
         </div>
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>                Creates a new file with the provided name and extension.&nbsp;</p><div>
                     <p>params: An object containing the following properties</p>
@@ -151,8 +151,8 @@
                 >
               </div>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box">
               <p>
                 Creates a new folder with the provided name. If no name is
@@ -174,7 +174,7 @@
               <h6>Example</h6>
               <code class="padding-l radius-s background-secondary border">rnbw.files.createFolder("styles")</code>
             </div>
-          </div>
+          </design>
         </div>
 
         <div class="column gap-xl">
@@ -188,7 +188,7 @@
                 currently in "rnbw".
               </p>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.files.getRootTree()</code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -225,7 +225,7 @@
                     </code>
                 </div>
               </div>
-            </div>
+            </design>
           </div>
 
           <div class="row gap-xl">
@@ -237,7 +237,7 @@
                                                                             </ul>
                                                                           </div>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code
                 class="padding-l radius-s background-secondary border">rnbw.files.getFolderTree(params)</code><span>
                 <div class="column gap-m">
@@ -263,10 +263,10 @@
                     </code>
                 </div>
               </span>
-            </div>
+            </design>
           </div>
 
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>Returns the current file details</p>
             </div>
@@ -295,10 +295,10 @@
                   </code>
               </div>
             </div>
-          </div>
+          </design>
 
           <span> </span>
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>                Sets the `rnbw's clipboard state` with the uids passed along with the type as "copy".              </p><div>
                     <p>params: An object containing the following properties</p>
@@ -333,7 +333,7 @@
                   </code>
               </div>
             </div>
-          </div>
+          </design>
           <div class="row gap-xl">
             <div class="box">
               <p>                Sets the `rnbw's clipboard state` with the uids passed along with the type as&nbsp;"cut".
@@ -347,7 +347,7 @@
                     </ul>
                   </div>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.files.cutFiles(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -370,10 +370,10 @@
                     <div>&nbsp; &nbsp; &nbsp; },</div>
                   </code>
               </div>
-            </div>
+            </design>
           </div>
           
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>
                 Returns the uids of the selected files and directories in the
@@ -396,7 +396,7 @@
                   </code>
               </div>
             </div>
-          </div>
+          </design>
         </div>
         <div class="column gap-xl">
         <div>
@@ -420,15 +420,15 @@
                 </ul>
               </div>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.files.setCurrentFile(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.files.setCurrentFile({<br>uid:'ROOT/about.html'<br>})                  </code>
               </div>
-            </div>
+            </design>
           </div>
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box column gap-s">
               <p>
                 Updates the content of the current file with the content that
@@ -452,8 +452,8 @@
                 <code class="padding-l radius-s background-secondary border">rnbw.files.setCurrentFileContent({<br>content:'<br>&lt;html&gt; <br>&lt;body&gt; <br>&lt;p&gt; hello rnbw &lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;')                  </code>
               </div>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box column gap-s">
               <p>Renames the file or folder with the name provided.</p><div>
                                                                          <p>params: An object containing the following properties</p>
@@ -471,8 +471,8 @@
                 <code class="padding-l radius-s background-secondary border">rnbw.files.rename({<br>uid:'ROOT/about.html', <br>newName:'about-us',<br>extension:'html'<br>})                  </code>
               </div>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box">
               <p>                Undo the state of the files one step at a time.</p>
             </div>
@@ -484,8 +484,8 @@
                 </div>
               </span>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box">
               <p>                Redo the state of the files one step at a time.</p>
             </div>
@@ -498,8 +498,8 @@
                 </div>
               </span>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box">
               <p>                Pastes the copied or cut files and folders to the location of the
                 "destination Uid"
@@ -519,9 +519,9 @@
                 <code class="padding-l radius-s background-secondary border">rnbw.files.paste({<br>uids:["ROOT/styles","ROOT/js/index.js"],<br>targetUid: "ROOT/src",<br>deleteSource: false<br>})                  </code>
               </div>
             </div>
-          </div>
+          </design>
 
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>                Moves the file(s) or folder(s) that are currently selected to
                 the passed destination id.</p><div>
@@ -549,7 +549,7 @@
                 </div>
               </span>
             </div>
-          </div>
+          </design>
         </div>
         <div class="column gap-xl">
         <div>
@@ -565,13 +565,13 @@
                                                                  </ul>
                                                                </div>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.files.remove(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <span><code class="padding-l radius-s background-secondary border">rnbw.files.remove({<br>uids:[<br>'ROOT/about.html',<br>'ROOT/contact.html']<br>})</code></span>
               </div>
-            </div>
+            </design>
           </div>
           
         </div>
@@ -616,7 +616,7 @@
               <code class="padding-l radius-s background-secondary border">
                   <pre>rnbw.elements.add(params)</pre>
                 </code>
-              <div class="column gap-m">
+              <design class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">
                     <pre>
@@ -624,7 +624,7 @@ const result: string = rnbw.elements.add
 ({  tagName: 'div'});</pre
                     >
                   </code>
-              </div>
+              </design>
             </div>
           </div>
           <div class="row gap-xl">
@@ -649,12 +649,12 @@ const result: string = rnbw.elements.add
               <code class="padding-l radius-s background-secondary border">
                   <pre>rnbw.elements.duplicate(params)</pre>
                 </code>
-              <div class="column gap-m">
+              <design class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">
                     <pre>const result: string = rnbw.elements.duplicate()</pre>
                   </code>
-              </div>
+              </design>
             </div>
           </div>
         </div>
@@ -671,7 +671,7 @@ const result: string = rnbw.elements.add
                                                                              </ul>
                                                                            </div>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.getElement(elementUid)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -707,9 +707,9 @@ const result: string = rnbw.elements.add
                     >
                   </code>
               </div>
-            </div>
+            </design>
           </div>
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>Returns the "uids" of the elements selected on the stage.</p>
             </div>
@@ -726,8 +726,8 @@ const result: string = rnbw.elements.add
                   </code>
               </div>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box">
               <p>                Returns the settings object of the elements whose uid is passed.</p><div>
                     <p>params:&nbsp;</p>
@@ -746,9 +746,9 @@ const result: string = rnbw.elements.add
                 <code class="padding-l radius-s background-secondary border">                    {<br>class:"box column" <br >style: "border: 1px solid white"<br>}</code>
               </div>
             </div>
-          </div>
+          </design>
 
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>
                 Copies the code of items in the code view to the clipboard.
@@ -781,13 +781,13 @@ const result: string = rnbw.elements.add
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.copy()</code>
               </div>
             </div>
-          </div>
+          </design>
         </div>
         <div class="column gap-xl">
           <div>
           <h5 id="update2">update</h5>
         </div>
-          <div class="row gap-xl">
+          <design class="row gap-xl">
             <div class="box">
               <p>
                 Selects the elements whose uids are passed replacing the
@@ -804,8 +804,8 @@ const result: string = rnbw.elements.add
                   class="padding-l radius-s background-secondary border">rnbw.elements.setSelectedElements(["215","456"])</code>
               </div>
             </div>
-          </div>
-          <div class="row gap-xl">
+          </design>
+          <design class="row gap-xl">
             <div class="box">
               <p>                Cuts the selected element.</p><p>Returns the cut code, and the updated code after cut, if successful.</p>
             </div>
@@ -816,7 +816,7 @@ const result: string = rnbw.elements.add
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.cut()</code>
               </div>
             </div>
-          </div>
+          </design>
           <div class="row gap-xl">
             <div class="box">
               <p>
@@ -853,7 +853,7 @@ const result: string = rnbw.elements.add
                 </ul>
               </div>
             </div>
-            <div class="box column gap-m">
+            <design class="box column gap-m">
               <code
                 class="padding-l radius-s background-secondary border">rnbw.elements.paste(params: Ipaste = {})</code>
               <div class="column gap-m">
@@ -861,7 +861,7 @@ const result: string = rnbw.elements.add
                 <code
                   class="padding-l radius-s background-secondary border">const result: Promise&lt;string&gt; = paste();</code>
               </div>
-            </div>
+            </design>
           </div>
 
           <div class="row gap-xl">
@@ -884,13 +884,13 @@ const result: string = rnbw.elements.add
                     </ul><p>Returns the updated code, if successful.</p>
                   </div>
             </div>
-            <div class="box column gap-m">
+            <design class="box column gap-m">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.group(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.group()</code>
               </div>
-            </div>
+            </design>
           </div>
           <div class="row gap-xl">
             <div class="box">
@@ -910,13 +910,13 @@ const result: string = rnbw.elements.add
                                                     </div><p>Returns the updated code, if successful.</p>
               
             </div>
-            <div class="box column gap-m">
+            <design class="box column gap-m">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.ungroup(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.ungroup()</code>
               </div>
-            </div>
+            </design>
           </div>
           <div class="row gap-xl">
             <div class="box">
@@ -950,7 +950,7 @@ const result: string = rnbw.elements.add
                 </ul>
               </div>
             </div>
-            <div class="box column gap-m">
+            <design class="box column gap-m">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.move(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -967,7 +967,7 @@ const result: string = rnbw.elements.add
                     <div>});</div>
                   </code>
               </div>
-            </div>
+            </design>
           </div>
 
           <div class="row gap-xl">
@@ -1002,27 +1002,27 @@ const result: string = rnbw.elements.add
             <div class="box">
               <p>Undo the state of the elements by 1 step.</p>
             </div>
-            <div class="box column gap-m">
+            <design class="box column gap-m">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.undo()</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.undo()
                   </code>
               </div>
-            </div>
+            </design>
           </div>
           <div class="row gap-xl">
             <div class="box">
               <p>Redo the state of the elements by 1 step.</p>
             </div>
-            <div class="box column gap-m">
+            <design class="box column gap-m">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.redo()</code>
               <div class="column gap-m">
                 <h6>Example</h6>
                 <code class="padding-l radius-s background-secondary border">rnbw.elements.redo()
                   </code>
               </div>
-            </div>
+            </design>
           </div>
         </div>
         <div class="column gap-xl">
@@ -1040,7 +1040,7 @@ const result: string = rnbw.elements.add
                                                                                                               </ul>
                                                                                                             </div><p>Returns the updated code, if successful.</p></p>
             </div>
-            <div class="box column gap-l">
+            <design class="box column gap-l">
               <code class="padding-l radius-s background-secondary border">rnbw.elements.remove(params)</code>
               <div class="column gap-m">
                 <h6>Example</h6>
@@ -1048,7 +1048,7 @@ const result: string = rnbw.elements.add
                                                                                                             >rnbw.elements.remove({<br>uids:["261","351","401"],<br>skipUpdate:false<br>})</code
                                                                                                           >
               </div>
-            </div>
+            </design>
           </div>
           
         </div>
@@ -1246,10 +1246,10 @@ const shortcuts = action.shortcuts</pre
   </div>
   <rnbw-footer></rnbw-footer>
 </body>
-<script src="https://rnbw.company/rnbw-header.js"></script>
-<script src="https://rnbw.company/rnbw-footer.js"></script>
-<script src="https://rnbw.company/rnbw-preview.js"></script>
-<script src="https://rnbw.company/rnbw-map.js"></script>
-<script src="https://rnbw.company/table-of-contents.js"></script>
+<script src="rnbw-header.js"></script>
+<script src="rnbw-footer.js"></script>
+<script src="rnbw-preview.js"></script>
+<script src="rnbw-map.js"></script>
+<script src="table-of-contents.js"></script>
 
 </html>

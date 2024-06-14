@@ -29,7 +29,7 @@
     <rnbw-header></rnbw-header>
     <div class="row" style="flex-wrap: nowrap;">
         <div>
-            <aside class="column justify-stretch sticky padding-l" style="width: 20rem; display: inline-block;">
+            <aside class="column justify-stretch sticky padding-l" style="width: 15rem; display: inline-block;">
             </aside>
         </div>
         <div class="view column align-center">
@@ -83,43 +83,43 @@
                 </div>
             </div>
 
-            <div class="page" id="jumpstart">
-                <div>
+            <div class="page">
+                <div id="jumpstart">
                     <h3>
                         1.1 jumpstart
                         <br />
                     </h3>
                 </div>
-                <div class="row gap-xl">
-                    <div class="gap-s column direction-s box">
+                <design class="row gap-xl">
+                    <div id="search" class="gap-s column direction-s box">
                         <svg-icon src="https://raincons.rnbw.dev/icons/search.svg" class="icon-m"></svg-icon>
                         <div class="box-l column">
                             <h5>search</h5>
                             <span>find and go to all of your projects and files.</span>
                         </div>
                     </div>
-                    <div class="gap-s column direction-s box">
+                    <div id="projects" class="gap-s column direction-s box">
                         <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg" class="icon-m"></svg-icon>
                         <div class="box-l column">
                             <h5>projects</h5>
                             <span>create a new project or open an existing one.</span>
                         </div>
                     </div>
-                    <div class="gap-s column direction-s box">
+                    <div id="help" class="gap-s column direction-s box">
                         <svg-icon src="https://raincons.rnbw.dev/icons/help.svg" class="icon-m"></svg-icon>
                         <div class="box-l column">
                             <h5>help</h5>
                             <span>get help,&nbsp;speak with someone, or many.</span>
                         </div>
                     </div>
-                    <div class="gap-s column direction-s box">
+                    <div id="jumpstart-settings" class="gap-s column direction-s box">
                         <svg-icon src="https://raincons.rnbw.dev/icons/settings.svg" class="icon-m"></svg-icon>
                         <div class="box-l column">
                             <h5>settings</h5>
                             <span>switch modes and configure things.</span>
                         </div>
                     </div>
-                </div>
+                </design>
                 <div class="background-secondary box align-center padding-xl radius-s border" style="min-height: 600px">
                     <div class="box-m row align-stretch shadow background-primary radius-s border">
                         <div class="gap-m box-l border-bottom padding-m justify-start radius-xs">
@@ -329,9 +329,9 @@
 
 
 
-            <div class="page" id="navigate">
-                <h3 class="box-l">1.2 files</h3>
-                <div class="row gap-xl">
+            <div class="page">
+                <h3 class="box-l" id="files">1.2 files</h3>
+                <div id="local-sync" class="row gap-xl">
                     <div class="box">
                         <p>
                             use the navigation bar to indicate where you are and what you're
@@ -365,7 +365,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row gap-xl">
+                <div id="autosave" class="row gap-xl">
                     <div class="box">
                         <p>
                             click the project label to navigate between files and folders. the
@@ -462,10 +462,10 @@
 
 
             <div class="page">
-                <div>
+                <div id="elements">
                     <h3 class="box-l">1.3 elements</h3>
                 </div>
-                <div class="row gap-xl">
+                <div class="row gap-xl" id="elemets-drag-and-drop">
                     <div class="box">
                         <p> view and manipulate your nodes tree. simply compose your HTML
                             objects visually. drag and drop things.
@@ -612,7 +612,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row box-l gap-xl">
+                <design class="row box-l gap-xl" id="types">
                     <div class="box direction-s column gap-s">
                         <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/border.svg"></svg-icon>
                         <div>
@@ -641,8 +641,12 @@
                             <span>design with functional HTML forms.</span>
                         </div>
                     </div>
-                </div>
-                <div class="row box-l gap-xl">
+                </design>
+
+
+
+
+                <design class="row box-l gap-xl">
                     <div class="box direction-s column gap-s">
                         <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/code-html.svg"></svg-icon>
                         <div>
@@ -671,8 +675,8 @@
                     </div>
 
                     <div class="box opacity-m"></div>
-                </div>
-                <div class="row box-l">
+                </design>
+                <div class="row box-l" id="elements-settings">
                     <div class="box">
                         <div>
                             <p>
@@ -998,11 +1002,11 @@
                 </div>
             </div>
             <div class="page">
-                <div class="box-s column">
+                <div class="box-s column" id="settings">
                     <h3>1.4 settings</h3>
                     <p>customs attributes provide more details and settings for elements.</p>
                 </div>
-                <div class="row align-start">
+                <div class="row align-start" id="add-custom">
                     <div class="box-s">
                         <p>
                             To <b>add Custom Attribute</b> -&gt; Click on the "+" right to the Settings headline.
@@ -1022,7 +1026,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-start">
+                <div class="row align-start" id="create-new">
                     <div class="box-s">
                         <p>
                             To <b>Create your new attribute</b> -&gt; Select common attribute or name the property, and
@@ -1122,7 +1126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-start">
+                <div class="row align-start" id="activate">
                     <div class="box-s">
                         <p>
                             To <b>Activate your new attribute</b> -&gt; Fill in its value and click Enter/elsewhere.
@@ -1195,7 +1199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-start">
+                <div class="row align-start" id="remove">
                     <div class="box-s">
                         <p>
                             To <b>remove a custom attribute</b> -&gt; Make it inactive, and delete it using the "remove'
@@ -1242,11 +1246,11 @@
 
 
             <div class="page">
-            <div>
-                <h3>1.5 design</h3>
-            </div>
+                <div id="design">
+                    <h3>1.5 design</h3>
+                </div>
                 <div class="row gap-column-xl">
-                    <div class="box">
+                    <div class="box" id="live-editing">
                         <p>
                             the design is where your design is playing. let's get real -
                             there's no 'run' button here because, guess what? it's already
@@ -1257,7 +1261,7 @@
                             on your keyboard and you'll switch to a clean preview mode.
                         </p>
                     </div>
-                    <div class="box">
+                    <div class="box" id="multiple-selection">
                         <p>
                             it's just your website or app, no editing mode distractions, free
                             for you to click around and navigate. want to jump back into
@@ -1272,13 +1276,13 @@
                     </div>
                 </div>
                 <div class="row radius-s background-primary border">
-                    <div class="box padding-xl" style="min-height: 600px">
+                    <div class="box padding-xl" style="min-height: 600px" id="drag-and-drop">
                         <p>
-                          "The first web browser was also an editor. The idea being that not only could
-                          everyone read content on the web, but they could also help create it. It was
-                          to be a collaborative space for everyone."
-                          <br />
-                          <i>Sir Tim Berners-Lee</i>
+                            "The first web browser was also an editor. The idea being that not only could
+                            everyone read content on the web, but they could also help create it. It was
+                            to be a collaborative space for everyone."
+                            <br />
+                            <i>Sir Tim Berners-Lee</i>
                         </p>
                         <div class="box-l gap-xs padding-s">
                             <p class="opacity-m">/</p>
@@ -1334,9 +1338,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="box-l">
-                    <div class="box-s">
+                    <div class="box-s" id="text-editing">
                         <div>
                             <p>
                                 To <b>Edit Text</b> → Double-click on any text element
@@ -1346,113 +1350,87 @@
                                 too.</blockquote>
                         </div>
                     </div>
-                    <div class="box-s align-center">
+                    <div class="box-s align-center gap-xl">
                         <div class="shadow padding-m">
                             <div class="gap-m">
-                                <div class="background-secondary-onhover padding-xs">
-                                    <div class="icon-xs icon-link"></div>
-                                </div>
-                                <div class="background-secondary-onhover padding-xs">
-                                    <div class="icon-xs icon-bold"></div>
-                                </div>
-                                <div class="background-secondary-onhover padding-xs">
-                                    <div class="icon-xs icon-italic"></div>
-                                </div>
-                                <div class="background-secondary-onhover padding-xs">
-                                    <div class="icon-xs icon-underline"></div>
-                                </div>
-                                <div class="background-secondary-onhover padding-xs">
-                                    <div class="icon-xs icon-strikeout"></div>
-                                </div>
-                                <div class="background-secondary-onhover padding-xs">
-                                    <div class="icon-xs icon-font"></div>
-                                </div>
+                                <svg-icon class="background-secondary-onhover icon-xs" src="https://raincons.rnbw.dev/icons/link.svg"></svg-icon>
+                                <svg-icon class="background-secondary-onhover icon-xs" src="https://raincons.rnbw.dev/icons/bold.svg"></svg-icon>
+                                <svg-icon class="background-secondary-onhover icon-xs" src="https://raincons.rnbw.dev/icons/italic.svg"></svg-icon>
+                                <svg-icon class="background-secondary-onhover icon-xs" src="https://raincons.rnbw.dev/icons/underline.svg"></svg-icon>
+                                <svg-icon class="background-secondary-onhover icon-xs" src="https://raincons.rnbw.dev/icons/strikeout.svg"></svg-icon>
+                                <svg-icon class="background-secondary-onhover icon-xs" src="https://raincons.rnbw.dev/icons/font.svg"></svg-icon>
                             </div>
                         </div>
-                        <h4>Write Something</h4>
+                        <design>
+                            <h4>Write Something</h4>
+                        </design>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="column padding-l box-s">
-                        <div class="icon-m icon-bold"></div>
-                        <div class="column size-m">
-                            <h6>Bold</h6>
-                            <span>
-                                "Wrap" text with the <b>Bold</b> Element
-                            </span>
+                <design class="row box-l gap-xl">
+                    <div class="box direction-s column gap-s">
+                        <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/bold.svg"></svg-icon>
+                        <div>
+                            <h5>bold</h5>
+                            <span>"wrap" text with the <b>bold</b> element</span>
                         </div>
                     </div>
-                    <div class="column padding-l box-s">
-                        <div class="icon-m icon-italic"></div>
-                        <div class="box-l column">
-                            <h6>Italic</h6>
-                            <span>
-                                "Wrap" text with the <i>Italic</i> Element
-                            </span>
+                    <div class="box direction-s column gap-s">
+                        <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/italic.svg"></svg-icon>
+                        <div>
+                            <h5>italic</h5>
+                            <span> "wrap" text with the <i>italic</i> element</span>
                         </div>
                     </div>
-                    <div class="column padding-l box-s">
-                        <div class="icon-m icon-font"></div>
-                        <div class="box-l column">
-                            <h6>Span</h6>
+                    <div class="box direction-s column gap-s">
+                        <svg-icon src="https://raincons.rnbw.dev/icons/font.svg" class="icon-m"></svg-icon>
+                        <div>
+                            <h5>span</h5>
                             <span>"Wrap" text with the Span Element</span>
                         </div>
                     </div>
-                    <div class="column padding-l box-s">
-                        <div class="icon-m icon-link"></div>
-                        <div class="box-l column">
-                            <h6>Link</h6>
+                    <div class="box direction-s column gap-s">
+                        <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/link.svg"></svg-icon>
+                        <div>
+                            <h5>link</h5>
                             <span>
-                                "Wrap" text with the <a class="link">
-                                    <span>Link</span>
-                                </a> Element
+                                "wrap" text with the <a class="link">
+                                    <span>link</span>
+                                </a> element
                             </span>
                         </div>
                     </div>
-                    <div class="column padding-l box-s">
-                        <div class="icon-m icon-underline"></div>
-                        <div class="box-l column">
-                            <h6>Underline</h6>
+                </design>
+                <design class="row box-s gap-xl">
+                    <div class="box direction-s column gap-s">
+                        <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/underline.svg"></svg-icon>
+                        <div>
+                            <h5>underline</h5>
                             <span>
-                                "Wrap" text with the <u>Underline</u> Element
+                                "wrap" text with the <u>underline</u> element
                             </span>
                         </div>
                     </div>
-                    <div class="column padding-l box-s">
-                        <div class="icon-m icon-strikeout"></div>
-                        <div class="box-l column">
-                            <h6>Strikethrough</h6>
+                    <div class="box direction-s column gap-s">
+                        <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/strikeout.svg"></svg-icon>
+                        <div>
+                            <h5>strikethrough</h5>
                             <span>
-                                "Wrap" text with the <s>Strikethrough</s> Element
+                                "wrap" text with the <s>strikethrough</s> element
                             </span>
                         </div>
                     </div>
-                </div>
-                
-                
-                
-                
-                
-                
-                
-                
             </div>
-
-
-
-
-
-
-
+            </design>
 
             <div class="page">
-            <div>
-                <h3>1.6 add something</h3>
-            </div>
-                <div class="row gap-column-xl">
+                <div id="add-something">
+                    <h3>1.6 add something</h3>
+                </div>
+                <div class="row gap-column-xl" id="add-files">
                     <div class="box">
                         <p>
-                            let's add something. the <b>add</b> menu let you add different things in different contexts
+                            let's add something. the <b>add</b> menu let you add different things in different
+                            contexts
                             -
                             rnbw knows how to validate things and handle cases that doesn't makes sense.</p>
                     </div>
@@ -1574,7 +1552,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row gap-column-xl">
+                <div class="row gap-column-xl" id="add-elements">
                     <div class="box">
                         <p>
                             congrats, you've added your first elements! there's another way of
@@ -1673,14 +1651,16 @@
                     </div>
                     <div class="box align-stretch">
                         <div class="box padding-m">
-                            <h5 class="border">
-                                "The first web browser was also an editor. The idea being that
-                                not only could everyone read content on the web, but they could
-                                also help create it. It was to be a collaborative space for
-                                everyone."
-                                <br />
-                                <i>Sir Tim Berners-Lee</i>
-                            </h5>
+                            <design>
+                                <h5 class="border">
+                                    "The first web browser was also an editor. The idea being that
+                                    not only could everyone read content on the web, but they could
+                                    also help create it. It was to be a collaborative space for
+                                    everyone."
+                                    <br />
+                                    <i>Sir Tim Berners-Lee</i>
+                                </h5>
+                            </design>
                             <div class="gap-s column">
                                 <div class="box-l gap-xs padding-s">
                                     <p class="opacity-m">/</p>
@@ -1741,10 +1721,10 @@
                 </div>
             </div>
             <div class="page">
-            <div>
-                <h3>1.7 do something</h3>
-            </div>
-                <div class="row gap-column-xl">
+                <div id="do-something">
+                    <h3>1.7 do something</h3>
+                </div>
+                <div class="row gap-column-xl" id="basic-actions">
                     <div class="column box">
                         <p>
                             the actions menu provides a one-stop destination for all of the
@@ -1841,7 +1821,7 @@
                     </div>
                 </div>
 
-                <div class="row gap-xl">
+                <design class="row gap-xl" id="other-actions">
 
                     <div class="box direction-s column gap-s">
                         <svg-icon src="https://raincons.rnbw.dev/icons/code-html.svg" class="icon-m"></svg-icon>
@@ -1860,15 +1840,15 @@
                     <div class="box opacity-m"></div>
                     <div class="box opacity-m"></div>
 
-                </div>
+                </design>
 
             </div>
             <div class="page opacity-m">
                 <div class="gap-s align-start column">
                     <span class="text-s padding-s radius-s border background-secondary">coming soon</span>
-                <div>
-                    <h3>1.8 ask something</h3>
-                </div>
+                    <div id="ask-something" id="ask-something">
+                        <h3>1.8 ask something</h3>
+                    </div>
                 </div>
                 <div class="row gap-column-xl">
                     <div class="column box">
@@ -1890,7 +1870,7 @@
             <div class="page" style="padding-top: 0 !important;">
                 <div class="box align-center radius-s border padding-xl" style="min-height: 600px; position: relative">
                     <div class="opacity-xl" style="position: absolute; left: 40px; top: 40px; right: 40px">
-                        <div>
+                        <design>
                             <h2>Blog Post Title</h2>
                             <p>Posted on April 30, 2023 by Author Name</p>
                             <svg-icon src="https://rnbw.design/images/image.svg" alt="Blog Post Image"
@@ -1910,7 +1890,7 @@
                                 This paragraph is part of the second section, which also has a
                                 subheading for organization purposes.
                             </p>
-                        </div>
+                        </design>
                     </div>
                     <div class="row shadow background-primary radius-s box-s border" style="z-index: 999">
                         <div class="gap-m border-bottom padding-m justify-stretch box-l">
@@ -2022,9 +2002,9 @@
 
 
             <div class="page">
-            <div>
-                <h3>1.9 code</h3>
-            </div>
+                <div id="code">
+                    <h3>1.9 code</h3>
+                </div>
                 <div class="row gap-column-xl">
                     <div class="box">
                         <p>
@@ -2196,7 +2176,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-s gap-s justify-stretch row padding-m">
+                    <design class="box-s gap-s justify-stretch row padding-m">
                         <h5>
                             "The first web browser was also an editor. The idea being that not
                             only could everyone read content on the web, but they could also
@@ -2204,7 +2184,7 @@
                             <br />
                             <i>Sir Tim Berners-Lee</i>
                         </h5>
-                    </div>
+                    </design>
                     <div class="box-s padding-m border-left box">
                         <code style="word-break: break-all">
                     const tryMeBtn = document.getElementById("try_me");<br />
@@ -2215,7 +2195,7 @@
                     </div>
                 </div>
 
-                <div class="row box-l gap-xl">
+                <design class="row box-l gap-xl">
                     <div class="box direction-s column gap-s">
                         <svg-icon class="icon-m" src="https://raincons.rnbw.dev/icons/events.svg"></svg-icon>
                         <div>
@@ -2235,7 +2215,7 @@
 
                     <div class="box opacity-m"></div>
                     <div class="box opacity-m"></div>
-                </div>
+                </design>
             </div>
 
 
@@ -2259,11 +2239,10 @@
     </div>
     <rnbw-footer></rnbw-footer>
 </body>
-<script src="https://rnbw.company/rnbw-header.js"></script>
-<script src="https://rnbw.company/rnbw-footer.js"></script>
-<script src="https://rnbw.company/table-of-contents.js"></script>
-<script src="https://rnbw.company/rnbw-preview.js"></script>
-<script src="https://rnbw.company/rnbw-map.js"></script>
-<script src="https://rnbw.company/table-of-contents.js"></script>
+<script src="rnbw-header.js"></script>
+<script src="rnbw-footer.js"></script>
+<script src="table-of-contents.js"></script>
+<script src="rnbw-preview.js"></script>
+<script src="rnbw-map.js"></script>
 
 </html>

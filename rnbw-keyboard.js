@@ -680,31 +680,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-
-function isPortraitPhone() {
-  return window.matchMedia("(max-width: 767px) and (orientation: portrait)").matches;
-}
-
-function setMediaStyles() {
-  const media1 = document.querySelector('.media1');
-  const media2 = document.querySelector('.media2');
-  const media3 = document.querySelector('.media3');
-
-  if (isPortraitPhone()) {
-    media1.style.position = 'absolute';
-    media2.style.position = 'absolute';
-    media3.style.position = 'relative';
-    media1.style.right = '-45vw';
-    media2.style.left = '-20vw';
-    media3.style.overflow = 'hidden';
-  } else {
-    media1.style.position = '';
-    media2.style.position = '';
-    media1.style.left = '';
-    media2.style.top = ''; 
-    media3.style.position = '';
-  }
-}
-
-window.addEventListener('load', setMediaStyles);
-window.addEventListener('resize', setMediaStyles);

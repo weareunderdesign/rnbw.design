@@ -95,28 +95,42 @@ document.addEventListener("DOMContentLoaded", function () {
         return -1;
     }
 
+    // function isElementInViewport(el) {
+    //     const rect = el.getBoundingClientRect();
+    //     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    //     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+    //     const documentHeight = document.documentElement.scrollHeight;
+
+    //     if (rect.bottom + window.scrollY >= documentHeight / 9) {
+    //         return (
+    //             rect.top >= 0 &&
+    //             rect.left >= 0 &&
+    //             rect.bottom <= windowHeight &&
+    //             rect.right <= windowWidth
+    //         );
+    //     } else {
+    //         return (
+    //             (rect.top <= windowHeight / 4) &&
+    //             rect.left >= 0 &&
+    //             rect.bottom + window.scrollY <= documentHeight &&
+    //             rect.right <= windowWidth
+    //         );
+    //     }
+    // }
+
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-        const documentHeight = document.documentElement.scrollHeight;
-
-        if (rect.bottom + window.scrollY <= documentHeight / 2) {
-            return (
-                (rect.top <= windowHeight / 4) &&
-                rect.left >= 0 &&
-                rect.bottom + window.scrollY <= documentHeight &&
-                rect.right <= windowWidth
-            );
-        } else {
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= windowHeight &&
-                rect.right <= windowWidth
-            );
-        }
+    
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= windowHeight &&
+            rect.right <= windowWidth
+        );
     }
+    
     
     let scrollTimer;
     let headerVisibleFlag = false;
