@@ -274,11 +274,11 @@ const rnbwPreviewTemplate = `
         <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
         <span class="hidden" style="color: #800080">It works with your files.</span>
         <span class="hidden" style="color: #ee82ee">it's powered by the web</span>
-        <img class="hidden" src="https://rnbw.design/images/rnbwanimation1.png" style="width: auto; height: 2.19vw;">
+        <img class="hidden" src="https://rnbw.company/images/rnbwanimation1.png" style="width: auto; height: 2.19vw;">
         <span class="hidden" style="color: #ee82ee">.</span>
         <span class="hidden" style="color: #ff4500">it's open source.</span>
         <span class="hidden" style="color: #ffa500">it fully embraces open web</span>
-        <img class="hidden" src="https://rnbw.design/images/rnbwanimation2.png" style="width: auto; height: 2.19vw;">
+        <img class="hidden" src="https://rnbw.company/images/rnbwanimation2.png" style="width: auto; height: 2.19vw;">
         <span class="hidden" style="color: #ffa500">standards.</span>
         <span class="hidden" style="color: #ffd700">and, it is powered by AI 🤖 ...</span>
     </h3>

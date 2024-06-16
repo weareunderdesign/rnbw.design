@@ -12,7 +12,8 @@
     <meta property="og:title" content="quick start guide - get started easily | rnbw">
     <meta property="og:description"
         content="explore our quick start guide to easily get started with rnbw. learn key features, navigation, and tips to kickstart your projects.">
-    <meta property="og:image" content="./images/rnbw.design.png">
+    <meta property="og:image" content="https://rnbw.company/images/rnbw.design.png">
+    <meta property="twitter:image" content="https://rnbw.company/images/rnbw.design.png">
     <meta property="og:url" content="https://rnbw.company/quick-start">
     <meta property="og:type" content="website">
 
@@ -73,7 +74,7 @@
                         </p>
                     </div>
                     <div class="box">
-                        <p>                            change something and the whole project gets updated. here's the
+                        <p> change something and the whole project gets updated. here's the
                             best bit - rnbw is prompt-driven, putting command menus at the
                             heart of your experience. mastering these will make you a rnbw
                             whiz in no time.
@@ -134,7 +135,7 @@
                                     <div class="padding-m gap-s">
                                         <span class="text-s opacity-m">Projects</span>
                                     </div>
-                                    <div class="padding-m gap-s justify-stretch">
+                                    <div class="padding-m gap-s justify-stretch background-secondary radius-xs">
                                         <div class="gap-s align-center">
                                             <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
                                             <span class="text-m">New</span>
@@ -143,7 +144,7 @@
                                             <span class="text-m">N</span>
                                         </div>
                                     </div>
-                                    <div class="padding-m gap-s justify-stretch background-secondary radius-xs">
+                                    <div class="padding-m gap-s justify-stretch">
                                         <div class="gap-s align-center">
                                             <svg-icon src="https://raincons.rnbw.dev/icons/folder.svg"></svg-icon>
                                             <span class="text-m">Open</span>
@@ -222,9 +223,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hidden-on-mobile column box align-center border-left gap-s"><img src="image.png"
-                                    alt="Image description">
-                                <span>Title</span><span class=" text-m opacity-m">Description</span>
+                            <div class="hidden-on-mobile column box align-center border-left gap-s">
+                                <img id="theme-image-new" src="images/new-light.svg">
+                                <span>Title</span>
+                                <span class="text-m opacity-m">Description</span>
                             </div>
                         </div>
                     </div>
@@ -1034,7 +1036,7 @@
                             click Enter/elsewhere.
                         </p>
                     </div>
-                    <div class="box-s align-center">
+                    <div class="box-s align-center" style="position: relative;">
                         <div class="panel border radius-s">
                             <div class="column padding-m gap-m border-bottom">
                                 <div class="">
@@ -1056,14 +1058,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border radius-s background-primary" style="margin-left: -0.5rem;">
+                        <div id="attribute-card" class="border radius-s background-primary"
+                            style="position: absolute; top: 85%; right: 54%;">
                             <div class="column border-bottom">
-                                <div class="justify-start padding-s background-secondary-onhover">
-                                    <span class="text-s">Attribute</span>
-                                </div>
-                                <div class="justify-start padding-s background-secondary-onhover">
-                                    <span class="text-s">Attribute</span>
-                                </div>
                                 <div class="justify-start padding-s background-secondary-onhover">
                                     <span class="text-s">Attribute</span>
                                 </div>
@@ -1077,14 +1074,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-start">
+                <div id="attribute-cards" class="row align-start" style="margin-top: 3rem;">
                     <div class="box-s">
                         <p>
                             To <b>Create your new attribute</b> -&gt; Select common attribute or name the property, and
                             click Enter/elsewhere.
                         </p>
                     </div>
-                    <div class="box-s align-center">
+                    <div class="box-s align-center" style="margin-top: 1rem; position: relative;">
                         <div class="panel border radius-s">
                             <div class="column padding-m gap-m border-bottom">
                                 <div class="">
@@ -1106,14 +1103,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border radius-s background-primary" style="margin-left: -0.5rem;">
+                        <div id="attribute-card" class="border radius-s background-primary"
+                            style="position: absolute; top: 85%; right: 54%;">
                             <div class="column border-bottom">
-                                <div class="justify-start padding-s background-secondary-onhover">
-                                    <span class="text-s">Attribute</span>
-                                </div>
-                                <div class="justify-start padding-s background-secondary-onhover">
-                                    <span class="text-s">Attribute</span>
-                                </div>
                                 <div class="justify-start padding-s background-secondary-onhover">
                                     <span class="text-s">Attribute</span>
                                 </div>
@@ -1127,7 +1119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-start" id="activate">
+                <div id="attribute-cards" class="row align-start" id="activate" style="margin-top: 3rem;">
                     <div class="box-s">
                         <p>
                             To <b>Activate your new attribute</b> -&gt; Fill in its value and click Enter/elsewhere.
@@ -1351,8 +1343,8 @@
                                 too.</blockquote>
                         </div>
                     </div>
-                    <div class="box-s align-center gap-xl">
-                        <div class="shadow padding-m">
+                    <div class="box-s align-center gap-l column">
+                        <div class="shadow padding-m background-secondary radius-s">
                             <div class="gap-m">
                                 <svg-icon class="background-secondary-onhover icon-xs"
                                     src="https://raincons.rnbw.dev/icons/link.svg"></svg-icon>
@@ -2251,5 +2243,6 @@
 <script src="table-of-contents.js"></script>
 <script src="rnbw-preview.js"></script>
 <script src="rnbw-map.js"></script>
+<script src="responsive.js"></script>
 
 </html>

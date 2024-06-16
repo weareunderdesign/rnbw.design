@@ -96,11 +96,11 @@ const rnbwMapTemplate = `
     </div>
     <div
       id="anim1"
-      class="row border radius-s box-s align-stretch"
+      class="row border radius-s box-m align-stretch"
       style="align-self: center;"
     >
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://rnbw.company/quick-start#jumpstart" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#jumpstart" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -118,7 +118,7 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="border-bottom box-l padding-m shortcutbox">
-        <a href="https://rnbw.company/quick-start#add-something" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#add-something" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -134,7 +134,7 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://rnbw.company/quick-start#do-something" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#do-something" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -150,7 +150,7 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="box-l padding-m shortcutbox">
-        <a href="https://rnbw.company/quick-start#ask-something" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#ask-something" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
