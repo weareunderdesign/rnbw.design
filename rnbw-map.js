@@ -17,7 +17,7 @@ const rnbwMapTemplate = `
   >
     <div>
       <div class="border-bottom padding-m shortcutbox">
-        <a href="https://guide.rnbw.dev/quick-start#workspaces" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.company/quick-start#guide-files" style="width: 65%; padding-right: 0.5rem;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -33,7 +33,7 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="border-bottom padding-m box shortcutbox">
-        <a href="https://guide.rnbw.dev/quick-start#elements" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.company/quick-start#elements" style="width: 65%; padding-right: 0.5rem;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -53,9 +53,16 @@ const rnbwMapTemplate = `
     </div>
     <div>
       <div class="padding-m gap-s border-bottom opacity-l">
-        <a>
-          <span class="text-l">Settings</span>
-          <p class="text-s">Control the properties and values of nodes.</p>
+        <a href="https://rnbw.company/quick-start#settings" style="width: 65%; padding-right: 0.5rem;">
+          <span class="text-l">
+            <div style="display: flex; align-items: center;" class="gap-s">
+              <span class="padding-xs background-secondary radius-s border">
+                1.4
+              </span>
+              Settings
+            </div>
+          </span>
+          <p class="text-s">Control the properties and values of nodes..</p>
         </a>
       </div>
       <div class="padding-m gap-s opacity-l">
@@ -73,9 +80,9 @@ const rnbwMapTemplate = `
       class="opacity-xl"
       src="https://rnbw.company/images/shapes.svg"
     ></svg-icon>
-    <a id="anim2" href="https://guide.rnbw.dev/quick-start#elements">
+    <a id="anim2" href="https://rnbw.company/quick-start#design">
       <span class="text-l">
-        <span class="padding-xs background-secondary radius-s border">1.4</span>
+        <span class="padding-xs background-secondary radius-s border">1.5</span>
         Design
       </span>
       <p class="text-s">
@@ -93,7 +100,7 @@ const rnbwMapTemplate = `
       style="align-self: center;"
     >
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://guide.rnbw.dev/quick-start#jumpstart" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#jumpstart" style="width: 150px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -111,11 +118,11 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="border-bottom box-l padding-m shortcutbox">
-        <a href="https://guide.rnbw.dev/quick-start#add-something" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#add-something" style="width: 150px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
-                1.5
+                1.6
               </span>
               Add something
             </div>
@@ -127,11 +134,11 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://guide.rnbw.dev/quick-start#do-something" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#do-something" style="width: 150px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
-                1.6
+                1.7
               </span>
               Do something
             </div>
@@ -143,11 +150,11 @@ const rnbwMapTemplate = `
         </div>
       </div>
       <div class="box-l padding-m shortcutbox">
-        <a href="https://guide.rnbw.dev/quick-start#ask-something" style="width: 150px; min-height:70px;">
+        <a href="https://rnbw.company/quick-start#ask-something" style="width: 150px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
-                1.7
+                1.8
               </span>
               Ask something
             </div>
@@ -164,9 +171,9 @@ const rnbwMapTemplate = `
     id="anim3"
     class="hidden-on-mobile box border-left padding-m border-left shortcutbox"
   >
-    <a href="https://guide.rnbw.dev/quick-start#code">
+    <a href="https://rnbw.company/quick-start#code">
       <span class="text-l">
-        <span class="padding-xs background-secondary radius-s border">1.8</span>
+        <span class="padding-xs background-secondary radius-s border">1.9</span>
         Code
       </span>
       <p class="text-s">Edit your code. The real thing.</p>
