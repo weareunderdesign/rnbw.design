@@ -48,8 +48,13 @@ function updateThemeElementsVisibility() {
   darkElements.forEach((element) => {
     element.style.display = theme === "dark" ? "" : "none";
   });
-
-  updateThemeImage(theme);
+  try {
+    updateThemeImageNew(theme); 
+  } catch (error) {
+    console.error('Error in updateThemeImageNew:', error); 
+  } finally {
+    updateThemeImage(theme); 
+  }
 }
 
 function handleSystemThemeChange(e) {
@@ -156,6 +161,15 @@ function updateThemeImage(theme) {
     image.src = 'images/guide-dark.png';
   } else {
     image.src = 'images/guide-light.png';
+  }
+}
+
+function updateThemeImageNew(theme) {
+  const image = document.getElementById('theme-image-new');
+  if (theme === 'dark') {
+    image.src = 'images/new-dark.svg';
+  } else {
+    image.src = 'images/new-light.svg';
   }
 }
 
