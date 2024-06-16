@@ -82,7 +82,8 @@
                 subscribeButton.value = "subscribe";
               }
             };
-            xhr.send("fullname=" + encodeURIComponent(fullname) + "&email=" + encodeURIComponent(email) + "&companyname=" + encodeURIComponent(companyname));
+            var params = "fullname=" + encodeURIComponent(fullname) + "&email=" + encodeURIComponent(email) + "&companyname=" + encodeURIComponent(companyname);
+            xhr.send(params);
           });
         document
           .getElementById("bd-email")
