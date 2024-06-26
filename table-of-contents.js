@@ -1,128 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-
     const menu = document.querySelector("aside");
     let lastScrollTop = 0;
 
     function createMenuLinks() {
         const articles = document.querySelectorAll("div.row > div.view > div");
-    
-        const headerCounts = {}; // object for tracking header repetitions
-    
+        const headerCounts = {};
+        let currentLevel = 0;
+        let levelStack = [];
+
         articles.forEach(article => {
             const headers = article.querySelectorAll("h1, h2, h3, h4, h5, h6");
-    
+
             headers.forEach(header => {
-                // Check if the header is within a <design> tag
                 if (header.closest('design') !== null) {
-                    return; // Skip this header if it's within a <design> tag
+                    return;
                 }
-    
+
                 const text = header.textContent.trim();
                 let id = "@" + text.toLowerCase().replace(/\s+/g, "-");
-    
-                // Check if this header has already existed
+
                 if (headerCounts[id] === undefined) {
                     headerCounts[id] = 0;
                 } else {
                     headerCounts[id]++;
-                    id += `-${headerCounts[id] + 1}`; // add a number starting from 2
+                    id += `-${headerCounts[id] + 1}`;
                 }
-    
+
                 const link = document.createElement("a");
                 link.href = `#${id}`;
                 link.style.display = "block";
                 link.textContent = text;
-    
+
                 const menuItem = document.createElement("div");
                 menuItem.classList.add("menu-item", "text-m");
                 menuItem.appendChild(link);
+
+                const headerLevel = parseInt(header.tagName.charAt(1));
+
+                while (levelStack.length > 0 && levelStack[levelStack.length - 1] >= headerLevel) {
+                    levelStack.pop();
+                    currentLevel--;
+                }
+
+                if (levelStack.length === 0 || headerLevel > levelStack[levelStack.length - 1]) {
+                    currentLevel++;
+                    levelStack.push(headerLevel);
+                }
+
+                menuItem.style.paddingLeft = `${(currentLevel - 1) * 20}px`;
                 menu.appendChild(menuItem);
                 header.id = id;
             });
         });
-    
-        applyMenuOffsets();
     }
-    
-    
-    
+
     createMenuLinks();
-
-
-    // Apply menu offsets to the links based on header levels
-    function applyMenuOffsets() {
-        const menuLinks = document.querySelectorAll("aside .menu-item a");
-
-        const headerLevels = {};
-        let minLevel = Infinity;
-
-        // Calculate header levels and minimum level
-        menuLinks.forEach(link => {
-            const targetId = link.getAttribute("href").substring(1);
-            const headerLevel = getHeaderLevel(targetId);
-            if (headerLevel > 0) {
-                if (!headerLevels.hasOwnProperty(headerLevel)) {
-                    headerLevels[headerLevel] = 0;
-                }
-                headerLevels[headerLevel]++;
-                minLevel = Math.min(minLevel, headerLevel);
-            }
-        });
-
-        let offset = 0;
-        for (let i = minLevel; i <= 6; i++) {
-            if (headerLevels[i] !== undefined) {
-                menuLinks.forEach(link => {
-                    const targetId = link.getAttribute("href").substring(1);
-                    const headerLevel = getHeaderLevel(targetId);
-                    if (headerLevel === i) {
-                        link.style.marginLeft = offset + "px";
-                    }
-                });
-                offset += 20;
-            }
-        }
-    }
-
-    // Get the header level of an element
-    function getHeaderLevel(headerId) {
-        const header = document.getElementById(headerId);
-        if (header) {
-            const tagName = header.tagName.toLowerCase();
-            return parseInt(tagName.charAt(1));
-        }
-        return -1;
-    }
-
-    // function isElementInViewport(el) {
-    //     const rect = el.getBoundingClientRect();
-    //     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    //     const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-    //     const documentHeight = document.documentElement.scrollHeight;
-
-    //     if (rect.bottom + window.scrollY >= documentHeight / 9) {
-    //         return (
-    //             rect.top >= 0 &&
-    //             rect.left >= 0 &&
-    //             rect.bottom <= windowHeight &&
-    //             rect.right <= windowWidth
-    //         );
-    //     } else {
-    //         return (
-    //             (rect.top <= windowHeight / 4) &&
-    //             rect.left >= 0 &&
-    //             rect.bottom + window.scrollY <= documentHeight &&
-    //             rect.right <= windowWidth
-    //         );
-    //     }
-    // }
 
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-    
+
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
@@ -130,25 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
             rect.right <= windowWidth
         );
     }
-    
-    
+
     let scrollTimer;
     let headerVisibleFlag = false;
 
-    // Function to highlight the active menu link based on scroll
     function highlightMenuLink() {
         clearTimeout(scrollTimer);
         scrollTimer = setTimeout(function () {
             const menuLinks = document.querySelectorAll("aside .menu-item a");
 
-            // Get the current scroll position
             let st = window.scrollY || document.documentElement.scrollTop;
             if (st > lastScrollTop) {
-                // If scrolling down
                 headerVisibleFlag = false;
                 let newActiveLink = null;
 
-                // Check which section is currently in the viewport
                 menuLinks.forEach(link => {
                     const targetId = link.getAttribute("href").substring(1);
                     const targetElement = document.getElementById(targetId);
@@ -158,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
 
-                // Set active class for the visible link
                 if (newActiveLink) {
                     if (!newActiveLink.classList.contains("active")) {
                         menuLinks.forEach(link => {
@@ -175,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
             else if (st < lastScrollTop) {
-                // If scrolling up
                 let newActiveIndex = null;
                 menuLinks.forEach((link, index) => {
                     const targetId = link.getAttribute("href").substring(1);
@@ -192,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     link.style.textDecorationThickness = "";
                 });
 
-                // Set active class based on the current scroll position and flag status
                 if (newActiveIndex !== null) {
                     menuLinks[newActiveIndex].classList.add("active");
                     menuLinks[newActiveIndex].style.textDecoration = "underline";
@@ -216,25 +146,20 @@ document.addEventListener("DOMContentLoaded", function () {
                         history.replaceState(null, null, `#${hash}`);
                     }
                 }
-
             }
 
-            // Update last scroll position
             lastScrollTop = st <= 0 ? 0 : st;
         }, 5);
     }
 
-    // Function to activate menu links on hover
     function activateOnHover() {
         const menuLinks = document.querySelectorAll("aside .menu-item a");
 
-        // Add event listeners for mouseenter, mouseleave, and click
         menuLinks.forEach(link => {
             link.addEventListener("mouseenter", function () {
                 this.classList.add("active");
                 this.style.textDecoration = "underline";
                 this.style.textDecorationThickness = "1.5px";
-
             });
             link.addEventListener("mouseleave", function () {
                 const hash = window.location.hash.substring(1);
@@ -257,13 +182,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.classList.add("active");
                 link.style.textDecoration = "underline";
                 link.style.textDecorationThickness = "1.5px";
-            
+
                 const targetId = link.getAttribute("href").substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    const offsetPercent = 40; 
+                    const offsetPercent = 40;
                     const offsetVH = (window.innerHeight * offsetPercent) / 100;
-            
+
                     const targetPosition = targetElement.offsetTop - offsetVH;
                     window.scrollTo({
                         top: targetPosition,
@@ -288,5 +213,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
