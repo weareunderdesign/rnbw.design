@@ -271,16 +271,16 @@ const rnbwPreviewTemplate = `
     </style>
     <h3 style="font-size: 2.38rem;">
         <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻 .</span>
-        <span class="hidden" style="color: #0000cd">it's simple, flexible, and open.</span>
-        <span class="hidden" style="color: #800080">It works with your files.</span>
-        <span class="hidden" style="color: #ee82ee">it's powered by the web</span>
+        <span class="hidden" style="color: #0000cd">it makes your html, css, js designable.</span>
+        <span class="hidden" style="color: #800080">when the code changes,</span>
+        <span class="hidden" style="color: #ee82ee">the design changes</span>
         <img class="hidden" src="https://rnbw.company/images/rnbwanimation1.png" style="width: auto; height: 2.19vw;">
         <span class="hidden" style="color: #ee82ee">.</span>
-        <span class="hidden" style="color: #ff4500">it's open source.</span>
-        <span class="hidden" style="color: #ffa500">it fully embraces open web</span>
+        <span class="hidden" style="color: #ff4500">when the design changes,</span>
+        <span class="hidden" style="color: #ffa500">the code changes.</span>
         <img class="hidden" src="https://rnbw.company/images/rnbwanimation2.png" style="width: auto; height: 2.19vw;">
-        <span class="hidden" style="color: #ffa500">standards.</span>
-        <span class="hidden" style="color: #ffd700">and, it is powered by AI 🤖 ...</span>
+        <span class="hidden" style="color: #ffa500">and,</span>
+        <span class="hidden" style="color: #ffd700">that's it!</span>
     </h3>
 </div>
     <div class="box-s padding-l border-left background-primary radius-s border" style="word-break: break-word;">
@@ -418,16 +418,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 "<div>",
                 "<h3>",
                 "<span>rnbw 🌈 is a modern design and code editor 💻 .</span>",
-                "<span>it's simple, flexible, and open.</span>",
-                "<span>It works with your files.</span>",
-                "<span>it's powered by the web</span>",
+                "<span>it makes your html, css, js designable.</span>",
+                "<span>when the code changes,</span>",
+                "<span>the design changes</span>",
                 "<img>",
                 "<span>.</span>",
-                "<span>it's open source.</span>",
-                "<span>it fully embraces open web</span>",
+                "<span>when the design changes,</span>",
+                "<span>the code changes.</span>",
                 "<img>",
-                "<span>standards.</span>",
-                "<span>and, it is powered by AI 🤖 ...</span>",
+                "<span>and,</span>",
+                "<span>that's it!</span>",
                 "</h3>",
                 "</div>"
             ];
