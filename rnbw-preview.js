@@ -17,7 +17,7 @@ const rnbwPreviewTemplate = `
                 <div class="justify-stretch padding-xs">
                     <div class="gap-s padding-xs">
                         <div class="icon-xs"></div>
-                        <svg-icon src="https://raincons.rnbw.dev/icons/page.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/page.svg"></svg-icon>
                         <span class="text-s">Page</span>
                     </div>
                     <div class="row"></div>
@@ -25,7 +25,7 @@ const rnbwPreviewTemplate = `
                 <div class="justify-stretch padding-xs">
                     <div class="justify-start gap-s padding-xs" style="display: flex; align-items: center;">
                         <div class="icon-xs"></div>
-                        <svg-icon src="https://raincons.rnbw.dev/icons/brush.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/brush.svg"></svg-icon>
                         <span class="text-s">Stylesheet</span>
                         <div class="radius-s foreground-primary" style="
                             width: 6px;
@@ -38,21 +38,21 @@ const rnbwPreviewTemplate = `
                 <div class="justify-stretch padding-xs">
                     <div class="gap-s padding-xs">
                         <div class="icon-xs"></div>
-                        <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/code-js.svg"></svg-icon>
                         <span class="text-s">Script</span>
                     </div>
                     <div class="row"></div>
                 </div>
                 <div class="gap-s justify-start padding-s">
                     <div class="icon-xs"></div>
-                    <svg-icon src="https://raincons.rnbw.dev/icons/component.svg"></svg-icon>
+                    <svg-icon src="http://raincons.rnbw.design/icons/component.svg"></svg-icon>
                     <span class="text-s">Component</span>
                 </div>
                 <div>
                     <div>
                         <div class="gap-s justify-start padding-s">
-                            <svg-icon src="https://raincons.rnbw.dev/icons/down.svg"></svg-icon>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/folder.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/down.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/folder.svg"></svg-icon>
                             <span class="text-s">Folder</span>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s justify-start padding-s">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/brush.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/brush.svg"></svg-icon>
                             <span class="text-s">Stylesheet</span>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s justify-start padding-s">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/code-js.svg"></svg-icon>
                             <span class="text-s">Script</span>
                         </div>
                     </div>
@@ -77,9 +77,9 @@ const rnbwPreviewTemplate = `
             <div class="">
                 <div class="justify-stretch padding-xs background-tertiary">
                     <div class="gap-s padding-xs">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/down.svg" id="heading3-dropdown-icon"
+                        <svg-icon src="http://raincons.rnbw.design/icons/down.svg" id="heading3-dropdown-icon"
                             class="hidden"></svg-icon>
-                        <svg-icon src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/heading.svg"></svg-icon>
                         <span class="text-s">Heading 3</span>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -97,7 +97,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -124,7 +124,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Image</span>
                         </div>
                     </div>
@@ -133,7 +133,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Image</span>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ const rnbwPreviewTemplate = `
                         <div class="gap-s padding-xs">
                             <div class="icon-xs"></div>
                             <div class="icon-xs"></div>
-                            <svg-icon src="https://raincons.rnbw.dev/icons/div.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/div.svg"></svg-icon>
                             <span class="text-s">Span</span>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ const rnbwPreviewTemplate = `
                     <span class="text-s">Settings</span>
                     <div class="row gap-s justify-end">
                         <div class="padding-xs radius-xs">
-                            <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/plus.svg"></svg-icon>
                         </div>
                     </div>
                 </div>
@@ -204,7 +204,7 @@ const rnbwPreviewTemplate = `
                     </div>
                     <div class="gap-s justify-end">
                         <div class="padding-xs radius-xs">
-                            <svg-icon src="https://raincons.rnbw.dev/icons/plus.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/plus.svg"></svg-icon>
                         </div>
                     </div>
                 </div>
@@ -213,20 +213,20 @@ const rnbwPreviewTemplate = `
                         <span class="text-s">Style1</span>
                     </div>
                     <div class="gap-xs border radius-xs padding-xs foreground-secondary">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/cross.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/cross.svg"></svg-icon>
                         <span class="text-s">Style2</span>
                     </div>
                     <div class="padding-xs radius-xs">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/states.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/states.svg"></svg-icon>
                     </div>
                     <div class="background-secondary-onhover padding-xs radius-xs">
-                        <svg-icon src="https://raincons.rnbw.dev/icons/media.svg"></svg-icon>
+                        <svg-icon src="http://raincons.rnbw.design/icons/media.svg"></svg-icon>
                     </div>
                 </div>
                 <div class="justify-stretch">
                     <div class="gap-s box justify-start align-center">
                         <div class="padding-xs radius-xs background-secondary">
-                            <svg-icon src="https://raincons.rnbw.dev/icons/width.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/width.svg"></svg-icon>
                         </div>
                         <span class="text-s">Width</span>
                     </div>
@@ -237,7 +237,7 @@ const rnbwPreviewTemplate = `
                 <div class="justify-stretch opacity-m">
                     <div class="gap-s box justify-start align-center">
                         <div class="padding-xs radius-xs">
-                            <svg-icon src="https://raincons.rnbw.dev/icons/flex.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/flex.svg"></svg-icon>
                         </div>
                         <span class="text-s">Display</span>
                     </div>
@@ -248,7 +248,7 @@ const rnbwPreviewTemplate = `
                 <div class="justify-stretch">
                     <div class="gap-s box justify-start align-center">
                         <div class="padding-xs radius-xs background-secondary">
-                            <svg-icon src="https://raincons.rnbw.dev/icons/relative.svg"></svg-icon>
+                            <svg-icon src="http://raincons.rnbw.design/icons/relative.svg"></svg-icon>
                         </div>
                         <span class="text-s">Position</span>
                     </div>
