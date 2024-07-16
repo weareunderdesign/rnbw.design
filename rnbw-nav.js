@@ -5,7 +5,7 @@ const navTemplate = `
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="http://raincons.rnbw.design/icons/oval.svg"
+                                src="https://rnbw.company/raincons/oval.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">start</p>
@@ -16,7 +16,7 @@ const navTemplate = `
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="http://raincons.rnbw.design/icons/library.svg"
+                                src="https://rnbw.company/raincons/library.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">guide</p>
@@ -27,7 +27,7 @@ const navTemplate = `
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="http://raincons.rnbw.design/icons/people.svg"
+                                src="https://rnbw.company/raincons/people.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">community ↗</p>
