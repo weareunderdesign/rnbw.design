@@ -2,23 +2,23 @@ const footerTemplate = `
 <footer class="padding-xl box-l">
     <div class="gap-s row align-start box-l">
         <div class="gap-l column align-start box">
-            <a href="https://rnbw.company">
-            <svg-icon src="https://rnbw.company/images/rnbw.svg"></svg-icon></a>
+            <a href="https://rnbw.design">
+            <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon></a>
             <div class="text-s">
                 © <span id="year"></span> Rainbow Design, Ltd.
             </div>
 
         </div>
         <div class="column gap-s box">
-            <a href="https://rnbw.company/signup" target="_blank">start</a>
-            <a href="https://rnbw.company/guide">guide</a>
-            <a href="https://rnbw.company/about">about</a>
-            <a href="https://rnbw.company/changelog">changelog</a>
+            <a href="https://rnbw.design/signup" target="_blank">start</a>
+            <a href="https://rnbw.design/guide">guide</a>
+            <a href="https://rnbw.design/about">about</a>
+            <a href="https://rnbw.design/changelog">changelog</a>
         </div>
         <div class="column gap-s box">
             <a href="https://twitter.com/rnbwdev" target="_blank">twitter ↗</a>
             <a href="https://github.com/rnbwdev" target="_blank">github ↗</a>
-            <a href="mailto:hello@rnbw.company">get in touch</a>
+            <a href="mailto:hello@rnbw.design">get in touch</a>
         </div>
         <div class="column gap-s box">
             <a href="https://renecss.org" target="_blank">rene.css ↗</a>
@@ -150,7 +150,7 @@ function switchFavicon(theme) {
   const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
   link.type = 'image/png';
   link.rel = 'shortcut icon';
-  link.href = `https://rnbw.company/images/favicon-${theme}.png`;
+  link.href = `https://rnbw.design/images/favicon-${theme}.png`;
 
   document.getElementsByTagName('head')[0].appendChild(link);
 }

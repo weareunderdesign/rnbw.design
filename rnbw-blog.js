@@ -54,7 +54,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/repeat-x.svg"
+              src="https://rnbw.design/raincons/repeat-x.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Continue</span>
@@ -64,7 +64,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/bullet.svg"
+              src="https://rnbw.design/raincons/bullet.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Create</span>
@@ -74,7 +74,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/help.svg"
+              src="https://rnbw.design/raincons/help.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Explain</span>
@@ -84,7 +84,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/events.svg"
+              src="https://rnbw.design/raincons/events.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Brainstorm </span>
@@ -97,7 +97,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/bubble.svg"
+              src="https://rnbw.design/raincons/bubble.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Change tone</span>
@@ -107,7 +107,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/edit.svg"
+              src="https://rnbw.design/raincons/edit.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Improve Writing </span>
@@ -117,7 +117,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/location.svg"
+              src="https://rnbw.design/raincons/location.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Simplify </span>
@@ -130,7 +130,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/bullet-outlined.svg"
+              src="https://rnbw.design/raincons/bullet-outlined.svg"
             ></svg-icon>
           </div>
           <span class="text-m">Create a blog post layout</span>
@@ -140,7 +140,7 @@ id="blog-wrapper"
         <div class="gap-s align-center">
           <div class="padding-xs">
             <svg-icon
-              src="https://rnbw.company/raincons/bullet-outlined.svg"
+              src="https://rnbw.design/raincons/bullet-outlined.svg"
             ></svg-icon>
           </div>
           <span class="text-m"

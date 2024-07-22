@@ -1,22 +1,22 @@
 const navTemplate = `
                 <div class="row box-l gap-m align-center">
                         <a id="nav-item-1"
-                            href="https://rnbw.company/signup"
+                            href="https://rnbw.design/signup"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="https://rnbw.company/raincons/oval.svg"
+                                src="https://rnbw.design/raincons/oval.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">start</p>
                             </div>
                         </a>
                         <a id="nav-item-2"
-                            href="https://rnbw.company/guide"
+                            href="https://rnbw.design/guide"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="https://rnbw.company/raincons/library.svg"
+                                src="https://rnbw.design/raincons/library.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">guide</p>
@@ -27,7 +27,7 @@ const navTemplate = `
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="https://rnbw.company/raincons/people.svg"
+                                src="https://rnbw.design/raincons/people.svg"
                                 class="icon-s"></svg-icon>
                             <div>
                                 <p class="text-l">community ↗</p>
@@ -38,7 +38,7 @@ const navTemplate = `
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <img
-                                src="https://rnbw.company/images/githubgradient.svg"
+                                src="https://rnbw.design/images/githubgradient.svg"
                                 class="icon-s">
                             <div>
                                 <p class="text-l">GitHub ↗</p>

@@ -21,7 +21,7 @@ const rnbwFiles = `
         <div class="gap-s padding-xs">
           <div class="icon-xs"></div>
           <svg-icon
-            src="https://rnbw.company/raincons/page.svg"
+            src="https://rnbw.design/raincons/page.svg"
           ></svg-icon>
           <span class="text-s">Page</span>
         </div>
@@ -30,7 +30,7 @@ const rnbwFiles = `
       <div class="justify-stretch padding-xs" id="anim-2">
       <div class="justify-start gap-s padding-xs" style="display: flex; align-items: center;">
         <div class="icon-xs"></div>
-        <svg-icon src="https://rnbw.company/raincons/brush.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/raincons/brush.svg"></svg-icon>
         <span class="text-s">Stylesheet</span>
         <div class="radius-s foreground-primary" style="
             width: 6px;
@@ -43,7 +43,7 @@ const rnbwFiles = `
         <div class="gap-s padding-xs">
           <div class="icon-xs"></div>
           <svg-icon
-            src="https://rnbw.company/raincons/code-js.svg"
+            src="https://rnbw.design/raincons/code-js.svg"
           ></svg-icon>
           <span class="text-s">Script</span>
         </div>
@@ -52,7 +52,7 @@ const rnbwFiles = `
       <div class="gap-s justify-start padding-s">
         <div class="icon-xs"></div>
         <svg-icon
-          src="https://rnbw.company/raincons/component.svg"
+          src="https://rnbw.design/raincons/component.svg"
         ></svg-icon>
         <span class="text-s">Component</span>
       </div>
@@ -60,10 +60,10 @@ const rnbwFiles = `
         <div>
           <div class="gap-s justify-start padding-s">
             <svg-icon
-              src="https://rnbw.company/raincons/down.svg"
+              src="https://rnbw.design/raincons/down.svg"
             ></svg-icon>
             <svg-icon
-              src="https://rnbw.company/raincons/folder.svg"
+              src="https://rnbw.design/raincons/folder.svg"
             ></svg-icon>
             <span class="text-s">Folder</span>
           </div>
@@ -73,7 +73,7 @@ const rnbwFiles = `
             <div class="icon-xs"></div>
             <div class="icon-xs"></div>
             <svg-icon
-              src="https://rnbw.company/raincons/brush.svg"
+              src="https://rnbw.design/raincons/brush.svg"
             ></svg-icon>
             <span class="text-s">Stylesheet</span>
           </div>
@@ -83,7 +83,7 @@ const rnbwFiles = `
             <div class="icon-xs"></div>
             <div class="icon-xs"></div>
             <svg-icon
-              src="https://rnbw.company/raincons/code-js.svg"
+              src="https://rnbw.design/raincons/code-js.svg"
             ></svg-icon>
             <span class="text-s">Script</span>
           </div>
@@ -100,7 +100,7 @@ const rnbwFiles = `
       height: 13.36rem;
     }
   </style>
-    <svg-icon class="svg-image" src="https://rnbw.company/images/HTML.svg"></svg-icon>
+    <svg-icon class="svg-image" src="https://rnbw.design/images/HTML.svg"></svg-icon>
   </div>
     <div
       class="box-xs row padding-l border-left background-primary opacity-m"
@@ -162,9 +162,9 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const imageSourcesLight = [
-    "https://rnbw.company/images/HTML.svg",
-    "https://rnbw.company/images/CSS.svg",
-    "https://rnbw.company/images/JS.svg"
+    "https://rnbw.design/images/HTML.svg",
+    "https://rnbw.design/images/CSS.svg",
+    "https://rnbw.design/images/JS.svg"
   ];
 
   const preloadedImages = document.createElement("div");
