@@ -34,7 +34,7 @@ const navTemplate = `
                             </div>
                         </a>
                         <a id="nav-item-4"
-                            href="https://github.com/rnbwdev/rnbw"
+                            href="https://github.com/weareunder/rnbw"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <img
