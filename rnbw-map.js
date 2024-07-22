@@ -17,7 +17,7 @@ const rnbwMapTemplate = `
   >
     <div>
       <div class="border-bottom padding-m shortcutbox">
-        <a href="https://rnbw.company/quick-start#guide-files" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.design/quick-start#guide-files" style="width: 65%; padding-right: 0.5rem;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -29,11 +29,11 @@ const rnbwMapTemplate = `
           <p class="text-s">Navigate files and subfolders.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/files.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/files.svg"></svg-icon>
         </div>
       </div>
       <div class="border-bottom padding-m box shortcutbox">
-        <a href="https://rnbw.company/quick-start#elements" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.design/quick-start#elements" style="width: 65%; padding-right: 0.5rem;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -47,13 +47,13 @@ const rnbwMapTemplate = `
           </p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/open.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/open.svg"></svg-icon>
         </div>
       </div>
     </div>
     <div>
       <div class="padding-m gap-s border-bottom opacity-l">
-        <a href="https://rnbw.company/quick-start#settings" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.design/quick-start#settings" style="width: 65%; padding-right: 0.5rem;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -78,9 +78,9 @@ const rnbwMapTemplate = `
     <div class="column gap-m">
     <svg-icon
       class="opacity-xl"
-      src="https://rnbw.company/images/shapes.svg"
+      src="https://rnbw.design/images/shapes.svg"
     ></svg-icon>
-    <a id="anim2" href="https://rnbw.company/quick-start#design">
+    <a id="anim2" href="https://rnbw.design/quick-start#design">
       <span class="text-l">
         <span class="padding-xs background-secondary radius-s border">1.5</span>
         Design
@@ -91,7 +91,7 @@ const rnbwMapTemplate = `
     </a>
     </div>
     <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/toggle.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/toggle.svg"></svg-icon>
         </div>
     </div>
     <div
@@ -100,7 +100,7 @@ const rnbwMapTemplate = `
       style="align-self: center;"
     >
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://rnbw.company/quick-start#jumpstart" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#jumpstart" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -114,11 +114,11 @@ const rnbwMapTemplate = `
           </p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/jumpstart.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/jumpstart.svg"></svg-icon>
         </div>
       </div>
       <div class="border-bottom box-l padding-m shortcutbox">
-        <a href="https://rnbw.company/quick-start#add-something" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#add-something" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -130,11 +130,11 @@ const rnbwMapTemplate = `
           <p class="text-s">Add different things in different contexts.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/add.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/add.svg"></svg-icon>
         </div>
       </div>
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://rnbw.company/quick-start#do-something" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#do-something" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -146,11 +146,11 @@ const rnbwMapTemplate = `
           <p class="text-s">All of the actions offered by rnbw.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/do.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/do.svg"></svg-icon>
         </div>
       </div>
       <div class="box-l padding-m shortcutbox">
-        <a href="https://rnbw.company/quick-start#ask-something" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#ask-something" style="width: 250px; min-height:70px;">
           <span class="text-l">
             <div style="display: flex; align-items: center;" class="gap-s">
               <span class="padding-xs background-secondary radius-s border">
@@ -162,7 +162,7 @@ const rnbwMapTemplate = `
           <p class="text-s">let AI do the work and unleash your creativity.</p>
         </a>
         <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/ask.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/ask.svg"></svg-icon>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@ const rnbwMapTemplate = `
     id="anim3"
     class="hidden-on-mobile box border-left padding-m border-left shortcutbox"
   >
-    <a href="https://rnbw.company/quick-start#code">
+    <a href="https://rnbw.design/quick-start#code">
       <span class="text-l">
         <span class="padding-xs background-secondary radius-s border">1.9</span>
         Code
@@ -180,7 +180,7 @@ const rnbwMapTemplate = `
     </a>
     <div style="width: 70px; height: 70px;">
     <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.company/images/code.svg"></svg-icon>
+        <svg-icon src="https://rnbw.design/images/code.svg"></svg-icon>
         </div>
     </div>
   </div>
