@@ -33,4 +33,4 @@ here’s how you can get involved:
 
 ## support
 
-need help or want to be a part of our community? [join us](https://github.com/orgs/rnbwdev/discussions).
+need help or want to be a part of our community? [join us](https://github.com/orgs/weareunder/discussions).
