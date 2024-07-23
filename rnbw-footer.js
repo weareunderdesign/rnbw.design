@@ -16,8 +16,8 @@ const footerTemplate = `
             <a href="https://rnbw.design/changelog">changelog</a>
         </div>
         <div class="column gap-s box">
-            <a href="https://twitter.com/rnbwdev" target="_blank">twitter ↗</a>
-            <a href="https://github.com/rnbwdev" target="_blank">github ↗</a>
+            <a href="https://twitter.com/weareunder" target="_blank">twitter ↗</a>
+            <a href="https://github.com/weareunder" target="_blank">github ↗</a>
             <a href="mailto:hello@rnbw.design">get in touch</a>
         </div>
         <div class="column gap-s box">
