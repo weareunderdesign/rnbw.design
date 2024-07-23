@@ -1,41 +1,66 @@
 const footerTemplate = `
 <footer class="padding-xl box-l">
-    <div class="gap-s row align-start box-l">
-        <div class="gap-l column align-start box">
-            <a href="https://rnbw.design">
-            <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon></a>
-            <div class="text-s">
-                © <span id="year"></span> Rainbow Design, Ltd.
-            </div>
+  <div class="gap-s row align-start box-l">
 
-        </div>
-        <div class="column gap-s box">
-            <a href="https://rnbw.design/signup" target="_blank">start</a>
-            <a href="https://rnbw.design/guide">guide</a>
-            <a href="https://rnbw.design/about">about</a>
-            <a href="https://rnbw.design/changelog">changelog</a>
-        </div>
-        <div class="column gap-s box">
-            <a href="https://twitter.com/weareunder" target="_blank">twitter ↗</a>
-            <a href="https://github.com/weareunder" target="_blank">github ↗</a>
-            <a href="mailto:hello@rnbw.design">get in touch</a>
-        </div>
-        <div class="column gap-s box">
-            <a href="https://renecss.org" target="_blank">rene.css ↗</a>
-            <a class="opacity-m">svg-icon.js ↗</a>
-            <a class="opacity-m">rfrncs.design ↗</a>
-        </div>
-        <div class="column gap-s box">
-            <a href="legal.html"
-                target="_blank">legal
-            </a>
-                <div>
-                    <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer; margin-top: 0.25rem;"><span class="opacity-m" id="theme-name"></span></button>
-                </div>
+
+    <div class="gap-l column align-start box" style="display: none;">
+      <a href="https://rnbw.design">
+        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
+      </a>
+      <div class="text-s">
+        © <span id="year"></span> Rainbow Design, Ltd.
+      </div>
+    </div>
+
+
+    <div class="gap-xl row align-start box-l">
+      <a href="https://weareunder.design/">
+        <svg-icon src="https://weareunder.design/images/under-footer.svg" style="width: 140px; height: 140px;"></svg-icon>
+      </a>
+      <h5 class="box">
+        under creates high-quality,<br>
+        well-designed, creative brands <br>
+        and products for creative people.
+      </h5>
+      <div class="column">
+        <a href="https://weareunder.design/brandsprint/">
+          <h5>brandsprint</h5>
+        </a>
+        <a href="https://weareunder.design/blog/">
+          <h5>blog</h5>
+        </a>
+        <a href="https://store.weareunder.design/">
+          <h5>store</h5>
+        </a>
+        <a href="mailto:hello@weareunder.design">
+          <h5>contact</h5>
+        </a>
+      </div>
+      <div class="column">
+        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
+          <h5>newsletter</h5>
+        </a>
+        <a href="https://www.instagram.com/under.design/" target="_blank">
+          <h5>instagram</h5>
+        </a>
+        <a href="https://x.com/underdesign_" target="_blank">
+          <h5>twitter</h5>
+        </a>
+        <a href="https://github.com/weareunderdesign" target="_blank">
+          <h5>github</h5>
+        </a>
+      </div>
+      <div>
+          <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer; margin-top: 0.25rem;">
+            <span class="opacity-m" id="theme-name"></span>
+          </button>
         </div>
     </div>
+    
+  </div>
 </footer>
 `;
+
 function updateThemeElementsVisibility() {
   const theme = document.documentElement.getAttribute("data-theme");
   const lightElements = document.querySelectorAll(".light");
