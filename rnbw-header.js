@@ -2,7 +2,8 @@ const headerTemplate = `
 <nav class="box-l padding-l gap-l justify-stretch" id="rnbw-logo">
     <div class="gap-l box">
         <a href="https://rnbw.design/">
-        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon></a>
+        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
+        </a>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
     <div class="gap-m justify-end box">
