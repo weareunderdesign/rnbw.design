@@ -1,12 +1,16 @@
 const headerTemplate = `
 <nav class="box-l padding-l gap-l justify-stretch" id="rnbw-logo">
     <div class="gap-l box">
+        <a href="https://weareunder.design/" target="_blank">
+        <svg-icon src="https://rnbw.design/images/under.svg" style="width: 2.5rem; height: 3.5rem;"></svg-icon>
+        </a>
         <a href="https://rnbw.design/">
-        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon></a>
+        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
+        </a>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
     <div class="gap-m justify-end box">
-        <a id="nav-item" href="https://rnbw.design/signup" class="align-center column">
+        <a id="nav-item" href="https://rnbw.dev" class="align-center column">
         <svg-icon src="https://rnbw.design/images/logo.svg" class="padding-s border radius-s icon-xl" id="header-item" style="display: flex; align-items: center;"></svg-icon>
             rnbw 0.1
         </a>

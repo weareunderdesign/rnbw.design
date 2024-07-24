@@ -1,8 +1,7 @@
 const navTemplate = `
                 <div class="row box-l gap-m align-center">
                         <a id="nav-item-1"
-                            href="https://rnbw.design/signup"
-                            target="_blank"
+                            href="https://rnbw.dev"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
                                 src="https://rnbw.design/raincons/oval.svg"
@@ -13,7 +12,6 @@ const navTemplate = `
                         </a>
                         <a id="nav-item-2"
                             href="https://rnbw.design/guide"
-                            target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
                                 src="https://rnbw.design/raincons/library.svg"
