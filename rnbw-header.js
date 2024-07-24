@@ -1,9 +1,9 @@
 const headerTemplate = `
 <nav class="box-l padding-l gap-l justify-stretch" id="rnbw-logo">
-    <div class="gap-m box">
+    <div class="gap-l box">
         <a href="https://weareunder.design/" target="_blank">
-        <svg-icon src="https://weareunder.design/images/webclip.svg" style="width: 3.75rem; height: 3.75rem;"></svg-icon>
-        </a>.
+        <svg-icon src="https://rnbw.design/images/under.svg" style="width: 2.5rem; height: 3.5rem;"></svg-icon>
+        </a>
         <a href="https://rnbw.design/">
         <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
         </a>
