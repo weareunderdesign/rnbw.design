@@ -1,11 +1,11 @@
 const headerTemplate = `
 <nav class="box-l padding-l gap-l justify-stretch" id="rnbw-logo">
     <div class="gap-m box">
-        <a href="https://rnbw.design/">
-        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
-        </a>
         <a href="https://weareunder.design/" target="_blank">
         <svg-icon src="https://weareunder.design/images/webclip.svg" style="width: 3.75rem; height: 3.75rem;"></svg-icon>
+        </a>.
+        <a href="https://rnbw.design/">
+        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
         </a>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
