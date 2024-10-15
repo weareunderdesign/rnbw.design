@@ -1,25 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 85 85">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #111;
-      }
-
-      .cls-1, .cls-2 {
-        stroke-width: 0px;
-      }
-
-      .cls-2 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <rect class="cls-1" x="23.5" y="8.5" width="12.5" height="37.7"/>
-  <rect class="cls-1" x="37" y="8.5" width="12.2" height="37.7"/>
-  <rect class="cls-1" x="50.3" y="8.5" width="12.2" height="37.7"/>
-  <path class="cls-2" d="M22.5,46.2v.5h.5v-.5h-.5ZM63,46.2v.5h.5v-.5h-.5Z"/>
-  <polygon class="cls-1" points="48.5 68.5 43.6 76.1 38.4 68.5 48.5 68.5"/>
-  <polygon class="cls-1" points="62.1 47.2 49.1 67.5 37.8 67.5 24 47.2 62.1 47.2"/>
-  <path class="cls-2" d="M63,46.2v.5l.4.3.5-.8h-.9ZM23,46.7v-.5h-1l21.6,31.7-21.1-30.9.4-.3Z"/>
+<svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M36 8.5H23.5V46.2H36V8.5Z" fill="#111111"/>
+<path d="M49.2 8.5H37V46.2H49.2V8.5Z" fill="#111111"/>
+<path d="M62.4998 8.5H50.2998V46.2H62.4998V8.5Z" fill="#111111"/>
+<path d="M22.5 46.2V46.7H23V46.2H22.5ZM63 46.2V46.7H63.5V46.2H63Z" fill="white"/>
+<path d="M48.5004 68.5L43.6004 76.1L38.4004 68.5H48.5004Z" fill="#111111"/>
+<path d="M62.1 47.2L49.1 67.5H37.8L24 47.2H62.1Z" fill="#111111"/>
+<path d="M63 46.2V46.7L63.4 47L63.9 46.2H63ZM23 46.7V46.2H22L43.6 77.9L22.5 47L22.9 46.7H23Z" fill="white"/>
 </svg>
