@@ -4,9 +4,9 @@ this colorpaper is intended for under, the rnbw team, users, partners, and contr
 
 ### note from eden
 
-i am an individualist with a style that cannot be found in any book. i enjoy thinking, writing, visualizing, and coding. i am a designer, but i don't mind what people call me. i just focus on doing what i love - creating unique brands and products. as part of my work, i have also built some tools. tools tools tools.
+i am a designer, but i don't mind what people call me. i just focus on doing what i love - creating unique brands and products. as part of my work, i have also built some tools. tools tools tools.
 
-these tools don't just help us make things. they also push the whole tech world to try new things and improve how humans make things, in a never-ending cycle of getting better.
+these tools don't just help us make things. they also push the whole tech world to try new things and improve how humans make things in a never-ending cycle of getting better.
 
 tools are fascinating. we shape them, and then they shape us. there’s something meta in them that i’ve been drawn to since childhood: things that create, musical instruments, modular things, legos. design tools are a crucial element in our everyday lives.
 
@@ -32,9 +32,10 @@ being open source, rnbw invites users to contribute to its evolution, making it 
 
 - [rnbw.design](https://rnbw.design) - an educational guide for users, developers, and the rnbw product team - it’s the actual product design of rnbw, designed in rnbw.
 - [rene.css](https://renecss.org/) - rené is a design system for styling clean, simple, lightweight interfaces. it's easy enough to quickly "get it.” no weird stuff. it is both a library and a framework. as a library, it offers ready-to-use elements and styles. as a framework, it gives a consistent and customizable structure for building and styling your apps. it is the ultimate common ground for designers and developers.
-- [rfrncs.design](http://rfrncs.design/) - a comprehensive repository that includes csv files containing detailed data on html elements, attributes, css selectors and more. (https://github.com/rnbwdev/rfrncs)
+- [brand](https://www.figma.com/file/cQZej1OS6VkvEGzfNULZlB/rnbw?type=design&node-id=4233%3A890&mode=design&t=DIZlBG9O8L5dbOTK-1) bible - a detailed overview of branding strategy and brand identity assets
 - raincons / [github](https://github.com/rnbwdev/raincons) - 12x12 icons designed for clean, minimal, and info-rich interfaces. by the rnbw team.
-- [svg-icon.js](http://svg-icon.xyz/) / [github](https://github.com/rnbwdev/svg-icon.js)- web component for svg icons. works without or with any web framework and for any purpose. optimized for smooth design and development workflow (built by the rnbw team for rnbw).
+- [rfrncs.design](http://rfrncs.design/) (wip)- a comprehensive repository that includes csv files containing detailed data on html elements, attributes, css selectors and more. (https://github.com/rnbwdev/rfrncs)
+- [svg-icon.js](http://svg-icon.xyz/) / [github](https://github.com/rnbwdev/svg-icon.js) (wip)- web component for svg icons. works without or with any web framework and for any purpose. optimized for smooth design and development workflow (built by the rnbw team for rnbw).
 
 ### concepts
 
@@ -80,7 +81,7 @@ at rnbw, no detail is too small. to truly excel, we need to be significantly bet
 
 ## wait but why
 
-brand story - people think rainbow is just half circle, but the truth is a rainbow is a full circle. surprising, right? when we usually see a rainbow, it's from the ground and our horizon limits our view to just a half-circle or arc. but if you ever get a chance to see a rainbow from an airplane, or from a high mountain, you'll see it's a complete circle. this is due to the raindrops scattering light in every direction, and it's only our perspective on the ground that limits our view.
+people think rainbow is just half circle, but the truth is a rainbow is a full circle. surprising, right? when we usually see a rainbow, it's from the ground and our horizon limits our view to just a half-circle or arc. but if you ever get a chance to see a rainbow from an airplane, or from a high mountain, you'll see it's a complete circle. this is due to the raindrops scattering light in every direction, and it's only our perspective on the ground that limits our view.
 
 like a rainbow, the whole world of design and development often goes unseen. we get tangled up in tiny details, forgetting the big picture.
 
@@ -92,17 +93,7 @@ welcome to the age of full-circle creation.
 
 welcome to rnbw.
 
----
-
-- [brand](https://www.figma.com/file/cQZej1OS6VkvEGzfNULZlB/rnbw?type=design&node-id=4233%3A890&mode=design&t=DIZlBG9O8L5dbOTK-1) bible - a detailed overview of branding strategy and brand identity assets
-
----
-
-- [rnbw.company](https://rnbw.company/) - corporate website
-
----
-
-### it’s a business problem
+### it's a business challenge
 
 imagine you're launching a company with a groundbreaking app idea that solves a real-world issue. traditionally, the design and development stages are distinct—designers map out the interface, then developers interpret these designs into code. this separation often leads to miscommunication and inefficiencies, impacting user experience and squandering resources.
 
@@ -146,9 +137,7 @@ but what about the others? big enterprise companies are pouring time and money i
 
 then there are the small fries - freelancers, code-savvy designers, design-savvy coders, lean startups, and fast-growing young companies. they don't have the resources to focus on design systems. these systems, if they exist at all, are often half-baked, leading to problems down the line.
 
-Here's an expanded and more engaging version of the "The Web is Now Amazing" section, providing more details about each advancement, especially focusing on the widespread adoption of web components:
-
-### the web is now amazing
+### **the web is now amazing**
 
 the web continues to evolve rapidly, driven by significant advancements in web standards and technologies. here’s a closer look at some of the most impactful updates, enabling something like rnbw.
 
@@ -162,7 +151,9 @@ the web continues to evolve rapidly, driven by significant advancements in web s
 
 ## ✨ design-as-code
 
-"what's the secret sauce?" - it’s design-as-code. it's a unique design approach that's built into a design tool, powered by code from the ground up, which uses a two-way design-code engine. this approach eliminates the need for handoff and traditional design platforms. with a perfect blend of simplicity, flexibility, and openness, it’s a game-changing solution for design professionals.
+"what's the secret sauce?" - it’s design-as-code.
+
+it's a unique design approach that's built into a design tool, powered by code from the ground up, which uses a two-way design-code engine. this approach eliminates the need for handoff and traditional design platforms. with a perfect blend of simplicity, flexibility, and openness, it’s a game-changing solution for design professionals.
 
 fast, zero latency, two-way design<>code synchronization. this means that you can make changes on one side and see the result immediately on the other side without any delay or interruption. speed is crucial in this process, whether you are loading a page, adding or modifying elements, or making an api call. our goal is to boost performance and reduce response times, always striving to enhance speed and prioritize user convenience over our ease of development.
 
@@ -175,7 +166,7 @@ our goal is to make it easy and fun for designers and anyone to use our product,
 - user input is achieved through command menus, prompts, keyboard shortcuts, and straightforward gestures, ensuring a smooth workflow.
 - you’re editing the live thing. there’s no “going from design to production”. the design is already in production.
 
-### flexible enough for anything
+### complex enough for anything
 
 create whatever is possible with code. the ceiling is endless
 
@@ -203,30 +194,18 @@ create whatever is possible with code. the ceiling is endless
 
 rnbw stands out as a versatile tool that combines the functionalities of various specialized platforms into one comprehensive solution. Here's how it integrates features from different tools:
 
-By combining these features, rnbw eliminates the need for multiple specialized tools, streamlining the design and development process. This integration allows for a more efficient workflow, reducing the time and effort spent switching between different platforms and ensuring consistency between design and code throughout the project lifecycle.
+by combining these features, rnbw eliminates the need for multiple specialized tools, streamlining the design and development process. this integration allows for a more efficient workflow, reducing the time and effort spent switching between different platforms and ensuring consistency between design and code throughout the project lifecycle.
 
--  VSCode : Primarily for developers, it focuses on code, Git, and extensions. It's flexible and open, but not as simple as rnbw.
--  Figma : Designed for designers and general users, it deals with text, vector graphics, and design. It's simple but not as flexible or open as rnbw.
--  Webflow : Aimed at designers and general users, it's mainly for design. It's not considered simple, flexible, or open in this comparison.
--  Notion : Made for general users, it handles text, extensions, and AI. It's simple and open, but not as flexible as rnbw.
+- vscode: primarily for developers, it focuses on code, git, and extensions. it's flexible and open, but not as simple as rnbw.
+- figma: designed for designers and general users, it deals with text, vector graphics, and design. it's simple but not as flexible or open as rnbw.
+- webflow: aimed at designers and general users, it's mainly for design. it's not considered simple, flexible, or open in this comparison.
+- notion: made for general users, it handles text, extensions, and ai. it's simple and open, but not as flexible as rnbw.
 
-Overall, rnbw stands out as the most versatile tool, being the only one that checks all boxes for simplicity, flexibility, and openness while catering to a wide range of users and functionalities.
-
-it is a versatile tool for developers, designers, and general users. It can handle code, AI, design, and text. It's simple to use, flexible, and open.
+rnbw stands out as the most versatile tool, being the only one that checks all boxes for simplicity, flexibility, and openness while catering to a wide range of users and functionalities -  developers, designers, and general users. it can handle code, ai, design, and text.
 
 [tools](rnbw%2073d1033d6e0b471495349771c1545e12/tools%20e5a2be8622eb44148834e0c6b4eef89b.csv)
 
-## design in public
-
-you know the feeling when you create something, but don't share it with anyone. time passes, you get no feedback or motivation, and it turns into a cycle of regret and guilt.
-
-building in public is a practice where developers openly share their development process, progress, and challenges with a community. this approach involves regular updates, discussions about obstacles, and celebrations of milestones to engage feedback, enhance transparency, and build a supportive network. it helps refine the product and grow a user base from early stages.
-
-we’re crafting narratives that tell the story of our products and brand, reflecting the essence of what we do. we’re not just building; we’re designing; let’s do it in public.
-
-engage with our user base, incorporating their feedback into the heart of our product development and marketing. share our process to create a wave of interest before, during, and after the product is out.
-
-designing in public is a core practice for under, reflecting our commitment to transparency and collaboration in the open-source community. this document outlines the standards and expectations for our design process, ensuring that every aspect of our product's development is accessible and open to public input and scrutiny.
+## **design in public**
 
 designing in public involves fully disclosing and sharing our design processes, from the initial concept to the final details of implementation. this includes user interface designs, technical architecture, and all underlying elements that contribute to the creation.
 
@@ -234,29 +213,29 @@ designing in public involves fully disclosing and sharing our design processes, 
 - to maintain high quality and accountability through public scrutiny.
 - to educate and engage the user base and developer community by providing deep insights into the product’s design and functionality.
 
-### documentation as design
+### **documentation as design**
 
 - treat design documentation not as an afterthought but as a parallel process to development.
     - all design-related documents and updates should be made available on designated public platforms such as github and our official community forum.
     - maintain a regular update cycle to ensure that the documentation stays relevant and reflective of the latest design developments.
 - ensure that documentation reflects real-time changes and decisions in the design process.
 
-### the open garden model
+### **the open garden model**
 
 - visualize our design documentation as an open garden that is cultivated and nurtured in view of the public.
 - encourage the community to explore, interact with, and contribute to the design process, enhancing the product's ecosystem.
 
-### community collaboration
+### **community collaboration**
 
 - actively seek input and feedback from users and developers.
 - incorporate community suggestions to improve and evolve the product.
 
-### accountability and quality
+### **accountability and quality**
 
 - uphold a standard of excellence, knowing that every design decision and document is subject to public review.
 - use public exposure as a motivator to achieve higher quality and innovation.
 
-### educational engagement
+### **educational engagement**
 
 we teach our users about our products, ensuring that both beginners and experts understand how to use them. our products embody our principles of simplicity and flexibility. they are straightforward to use for beginners, yet provide advanced stretch out capabilities for experts.
 
@@ -265,43 +244,17 @@ we teach our users about our products, ensuring that both beginners and experts 
 - webinars: host online events on design and dev topics.
 - tutorials: provide how-to guides.
 - use the design process as a tool for education, providing clear, accessible explanations of the decisions and technologies at play.
-- engage with the community through workshops, tutorials, and discussions about the design.
-- establish a structured process for receiving and implementing feedback from the community.
+- engage with the community through workshops, tutorials, and discussions. establish a structured process for receiving and implementing feedback from the community.
 
-###  commitment to openness 
+### **commitment to openness**
 
 by adhering to these guidelines, rnbw commits to an open and inclusive design culture that not only advances our product but also contributes to the broader field of web development and design.
 
 this section is intended to evolve as our understanding and practice of designing in public matures and as we learn from the collective experience of our community.
 
-### tracking & analytics
+## **use cases**
 
-- periodically review and revise this standard document to reflect new insights, technologies, and community needs.
-- plausible - simple site/app analytics solution
-
-##  channels 
-
-where we expand our reach, engage the community, and enrich our content. they're focused on collaboration, support, and making our tools easily accessible and understood.
-
----
-
-- email - get contact info and send a personalized email pitch about rnbw.
-- [twitter](https://twitter.com/rnbwdev) - Primary channel for announcements and community engagement. follow and engage with designers. great for casual intros.
-- [linkedin](https://www.linkedin.com/company/rnbwdev) - For corporate relationships and recruiting. find and target companies. connect and message to talk about rnbw.
-- [frienbows](https://www.facebook.com/groups/frienbows) - Community group for close friends and users.
-- [github](https://github.com/orgs/rnbwdev/discussions) - Developer community and discussions.
-
----
-
-- reddit’s [r/programming](https://www.reddit.com/r/programming) or [r/webdev](https://www.reddit.com/r/webdev) - Share articles and engage in technical discussions.
-- blogs - comment on or reach out to authors of company blogs where designers write.
-    - [dev.to](https://dev.to/) - Publish tutorials and thought leadership articles. show interest in people’s work.
-    - [hacker news](https://news.ycombinator.com/) - Share articles to a tech-savvy audience.
-    - [sidebar](https://sidebar.io/) - Curate and share top design news and articles.
-
-##  use cases 
-
-###  design systems as web components 
+### **design systems as web components**
 
 a company needs to keep the same design across many web apps. with rnbw, designers make web components in the tool, setting styles, behaviors, and interactions. these components turn into live code right away, which developers can use without having to change or rewrite them.
 
@@ -321,7 +274,7 @@ benefits
 - agility - teams can quickly make changes based on feedback, shortening the time from idea to use.
 - accuracy - lets both teams work in the code environment. when the design is the final product, there’s no need to make sure the final product matches the design.
 
-###  design systems 
+### **design systems**
 
 a big company has a complex design system that often needs updates. rnbw helps by letting designers edit and design directly in the system, where changes turn into code and get documented right away.
 
@@ -331,7 +284,7 @@ benefits
 - compliance - makes sure all parts meet the newest standards and practices, as updates are quickly shared.
 - empowerment - gives designers more control and lets them make changes without waiting for development, letting them have more say in the product.
 
-scenario 4 - making work better with ai-assisted design
+---
 
 a design team needs to make a complex user interface that changes based on how users behave. using rnbw's ai features, designers can put in user scenarios, and the system will suggest and make design changes on its own.
 
@@ -343,11 +296,11 @@ benefits
 
 each scenario shows how rnbw helps make design and development work better together, improving workflow a lot through smart use of web components and native code tools.
 
-##  get started 
+## **get started**
 
 integrating rnbw into your workflow is straightforward, and here's how you can begin:
 
-###  technical requirements 
+### **technical requirements**
 
 to ensure a smooth integration and optimal performance of rnbw, please make sure you meet the following technical requirements:
 
@@ -358,25 +311,25 @@ to ensure a smooth integration and optimal performance of rnbw, please make sure
 
 if you have any technical issues or need support, our dedicated team and community are always ready to assist you.
 
-###  download rnbw 
+### **download rnbw**
 
 ready to dive into the world of enhanced web design and development? follow these steps to download rnbw:
 
 1. visit [rnbw.dev](https://rnbw.dev/) and navigate to the 'download' section.
 2. follow the installation prompts to complete the setup.
 
-###  join the community 
+### **join the community**
 
 being part of the rnbw community opens up a wealth of knowledge and collaborative opportunities. you can get involved by 
 
 - forums - join discussions, share your experiences, and connect with other users at rnbwdev/forums.
 - social media: follow us on [twitter](https://twitter.com/rnbwdev), [linkedin](https://www.linkedin.com/company/rnbwdev), and [instagram](https://instagram.com/rnbwdev) for the latest updates and insights.
 
-###  participate in the conversation 
+### **participate in the conversation**
 
 your input is invaluable to us as we continuously improve rnbw. participate in ongoing discussions about the future of web design and development by:
 
--  feedback sessions : provide your feedback on new features and improvements.
--  beta testing : join our beta testing program to get early access to new tools and features.
+- **feedback sessions**: provide your feedback on new features and improvements.
+- **beta testing**: join our beta testing program to get early access to new tools and features.
 
 we encourage you to download rnbw, connect with our vibrant community, and start shaping the future of the web today! your journey with rnbw is just beginning, and we can't wait to see what you'll create.
