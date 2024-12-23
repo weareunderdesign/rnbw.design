@@ -96,8 +96,13 @@ async function loadMarkdownContent() {
         marked.setOptions({ renderer });
 
         const htmlContent = marked(markdownText);
-        
         document.getElementById('markdown-content').innerHTML = htmlContent;
+
+        // Create a new script element
+        const tocScript = document.createElement('script');
+        tocScript.src = 'table-of-contents.js';
+        document.body.appendChild(tocScript);
+
     } catch (error) {
         console.error('Error loading markdown:', error);
     }
@@ -108,6 +113,5 @@ document.addEventListener('DOMContentLoaded', loadMarkdownContent);
 
 <script src="rnbw-header.js"></script>
 <script src="https://weareunder.design/js/footer.js"></script>
-<script src="table-of-contents.js"></script>
 <script src="responsive.js"></script>
 </html>
