@@ -137,7 +137,7 @@ but what about the others? big enterprise companies are pouring time and money i
 
 then there are the small fries - freelancers, code-savvy designers, design-savvy coders, lean startups, and fast-growing young companies. they don't have the resources to focus on design systems. these systems, if they exist at all, are often half-baked, leading to problems down the line.
 
-### **the web is now amazing**
+### the web is now amazing
 
 the web continues to evolve rapidly, driven by significant advancements in web standards and technologies. here’s a closer look at some of the most impactful updates, enabling something like rnbw.
 
@@ -205,7 +205,7 @@ rnbw stands out as the most versatile tool, being the only one that checks all b
 
 [tools](rnbw%2073d1033d6e0b471495349771c1545e12/tools%20e5a2be8622eb44148834e0c6b4eef89b.csv)
 
-## **design in public**
+## design in public
 
 designing in public involves fully disclosing and sharing our design processes, from the initial concept to the final details of implementation. this includes user interface designs, technical architecture, and all underlying elements that contribute to the creation.
 
@@ -213,29 +213,29 @@ designing in public involves fully disclosing and sharing our design processes, 
 - to maintain high quality and accountability through public scrutiny.
 - to educate and engage the user base and developer community by providing deep insights into the product’s design and functionality.
 
-### **documentation as design**
+### documentation as design
 
 - treat design documentation not as an afterthought but as a parallel process to development.
     - all design-related documents and updates should be made available on designated public platforms such as github and our official community forum.
     - maintain a regular update cycle to ensure that the documentation stays relevant and reflective of the latest design developments.
 - ensure that documentation reflects real-time changes and decisions in the design process.
 
-### **the open garden model**
+### the open garden model
 
 - visualize our design documentation as an open garden that is cultivated and nurtured in view of the public.
 - encourage the community to explore, interact with, and contribute to the design process, enhancing the product's ecosystem.
 
-### **community collaboration**
+### community collaboration
 
 - actively seek input and feedback from users and developers.
 - incorporate community suggestions to improve and evolve the product.
 
-### **accountability and quality**
+### accountability and quality
 
 - uphold a standard of excellence, knowing that every design decision and document is subject to public review.
 - use public exposure as a motivator to achieve higher quality and innovation.
 
-### **educational engagement**
+### educational engagement
 
 we teach our users about our products, ensuring that both beginners and experts understand how to use them. our products embody our principles of simplicity and flexibility. they are straightforward to use for beginners, yet provide advanced stretch out capabilities for experts.
 
@@ -246,15 +246,15 @@ we teach our users about our products, ensuring that both beginners and experts 
 - use the design process as a tool for education, providing clear, accessible explanations of the decisions and technologies at play.
 - engage with the community through workshops, tutorials, and discussions. establish a structured process for receiving and implementing feedback from the community.
 
-### **commitment to openness**
+### commitment to openness
 
 by adhering to these guidelines, rnbw commits to an open and inclusive design culture that not only advances our product but also contributes to the broader field of web development and design.
 
 this section is intended to evolve as our understanding and practice of designing in public matures and as we learn from the collective experience of our community.
 
-## **use cases**
+## use cases
 
-### **design systems as web components**
+### design systems as web components
 
 a company needs to keep the same design across many web apps. with rnbw, designers make web components in the tool, setting styles, behaviors, and interactions. these components turn into live code right away, which developers can use without having to change or rewrite them.
 
@@ -274,7 +274,7 @@ benefits
 - agility - teams can quickly make changes based on feedback, shortening the time from idea to use.
 - accuracy - lets both teams work in the code environment. when the design is the final product, there’s no need to make sure the final product matches the design.
 
-### **design systems**
+### design systems
 
 a big company has a complex design system that often needs updates. rnbw helps by letting designers edit and design directly in the system, where changes turn into code and get documented right away.
 
@@ -296,11 +296,11 @@ benefits
 
 each scenario shows how rnbw helps make design and development work better together, improving workflow a lot through smart use of web components and native code tools.
 
-## **get started**
+## get started
 
 integrating rnbw into your workflow is straightforward, and here's how you can begin:
 
-### **technical requirements**
+### technical requirements
 
 to ensure a smooth integration and optimal performance of rnbw, please make sure you meet the following technical requirements:
 
@@ -311,25 +311,25 @@ to ensure a smooth integration and optimal performance of rnbw, please make sure
 
 if you have any technical issues or need support, our dedicated team and community are always ready to assist you.
 
-### **download rnbw**
+### download rnbw
 
 ready to dive into the world of enhanced web design and development? follow these steps to download rnbw:
 
 1. visit [rnbw.dev](https://rnbw.dev/) and navigate to the 'download' section.
 2. follow the installation prompts to complete the setup.
 
-### **join the community**
+### join the community
 
 being part of the rnbw community opens up a wealth of knowledge and collaborative opportunities. you can get involved by 
 
 - forums - join discussions, share your experiences, and connect with other users at rnbwdev/forums.
 - social media: follow us on [twitter](https://twitter.com/rnbwdev), [linkedin](https://www.linkedin.com/company/rnbwdev), and [instagram](https://instagram.com/rnbwdev) for the latest updates and insights.
 
-### **participate in the conversation**
+### participate in the conversation
 
 your input is invaluable to us as we continuously improve rnbw. participate in ongoing discussions about the future of web design and development by:
 
-- **feedback sessions**: provide your feedback on new features and improvements.
-- **beta testing**: join our beta testing program to get early access to new tools and features.
+- feedback sessions: provide your feedback on new features and improvements.
+- beta testing: join our beta testing program to get early access to new tools and features.
 
 we encourage you to download rnbw, connect with our vibrant community, and start shaping the future of the web today! your journey with rnbw is just beginning, and we can't wait to see what you'll create.
