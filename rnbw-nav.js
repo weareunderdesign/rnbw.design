@@ -11,6 +11,16 @@ const navTemplate = `
                             </div>
                         </a>
                         <a id="nav-item-2"
+                            href="https://rnbw.design/colorpaper"
+                            class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
+                            <img
+                                src="images/pagegradient.svg"
+                                class="icon-s">
+                            <div>
+                                <p class="text-l">colorpaper ↗</p>
+                            </div>
+                        </a>
+                        <a id="nav-item-3"
                             href="https://rnbw.design/guide"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
@@ -20,7 +30,7 @@ const navTemplate = `
                                 <p class="text-l">guide</p>
                             </div>
                         </a>
-                        <a id="nav-item-3"
+                        <a id="nav-item-4"
                             href="https://github.com/orgs/weareunder/discussions"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
@@ -31,7 +41,7 @@ const navTemplate = `
                                 <p class="text-l">community ↗</p>
                             </div>
                         </a>
-                        <a id="nav-item-4"
+                        <a id="nav-item-5"
                             href="https://github.com/weareunder/rnbw"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
