@@ -17,56 +17,45 @@ const rnbwMapTemplate = `
   >
     <div>
       <div class="border-bottom padding-m shortcutbox">
-        <a href="https://rnbw.design/quick-start#guide-files" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.design/quick-start#guide-files">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.2
-              </span>
-              Files
+            <div class="row gap-s align-end">
+              1.2 Files
             </div>
           </span>
           <p class="text-s">Navigate files and subfolders.</p>
         </a>
-        <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/files.svg"></svg-icon>
+        <div>
+          <svg-icon src="./images/files.svg"></svg-icon>
         </div>
       </div>
       <div class="border-bottom padding-m box shortcutbox">
-        <a href="https://rnbw.design/quick-start#elements" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.design/quick-start#elements">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.3
-              </span>
-              Elements
+            <div class="row gap-s align-end">
+              1.3 Elements
             </div>
           </span>
-          <p class="text-s">
-            View and control objects in a hierarchical manner
-          </p>
+          <p class="text-s">View and control objects</p>
         </a>
-        <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/open.svg"></svg-icon>
+        <div>
+          <svg-icon src="./images/open.svg"></svg-icon>
         </div>
       </div>
     </div>
     <div>
       <div class="padding-m gap-s border-bottom opacity-l">
-        <a href="https://rnbw.design/quick-start#settings" style="width: 65%; padding-right: 0.5rem;">
+        <a href="https://rnbw.design/quick-start#settings">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.4
-              </span>
-              Settings
+            <div class="row gap-s align-end">
+              1.4 Settings
             </div>
           </span>
-          <p class="text-s">Control the properties and values of nodes..</p>
+          <p class="text-s">Control the properties and values of nodes.</p>
         </a>
       </div>
       <div class="padding-m gap-s opacity-l">
-        <a>
+        <a href="https://rnbw.design/quick-start#styles">
           <span class="text-l">Styles</span>
           <p class="text-s">Apply and create styles for your elements.</p>
         </a>
@@ -76,22 +65,17 @@ const rnbwMapTemplate = `
   <div class="box-s column gap-m padding-m">
     <div class="shortcutbox">
     <div class="column gap-m">
-    <svg-icon
-      class="opacity-xl"
-      src="https://rnbw.design/images/shapes.svg"
-    ></svg-icon>
     <a id="anim2" href="https://rnbw.design/quick-start#design">
       <span class="text-l">
-        <span class="padding-xs background-secondary radius-s border">1.5</span>
-        Design
+        1.5 Design
       </span>
       <p class="text-s">
         Visualize and manipulate objects and their composition.
       </p>
     </a>
     </div>
-    <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/toggle.svg"></svg-icon>
+    <div>
+        <svg-icon src="./images/toggle.svg"></svg-icon>
         </div>
     </div>
     <div
@@ -100,88 +84,86 @@ const rnbwMapTemplate = `
       style="align-self: center;"
     >
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://rnbw.design/quick-start#jumpstart" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#jumpstart">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.1
-              </span>
-              Jumpstart
+            <div class="row gap-s align-end">
+              1.1 Jumpstart
             </div>
           </span>
           <p class="text-s">
             Start and open projects, control settings and get help.
           </p>
         </a>
-        <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/jumpstart.svg"></svg-icon>
+        <div>
+        <svg-icon src="./images/jumpstart.svg"></svg-icon>
         </div>
       </div>
       <div class="border-bottom box-l padding-m shortcutbox">
-        <a href="https://rnbw.design/quick-start#add-something" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#add-something">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.6
-              </span>
-              Add something
+            <div class="row gap-s align-end">
+              1.6 Add something
             </div>
           </span>
           <p class="text-s">Add different things in different contexts.</p>
         </a>
-        <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/add.svg"></svg-icon>
+        <div>
+        <svg-icon src="./images/add.svg"></svg-icon>
         </div>
       </div>
       <div class="box-l padding-m border-bottom shortcutbox">
-        <a href="https://rnbw.design/quick-start#do-something" style="width: 250px; min-height:70px;">
+        <a href="https://rnbw.design/quick-start#do-something">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.7
-              </span>
-              Do something
+            <div class="row gap-s align-end">
+              1.7 Do something
             </div>
           </span>
           <p class="text-s">All of the actions offered by rnbw.</p>
         </a>
-        <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/do.svg"></svg-icon>
+        <div>
+        <svg-icon src="./images/do.svg"></svg-icon>
         </div>
       </div>
-      <div class="box-l padding-m shortcutbox">
-        <a href="https://rnbw.design/quick-start#ask-something" style="width: 250px; min-height:70px;">
+      <div class="box-l padding-m border-bottom shortcutbox">
+        <a href="https://rnbw.design/quick-start#ask-something">
           <span class="text-l">
-            <div style="display: flex; align-items: center;" class="gap-s">
-              <span class="padding-xs background-secondary radius-s border">
-                1.8
-              </span>
-              Ask something
+            <div class="row gap-s align-end">
+              1.8 Ask something
             </div>
           </span>
           <p class="text-s">let AI do the work and unleash your creativity.</p>
         </a>
-        <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/ask.svg"></svg-icon>
+        <div>
+        <svg-icon src="./images/ask.svg"></svg-icon>
+        </div>
+      </div>
+      <div class="box-l padding-m shortcutbox">
+        <a href="https://rnbw.design/quick-start#search-something">
+          <span class="text-l">
+            <div class="row gap-s align-end">
+              1.9 Search something
+            </div>
+          </span>
+          <p class="text-s">Find anything you need quickly and efficiently.</p>
+        </a>
+        <div>
+        <svg-icon src="./images/search.svg"></svg-icon>
         </div>
       </div>
     </div>
   </div>
   <div
     id="anim3"
-    class="hidden-on-mobile box border-left padding-m border-left shortcutbox"
+    class="hidden-on-mobile box border-left padding-m shortcutbox"
   >
     <a href="https://rnbw.design/quick-start#code">
       <span class="text-l">
-        <span class="padding-xs background-secondary radius-s border">1.9</span>
-        Code
+        1.9 Code
       </span>
       <p class="text-s">Edit your code. The real thing.</p>
     </a>
-    <div style="width: 70px; height: 70px;">
-    <div style="width: 70px; height: 70px;">
-        <svg-icon src="https://rnbw.design/images/code.svg"></svg-icon>
-        </div>
+    <div>
+      <svg-icon src="./images/code.svg"></svg-icon>
     </div>
   </div>
 </div>
