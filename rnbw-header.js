@@ -1,24 +1,23 @@
 const headerTemplate = `
 <nav class="box-l padding-l gap-l justify-stretch" id="rnbw-logo">
     <div class="gap-l box">
-        <a href="https://weareunder.design/" target="_blank">
+        <a href="https://weareunder.design/" target="_blank" class="under-logo">
         <svg-icon src="https://rnbw.design/images/under.svg" style="width: 2.5rem; height: 3.5rem;"></svg-icon>
         </a>
-        <a href="https://rnbw.design/">
+        <a href="https://rnbw.design/" class="rnbw-logo">
         <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
         </a>
         <div class="text-s">high-quality,</br> design and</br>development tools</div>
     </div>
     <div class="gap-m justify-end box">
-        <a id="nav-item" href="https://rnbw.dev" class="align-center column">
-        <svg-icon src="https://rnbw.design/images/logo.svg" class="padding-s border radius-s icon-xl" id="header-item" style="display: flex; align-items: center;"></svg-icon>
+        <a id="nav-item" href="https://rnbw.dev" class="align-center column text-m gap-xs">
+        <svg-icon src="https://rnbw.design/images/logo.svg" id="header-item"></svg-icon>
             rnbw 0.1
         </a>
-        <a id="nav-item" href="https://renecss.org" class="align-center column">
-        <svg-icon src="https://rnbw.design/images/rene.svg" class="padding-s border radius-s icon-xl" id="header-item" style="display: flex; align-items: center;"></svg-icon>
+        <a id="nav-item" href="https://renecss.org" class="align-center column text-m gap-xs">
+        <svg-icon src="https://rnbw.design/images/rene.svg" id="header-item"></svg-icon>
         rene.css
         </a>
-
     </div>
 </nav>
 `;
@@ -30,22 +29,65 @@ class RnbwHeader extends HTMLElement {
   }
 
   connectedCallback() {
-    this.applyHoverEffect();
+    this.setupLogoHovers();
+    this.setupNavItemHovers();
     this.highlightActiveLink();
   }
 
-  applyHoverEffect() {
+  setupLogoHovers() {
+    const underLogo = this.querySelector('.under-logo svg-icon');
+    const rnbwLogo = this.querySelector('.rnbw-logo svg-icon');
+
+    // Under logo hover
+    underLogo.parentElement.addEventListener('mouseover', () => {
+      underLogo.setAttribute('src', 'https://rnbw.design/images/under-hover.svg'); // Replace with your hover state asset
+    });
+    underLogo.parentElement.addEventListener('mouseout', () => {
+      underLogo.setAttribute('src', 'https://rnbw.design/images/under.svg');
+    });
+
+    // RNBW logo hover
+    const rnbwLogoParent = rnbwLogo.parentElement;
+    let isHovered = false;
+    
+    const resetToSvgIcon = () => {
+      if (!isHovered) {
+        const svgIcon = document.createElement('svg-icon');
+        svgIcon.setAttribute('src', 'https://rnbw.design/images/rnbw.svg');
+        rnbwLogoParent.innerHTML = '';
+        rnbwLogoParent.appendChild(svgIcon);
+      }
+    };
+
+    rnbwLogoParent.addEventListener('mouseenter', () => {
+      isHovered = true;
+      const img = document.createElement('img');
+      img.src = 'https://rnbw.design/images/rnbw-color.svg';
+      img.classList.add('animate', 'rotate', 'infinite');
+      rnbwLogoParent.innerHTML = '';
+      rnbwLogoParent.appendChild(img);
+    });
+
+    rnbwLogoParent.addEventListener('mouseleave', () => {
+      isHovered = false;
+      resetToSvgIcon();
+    });
+  }
+
+  setupNavItemHovers() {
     const navItems = this.querySelectorAll("#nav-item");
 
     navItems.forEach((navItem) => {
       const headerItem = navItem.querySelector("#header-item");
+      const originalSrc = headerItem.getAttribute('src');
+      const hoverSrc = originalSrc.replace('.svg', '-hover.svg'); // Replace with your hover state naming convention
 
-      navItem.addEventListener("mouseover", function () {
-        headerItem.classList.add("background-secondary");
+      navItem.addEventListener("mouseover", () => {
+        headerItem.setAttribute('src', hoverSrc);
       });
 
-      navItem.addEventListener("mouseout", function () {
-        headerItem.classList.remove("background-secondary");
+      navItem.addEventListener("mouseout", () => {
+        headerItem.setAttribute('src', originalSrc);
       });
     });
   }
