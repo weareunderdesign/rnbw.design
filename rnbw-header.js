@@ -36,41 +36,13 @@ class RnbwHeader extends HTMLElement {
 
   setupLogoHovers() {
     const underLogo = this.querySelector('.under-logo svg-icon');
-    const rnbwLogo = this.querySelector('.rnbw-logo svg-icon');
 
     // Under logo hover
     underLogo.parentElement.addEventListener('mouseover', () => {
-      underLogo.setAttribute('src', 'https://rnbw.design/images/under-hover.svg'); // Replace with your hover state asset
+      underLogo.setAttribute('src', 'https://rnbw.design/images/under-hover.svg');
     });
     underLogo.parentElement.addEventListener('mouseout', () => {
       underLogo.setAttribute('src', 'https://rnbw.design/images/under.svg');
-    });
-
-    // RNBW logo hover
-    const rnbwLogoParent = rnbwLogo.parentElement;
-    let isHovered = false;
-    
-    const resetToSvgIcon = () => {
-      if (!isHovered) {
-        const svgIcon = document.createElement('svg-icon');
-        svgIcon.setAttribute('src', 'https://rnbw.design/images/rnbw.svg');
-        rnbwLogoParent.innerHTML = '';
-        rnbwLogoParent.appendChild(svgIcon);
-      }
-    };
-
-    rnbwLogoParent.addEventListener('mouseenter', () => {
-      isHovered = true;
-      const img = document.createElement('img');
-      img.src = 'https://rnbw.design/images/rnbw-color.svg';
-      img.classList.add('animate', 'rotate', 'infinite');
-      rnbwLogoParent.innerHTML = '';
-      rnbwLogoParent.appendChild(img);
-    });
-
-    rnbwLogoParent.addEventListener('mouseleave', () => {
-      isHovered = false;
-      resetToSvgIcon();
     });
   }
 
