@@ -2,13 +2,13 @@
 
 this colorpaper is intended for under, the rnbw team, users, partners, and contributors. its purpose is to provide a comprehensive understanding of the products and services we offer and the activities involved in bringing them to market and effectively reaching our target audience. this is an endless, never-ending process of adjustment and refinement, and so is this document.
 
-### note from eden
+## note from eden
 
 i am a designer, but i don't mind what people call me. i just focus on doing what i love - creating unique brands and products. as part of my work, i have also built some tools. tools tools tools.
 
 these tools don't just help us make things. they also push the whole tech world to try new things and improve how humans make things in a never-ending cycle of getting better.
 
-tools are fascinating. we shape them, and then they shape us. there’s something meta in them that i’ve been drawn to since childhood: things that create, musical instruments, modular things, legos. design tools are a crucial element in our everyday lives.
+tools are fascinating. we shape them, and then they shape us. there's something meta in them that i've been drawn to since childhood: things that create, musical instruments, modular things, legos. design tools are a crucial element in our everyday lives.
 
 these thoughts and experiences led me down the rabbit hole to the history of software development and design tools.
 
@@ -26,12 +26,12 @@ ai's capabilities are set to revolutionize the creation process by essentially a
 
 ## [rnbw.dev](https://rnbw.dev/)
 
-rnbw is a tool designed to make web design and development easier and more effective by integrating design directly with live coding. It is simple enough for anyone, flexible enough for anything, and open enough for anyone to use it anyhow. built with the latest web technologies and ai, rnbw works directly on your local files and doesn’t require complex setups.
+rnbw is a tool designed to make web design and development easier and more effective by integrating design directly with live coding. It is simple enough for anyone, flexible enough for anything, and open enough for anyone to use it anyhow. built with the latest web technologies and ai, rnbw works directly on your local files and doesn't require complex setups.
 
 being open source, rnbw invites users to contribute to its evolution, making it a community-driven tool. this approach not only enhances the tool's capabilities but also fosters a strong sense of community among its users.
 
-- [rnbw.design](https://rnbw.design) - an educational guide for users, developers, and the rnbw product team - it’s the actual product design of rnbw, designed in rnbw.
-- [rene.css](https://renecss.org/) - rené is a design system for styling clean, simple, lightweight interfaces. it's easy enough to quickly "get it.” no weird stuff. it is both a library and a framework. as a library, it offers ready-to-use elements and styles. as a framework, it gives a consistent and customizable structure for building and styling your apps. it is the ultimate common ground for designers and developers.
+- [rnbw.design](https://rnbw.design) - an educational guide for users, developers, and the rnbw product team - it's the actual product design of rnbw, designed in rnbw.
+- [rene.css](https://renecss.org/) - rené is a design system for styling clean, simple, lightweight interfaces. it's easy enough to quickly "get it." no weird stuff. it is both a library and a framework. as a library, it offers ready-to-use elements and styles. as a framework, it gives a consistent and customizable structure for building and styling your apps. it is the ultimate common ground for designers and developers.
 - [brand](https://www.figma.com/file/cQZej1OS6VkvEGzfNULZlB/rnbw?type=design&node-id=4233%3A890&mode=design&t=DIZlBG9O8L5dbOTK-1) bible - a detailed overview of branding strategy and brand identity assets
 - raincons / [github](https://github.com/rnbwdev/raincons) - 12x12 icons designed for clean, minimal, and info-rich interfaces. by the rnbw team.
 - [rfrncs.design](http://rfrncs.design/) (wip)- a comprehensive repository that includes csv files containing detailed data on html elements, attributes, css selectors and more. (https://github.com/rnbwdev/rfrncs)
@@ -106,7 +106,7 @@ this approach not only streamlines production but also enhances collaboration am
 
 today's design tools claim to offer a "single source of truth" for a product's design system. however, it raises the question of where the actual truth lies. is it in the designs created using these tools? or does it lie in the code used by developers to build the application? or, perhaps, do the tools that bridge design and code represent a third, separate truth?
 
-most of today's design tools are built on a wrong idea: that design and development live in separate, imaginary worlds. but if design lives in too many different worlds, none of which are the actual code running on people's devices, it can never reach a 'single source of truth.’
+most of today's design tools are built on a wrong idea: that design and development live in separate, imaginary worlds. but if design lives in too many different worlds, none of which are the actual code running on people's devices, it can never reach a 'single source of truth.'
 
 some people believe that website builders can help solve the problem of building a website, but in reality, they are just tools for building websites and not for designing them. these builders are suitable for creating simple websites, but not for web applications that require a more flexible and advanced user interface to handle their complexity. unfortunately, website builders are not capable of providing such advanced user interfaces.
 
@@ -120,7 +120,7 @@ no more juggling multiple mediums trying to match design with code. in this worl
 
 and while they do that, code is being cooked up in the background and blended into the development. magic, isn't it?
 
-what’s the secret sauce? a refreshingly simple design experience that is also a development environment. designers own their designs and have the power to shape the live product.
+what's the secret sauce? a refreshingly simple design experience that is also a development environment. designers own their designs and have the power to shape the live product.
 
 updates happen in the blink of an eye. no more waiting for developers. design is instant.
 
@@ -140,7 +140,7 @@ then there are the small fries - freelancers, code-savvy designers, design-savvy
 
 ### the web is now amazing
 
-the web continues to evolve rapidly, driven by significant advancements in web standards and technologies. here’s a closer look at some of the most impactful updates, enabling something like rnbw.
+the web continues to evolve rapidly, driven by significant advancements in web standards and technologies. here's a closer look at some of the most impactful updates, enabling something like rnbw.
 
 1. css updates - modern css features like css grid and subgrid have revolutionized web design, allowing developers to create more complex and responsive layouts that maintain consistency across different browsers. these tools help in building layouts that adapt to various screen sizes and devices effortlessly (mdn [web docs](https://developer.mozilla.org/en-US/blog/interop2023-mdn-doc-updates/)).
 2. interop 2023 - this initiative aims to enhance how well web features work across different browsers. by focusing on interoperability, interop 2023 helps ensure that users have a uniform experience no matter their choice of browser, reducing the headaches for developers when testing across platforms (mdn [web docs](https://developer.mozilla.org/en-US/blog/interop2023-mdn-doc-updates/)).
@@ -148,14 +148,14 @@ the web continues to evolve rapidly, driven by significant advancements in web s
 4. web components - web components represent a major leap in creating reusable and maintainable design systems and web applications. these encapsulated elements can be used across different projects and websites, significantly speeding up development times and reducing errors. their adoption has become a standard practice among both large corporations and small startups, underlining their effectiveness in modern web development.
 5. performance improvements - advances in browser technology and coding standards have led to faster web pages that are more efficient to run. these improvements not only enhance user satisfaction by providing quicker interactions but also contribute to better seo as page speed is a critical factor in search engine rankings.
 6. progressive web apps (pwas) - pwas use modern web capabilities to deliver app-like experiences to users. they can work offline, receive push notifications, and access device hardware, which positions them as a powerful alternative to traditional mobile apps. this technology enhances the user experience dramatically by making web applications behave more like native apps.
-7. the file system access api - a significant web standard implemented in chrome that enhances the capabilities of web applications to interact with files locally on a user's device. this api allows web apps to read or save changes directly to files and folders on the user’s device, once the user has granted permission. this is particularly useful for desktop applications which can benefit from native-like file handling capabilities.
+7. the file system access api - a significant web standard implemented in chrome that enhances the capabilities of web applications to interact with files locally on a user's device. this api allows web apps to read or save changes directly to files and folders on the user's device, once the user has granted permission. this is particularly useful for desktop applications which can benefit from native-like file handling capabilities.
 8. ai and machine learning - the integration of ai and ml technologies has transformed web development by enabling smart features like automated code generation, intelligent debugging, and predictive user behavior analysis. these technologies help developers create more sophisticated and personalized web experiences while reducing development time and potential errors.
 
-## ✨ design-as-code
+## ✨ design-as-code
 
-"what's the secret sauce?" - it’s design-as-code.
+"what's the secret sauce?" - it's design-as-code.
 
-it's a unique design approach that's built into a design tool, powered by code from the ground up, which uses a two-way design-code engine. this approach eliminates the need for handoff and traditional design platforms. with a perfect blend of simplicity, flexibility, and openness, it’s a game-changing solution for design professionals.
+it's a unique design approach that's built into a design tool, powered by code from the ground up, which uses a two-way design-code engine. this approach eliminates the need for handoff and traditional design platforms. with a perfect blend of simplicity, flexibility, and openness, it's a game-changing solution for design professionals.
 
 fast, zero latency, two-way design<>code synchronization. this means that you can make changes on one side and see the result immediately on the other side without any delay or interruption. speed is crucial in this process, whether you are loading a page, adding or modifying elements, or making an api call. our goal is to boost performance and reduce response times, always striving to enhance speed and prioritize user convenience over our ease of development.
 
@@ -185,18 +185,18 @@ we view our design documentation as an open garden, cultivated and grown in full
 
 our goal is to make it easy and fun for designers and anyone to use our product, so we keep the barrier to entry low. 
 
-- create instantly. edit as if you’re in a design tool you’re familiar with.
+- create instantly. edit as if you're in a design tool you're familiar with.
 - beyond exceptional user onboarding experience, the most accessible guide and documentation are available. the guide, documentation, and design are the same thing.
 - user input is achieved through command menus, prompts, keyboard shortcuts, and straightforward gestures, ensuring a smooth workflow.
-- you’re editing the live thing. there’s no “going from design to production”. the design is already in production.
+- you're editing the live thing. there's no "going from design to production". the design is already in production.
 
 ### complex enough for anything
 
 create whatever is possible with code. the ceiling is endless
 
 - create anything - websites, apps, and design systems using popular libraries or your code.
-- files, files, files. it’s html, css, js. go wild.
-- local-first. open any plain html/css/js and start editing it. there’s no cloud. no need for the fastest computer, no need for an internet connection.
+- files, files, files. it's html, css, js. go wild.
+- local-first. open any plain html/css/js and start editing it. there's no cloud. no need for the fastest computer, no need for an internet connection.
 - work with your tools. enjoy the power of git.
 - scale to any needs.
 - modular, built-to-fracture, and connected with anything. users can contribute to the development and/or customize the platform for their needs.
@@ -206,7 +206,7 @@ create whatever is possible with code. the ceiling is endless
 - for everyone, everywhere.
 - free to use. you own the files.
 - design with instant html/css/js. the world is in your hands. forever.
-    - sustainability and longevity - it’s the good ol’ web.
+    - sustainability and longevity - it's the good ol' web.
 - api-first approach - enables integration with other tools and services.
 - integrated with anything. use anyhow. really
 
@@ -249,7 +249,7 @@ benefits
 
 - transparency - both teams see changes right away, helping them understand each other's work better.
 - agility - teams can quickly make changes based on feedback, shortening the time from idea to use.
-- accuracy - lets both teams work in the code environment. when the design is the final product, there’s no need to make sure the final product matches the design.
+- accuracy - lets both teams work in the code environment. when the design is the final product, there's no need to make sure the final product matches the design.
 
 ### big design and brand systems
 
@@ -295,47 +295,47 @@ this section is intended to evolve as our understanding and practice of designin
 
 ## the future: apps that build themselves
 
-as ai, automation, and self-generating systems advance, the process of creating web apps could become seamless, combining design, code, and collaboration into one unified system. here’s how this future might unfold:
+as ai, automation, and self-generating systems advance, the process of creating web apps could become seamless, combining design, code, and collaboration into one unified system. here's how this future might unfold:
 
-### **intent-based creation**
+### intent-based creation
 
 Users can simply express their needs in natural language - for example, requesting "an app for booking yoga classes with payments and reminders" - and the AI will automatically generate a complete solution. This includes not just the visual design, but also the entire technical infrastructure: database schemas, payment processing integration, notification systems, user authentication, and responsive front-end components.
 
 The system understands context and best practices, implementing features like secure payment gateways, customizable reminder settings, calendar integration, and proper data validation, all while maintaining a cohesive and user-friendly interface that aligns with modern design standards.
 
-### **modular self-assembly & adaptive components**
+### modular self-assembly & adaptive components
 
 - instead of building from scratch, the ai selects optimized, pre-built components from a global library.
 - components integrate seamlessly, follow best practices, and adapt automatically to match the brand, style, accessibility standards, or user preferences.
 
-### **adaptive systems & continuous deployment**
+### adaptive systems & continuous deployment
 
 - apps evolve dynamically based on user behavior and trends.
     - for example, if users engage more with a specific feature, the ai might prioritize or redesign it.
 - adjustments for performance, accessibility, and relevance happen automatically without downtime.
 - apps are living systems: always live, always iterating, and always improving.
 
-### **complete abstraction of code**
+### complete abstraction of code
 
-- users don’t interact with or think about code.
+- users don't interact with or think about code.
 - the system translates high-level goals into clean, optimized code, hiding all technical complexity.
 
-### **ai-powered collaboration**
+### ai-powered collaboration
 
 - multiple ai agents collaborate on different aspects of app creation:
     - one focuses on ui/ux, another on backend logic, another on testing and error handling.
 - these agents negotiate and solve problems autonomously, involving humans only when necessary.
 
-### **natural design languages & wysiwym**
+### natural design languages & wysiwym
 
 - interaction with the system is conversational, visual, or gesture-based:
     - for instance, users can say, "make this button stand out," or "add a calendar here."
     - users define the purpose of elements (e.g., "this is a button to submit forms"), and the system ensures proper implementation.
 - the system understands and executes changes intuitively, bridging intent with functionality.
 
-### **contextual intelligence**
+### contextual intelligence
 
-- the system understands the app’s purpose, audience, and market context.
+- the system understands the app's purpose, audience, and market context.
 - it recommends or builds features based on trends, market research, or competitor analysis.
     - for example, suggesting features like ai chatbots, dark mode, or social integrations.
 
@@ -354,7 +354,7 @@ The system understands context and best practices, implementing features like se
 - real-time teamwork: designers, developers, and stakeholders collaborate live, like in tools such as figma or google docs.
 - feedback loops: ai analyzes comments and provides actionable suggestions for fixes or improvements.
 
-### **cross-platform, multi-device support**
+### cross-platform, multi-device support
 
 - the system simulates and adapts designs for different screen sizes, devices, and browsers in real time.
 
@@ -368,6 +368,6 @@ The system understands context and best practices, implementing features like se
 - plugin ecosystem: users can expand functionality with custom plugins.
 - integrations: seamless compatibility with version control (e.g., git), ci/cd pipelines, cms platforms, and analytics tools.
 
-## **the dream of a unified future**
+### the dream of a unified future
 
 this ideal system would erase the barriers between design, development, and ai agents. creation would be conversational, collaborative, and continuous. apps would adapt and evolve seamlessly, empowering users while eliminating technical complexity. this is the future of web app development: intelligent, fast, and fully automated.
