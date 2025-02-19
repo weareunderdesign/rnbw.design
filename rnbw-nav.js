@@ -10,16 +10,6 @@ const navTemplate = `
                                 <p class="text-l">start</p>
                             </div>
                         </a>
-                        <a id="nav-item-2"
-                            href="https://rnbw.design/colorpaper"
-                            class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
-                            <img
-                                src="images/pagegradient.svg"
-                                class="icon-s">
-                            <div>
-                                <p class="text-l">colorpaper ↗</p>
-                            </div>
-                        </a>
                         <a id="nav-item-3"
                             href="https://rnbw.design/guide"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
@@ -30,24 +20,14 @@ const navTemplate = `
                                 <p class="text-l">guide</p>
                             </div>
                         </a>
-                        <a id="nav-item-4"
-                            href="https://github.com/orgs/weareunder/discussions"
+
+                        <a id="nav-item-5"
+                            href="https://github.com/weareunderdesign/rnbw"
                             target="_blank"
                             class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
                             <svg-icon
-                                src="https://raincons.rnbw.dev/icons/people.svg"
+                                src="https://raincons.rnbw.dev/icons/github.svg"
                                 class="icon-s"></svg-icon>
-                            <div>
-                                <p class="text-l">community ↗</p>
-                            </div>
-                        </a>
-                        <a id="nav-item-5"
-                            href="https://github.com/weareunder/rnbw"
-                            target="_blank"
-                            class="align-center nav justify-start padding-l gap-m radius-s background-primary border">
-                            <img
-                                src="https://rnbw.design/images/githubgradient.svg"
-                                class="icon-s">
                             <div>
                                 <p class="text-l">GitHub ↗</p>
                             </div>
