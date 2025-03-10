@@ -261,14 +261,6 @@ const rnbwPreviewTemplate = `
     </div>
 
     <div class="box-s gap-l column padding-m">
-    <style>
-        .hidden {
-            display: none;
-        }
-        img {
-            display: inline;
-        }
-    </style>
     <h3 style="font-size: 2.38rem;">
         <span class="hidden" style="color: #006400">rnbw 🌈 is a modern design and code editor 💻 .</span>
         <span class="hidden" style="color: #0000cd">it makes your html, css, js designable.</span>
@@ -282,9 +274,17 @@ const rnbwPreviewTemplate = `
         <span class="hidden" style="color: #ffa500">and,</span>
         <span class="hidden" style="color: #ffd700">that's it!</span>
     </h3>
+        <style>
+        .hidden {
+            display: none;
+        }
+        img {
+            display: inline;
+        }
+    </style>
 </div>
     <div class="hidden-on-mobile box-s padding-l border-left  border-left" style="word-break: break-word;">
-        <code class="hidden">
+        <code>
         </code>
     </div>
 </div>
