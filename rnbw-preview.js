@@ -283,8 +283,8 @@ const rnbwPreviewTemplate = `
         <span class="hidden" style="color: #ffd700">that's it!</span>
     </h3>
 </div>
-    <div class="box-s padding-l border-left  border-left" style="word-break: break-word;">
-        <code>
+    <div class="hidden-on-mobile box-s padding-l border-left  border-left" style="word-break: break-word;">
+        <code class="hidden">
         </code>
     </div>
 </div>

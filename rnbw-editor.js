@@ -114,23 +114,23 @@ style="height: 950px">
 
         <div class="size-dropdown shadow column radius-xs background-primary border anim" id="anim2" style="opacity:0;width:100%;">
             <div class="border-bottom box-l column" id ="anim3">
-                <div class="padding-s background-secondary-onhover row gap-s box-l">
+                <div class="align-start padding-s background-secondary-onhover gap-s">
                     <svg-icon src="https://raincons.rnbw.dev/icons/code-js.svg"></svg-icon>
                     <span class="text-s">Page</span>
                 </div>
-                <div class="padding-s background-secondary-onhover row gap-s box-l" id="filtered-option">
+                <div class="align-start padding-s background-secondary-onhover gap-s" id="filtered-option">
                     <svg-icon src="https://raincons.rnbw.dev/icons/heading.svg"></svg-icon>
                     <span class="text-s">Heading</span>
                 </div>
-                <div class="padding-s background-secondary-onhover row gap-s box-l">
+                <div class="align-start padding-s background-secondary-onhover gap-s">
                     <svg-icon src="https://raincons.rnbw.dev/icons/text.svg"></svg-icon>
                     <span class="text-s">Span</span>
                 </div>
-                <div class="padding-s background-secondary-onhover row gap-s box-l">
+                <div class="align-start padding-s background-secondary-onhover gap-s">
                     <svg-icon src="https://raincons.rnbw.dev/icons/image.svg"></svg-icon>
                     <span class="text-s">Image</span>
                 </div>
-                <div class="padding-s background-secondary-onhover row gap-s box-l">
+                <div class="align-start padding-s background-secondary-onhover gap-s">
                     <svg-icon src="https://raincons.rnbw.dev/icons/link.svg"></svg-icon>
                     <span class="text-s">Link</span>
                 </div>

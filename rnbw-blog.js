@@ -4,7 +4,7 @@ class="box align-center radius-s padding-l border"
 
 id="blog-wrapper"
 >
-<div style="position: absolute; left: 40px; top: 40px; right: 40px"
+<div style="position: absolute; left: 24px; top: 24px; right: 24px"
 >
   <article style="opacity:0; transition: opacity 0.5s; transition-delay: 0.5s;" id="anim-5">
     <h2>Blog Post Title</h2>
